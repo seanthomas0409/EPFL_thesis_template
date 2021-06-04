@@ -10,11 +10,11 @@
 % %
 % %   Use this file for your own custom packages, command-definitions, etc...
 % %
-% % 
+% %
 % % Packages for references - cleverref must be last
 % \usepackage{nameref}
 % \usepackage{hyperref}
-% \usepackage{cleveref}
+\usepackage{cleveref}
 % \usepackage[shortlabels]{enumitem}
 % % Reduce spacing in bibliography
 % \setlength{\bibsep}{0pt plus 0.3ex}
@@ -26,3 +26,64 @@
 % %Penalty for relation and binary operation breaks in equations
 % \relpenalty=9999
 % \binoppenalty=9999
+
+%%%%%%%%%% FLOW CHART %%%%%%%%%%%%%
+\usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
+    decorations.pathreplacing,decorations.pathmorphing,shapes,%
+    matrix,shapes.symbols}
+\tikzset{
+>=stealth',
+  punktchain/.style={
+    rectangle,
+    rounded corners,
+    % fill=black!10,
+    draw=black, very thick,
+    text width=10em,
+    minimum height=3em,
+    text centered,
+    on chain},
+  line/.style={draw, thick, <-},
+  element/.style={
+    tape,
+    top color=white,
+    bottom color=blue!50!black!60!,
+    minimum width=8em,
+    draw=blue!40!black!90, very thick,
+    text width=10em,
+    minimum height=3.5em,
+    text centered,
+    on chain},
+  every join/.style={->, thick,shorten >=1pt},
+  decoration={brace},
+  tuborg/.style={decorate},
+  tubnode/.style={midway, right=2pt},
+}
+
+\tikzstyle{textbox} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, text width=3cm, draw=black, fill=white]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%       Custom Commands
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\todocite}{{\color{red}cite}}
+% To circle some numbers (require the tikz package) :  \circled{<number>}
+\newcommand*\bigcircled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+\DeclareRobustCommand \circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=0.4pt] (char) {#1};}}
+
+
+%%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{myblue}{HTML}{0072BD}
+\definecolor{mygreen}{HTML}{51986C}
+\definecolor{myred}{HTML}{C4000C}
+\definecolor{myyellow}{HTML}{F2C335}
+\definecolor{myblack}{HTML}{282C34}
+\definecolor{darkgreen}{HTML}{0D330A}
+\definecolor{lightgreen}{HTML}{32C326}
+\definecolor{darkblue}{HTML}{09299E}
+\definecolor{lightblue}{HTML}{367DD9}
+\definecolor{lightgrey}{HTML}{6A6A6A}
+\definecolor{darkgrey}{HTML}{1E1E1E}
