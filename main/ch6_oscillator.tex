@@ -35,16 +35,10 @@ This approach, when properly implemented, can result in an robotic system where 
 
 \subsection{Implementation}
 % Implementation
-% Bias spring using flexural linear stage
-As mentioned earlier, using a flexure based mechanism as a linear guide, permits the omission of a dedicated spring in the design. As seen in \cref{fig:proto-closeup}, the linear stage is comprised of two parallel cantilever beams. These cantilevers act as leaf springs that apply a tractional return force on the SMA coil at a lower temperature while also preventing any unwanted degrees of freedom in the other axis.
+The basic implementation of such as system consists of using a latch system or multi-stable mechanism where after a certain stroke or force threshold results in a snap-through effect that can be exploited to disconnect the electrical contacts across the SMA wire or coil. The rapid bifurcation or spring back from a latch system is used to cut the flow of current across from the SMA and the slow return of the SMA actuator due to cooling can be used to re-establish the electrical connection to create this oscillating effect.
 
-The implementation of the oscillator mechanism consists of pairing the SMA actuator with a magnetic latch system. A diagram of the working principle of the prototype can be seen in \cref{fig:oscillator-schematic}. The magnetic latch consists of a magnet mounted on a leaf spring that is attracted to the free end of the SMA actuator. The electrical current is made to flow across the magnetic latch and into the SMA coil. Thus, the coil is only heated when the magnet makes contact with the free end of the actuator. Essentially, as the magnet connects to the actuator, the coil is heated and retracts. As the coil retracts, the magnet mounted on the leaf spring is displaced with the coil. During this phase, the magnet experiences a return force, $F_\textrm{S}$, and will continue to follow the actuator. Once, the return force is higher than the attractive magnetic force, $F_\textrm{mag}$, between the magnet and the SMA coil, the latch detaches immediately from the actuator and the magnet returns to its original location. This causes the electrical contact to be broken and begins the cooling of the SMA coil. The bias leaf spring of the SMA actuator will, in this phase, extend the coil back towards the magnetic latch to, once again, re-establish the electrical contact. In this manner, an oscillating behaviour can be observed without any control logic or sensors. Therefore, the required contraction of the SMA coil, $\varepsilon$, can be controlled by sizing the leaf spring associated with the magnet.
-\begin{equation}\label{eq:sma-contraction}
-    \varepsilon = \frac{F_\textrm{mag}}{K_s}
-\end{equation}
-where $K_s$ is the rigidity of the leaf spring which depends on the dimensions of the cantilever beams and can be calculated using \cite{henein-2017, howell_handbook_2013}.
+The implementation of this oscillator mechanism in the scope of a simple biased-spring SMA actuator consists of a magnetic or mechanical latch system. A diagram of the working principle of the proof-of-concept can be in \cref{fig:oscillator-schematic}. The latch, here, consists of a magnet mounted on a leaf spring that is attracted to the end-effector of the bias-spring SMA actuator. The electrical current, in this case, is made to flow across the conductive magnet and into the SMA coil. Thus, only as the the magnet attaches to the end-effector of the SMA actuator will the SMA coil be heated using Joule's losses. Essentially, as the magnet and the SMA coil makes contact, the SMA element is heated and reduces in size due to the shape memory effect. During this phase, the magnet, which is mounted to a leaf spring, experiences a return force, $F_\textrm{S}$, and will continue to follow the actuator. Once, this force exceeds the attractive magnetic force, $F_\textrm{mag}$, between the magnet and the SMA coil, the latch detaches and immediately returns to its original location. This spring back occurs due to the resting return force of the leaf spring attached to the magnet. This concept can be implement in numerous ways including a mechanical latch mounted on a passive spring. Once this snap-through occurs, the electrical connection and the electrical current across the SMA is cut and will only be re-established when the bias spring of the SMA deforms the SMA coil and extends it back towards the latch. In this manner, the oscillating behaviour is observed without any sensors, micro-controllers or electronics.
 
-This basic concept can be implemented using different methods. The linear stages can be further optimised and size to fit the desired stroke of the actuator. Solutions involving mechanical latches and pogo pins can be imagined to serve the same purpose.
 
 \begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
   \centering
@@ -52,6 +46,14 @@ This basic concept can be implemented using different methods. The linear stages
   \caption{Diagram showing the working principle of the magnetic latch system implemented in the SMA oscillator.}
   \label{fig:oscillator-schematic}
 \end{figure}
+
+
+% Bias spring using flexural linear stage
+As mentioned earlier, using a flexure-based mechanism permits the omission of a dedicated spring in the design. As seen in \cref{fig:proto-full}, a proof-of-concept of this design methodology is implemented. Here, the linear stage is comprised of two parallel cantilever beams that also behaves as leaf springs. These biasing leaf springs apply a tractional return force on the SMA coil at a lower temperature while also preventing any unwanted degrees of freedom in the other axis. Another leaf spring is used to apply the return spring force required in the magnetic latch. Here, the SMA actuator is heated using the magnetic latch system and the snap-through of the latch occurs when the return force of the leaf spring exceeds the attractive force of the magnet, $F_\textrm{S}>F_\textrm{mag}$. Therefore, the required contraction of the SMA coil, $\varepsilon$, can be controlled by sizing the leaf spring associated with the magnet.
+\begin{equation}\label{eq:sma-contraction}
+    \varepsilon = \frac{F_\textrm{mag}}{K_s}
+\end{equation}
+where $K_s$ is the rigidity of the leaf spring which depends on the dimensions of the cantilever beams and can be calculated using the analytical model described in the works by \cite{rubbertIsotropicSpringsBased2016} and \cite{heneinParallelSpringStages1998}.
 
 \begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
   \centering
@@ -76,37 +78,11 @@ This basic concept can be implemented using different methods. The linear stages
   \label{fig:proto-closeup}
 \end{figure}
 
-% % Attempt at overpic osc prototype
-% \begin{figure}[t]
-%     \begin{tikzpicture}
-%         \node[anchor=south west,inner sep=0] (graph) at (0,0) {
-%         \begin{overpic}[trim={0 0cm 0 20cm},clip,width=0.45\textwidth]{
-%             \begin{scope}[xshift=1.5cm]
-%                 \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[trim={0 0cm 0 20cm},clip, width=0.45\textwidth]{images/chap6/proto-closeup.jpg}};
-%                 \node [anchor=west] (magnettext) at (4.5,4) {\color{white} Magnet};
-%                 \node [anchor=west] (SMA) at (6.9,2.9) {\color{white} \large SMA};
-%                 \node [anchor=west] (BLS) at (4.8,0.3) {\color{white} Bias Leaf Spring};
-%                 \node [anchor=east] (LS) at (3.1,0.3) {\color{white} Leaf Spring};
-%                 % \node [anchor=east] (magnet) at (4.15,2.55);
-%                 % \draw[->] (magnettext) edge (magnet)
-%                 % \begin{scope}[x={(image.south east)},y={(image.north west)}]
-%                 %     \draw[red,ultra thick,rounded corners] (0.48,0.80) rectangle (0.55,0.95);
-%                 \draw [-latex, ultra thick, white] (magnettext) to (4,2.55);
-%                 % \end{scope}
-%             \end{scope}
-%         }
-%             \put(37,1){\color{white}\linethickness{0.3mm}% Zoomed image
-%             \frame{\includegraphics[trim={0cm 0cm 0cm 0cm},clip,width=0.6\columnwidth]{figures/proto-full.jpg}}}
-%         \end{overpic}
-%         };
-%      \end{tikzpicture}
-%     \caption{The proof of concept of the magnetic latch system that acts as the oscillating electrical contact for the SMA coil. Here, the leaf spring also act as a linear stage for the actuator.}
-%     \label{fig:proto-closeup}
-% \end{figure}
+Here, in this proof-of-concept, the magnetic latch consists of a small magnet, with an attractive force of $150$ g, mounted on a thin leaf spring measuring $500\mu\mathrm{m}\times2.5\mathrm{mm}\times30\mathrm{mm}$. An M2 screw is used to clamp an electrically conductive wire to the magnet and acts as the ground of the electrical circuit. The magnet latches onto another ferromagnetic M2 screw which is mounted to the end-effector of the SMA actuator, as seen in \cref{fig:proto-closeup}. The SMA is supplied by \textit{Dynalloy, Inc} (Irvine, CA) and is a 90\degreeC Flexinol\textsuperscript{\textregistered} coil with wire diameter of 200 $\mu$m and an outer diameter of 1.4 mm. The coil contains around 40 coils and with a solid length of 8 mm. The SMA is mounted on a 3D printed support containing a flexure-based linear stage which supports the free end of the SMA. The linear stage is 3D printed from PLA and consists of 2 parallel leaf springs with dimensions 500 $\mu$m x 10 mm x 30 mm.
 
-% The SMA is supplied by \textit{Dynalloy, Inc} (Irvine, CA) and is a 90\degreeC Flexinol\textsuperscript{\textregistered} coil with wire diameter of 200 $\mu$m and an outer diameter of 1.4 mm. The coil contains around 40 coils and with a solid length of 8 mm. The SMA is mounted on a 3D printed support containing a flexure-based linear stage which supports the free end of the SMA. The linear stage is 3D printed from PLA and consists of 2 parallel leaf springs with dimensions 500 $\mu$m x 10 mm x 30 mm.
-
+\subsection{Sizing of the oscillator}
 % Sizing strategies (thermal model) + results
+
 \section{Validation of the Approach}
 % Validation of the approach using a case study (introduction)
 % Concept and motivation

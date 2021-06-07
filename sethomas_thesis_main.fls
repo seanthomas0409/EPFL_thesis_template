@@ -1838,6 +1838,16 @@ INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmss.fd
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmss10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/lm/ec-lmssbx10.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/fourier/ts1futs.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/fourier/ts1futs.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/fourier/ts1futs.fd
+INPUT /usr/local/texlive/2021/texmf-dist/tex/latex/fourier/ts1futs.fd
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/fourier/futr8c.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/fourier/futsy.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/fourier/fourier-ms.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/fourier/fourier-mcl.tfm
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/vf/public/fourier/futr8c.vf
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/tfm/public/fourier/fourier-orns.tfm
 INPUT ./main/ch7_case_study.tex
 INPUT ./main/ch7_case_study.tex
 INPUT ./main/ch7_case_study.tex
