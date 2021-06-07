@@ -79,6 +79,29 @@
 % Dotted line for legends
 \newcommand{\dottedrule}{ \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm}}
 
+%%%%%%%%% ANNOTATING IMAGES %%%%%%%%%%%%%
+\usepackage{tikz-imagelabels}
+
+\imagelabelset{
+   coarse grid color = red,
+   fine grid color = gray,
+   image label font = \sffamily\bfseries\small,
+   image label distance = 2mm,
+   image label back = black,
+   image label text = white,
+   coordinate label font = \sffamily\bfseries\small,
+   coordinate label distance = 2mm,
+   coordinate label back = none,
+   coordinate label text = white,
+   annotation font = \normalfont\small,
+   arrow distance = 0mm,
+   border thickness = 0.6pt,
+   arrow thickness = 0.4pt,
+   tip size = 1.2mm,
+   outer dist = 0.1cm,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{myblue}{HTML}{0072BD}
 \definecolor{mygreen}{HTML}{258F1B}
