@@ -15,6 +15,8 @@
 % \usepackage{nameref}
 % \usepackage{hyperref}
 \usepackage{cleveref}
+\usepackage{multicol}
+\usepackage{multirow}
 % \usepackage[shortlabels]{enumitem}
 % % Reduce spacing in bibliography
 % \setlength{\bibsep}{0pt plus 0.3ex}
@@ -74,10 +76,12 @@
 \DeclareRobustCommand \circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=0.4pt] (char) {#1};}}
 
+% Dotted line for legends
+\newcommand{\dottedrule}{ \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm}}
 
 %%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{myblue}{HTML}{0072BD}
-\definecolor{mygreen}{HTML}{51986C}
+\definecolor{mygreen}{HTML}{258F1B}
 \definecolor{myred}{HTML}{C4000C}
 \definecolor{myyellow}{HTML}{F2C335}
 \definecolor{myblack}{HTML}{282C34}
