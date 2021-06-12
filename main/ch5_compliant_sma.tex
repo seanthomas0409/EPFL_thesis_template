@@ -1,13 +1,121 @@
 % !TEX root = ../sethomas_thesis_main.tex
 
-\chapter{Designing Compliant SMA Actuators}
-Using topology optimization to create a compliant SMA actuator can be used to develop novel compact multi-output actuators.
-
+\chapter{Designing Actuators Powered by Compliant SMA Elements}
 \section{Introduction}
-\section{Integrated Active Elements}
-\subsection{Compliant SMA Actuators}
-\subsection{Kirigami inspired SMA Actuators}
+Smart materials, due to their integrated nature of reacting mechanically to a certain type of stimulus, have become an integral part of designing complex actuators. These materials have become an integral part of designing integrated and compact actuators. As presented in \cref{chap:design-methodology}, integrating the traditional building blocks of the tradition smart actuator can results in more compact designs. The behaviours of smart materials, however, range from simple linear behaviours to highly complex multi-physical behaviours. Thus, designing smart actuators with complex geometries are only feasible with certain types of smart materials.
 
+In the case of shape memory alloys, the shape memory effect is a complex non-linear behaviour that is reliant on multiple kind of physics. This results in active elements present in SMA actuators to often be in the shape of wire, coil or thin sheets. These 1-dimensional structures are the most common type of implementation in SMA actuators due to the fact that their behaviours when heated or cooled are more easily predicted. As stated, in practice, when complex motions are required, the actuator is composed of complex kinematic stages and a simple SMA wire or coil as shown in the work by \todocite.
+
+When taking inspiration from other more established smart materials, complex designs that still exhibit the smart behaviours of the material are often generated using algorithm as shown in the work by \todocite. Topology Optimization (TO) has been essential in designing such complex design that can take simple inputs and transform them into more complex and useful outputs. These compliant mechanisms fabricated from smart materials are compact and lightweight. However, combining this design methodology with SMAs can be quite difficult and computationally expensive to implement due to the highly non-linear nature of the Shape Memory Effect (SME).
+
+In this chapter, a robust design methodology to design compliant SMA structures for powering integrated smart actuator is presented. Furthermore, a qualitative factor is described that can be used to compare various generated SMA topologies. Using Finite Element Modelling (FEM), the various topologies are simulated and shown to exhibit the shape memory effect.
+
+\section{Designing Integrated Active Elements}
+When designing smart actuators that display complex output motions, they generally consist of 1D SMA structures such as wires coupled with complex kinematic stages that transform the simple linear motion into complex ones, as shown in the work by \todocite and \todocite. By extrapolating the methodology presented in \cref{chap:design-methodology}, it is conceivable to imagine a scenario where the active SMA elements and the kinematic stages are combined, as shown in \cref{fig:building-blocks-at}. Here, compliant structures fabricated from a monolithic block of SMA can be used to create compact actuator that no longer require a kinematic stage consisting of multiple pieces.
+\begin{figure}[h] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \input{images/chap5/hexagon-base-layer-intersect-at.tex}
+  \caption{Diagram of the adapted building blocks of the SMA actuator based on integrating the active element and the kinematic stage.}
+  \label{fig:building-blocks-at}
+\end{figure}
+
+The challenges posed by this approach consist of the complex nature of the shape memory effect. The behaviour, consisting of highly non-linear behaviour and comprised of multi-physical variables, makes it hard to predict when the complex geometries are heated or cooled. Furthermore, implementing generative algorithms that design these complex geometries, as implemented with other simpler smart materials, is difficult due to the high computational costs required to simulate the shape memory effect.
+
+\section{Designing with Topology Optimization}
+% Talk about SME
+Due to the high computational costs of simulating the shape memory effect, it is quite difficult to generate complex novel geometries even with poor mesh resolution. The basic principle of the proposed approach is to generate novel designs made of SMAs with computer-aided methods such as topology optimisation method (TOM). Here, the crux of the approach consists of abstracting the temperature-dependent effects but appropriately formulate the design problem so as to indirectly take into account the requirements of the shape memory effect.
+
+When purely optimising for strain and assuming a standard elastic material, compliant mechanisms can be designed without considering the nonlinear nature of the material. Here, as mentioned previously, the requirements of the shape memory effect consists of a certain level of deformation during lower temperatures. Thus, the optimisation, when designing the compliant structure that when exposed to a biasing element, prioritises the strain across the entire structure. As long as the material undergoes sufficient deformation, above a critical strain threshold, will exhibit the shape memory effect when heated to higher temperatures. The analysis is executed assuming small and purely elastic deformation to reply on linear finite element analysis so as to significantly reduce the computational time.
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.5\columnwidth]{images/chap5/TOM-wp.pdf}
+    \caption{Basic design problem for compliant mechanisms.}
+    \label{fig:ComplProb}
+\end{figure}
+
+\subsection{Density-Based Topology Optimization}
+The basic concept being topology optimisation consists of investigating the distribution of material inside a discretised design space while trying to improve a certain specified objective function. The design variables applied in this density-based approach optimisation are artificial densities $\ArtDen$ that describe the proportion of the material, $0<\ArtDen_\text{min} \leq \ArtDen \leq 1$, an individual domain space is filled with. The lower and upper bounds of density range are considered as \textit{full} materials representing fully empty or fully filled elements, respectively. While the densities within the range are defined as \textit{intermediate} materials. Here, this artificial density variable are made continuous to use a gradient-based solver which has the advantage of lower computational time compared to non-gradient based approaches, as shown in the work by \cite{sigmund_usefulness_2011}. In order to avoid mesh-dependent solutions and checker-board patters, the optimisation is regulated. This is achieved with a density filter that limits the length scale, $\FiltRadius$, to a minimum inside the structure, as shown in the worky by \cite{bendsoe_topology_2011}.
+
+Each iteration of the optimisation consists of the following steps. First, the filtered design variables are mapped to a material property using the Material Interpolation Scheme (MIS). This converts the artifical densities into a usable Young's Modulus. Next, the well-known Solid Isotropic Material Penalisation (SIMP), as shown in \cref{eq:SIMP} from the work by \cite{bendsoe_topology_2011}, is implemented. This scheme penalises intermediate materials so as to prevent obtaining a geometry that cannot be manufactured. This is done using a penalty facor $\PenFac$ which continuously increases throughout the optimisation.
+\begin{equation} % MIS SIMP
+  \YoungModulus_\elem = \MIS(\ArtDen_\elem) = ( \overline{\YoungModulus} - \underline{\YoungModulus} ) \ArtDen_\elem ^\PenFac + \underline{\YoungModulus},
+\label{eq:SIMP}
+\end{equation}
+with $\underline{\YoungModulus}$, $\overline{\YoungModulus}$ the lower and upper bound of $\vec{\YoungModulus} =  [\ \!\! \YoungModulus, \cdots, \YoungModulus_\NDesElem]\ \!\!^\text{T}$ respectively corresponding to the Young's modulus of an "empty" element and a completely filled one. $\NDesElem$ is the number of elements inside the domain.
+When the material properties of each element are known, the \textit{Stiffness matrix} $\StiffMat$ of the corresponding structure is constructed. Next, Finite Element Analysis (FEA) is performed to estimate the displacement $\Disp$ of each node under imposed external loads $\Load$ so as to solve the linear elasticity equation: $\StiffMat \Disp = \Load$. The chosen objective function with its associated sensitivity (gradient of the objective function with respect to the design variable) is evaluated using these, aforementioned, displacements. For the following iteration, the sensitivites can, then, be used by the solver to update the design variables. In this case, the Optimality Criteria (OC) scheme from the work by \cite{bendsoe_topology_2011} is used as the solver.
+
+One of the main advantages to this approach to designing compliant SMA elements is the fact that various Open-Source academic codes are available for implementing this structural topology optimisation as shown in the work by \cite{zhu_review_2020} and \cite{talischi_polytop_2012}. Due to ignoring the thermal dependencies of the shape memory effect, the resulting FEA used is similar to that of traditional compliant mechanisms and can thus be easily extended to such generative algorithms by simply changing the objective functions and associated sensitivity.
+
+\subsection{Topology Optimization of Compliant Mechanisms}
+The basic principle behind designing a compliant mechanism, as illustrated in \cref{fig:ComplProb}, can be formulated as : "Under an external input force and certain boundary conditions, what is the distribution of material defining the compliant mechanism that transforms the input load to a specific output one?"
+
+At the input and output points, artificial springs are added to simulate the intput work and resistance to the output displacement of the workpiece, respectively, as shown in the work by \cite{alonso_topology_2014}. In the final geometry, these springs are removed and are only present during the design process. Regarding the objective function that governs the final design of the compliant mechanism, a formulation that can be extended to Multi-Input Multi-Outputs (MIMO), is implemented based on various strain energies as shown in the work by \cite{alonso_topology_2014}.
+
+An objective function based upon the mutual strain energy between the input and output is chosen. This permits to distribute the strain throughout the structure and avoid to have only \textit{de facto} (single point) hinges responsible for the compliant behaviour. Ideally, the maximum volume of the structure should be deformed to harvest as maximum work, when the alloy is heated and experiences the shape memory effect. Here, the objective function is built using three different types of strain energies. First, there is the input strain energy $\EStrain_\text{in}$, that is present when only an input load $\Load_\text{in}$ is applied and result in some nodal displacements $\Disp_\text{in}$. Similarly, the output strain energy $\EStrain_\text{out}$, is present when only a dummy unit load $\Load_\text{out}$ is applied at the output port resulting in nodal displacements $\Disp_\text{out}$. Finally, the Mutual Potential Energy (MPE) or mutual strain energy $\EStrain_\text{mut}$ can be built with the two previous nodal displacements. The objective function is chosen as a ratio of these three energies due to its non-dimensional aspect and due to the fact that the desired input and output displacements are indirectly accounted for. Here, since the problem is formulated as a minimisation, a minus signed is placed before the chosen ratio to maximise the MPE as follows :
+\begin{equation}
+    \ObjFct = - \frac{\EStrain_\text{mut}}{\EStrain_\text{in} + \EStrain_\text{out}} = -\frac{{\Disp _\text{out}}^\text{T} \StiffMat \Disp_\text{int}}{\frac{1}{2} {\Disp_\text{out}}^\text{T} \StiffMat \Disp_\text{out} + \frac{1}{2} {\Disp_\text{in}}^\text{T} \StiffMat \Disp_\text{in}}.
+\end{equation}
+Lastly, two separate FEAs are performed to evaluate the chosen objective: $\StiffMat \Disp_\text{in} = \Load_\text{in}$ and  $\StiffMat \Disp_\text{out} = \Load_\text{out}$.
+
+The current objective governing the design of the generated compliant mechanisms made of \textit{conventional} linear material, can be extended to generating design for mechanisms made from SMAs. This is due to the fact that, as previously mentioned, the algorithm tends to distribute the strain throughout the structure which will indirectly allow a large portion of the material to be activated if made from SMA. The optimisation problem, as formulated in \cref{eq:OptProblem}, consists of the minimisation of the objective function $\ObjFct$ subject to the limitation of the infill $\Volume^{\ast}$ of the design domain's volume, with $\VolumeElem_\elem$ the volume of element $\elem$.
+
+\begin{alignat}{2} % Optimization problem
+  \label{eq:OptProblem}
+  &\underset{\vec{\ArtDen}}{\text{min}} : \quad        &&\ObjFct(\vec{\Disp_\text{in}},\vec{\Disp_\text{out}},\vec{\YoungModulus}) \notag \\
+  &\text{s.t. :}            &&  \StiffMat \Disp_\text{in} = \Load_\text{in}         \notag       \\
+  &                         &&  \StiffMat \Disp_\text{out} = \Load_\text{out}                \\
+  &                         && \Volume < \Volume^{\ast} \text{,   with } \Volume = (\sum_{\elem=1}^{\NDesElem} \ArtDen_\elem \cdot \VolumeElem_\elem) / (\sum_{\elem=1}^{\NDesElem} \VolumeElem_\elem)   \notag      \\
+  &                         && \vec{\YoungModulus} = \MIS(\vec{\ArtDen})    \quad \;     0<\ArtDen_\text{min}    \leqslant \ArtDen    \leqslant 1.     \notag
+\end{alignat}
+
+In \cref{fig:Invert_ProbFinal}, the basic design problem is displayed using the common force inverter scenario. Due to the symmetry of the problem, the domain space can be restricted to half the surface while adding rolling supports at the symmetry axis. In \cref{fig:ForceInverter_evol}, the evolution of the optimisation can be observed. Here the domain space is uniformly initialised with intermediate materials such that the volume limitation is satisfied so as to have the design converge to a solution that is only composed of full materials.
+
+\section{Benchmark problems}
+Before designing complex multi-output compliant SMA elements, the shape memory effect of the generated geometries must be validated. In this regard, a common practice is to use some traditional benchmark problems. The problems, while being simple problems, can be used to validate the generated designs using a commercially available Finite Element Modelling (FEM) software such as ANSYS\textsuperscript{\textregistered}. Using an FEM, the shape memory effect of the generated topologies can be simulated, verifying the efficiency of the algorithm for designing compliant SMA mechanisms.
+
+The proposed design method is applied to three benchmark problems : an inverter, a crimper, and a gripper. They are all fixed at their bottom and top left corners (which corresponds to ideal pivots) but each have their own input and output forces. The design problems and the resulting geometries are shown in \todocite. This half domain space has been discretised into $10^4$ elements and the design variables are initialised uniformly with a volume fraction constraint of 30\%. The stiffness of each artificial spring is equal to 0.1 and the input forces are equal to 1. When run on a Windows workstation with an Intel i7 3.6 GHz, 8-core processor and 32 GB of memory, the complete process takes less than 1 minute to converge to solution. It is important to note that the computational time would have been significantly higher if a non-linear and multi-physic analysis was executed. Due to the short computational time, this design method can be extended to 3-Dimensional problems.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/chap5/Inverter_Schematic_FinalCAD.pdf}
+    \caption{Inverter: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
+    \label{fig:Invert_ProbFinal}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \input{images/chap5/SubFigs_Inverter_Evolution_v2.tex}
+    \caption{Evolution of the inverter design throughout the optimization. The grayscale represent the value of the filtered artificial density.}
+    \label{fig:ForceInverter_evol}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/chap5/Crimper_Schematic_FinalCAD.pdf}
+    \caption{Crimper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
+    \label{fig:Crimper_ProbFinal}
+\end{figure}
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.7\columnwidth]{images/chap5/Gripper_Schematic_FinalCAD.pdf}
+    \caption{Gripper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
+    \label{fig:Gripper_ProbFinal}
+\end{figure}
+
+Here, in the hopes of validating the shape memory effect, a four time-step simulation is constructed. The four different simulated steps can be seen in \todocite. Here, the figures represent the results of the FEM simulation for each benchmark problem. The simulation consists of first applying an input displacement which generates a displacement at the output, $\varepsilon_\text{loaded}$. If the entire structure is sufficiently strained to undergo the detwinning process, as explained in chapter \todocite, the structure will keep its deformed shape when the input displacement constraint is released. However, as some areas of the compliant structure does not undergo detwinning, a portion of the strain will be lost when the constraint is released. Thus, the observed strain at the output will decrease to $\varepsilon_\text{free}$. During the third time step, the structure is heated to activate the shape memory effect and force the structure to revert back to its original shape where all the strain is recovered. Finally, the structure is allowed to cool down and return the material back to its martensitic phase.
+
+\begin{figure}[hbt!]
+    \centering
+    \input{images/chap5/BM_Inverter30_FEM.tex}
+    \caption{Results of the shape memory effect simulation of the Inverter design. Here, the displacements are calculated relatively to the design domain size $L$. The displacements observed between time steps 1 and 2 show a strain retention of $\alpha_\varepsilon$ = 79.9\% confirming the presence of the shape memory effect.}
+    \label{fig:InverterAnsysSimu}
+\end{figure}
+
+\subsection{A Qualitative Measure of the SME}
+\subsection{Validation of the methodology}
 \section{Heating Strategies}
-After a brief state of the art for heating strategies, the principle of wireless heating is extended to actuate the novel SMA actuators with complex shapes.
+\subsection{Induction Heating}
+\section{Examples of Multi-Output Compliant SMA Actuators}
+\section{Kirigami inspired SMA Actuators}
 \section{Summary and Conclusion}

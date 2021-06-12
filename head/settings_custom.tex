@@ -17,6 +17,20 @@
 \usepackage{cleveref}
 \usepackage{multicol}
 \usepackage{multirow}
+\usepackage{makecell}
+\usepackage{overpic} % picture in picture
+\usepackage{siunitx}
+\usepackage{tabu}
+\usepackage{array}
+\newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} % New centered column with variable width
+\usepackage{framed}
+% \usepackage{tikz-dimline}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{rotating}   % For sideways table
+\usepackage{lscape}
+\usepackage{afterpage}
+\usepackage{standalone} % For seperature figure tex files
 % \usepackage[shortlabels]{enumitem}
 % % Reduce spacing in bibliography
 % \setlength{\bibsep}{0pt plus 0.3ex}
@@ -32,37 +46,12 @@
 %%%%%%%%%% FLOW CHART %%%%%%%%%%%%%
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
     decorations.pathreplacing,decorations.pathmorphing,shapes,%
-    matrix,shapes.symbols}
-\tikzset{
->=stealth',
-  punktchain/.style={
-    rectangle,
-    rounded corners,
-    % fill=black!10,
-    draw=black, very thick,
-    text width=10em,
-    minimum height=3em,
-    text centered,
-    on chain},
-  line/.style={draw, thick, <-},
-  element/.style={
-    tape,
-    top color=white,
-    bottom color=blue!50!black!60!,
-    minimum width=8em,
-    draw=blue!40!black!90, very thick,
-    text width=10em,
-    minimum height=3.5em,
-    text centered,
-    on chain},
-  every join/.style={->, thick,shorten >=1pt},
-  decoration={brace},
-  tuborg/.style={decorate},
-  tubnode/.style={midway, right=2pt},
-}
+    matrix,shapes.symbols,positioning,angles,quotes}
 
 \tikzstyle{textbox} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, text width=3cm, draw=black, fill=white]
 \tikzstyle{arrow} = [thick,->,>=stealth]
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
@@ -80,6 +69,15 @@
 \newcommand{\dottedrule}{ \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm}}
 
 \newcommand{\degreeC}{$^{\circ}$C~}
+
+% Thick lines for tabular
+\makeatletter
+\newcommand{\thickhline}{%
+    \noalign {\ifnum 0=`}\fi \hrule height 1pt
+    \futurelet \reserved@a \@xhline
+}
+\newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
+\makeatother
 
 %%%%%%%%% ANNOTATING IMAGES %%%%%%%%%%%%%
 \usepackage{tikz-imagelabels}
@@ -104,6 +102,35 @@
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% Inserts a scale bar into an image
+% Optional argument 1: the colour of the bar and text
+% Argument 2: an \includegraphics command
+% Argument 3: the real world width of the image
+% Argument 4: the length of the scale bar in pixels
+% Argument 5: the length of the scale bar in mm
+\newcommand{\scalebar}[5][white]{
+ \begin{tikzpicture}
+  \node[anchor=south west,inner sep=0] (image) { #2 };
+  \begin{scope}[x={(image.south east)},y={(image.north west)}]
+   \draw [#1, line width=0.4em] (0.04,1.2em) -- node[above,inner sep=0.3em, font=\normalsize] {\SI{#5}{\milli \meter}} (#5*#4/#3+0.04,1.2em);
+  \end{scope}
+ \end{tikzpicture}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Overlay Generator - Annotated Figures v0.0.1
+% Created with http://ff.cx/latex-overlay-generator/
+% If this generator saves you time, consider donating 5,- EUR! :-)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\annotatedFigureBoxCustom{bottom-left}{top-right}{label}{label-position}{box-color}{label-color}{border-color}{text-color}
+\newcommand*\annotatedFigureBoxCustom[8]{\draw[#5,ultra thick,rounded corners, opacity=0.8] (#1) rectangle (#2);\node at (#4) [fill=#6,ultra thick,shape=circle,draw=#7,inner sep=2pt,font=\sffamily,text=#8, opacity=0.8] {\textbf{#3}};}
+%\annotatedFigureBox{bottom-left}{top-right}{label}{label-position}
+\newcommand*\annotatedFigureBox[5]{\annotatedFigureBoxCustom{#1}{#2}{#3}{#4}{#5}{white}{#5}{#5}}
+\newcommand*\annotatedFigureText[4]{\node[draw=none, anchor=south west, text=#2, inner sep=0, text width=#3\linewidth,font=\sffamily] at (#1){#4};}
+\newenvironment {annotatedFigure}[1]{\centering\begin{tikzpicture}
+\node[anchor=south west,inner sep=0] (image) at (0,0) { #1};\begin{scope}[x={(image.south east)},y={(image.north west)}]}{\end{scope}\end{tikzpicture}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \definecolor{myblue}{HTML}{0072BD}
 \definecolor{mygreen}{HTML}{258F1B}
@@ -116,3 +143,68 @@
 \definecolor{lightblue}{HTML}{367DD9}
 \definecolor{lightgrey}{HTML}{6A6A6A}
 \definecolor{darkgrey}{HTML}{1E1E1E}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%% VARIABLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Domain}{\ensuremath{\Omega}} % Design domain
+\newcommand{\ObjFct}{\gamma} % Objective function
+\newcommand{\IniOpt}[1]{\ensuremath{\widetilde{#1}^*}} % Optimal value of #1 when optimized alone
+\newcommand{\ObjFctDec}{\gamma} % Infinideciaml evaluation of the Objective function
+\newcommand{\EquFct}{h} % Equality constraint function
+\newcommand{\IneqFct}{g} % Inequality constraint function
+% \newcommand{\Pot}{\ensuremath{u}} % Function depending on the design variable (Usually a potential found with FEA)
+\newcommand{\MIS}{\text{MIS}}  % Material Interpolation Function
+\newcommand{\ArtDen}{\ensuremath{\rho}} % Artificial density
+\newcommand{\FiltArtDen}{\widetilde{\ArtDen}} % Filtered Artificial Densities
+\newcommand{\NbEQ}{NEC} % Number of equality constraints
+\newcommand{\NbINEQ}{NIC} % Number of inequality constraints
+
+\newcommand{\Volume}{\text{Vol}} %Volume of the resulting topology
+\newcommand{\PenFac}{n} % penalization factor in SIMP model
+\newcommand{\FiltRadius}{\ensuremath{r_\text{min}}} % radius of the filter (r_min usually imply a minimal lenghtscale)
+
+
+\newcommand{\NSubObj}{\text{NF}} % Number of sub-objectives
+\newcommand{\WeightSubObj}{\ensuremath{\alpha}}
+
+\newcommand{\Lagran}{L}
+\newcommand{\LagranParam}{\ensuremath{\lambda}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%% Structural %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\YoungModulus}{\text{E}} % Young modulus
+\newcommand{\PoissonRatio}{\ensuremath{\nu}} % Poisson's ratio of the material $\ArtDen_\text{min}$
+\newcommand{\Stiffness}{\text{k}} % stiffness coeficient
+\newcommand{\Load}{\text{F}} % Load
+\newcommand{\Disp}{\text{U}} % Displacements
+\newcommand{\EStrain}{\text{S}} % Strain energy
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% Finite Element Analysis %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\ShapeFct}{\ensuremath{\phi}}
+\newcommand{\StiffMat}{\text{K}}
+\newcommand{\NDesElem}{\text{NE}}
+\newcommand{\NNodes}{\text{NN}} % Number of nodes of the design elements
+\newcommand{\NEROI}{\ensuremath{\text{NE}_\text{ROI}}}
+\newcommand{\NROI}{\ensuremath{\text{N}_\text{ROI}}}
+\newcommand{\VolumeElem}{\ensuremath{V}}
+\newcommand{\LengthElem}{\ensuremath{l}}
+\newcommand{\elemROI}{r}
+\newcommand{\elem}{e}
+\newcommand{\node}{n}
+\newcommand{\elemJ}{j}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Geometry %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\thickness}{t} % Thickness of the considered plane
+\newcommand{\width}{w} % Width of the design domain
+\newcommand{\height}{h} % Height of the design domain

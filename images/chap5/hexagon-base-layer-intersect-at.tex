@@ -1,0 +1,16 @@
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip, width=0.8\textwidth]{images/chap5/hexagon-base-layer-intersect-at.pdf}};
+  % Insert a relative reference based on image dimensions
+  \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    \node[] at (0.19, 0.52) {\textcolor{white}{\large Active Element}};
+    \node[] at (0.48, 0.76) {\textcolor{white}{\large Kinematic Stage}};
+    \node[] at (0.5, 0.24) {\textcolor{white}{\large Control Stage}};
+    \node[] at (0.82, 0.5) {\textcolor{white}{\large Biasing Element}};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
