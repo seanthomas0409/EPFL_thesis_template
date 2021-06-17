@@ -369,18 +369,6 @@ As detailed in the methodology, the analytical model of the inchworm robot that 
 \label{fig:insect-gait}
 \end{figure}
 
-\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
-  \centering
-  \resizebox{0.9\columnwidth}{!}{\input{images/chap6/insect-disp.pgf}}
-  % \begin{tabular}{r@{ }l r@{ }l}
-  %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
-  % \end{tabular}
-  \caption{The displacement of the insect robot. The average speed of the robot is $1.55$ mms$^{-1}$. Here, the step line represents the state of the SMA. A high value denotes that the SMA coil is being heated and a low state denotes that the SMA coil is cooling down.}
-  \label{fig:insect-disp}
-\end{figure}
-
-Due to the design being based on flexure-based structure, the inchworm could be fabricated from a single 3D printed piece. The structure was printed from PLA filament using fused deposition fabrication based on the parameters shown in \cref{tab:design-parameters}. Due to the novel control system based on the magnetic latch, when connecting the robot to a $20$ mAh battery, the robot is able to crawl untethered , as shown in \cref{fig:insect-gait}, for an estimated $1.6$ min. When allowed to crawl on a flat surface, the average speed of the insect robot was measured to be $1.55$ mms$^{-1}$, as shown in \cref{fig:insect-disp}. The efficiency of the leg design is highly dependant on the surface; smoother surfaces cause the legs to slip and drastically changes the overall efficiency of the design.
-
 \begin{table}[hbt!]
     \centering
     \caption{The design parameters of the inchworm robot.}
@@ -398,7 +386,19 @@ Due to the design being based on flexure-based structure, the inchworm could be 
  \end{tabular}}
 \end{table}
 
-As stated, the principle advantage to the novel control system approach is the absense of sensors or micro-controllers. Using this methodology, the total weight of the robot including the battery weights $9.7$ g. The insect robot is powered using only a single SMA coil. As with most SMA actuators, the coil is heated using Joule's heating by passing a current through it. Here, the heating consists of passing a $770$ mA current for a duration of $750$ ms with a power of $1.7$ W. As shown in \cref{fig:insect-am-fem-compare}, the step length of the insect robot was measured to be $8$ mm.
+Due to the design being based on flexure-based structure, the inchworm could be fabricated from a single 3D printed piece. The structure was printed from PLA filament using fused deposition fabrication based on the parameters shown in \cref{tab:design-parameters}. Due to the novel control system based on the magnetic latch, when connecting the robot to a $20$ mAh battery, the robot is able to crawl untethered , as shown in \cref{fig:insect-gait}, for an estimated $1.6$ min. When allowed to crawl on a flat surface, the average speed of the insect robot was measured to be $1.55$ mms$^{-1}$, as shown in \cref{fig:insect-disp}. The efficiency of the leg design is highly dependant on the surface; smoother surfaces cause the legs to slip and drastically changes the overall efficiency of the design.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.9\columnwidth}{!}{\input{images/chap6/insect-disp.pgf}}
+  % \begin{tabular}{r@{ }l r@{ }l}
+  %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
+  % \end{tabular}
+  \caption{The displacement of the insect robot. The average speed of the robot is $1.55$ mms$^{-1}$. Here, the step line represents the state of the SMA. A high value denotes that the SMA coil is being heated and a low state denotes that the SMA coil is cooling down.}
+  \label{fig:insect-disp}
+\end{figure}
+
+As stated, the principle advantage to the novel control system approach is the absence of sensors or micro-controllers. Using this methodology, the total weight of the robot including the battery weights $9.7$ g. The insect robot is powered using only a single SMA coil. As with most SMA actuators, the coil is heated using Joule's heating by passing a current through it. Here, the heating consists of passing a $770$ mA current for a duration of $750$ ms with a power of $1.7$ W. As shown in \cref{fig:insect-am-fem-compare}, the step length of the insect robot was measured to be $8$ mm.
 
 Often, in the case of mobile robots, especially bio-inspired robots, the cost of transport (CoT) is calculated to compare the design and implementation. This factor allows the comparison of mobile robots with varying structures, sizes and gaits. It can be calculated using the following equation :
 \begin{equation}\label{eq:CoT}

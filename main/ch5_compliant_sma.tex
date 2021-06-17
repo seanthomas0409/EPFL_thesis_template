@@ -35,22 +35,22 @@ When purely optimising for strain and assuming a standard elastic material, comp
 \end{figure}
 
 \subsection{Density-Based Topology Optimization}
-The basic concept being topology optimisation consists of investigating the distribution of material inside a discretised design space while trying to improve a certain specified objective function. The design variables applied in this density-based approach optimisation are artificial densities $\ArtDen$ that describe the proportion of the material, $0<\ArtDen_\text{min} \leq \ArtDen \leq 1$, an individual domain space is filled with. The lower and upper bounds of density range are considered as \textit{full} materials representing fully empty or fully filled elements, respectively. While the densities within the range are defined as \textit{intermediate} materials. Here, this artificial density variable are made continuous to use a gradient-based solver which has the advantage of lower computational time compared to non-gradient based approaches, as shown in the work by \cite{sigmund_usefulness_2011}. In order to avoid mesh-dependent solutions and checker-board patters, the optimisation is regulated. This is achieved with a density filter that limits the length scale, $\FiltRadius$, to a minimum inside the structure, as shown in the worky by \cite{bendsoe_topology_2011}.
+The basic concept being topology optimisation consists of investigating the distribution of material inside a discretised design space while trying to improve a certain specified objective function. The design variables applied in this density-based approach optimisation are artificial densities $\ArtDen$ that describe the proportion of the material, $0<\ArtDen_\text{min} \leq \ArtDen \leq 1$, an individual domain space is filled with. The lower and upper bounds of density range are considered as \textit{full} materials representing fully empty or fully filled elements, respectively. While the densities within the range are defined as \textit{intermediate} materials. Here, this artificial density variable are made continuous to use a gradient-based solver which has the advantage of lower computational time compared to non-gradient based approaches, as shown in the work by \cite{sigmundUsefulnessNongradientApproaches2011}. In order to avoid mesh-dependent solutions and checker-board patters, the optimisation is regulated. This is achieved with a density filter that limits the length scale, $\FiltRadius$, to a minimum inside the structure, as shown in the work by \cite{bendsoeTopologyOptimizationTheory2013}.
 
-Each iteration of the optimisation consists of the following steps. First, the filtered design variables are mapped to a material property using the Material Interpolation Scheme (MIS). This converts the artifical densities into a usable Young's Modulus. Next, the well-known Solid Isotropic Material Penalisation (SIMP), as shown in \cref{eq:SIMP} from the work by \cite{bendsoe_topology_2011}, is implemented. This scheme penalises intermediate materials so as to prevent obtaining a geometry that cannot be manufactured. This is done using a penalty facor $\PenFac$ which continuously increases throughout the optimisation.
+Each iteration of the optimisation consists of the following steps. First, the filtered design variables are mapped to a material property using the Material Interpolation Scheme (MIS). This converts the artificial densities into a usable Young's Modulus. Next, the well-known Solid Isotropic Material Penalisation (SIMP), as shown in \cref{eq:SIMP} from the work by \cite{bendsoeTopologyOptimizationTheory2013}, is implemented. This scheme penalises intermediate materials so as to prevent obtaining a geometry that cannot be manufactured. This is done using a penalty facor $\PenFac$ which continuously increases throughout the optimisation.
 \begin{equation} % MIS SIMP
   \YoungModulus_\elem = \MIS(\ArtDen_\elem) = ( \overline{\YoungModulus} - \underline{\YoungModulus} ) \ArtDen_\elem ^\PenFac + \underline{\YoungModulus},
 \label{eq:SIMP}
 \end{equation}
 with $\underline{\YoungModulus}$, $\overline{\YoungModulus}$ the lower and upper bound of $\vec{\YoungModulus} =  [\ \!\! \YoungModulus, \cdots, \YoungModulus_\NDesElem]\ \!\!^\text{T}$ respectively corresponding to the Young's modulus of an "empty" element and a completely filled one. $\NDesElem$ is the number of elements inside the domain.
-When the material properties of each element are known, the \textit{Stiffness matrix} $\StiffMat$ of the corresponding structure is constructed. Next, Finite Element Analysis (FEA) is performed to estimate the displacement $\Disp$ of each node under imposed external loads $\Load$ so as to solve the linear elasticity equation: $\StiffMat \Disp = \Load$. The chosen objective function with its associated sensitivity (gradient of the objective function with respect to the design variable) is evaluated using these, aforementioned, displacements. For the following iteration, the sensitivites can, then, be used by the solver to update the design variables. In this case, the Optimality Criteria (OC) scheme from the work by \cite{bendsoe_topology_2011} is used as the solver.
+When the material properties of each element are known, the \textit{Stiffness matrix} $\StiffMat$ of the corresponding structure is constructed. Next, Finite Element Analysis (FEA) is performed to estimate the displacement $\Disp$ of each node under imposed external loads $\Load$ so as to solve the linear elasticity equation: $\StiffMat \Disp = \Load$. The chosen objective function with its associated sensitivity (gradient of the objective function with respect to the design variable) is evaluated using these, aforementioned, displacements. For the following iteration, the sensitivities can, then, be used by the solver to update the design variables. In this case, the Optimality Criteria (OC) scheme from the work by \cite{bendsoeTopologyOptimizationTheory2013} is used as the solver.
 
-One of the main advantages to this approach to designing compliant SMA elements is the fact that various Open-Source academic codes are available for implementing this structural topology optimisation as shown in the work by \cite{zhu_review_2020} and \cite{talischi_polytop_2012}. Due to ignoring the thermal dependencies of the shape memory effect, the resulting FEA used is similar to that of traditional compliant mechanisms and can thus be easily extended to such generative algorithms by simply changing the objective functions and associated sensitivity.
+One of the main advantages to this approach to designing compliant SMA elements is the fact that various Open-Source academic codes are available for implementing this structural topology optimisation as shown in the work by \cite{zhuDesignCompliantMechanisms2020} and \cite{talischiPolyTopMatlabImplementation2012}. Due to ignoring the thermal dependencies of the shape memory effect, the resulting FEA used is similar to that of traditional compliant mechanisms and can thus be easily extended to such generative algorithms by simply changing the objective functions and associated sensitivity.
 
 \subsection{Topology Optimization of Compliant Mechanisms}
 The basic principle behind designing a compliant mechanism, as illustrated in \cref{fig:ComplProb}, can be formulated as : "Under an external input force and certain boundary conditions, what is the distribution of material defining the compliant mechanism that transforms the input load to a specific output one?"
 
-At the input and output points, artificial springs are added to simulate the intput work and resistance to the output displacement of the workpiece, respectively, as shown in the work by \cite{alonso_topology_2014}. In the final geometry, these springs are removed and are only present during the design process. Regarding the objective function that governs the final design of the compliant mechanism, a formulation that can be extended to Multi-Input Multi-Outputs (MIMO), is implemented based on various strain energies as shown in the work by \cite{alonso_topology_2014}.
+At the input and output points, artificial springs are added to simulate the input work and resistance to the output displacement of the workpiece, respectively, as shown in the work by \cite{alonsoTopologySynthesisMultiInput2014}. In the final geometry, these springs are removed and are only present during the design process. Regarding the objective function that governs the final design of the compliant mechanism, a formulation that can be extended to Multi-Input Multi-Outputs (MIMO), is implemented based on various strain energies as shown in the work by \cite{alonsoTopologySynthesisMultiInput2014}.
 
 An objective function based upon the mutual strain energy between the input and output is chosen. This permits to distribute the strain throughout the structure and avoid to have only \textit{de facto} (single point) hinges responsible for the compliant behaviour. Ideally, the maximum volume of the structure should be deformed to harvest as maximum work, when the alloy is heated and experiences the shape memory effect. Here, the objective function is built using three different types of strain energies. First, there is the input strain energy $\EStrain_\text{in}$, that is present when only an input load $\Load_\text{in}$ is applied and result in some nodal displacements $\Disp_\text{in}$. Similarly, the output strain energy $\EStrain_\text{out}$, is present when only a dummy unit load $\Load_\text{out}$ is applied at the output port resulting in nodal displacements $\Disp_\text{out}$. Finally, the Mutual Potential Energy (MPE) or mutual strain energy $\EStrain_\text{mut}$ can be built with the two previous nodal displacements. The objective function is chosen as a ratio of these three energies due to its non-dimensional aspect and due to the fact that the desired input and output displacements are indirectly accounted for. Here, since the problem is formulated as a minimisation, a minus signed is placed before the chosen ratio to maximise the MPE as follows :
 \begin{equation}
@@ -71,51 +71,231 @@ The current objective governing the design of the generated compliant mechanisms
 
 In \cref{fig:Invert_ProbFinal}, the basic design problem is displayed using the common force inverter scenario. Due to the symmetry of the problem, the domain space can be restricted to half the surface while adding rolling supports at the symmetry axis. In \cref{fig:ForceInverter_evol}, the evolution of the optimisation can be observed. Here the domain space is uniformly initialised with intermediate materials such that the volume limitation is satisfied so as to have the design converge to a solution that is only composed of full materials.
 
-\section{Benchmark problems}
+\section{Benchmark problems}\label{sec:benchmark-problems}
 Before designing complex multi-output compliant SMA elements, the shape memory effect of the generated geometries must be validated. In this regard, a common practice is to use some traditional benchmark problems. The problems, while being simple problems, can be used to validate the generated designs using a commercially available Finite Element Modelling (FEM) software such as ANSYS\textsuperscript{\textregistered}. Using an FEM, the shape memory effect of the generated topologies can be simulated, verifying the efficiency of the algorithm for designing compliant SMA mechanisms.
 
-The proposed design method is applied to three benchmark problems : an inverter, a crimper, and a gripper. They are all fixed at their bottom and top left corners (which corresponds to ideal pivots) but each have their own input and output forces. The design problems and the resulting geometries are shown in \todocite. This half domain space has been discretised into $10^4$ elements and the design variables are initialised uniformly with a volume fraction constraint of 30\%. The stiffness of each artificial spring is equal to 0.1 and the input forces are equal to 1. When run on a Windows workstation with an Intel i7 3.6 GHz, 8-core processor and 32 GB of memory, the complete process takes less than 1 minute to converge to solution. It is important to note that the computational time would have been significantly higher if a non-linear and multi-physic analysis was executed. Due to the short computational time, this design method can be extended to 3-Dimensional problems.
+The proposed design method is applied to three benchmark problems : an inverter, a crimper, and a gripper. They are all fixed at their bottom and top left corners (which corresponds to ideal pivots) but each have their own input and output forces. The design problems and the resulting geometries are shown in \cref{fig:Invert_ProbFinal}, \cref{fig:Crimper_ProbFinal}, and \cref{fig:Gripper_ProbFinal}. This half domain space has been discretised into $10^4$ elements and the design variables are initialised uniformly with a volume fraction constraint of 30\%. The stiffness of each artificial spring is equal to 0.1 and the input forces are equal to 1. When run on a Windows workstation with an Intel i7 3.6 GHz, 8-core processor and 32 GB of memory, the complete process takes less than 1 minute to converge to solution. It is important to note that the computational time would have been significantly higher if a non-linear and multi-physic analysis was executed. Due to the short computational time, this design method can be extended to 3-Dimensional problems.
 
-\begin{figure}[h!]
+\begin{figure}[hbt!]
     \centering
-    \includegraphics[width=0.7\columnwidth]{images/chap5/Inverter_Schematic_FinalCAD.pdf}
+    \includegraphics[width=0.65\columnwidth]{images/chap5/Inverter_Schematic_FinalCAD.pdf}
     \caption{Inverter: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
     \label{fig:Invert_ProbFinal}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[hbt!]
     \centering
     \input{images/chap5/SubFigs_Inverter_Evolution_v2.tex}
     \caption{Evolution of the inverter design throughout the optimization. The grayscale represent the value of the filtered artificial density.}
     \label{fig:ForceInverter_evol}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[hbt!]
     \centering
-    \includegraphics[width=0.7\columnwidth]{images/chap5/Crimper_Schematic_FinalCAD.pdf}
+    \includegraphics[width=0.65\columnwidth]{images/chap5/Crimper_Schematic_FinalCAD.pdf}
     \caption{Crimper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
     \label{fig:Crimper_ProbFinal}
 \end{figure}
-\begin{figure}[h!]
+\begin{figure}[hbt!]
     \centering
-    \includegraphics[width=0.7\columnwidth]{images/chap5/Gripper_Schematic_FinalCAD.pdf}
+    \includegraphics[width=0.65\columnwidth]{images/chap5/Gripper_Schematic_FinalCAD.pdf}
     \caption{Gripper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
     \label{fig:Gripper_ProbFinal}
 \end{figure}
 
-Here, in the hopes of validating the shape memory effect, a four time-step simulation is constructed. The four different simulated steps can be seen in \todocite. Here, the figures represent the results of the FEM simulation for each benchmark problem. The simulation consists of first applying an input displacement which generates a displacement at the output, $\varepsilon_\text{loaded}$. If the entire structure is sufficiently strained to undergo the detwinning process, as explained in chapter \todocite, the structure will keep its deformed shape when the input displacement constraint is released. However, as some areas of the compliant structure does not undergo detwinning, a portion of the strain will be lost when the constraint is released. Thus, the observed strain at the output will decrease to $\varepsilon_\text{free}$. During the third time step, the structure is heated to activate the shape memory effect and force the structure to revert back to its original shape where all the strain is recovered. Finally, the structure is allowed to cool down and return the material back to its martensitic phase.
+Here, in the hopes of validating the shape memory effect, a four time-step simulation is constructed. The four different simulated steps can be seen in \cref{fig:InverterAnsysSimu}. Here, the figures represent the results of the FEM simulation for each benchmark problem. The simulation consists of first applying an input displacement which generates a displacement at the output, $\varepsilon_\text{loaded}$. If the entire structure is sufficiently strained to undergo the detwinning process, as explained in chapter \todocite, the structure will keep its deformed shape when the input displacement constraint is released. However, as some areas of the compliant structure does not undergo detwinning, a portion of the strain will be lost when the constraint is released. Thus, the observed strain at the output will decrease to $\varepsilon_\text{free}$. During the third time step, the structure is heated to activate the shape memory effect and force the structure to revert back to its original shape where all the strain is recovered. Finally, the structure is allowed to cool down and return the material back to its martensitic phase.
 
 \begin{figure}[hbt!]
     \centering
     \input{images/chap5/BM_Inverter30_FEM.tex}
-    \caption{Results of the shape memory effect simulation of the Inverter design. Here, the displacements are calculated relatively to the design domain size $L$. The displacements observed between time steps 1 and 2 show a strain retention of $\alpha_\varepsilon$ = 79.9\% confirming the presence of the shape memory effect.}
+    \caption{Results of the shape memory effect simulation of the Inverter design. Here, the displacements are calculated relatively to the design domain size $L$. The displacements observed between time steps 1 and 2 show a strain retention of $\alpha_\epsilon$ = 77.6\% confirming the presence of the shape memory effect.}
     \label{fig:InverterAnsysSimu}
 \end{figure}
 
+\begin{figure}[hbt!]
+    \centering
+    \input{images/chap5/BM_Crimper30_FEM.tex}
+    \caption{Results of the shape memory effect simulation of the Crimper design showing a strain retention of $\alpha_\epsilon$ = 75.2\%.}
+    \label{fig:CrimperAnsysSimu}
+\end{figure}
+
+\begin{figure}[hbt!]
+    \centering
+    \input{images/chap5/BM_Gripper30_FEM.tex}
+    \caption{Results of the shape memory effect simulation of the Inverter design showing a strain retention of $\alpha_\epsilon$ = 77.6\%.}
+    \label{fig:GripperAnsysSimu}
+\end{figure}
+
 \subsection{A Qualitative Measure of the SME}
-\subsection{Validation of the methodology}
-\section{Heating Strategies}
-\subsection{Induction Heating}
-\section{Examples of Multi-Output Compliant SMA Actuators}
-\section{Kirigami inspired SMA Actuators}
+Since the topologies generated by the algorithm are widely different consisting of varying inputs, outputs and geometries, a measure by which the results can be compared is required. The final goal, being to integrate these compliant mechanisms as the active element in a biased-spring SMA actuator, the measure should represent the degree to which work has been stored by the biasing element. This measurement factor could be formulated as a measure of the relative quantity of material activate (or detwinned) by the biasing element. This implies that the larger the value of the factor is, the more optimal the biased-actuator will perform.
+
+The amount of detwinned material in the geometry can be roughly estimated using the principle that the deformed material behaves plastically. In other words, it is the volume of the material that is able to retain its shape after the load has been released. This factor, as described in \cref{eq:strainretention}, is expressed as the strain retention factor and is defined as the amount of strain observed in the topology after the deformation load is released. This factor will vary between 0 implying non of the material has been activated and the topology retains completely back to its original shape when the load is released and 1 for a perfectly detwinned material where the entirety of the strain is retained and can only be reverted back to its original shape when heated. This strain retention factor can be calculated using :
+\begin{equation}
+    \StrainRetention = 1-\frac{\epsilon_\text{loaded}-\epsilon_\text{free}}{\epsilon_\text{loaded}},
+    \label{eq:strainretention}
+\end{equation}
+with $\epsilon_\text{loaded}$ and $\epsilon_\text{free}$ representing the domain space normalised input displacement at time step 1 and 2 respectively. It is important to note that this factor can never be equal to 1 as there is some natural elastic spring back of the material even when fully detwinned and thus, is only a qualitative measure of the shape memory capabilities of the topology. It is still an effective way to compare the different topologies presented using the benchmark problems. The FEM results of the strain retention of each benchmark problem can be seen in \cref{tab:bm-fem-results}. This principle can be further extended to more complex designs where goal is to create compliant SMA structures that can have multiple outputs using just a single input biasing element which will be presented in future sections.
+\begin{table}[hbt!]
+    \centering
+    \caption{The simulation results of the strain retention factor for each of the benchmark problems: $\boldsymbol{\mathcal{I}}$ Inverter; $\boldsymbol{\mathcal{C}}$ Crimper; $\boldsymbol{\mathcal{G}}$ Gripper}
+    \label{tab:bm-fem-results}
+    {\rowcolors{1}{black!5}{black!10}
+     \begin{tabular}{r c c c c c c}
+     \rowcolor{black} & \textbf{\color{white} $\varepsilon_\text{loaded}^x$}  & \textbf{\color{white} $\varepsilon_\text{loaded}^y$}  & \textbf{\color{white} $\varepsilon_\text{free}^x$} & \textbf{\color{white} $\varepsilon_\text{free}^y$}  & \textbf{\color{white} $\alpha_\epsilon^x$}  & \textbf{\color{white} $\alpha_\epsilon^x$} \\
+     $\boldsymbol{\mathcal{I}}$ & $0.149$ & - & $0.103$ & - & \textbf{77.6\%} & - \\
+     $\boldsymbol{\mathcal{C}}$ & $-0.061$ & - & $-0.048$ & - & - & \textbf{75.2\%} \\
+     $\boldsymbol{\mathcal{G}}$ & $0.015$ & $-0.085$ & $0$ & $-0.065$ & \textbf{77.6\%} & - \\
+ \end{tabular}}
+\end{table}
+\subsection{Experimental Validation of the Methodology}
+In the previous section, three benchmark problems were used to validate the presence of the shape memory effect of topologically optimised compliant structures made from SMAs. Furthermore, a qualitative measure was formulated so as to compare and assess the degree to which these compliant structures would be ideal in creating biased-spring SMA actuators. However, to truly verify the presence of the shape memory effect, an experimental prototype can be fabricated.
+
+For an accurate comparison between the FEM results and the experimental data, a prototype of a benchmark problem is conceived. For the sake of simplicity, the inverter problem is chosen due to the fact that there is only one input and output. When designing the inverter, ideal pivots are used. However when creating the experimental prototype, these ideal pivots are changed to a more realistic solution involving mounting holes. Based on these new boundary conditions, the inverter problem is redesigned using the proposed topology optimisation algorithm.
+
+When fabricating the prototype, the cost of machining a monolithic block of NiTiNOL was deemed unfeasible. With the advent of additive manufacturing of NiTiNOL as portrayed in the work by \todocite, the creation of such compliant mechanisms has become cheaper and more feasible. However, in this case, as the topology generative is 2-Dimensional, the inverter prototype was fabricated by laser cutting thin sheets of NiTiNOL (55.8 wt. \% Ni). This laser cut inverter structure was then sandwiched between two PMMA sheets to prevent any unwanted buckling in the third dimension, as shown in \cref{fig:inverter-proto-setup}. This ensures that the deformations observed within the structure resembles the simulation.
+
+\begin{figure}[t!]
+    \centering
+    \resizebox{\textwidth}{!}{\input{images/chap5/inverter-prototype-setup.tex}}
+    \caption{The experimental setup of the inverter prototype. The prototype is cut from a thin SMA sheet and is sandwiched between PMMA sheets to prevent buckling. The input load is applied using the pull-tester while measuring the input displacement and force. The output displacement is recorded using a microscopic camera.}
+    \label{fig:inverter-proto-setup}
+\end{figure}
+
+The advantages of such a implementation, to test the validity of the design methodology, include the reduced cost of the prototype and more importantly, ensuring that the stress and strain distribution within the 2D structure is identical to the simulated 3D structure. This implies that the output displacement of the inverter prototype will closely resemble that of the simulated structure. The main disadvantage of this implement comes from the fact that the PMMA sheets cause lots of friction with the compliant structure. This implies that force requirements at the input will be higher than expect. As we sandwich the PMMA sheets more tightly around the compliant structure, the output displacements will be more accurate while increase the friction and force requirements to create the aforementioned output displacement. Thus, a trade-off is present but the strain retention factor, as described in \cref{eq:strainretention}, is only dependent on the the displacement and not the force requirements. Thus, the prototype was fabricated to maximise the input and output fidelity rather than the force requirement. Here, a pull-tester is used to measure the displacement of the input and the force requirements.
+
+The goal of this section is to experimentally validate the proposed design methodology. The prototype of the compliant SMA benchmark problem was realised and must be compared to the results of the simulation. As described before, the strain retention factor was developed to compare the various generated topologies and to have a qualitative analysis of the structure to be used as a bias-spring SMA actuator. Thus, this factor can also be used to compare the experimental prototype of the modified inverter mechanism and its corresponding FEM simulation.
+
+\begin{figure}[hbt!]
+    \centering
+    \resizebox{0.7\textwidth}{!}{\input{images/chap5/prototype-pull-tester-forcedisp.pgf}}
+    \caption{The experimental results of the inverter prototype are obtained using a pull-tester and a strain retention of 84.3\% is observed.}
+    \label{fig:results-proto-inverter}
+\end{figure}%
+
+In \cref{fig:results-proto-inverter}, the pull-tester results can be seen. The strain retention is measured by applying an initial strain to the input of the prototype using the pull-tester. By then reversing the direction of the pull-tester and measuring the reaction force, the point at which the reaction force descends below $0$ N will define the strain that is retained by the structure after the initial load is released. We assume that as the pull-tester observes a value below $-0.2$ N, the structure has overcome the internal friction with the PMMA sheets and is now bending the input of the prototype rather than returning to its original shape. Based on the values observed using the pull-tester, a strain retention of $84.2$\% is measured as shown in \cref{tab:inverter-prototype-fem-results}. When comparing to the results of the simulation of the same modified inverter topology of $78.9$\%, the shape memory effect capabilities of topologies generated by this design approach is validated. The difference in the strain retention between the experimental and FEM results can be accounted by the friction present in the physical implementation.
+
+\begin{table}[hbt!]
+    \centering
+    \caption{Comparison between the FEM and experimental results of the modified inverter benchmark problem.}
+    \label{tab:inverter-prototype-fem-results}
+    {\rowcolors{1}{black!5}{black!10}
+     \begin{tabular}{r c c c}
+     \rowcolor{black} & \textbf{\color{white} $x_\text{loaded}$ [mm]}  & \textbf{\color{white} $x_\text{free}$ [mm]} & \textbf{\color{white} $\alpha_\epsilon$ [\%]}\\
+     FEM & 2.0 & 1.58 & 78.9 \\
+     Expt. & 2.0 & 1.68 & 84.3 \\
+ \end{tabular}}
+\end{table}
+
+\section{Proposed Induction Heating Strategy}
+Due to the complex geometries of the generated topologies, simply passing a current through the structure by attaching electrode to the ends is no longer possible. In the case of inverter prototype, electrodes must be attached at multiple points so as to allow current to flow through all the areas of the geometry.
+
+Various works have been established where surface mounted coils have been installed to function as a heating coil that raise the temperature of the SMA structures for localised heating, as shown in the work by \todocite. This can be quite cumbersome due to possible risks of delamination while the SMA contracts and dilates during actuation. Another option would be to use hot air as a medium to increase the temperature of the SMA structure, perhaps with tools such as hot air guns. These external heating structure drastically reduce the work density of the resulting actuator and are thus, rarely used in small and compact applications.
+
+Due to the complex geometry of the inverter prototype, the current paths for Joule's heating are no longer unique, nor trivial anymore. Here, in this case, multiple electrodes with multiple external wires are required to heat the structure. Thus, here, the proposed heating solution consists of a contactless, wireless strategy where a current is induced within the SMA structures using external induction coils.
+\subsection{Magnetic Induction Heating}
+The basic working principle of the proposed heating methodology and its application in the inverter mechanism can be seen in \todocite. By passing an alternating current at a high frequency is passed through the primary coil and generates a magnetic field. When any electric conductor, the SMA structure in this case, is placed inside the generated magnetic field, a secondary electric current, $\InducedCurrent$, is induced inside the structure. This induced current will generate Joule's losses, $\PJoules$, heating the SMA :
+\begin{equation}
+    \PJoules = \ResisSMA \cdot \InducedCurrent^2 = \frac{\VoltageEMF^2}{\ResisSMA}.
+\end{equation}
+The magnitude of the current is based on the electromotive force, $\VoltageEMF$, generated by the primary coil, and the effective resistance, $\ResisSMA$, of the path taken by the induced current. The coupling between the primary coil and the SMA piece, as described in \cref{eq:back_emf}, dictates the electromotive force.
+\begin{equation}
+    \label{eq:back_emf}
+    \VoltageEMF^2 = \Big(-\frac{\text{d}\TotalFlux}{\text{dt}}\Big)^2 = \Big(- 2\pi \frequency \Inductance \cdot \PrimaryCurrent \Big)^2
+\end{equation}
+where $\TotalFlux$ is the total flux linkage between the primary and SMA side, $\frequency$ is the working frequency, $\PrimaryCurrent$ is the \textit{RMS} value of the primary current and $\Inductance$ is the mutual inductance between the primary coil and the SMA structure. As a voltage source is used to power the system, the input current is maximised and the resistance of the primary coil is minimised. This is further increased by creating a resonating circuit where a capacitor is connected to the primary coil.
+
+\begin{figure}[hbt!]
+  \centering
+  \includegraphics[width=\textwidth]{images/chap5/07_final_schematic_induction.pdf}
+  \caption{Induction heating - (a) General principle, (b) 2D view of the coil designed for the deformed inverter, with the direction of the generated magnetic flux normal to the plane, (c) 3D view of the induction system for the inverter problem.}
+  \label{fig:induction_schematic}
+\end{figure}
+
+When designing the heating solution for maximum induced current, as shown in \cref{eq:back_emf}, a large working frequency is desired. However, when working with alternating currents at high frequencies, undesirable effects such as skin and proximity effects, arise which increase the resistance of the primary coil. Furthermore, the parasitic capacitance of the impedance of the coil will take over above a certain critical frequency, cancelling the inductive effect. By limiting the working frequency, a favourable balance between the losses at the primary coil and the induced current at the resonant value can be maintained. The mutual inductance between the primary coil and the SMA structure can be maximised for a large area of influence and a large number of turns. However, the area of influence cannot be increased as it is constrained by the shape of the generated SMA topology while the number of turns is limited by the associated increase in resistance which in turn reduces the magnitude of the input current. Thus, based on the application, the sizing of the primary coil comes with various trade-offs.
+
+\subsection{Fabrication and Results of Primary Coil}
+Due to the complex shape of the generated SMA topologies, the shape of the primary coil must be designed so as to induce a current path across the deformed regions of the compliant mechanism. Currently, the fabrication of the primary coil is performed by hand using nails and a wooden plate. The nails are used to create the shape based on the desired current path and a wire is wound around the nails to fabricate the coil. Once constructed, varnish is used to maintain the shape of the primary coil when the nails are removed. As shown in \cref{fig:induction-coil-freq}, two types of primary coils are constructed using $25$ turns a standard monolithic wire with a copper diameter of $0.30$mm, and another composed of $15$ turns of a Litz wire composed of $300$ strands with a diameter of $0.040$mm each. As shown in \cref{fig:induction-coil-freq}, the resistance of tbe wire increases significantly with the frequency due to the skin and proximity effects. This implies that a thinner effective cross-section is preferred, as in the case of the Litz wire.
+
+As mentioned previously, the working frequency plays an important role in this proposed heating system. A trade-off is present where a higher value increases the heating but also increase the parasitic capacitance of the coil, limiting the impedance above a critical frequency, $\freqCritMONO=17$MHz and $\freqCritLITZ=41$MHz for the coil made of monolithic and Litz wire, respectively. As shown, despite the lower inductance of the Litz coil, better heating performance is achieved due to the working frequency and higher primary current when compared to the monolithic wire.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/chap5/10_final_Coil_BodeDiagram_2.pdf}
+    \caption{Comparison of primary coil with different types of wire. As the impedance becomes mainly capacitive over its critical frequency, the inductance's values after $\freqCritMONO = 17$MHz and $\freqCritLITZ  = 41$MHz are removed for the monolithic and Litz wire respectively.}
+    \label{fig:induction-coil-freq}
+\end{figure}
+
+Here a working frequency of around $4$ Mhz has been chosen so as to ensure that it sits safely above the critical frequency. At this frequency, the inductance of the coil is $L=7.4~\mu$H and its resistance $R=0.4~\Omega$. A capacitor of $C = 230$ pF is attached in series with the primary coil to create an LC circuit with a resonating frequency $\frequency=(2\pi\sqrt{LC})^{-1} = 3.86$ MHz. Here, the input source is constructed using a half-bridge inverter based on GaN transistors (EPC$9024$). With the Litz coil, a primary current of $I= 1.5$ A is generated at the working frequency while dissipating $0.9$ W of heat. This increased temperature is negligible and implies a stable operation. However, the coil made from the monolithic wire would result in higher temperatures at the primary resulting in a change in resistance and inductance values.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/chap5/11_final_results_experiments_heating.pdf}
+    % \vspace{-0.3cm}
+    \caption{Implementation of induction heating system. When activated, it resulted in the heating of the SMA structure, reverted the deformed structure back to its original shape.}
+    \label{fig:induction-heating-temp}
+\end{figure}
+
+The \cref{fig:induction-heating-temp} illustrates the implementation of the contactless inductive heating system for the compliant SMA prototype as well as the temperature distribution across the SMA structure using the FLUKE$\textsuperscript \textregistered$ Ti$25$ thermal camera. A glass plate is placed between primary coil and the SMA to avoid any heating through convection. Using the proposed heating system, the SMA inverter prototype was heated above $120^{\circ}$C validating the system as an active heating system. Furthermore, as the structure reverts back to its original shape, this further validates the presence of the shape memory effect.
+
+In this implementation of the prototype, the penetration depth does not limit the excitation frequency as the structure is composed of a thin film of SMA. In the case of a working frequency of $10$ MHz, the penetration depth is larger than the $100~\mu$m thick SMA sheet. However, in a real world application where the compliant structure is created from a thick monolithic block of SMA or 3D printed, the penetration depth would be an additional parameter to account for when sizing the input frequency.
+
+\section{Designing Multi-Output Compliant SMA Actuators}
+The proposed design methodology consisting of using topology optimisation to design compliant SMA mechanisms was validated using a FEM simulations and experimental results using standard benchmark problems. Furthermore, as the generative design algorithm used made abstraction of the shape memory effect, the designs of the compliant mechanisms were generated with a relatively low computational time. Due to the cost of NiTiNOL and advanced manufacturing techniques, prototype of the proposed design could not be fabricated but advanced additive manufacturing methods that avoid waste of material such subtractive methods such as machining has become possible as shown in the work by \todocite and \todocite. With these techniques, complex compliant SMA actuators could be fabricated in the near future. Thus, the proposed design methodology could be a great tool in creating novel biased-spring SMA actuators.
+
+\subsection{Generated Multi-Output SMA Actuators}
+In this section, various novel multi-output actuators fabricated from compliant SMA topologies are generated based on the proposed design methodology. These topologies were, similar to the benchmark problems in \cref{sec:benchmark-problems}, simulated and their corresponding strain retention factors were measured, as shown in \cref{fig:simo-results}. The \textit{rhombus} structure is a multi-directional mechanism where the axes move in opposing directions. They elongate in the y-axis and contract in the x-axis. The other structures, named the \textit{$8$-point mandrel}, the \textit{$4$-point mandrel $\Xsymbol$} and the \textit{$4$-point mandrel $+$}, perform as outer-mandrels for gripping objects. The evolution of the topology during the generative optimisation process for the \textit{$4$-point mandrel $\Xsymbol$} is shown in \cref{fig:TopologyEvolution-mandrel}. In a similar way to the benchmark problems, these topologies are generated while making abstraction of the shape memory effect and while neglecting the nonlinear nature of the alloy so as to drastically reduce the computational time, which took less than $2$ min per design.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{images/chap5/06_final_evolve_mandrel_2.pdf}
+    \caption{$4$-point Mandrel $\Xsymbol$ : Evolution throughout the optimization. The grayscale represents the value of the filtered artificial density. The input force is shown in red and the output force in green.}
+    \label{fig:TopologyEvolution-mandrel}
+\end{figure}
+
+\newpage
+\begin{figure}[ht!]
+    \centering
+    \includegraphics[width=\textwidth]{images/chap5/05_final_SIMO_schematics.pdf}
+    \caption{Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state. The input forces are shown in red and the output forces in green. The artificial springs present in the topology optimisation are shown in brown while the bias-springs of the actuators are shown in grey.}
+    \label{fig:simo-results}
+\end{figure}
+\newpage
+
+Using the FEM simulation of these multi-output compliant mechanisms and the strain retention factor, the presence of the shape memory effect within the generated topologies is validated. A fixed input strain of $10\%$ is applied at each input, where the bias-spring is attached, to have comparable results for each design. The results of the FEM simulation of the design are presented in \cref{tab:simo-results}. The obtained strain retention factor for each actuator topology shows that the majority fo the strain applied by the biasing spring is retained and will be recovered when heated using the proposed induction heating methodology. This implies that this design methodology could be an attractive tool for designing novel multi-output biased-spring SMA actuators.
+
+\begin{table}[hbt!]
+    \centering
+    \caption{Comparison between the FEM and experimental results of the modified inverter benchmark problem.}
+    \label{tab:simo-results}
+    \input{images/chap5/table-simo-results.tex}
+\end{table}
+
+\section{Kirigami inspired Compliant SMA Actuators}
+Using topology optimization, various compliant SMA actuators can be designed with the intent to combine the functions of the kinematic stage and the active element. However, due to the current limitations of fabrication and its costs, the feasibility of such an actuator, in the current sense, is unlikely. As additive manufacturing of SMAs becomes more accessible, the advantages of designing compliant SMA structures such as increasing the overall work density of the actuator, will become more apparent and attractive.
+
+Kirigami, the Japanese art of cutting paper to create intricate structure, has gained traction in various engineering fields to create stretchable structure as shown in the work by \todocite. While designing 3D compliant structure made of SMA is expensive, this kirigami approach can be extended to SMAs to create compliant structures that when cut in a specific manner, can exhibit surprising mechanical behaviours.
+
+When designing actuators, a key detail to keep in mind is the life cycle of the device. In common industrial applications, the number of cycles to fatigue of traditional grippers can exceed $10^6$ cycles. In the case of SMA actuators, this number is much lower and is directly related to the structural fatigue of the material. The determining factors regarding the fatigue life of SMAs are the strain amplitude and the type of strain applied to the material. The work by \cite{runcimanEquivalentStrainCoffin2011} looks at the fatigue lifetime of NiTiNOL based on different loading conditions, such as torsion, tension and bending. They conclude that SMAs tend to have a much longer life cycle when loading under torsion or bending when compared to tension. The results show that with a fixed strain amplitude of 1\%, in tension, the number of cycles to failure is less than $10^3$ whereas in bending or torsion, the number of cycles to failure is around $10^5$.
+
+The availability of NiTiNOL in different geometries such as springs, wires and sheets, has allowed the creation of multiple classes of SMA actuators that exploit their respective advantages. As mentioned in previous sections, the simplest approach would be to use the alloy in the shape of a wire paired with a biasing spring to drive an actuator where the stress and strain of the material corresponds directly to the stroke and force output of the actuator. In these cases, SMA wires are elongated under pure traction and are then heated to recover the strain and provide the force output as shown in the works by \cite{kyungDesignMicrogripperMicromanipulation2008}, \cite{welschVacuumGripperSystem2018}, \cite{haibinModelingGraspingForce2018}, and \cite{andrianesisDevelopmentControlMultifunctional2015}. Here, the stroke of the actuator can not exceed 1\% without compromising its fatigue life. Thus, in cases where a larger stroke is required, the geometry of the wire is adapted to form a spring which can provide stroke above 100\% as implemented in the works by \cite{ikutaMicroMiniatureShape1990} and \cite{zhakypovOrigamiInspiredReconfigurableSuction2018}. Here, the material no longer deforms in traction but rather in torsion, thereby increasing its fatigue life but while compromising the force output. This implies that there is a trade-off to be made between the force output, and the stroke and fatigue life.
+
+Since SMAs are available in the form of sheets which can be machined using laser cutters into complex geometries, different kinds of SMA actuator systems exploit the longer fatigue life of SMAs in flexion to create novel grippers as shown in the works by \cite{kohlSMAMicrogripperSystem2002}, \cite{benardThinfilmShapememoryAlloy1998}, \cite{zhakypovOrigamiInspiredReconfigurableSuction2018}. The major advantage to using sheets instead of wires is the fact that they provide a much higher force output. The difference in force output between sheets and wires can be reduced by placing multiple wires in parallel to generate forces in the same order of magnitude as sheets. Thus in applications, where a higher force output is required, the use of SMA sheets or multiple wires in parallel can be a viable solution.
+
+When working with thin wires, placing them in parallel to augment the overall force output also increases the complexity of the system greatly. The manufacturing and assembly of such a system can be difficult. Furthermore, it is also impossible to uniformly deform all the wires equally, resulting in some wires being inactive during the shape memory effect. Thus, in cases where a higher force output is required, the design space can become limited to just using sheets. For maximum force output, the sheet can be elongated in pure traction but only up to about 1\%. In applications where a large stroke and force output is required, the SMA sheets in its original state is no longer viable. Traditionally, this limitation is overcome by adding a kinematic stage to amplify the stroke of the SMA actuator but comes with the cost of reduced overall work density of the final actuator.
+
+In this section, a novel approach will look at a new kirigami-based approach to designing SMA sheets to obtain an actuator that can provide higher force output while being able to also provide high strokes. Kirigami is a variation of origami that involves the cutting of the substrate to create different shapes and behaviours. The pattern presented in this paper is based on the work by \cite{shyuKirigamiApproachEngineering2015} where a nanocomposite substrate is patterned to create a stretchable element. This approach allows an SMA sheet to reach strains over 100\% without losing its capacity to deliver a high force output.
+
+\subsection{Proposed Patterns}
+\subsection{Implementation}
+
 \section{Summary and Conclusion}
+In this chapter, a design methodology, consisting of integrating the kinematic stage and active element to create a compact SMA actuator, is proposed. Using topology optimization and a novel approach to generate topologies while making abstraction of the shape memory effect is detailed. By implementing such a generative algorithm, the computational time to design novel topologies has been drastically reduced. This has the implication to extending such a design algorithm to 3D structures.
+
+The design approach using topology optimisation was tested using benchmark problems with a standard input and output parameters to create various topologies that can be fabricated from SMAs. The presence of the shape memory effect and the feasibility of the topologies to be used in SMA actuators was validated using a FEM simulation and an experimental prototype. Furthermore, a qualitative measure called the strain retention factor was proposed as a means to compare the various topologies that can be generated using such an approach.
+
+As these novel structures can be complex, the heating of such geometries using simple Joule's heating is no longer trivial. A novel heating solution was proposed and fabricated so as to activate the shape memory effect of the fabricated topologies. Furthermore, using this design approach and generative design algorithm, various multi-output biased-spring SMA actuators, that can be actuated using only a single biasing spring, were proposed.
+
+These SMA structures were designed within a 2D space with the intention of fabricating the structure from a 3D monolithic block of SMA. As the design algorithm was implemented with a volume constraint to preserve material, fabricating the structure with subtractive methods such as machining will result in large amounts of wasted material. However, due to the current cost limitations of additive manufacturing processes that exist for SMA, the feasibility of such a compliant SMA structure is limited.
+
+Lastly, the same methodology where structure composed of complex patterns that exhibit surprising mechanical behaviours, can be be seen in kirigami-inspired structures. By extending this same design principle to SMA actuators, patterns can be cut into thin SMA sheets such that high stroke actuators can be fabricated without the need for cumbersome external kinematic stages.
+
+Using this design principle, compliant SMA active elements can be designed and fabricated so as to appropriate the functions of the kinematic stage within the SMA actuator. This allows for the creation of compact SMA actuators that retain their high work energy density.

@@ -1,0 +1,41 @@
+% !TEX root = ../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\usepackage{tikz-imagelabels}
+\imagelabelset{
+   coarse grid color = red,
+   fine grid color = gray,
+   image label font = \sffamily\bfseries\large,
+   image label distance = 2mm,
+   image label back = black,
+   image label text = white,
+   coordinate label font = \sffamily\bfseries\large,
+   coordinate label distance = 2mm,
+   coordinate label back = none,
+   coordinate label text = white,
+   annotation font = \normalfont\small,
+   arrow distance = 0mm,
+   border thickness = 0.6pt,
+   arrow thickness = 0.4pt,
+   tip size = 1.2mm,
+   outer dist = 0.1cm,
+}
+
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0){
+        \begin{annotationimage}{}{images/chap5/prototype-setup-new5.pdf}
+            \draw[annotation left = {{\large PMMA plates} at 0.4}] to (0.2,0.4);
+            \draw[annotation left = {{\large Pull-tester} at 0.8}] to (0.1,0.8);
+            \draw[annotation right = {{\large SMA} at 0.5}] to (0.86,0.5);
+            \draw[annotation right = {{\large PMMA plates} at 0.3}] to (0.94,0.3);
+        \end{annotationimage}
+    };
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+        \draw [-{stealth}{stealth}{stealth}, color=white, ultra thick](0.7,0.8) --  node[below, sloped] {\Large \color{white}Input} (0.7,0.95);
+        \draw [-{stealth}{stealth}{stealth}, color=white, ultra thick](0.64,0.22) --  node[below, sloped,rotate=180] {\Large \color{white}Output} (0.64,0.07);
+    \end{scope}
+\end{tikzpicture}%
+\end{document}

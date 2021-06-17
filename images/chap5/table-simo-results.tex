@@ -1,0 +1,25 @@
+% !TEX root = ../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\begin{document}
+\renewcommand{\arraystretch}{1.75}
+ \begin{tabular}{P{1.5cm} l l l l c}
+ \rowcolor{black} & \textbf{\color{white} $\varepsilon_\text{loaded}^x$}  & \textbf{\color{white} $\varepsilon_\text{loaded}^y$} & \textbf{\color{white} $\varepsilon_\text{free}^x$} & \textbf{\color{white} $\varepsilon_\text{free}^y$} & \textbf{\color{white} $\alpha_\epsilon^x$}\\
+
+ \rowcolor{black!5} & \circled{1} : 0.051 & \circled{1} : 0 & \circled{1} : 0.042 & \circled{1} : 0 & \\
+ \rowcolor{black!5} \parbox[t]{2mm}{\multirow{-2}{*}{\rotatebox[origin=c]{90}{Rhombus}}} & \circled{2} : 0 & \circled{2} : 0.062 & \circled{2} : 0 & \circled{2} : 0.045 & \multirow{-2}{*}{\textbf{67.9\%}}\\
+
+  \rowcolor{black!10} & \circled{1} : -0.057 & \circled{1} : 0 & \circled{1} : 0.037 & \circled{1} : 0 & \\
+  \rowcolor{black!10} & \circled{2} : -0.057 & \circled{2} : -0.05 & \circled{2} : -0.038 & \circled{2} : -0.034 & \\
+  \rowcolor{black!10} \parbox[t]{2mm}{\multirow{-3}{*}{\rotatebox[origin=c]{90}{\makecell{$8$-Point\\Mandrel}}}} & \circled{3} : 0 & \circled{3} : -0.085 & \circled{3} : 0 & \circled{3} : -0.058 & \multirow{-3}{*}{\textbf{74.7\%}}\\
+
+  \rowcolor{black!5} \rule{0pt}{1.25cm}\parbox[t]{2mm}{\rotatebox[origin=c]{90}{\makecell{$4$-Point\\Mandrel $\Xsymbol$}}}  & -0.029 & -0.022 & -0.023 & -0.017 & \textbf{81.4\%}\\[0.75cm]
+
+  \rowcolor{black!10} \rule{0pt}{1cm} & \circled{1} : 0.051 & \circled{1} : 0 & \circled{1} : 0.042 & \circled{1} : 0 & \\
+  \rowcolor{black!10} \parbox[t]{2mm}{\multirow{-2}{*}{\rotatebox[origin=c]{90}{\makecell{$4$-Point\\Mandrel $+$}}}} & \circled{2} : 0 & \circled{2} : 0.062 & \circled{2} : 0 & \circled{2} : 0.045 & \multirow{-2}{*}{\textbf{68\%}}\\[0.5cm]
+\end{tabular}
+% }
+\renewcommand{\arraystretch}{1}
+\end{document}

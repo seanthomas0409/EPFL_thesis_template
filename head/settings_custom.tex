@@ -147,6 +147,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%% VARIABLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\StrainRetention}{\ensuremath{\alpha_\epsilon}} % Strain
 \newcommand{\Domain}{\ensuremath{\Omega}} % Design domain
 \newcommand{\ObjFct}{\gamma} % Objective function
 \newcommand{\IniOpt}[1]{\ensuremath{\widetilde{#1}^*}} % Optimal value of #1 when optimized alone
@@ -208,3 +209,26 @@
 \newcommand{\thickness}{t} % Thickness of the considered plane
 \newcommand{\width}{w} % Width of the design domain
 \newcommand{\height}{h} % Height of the design domain
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%% Induction heating %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\VoltageEMF}{\ensuremath{V_\text{emf}}} % Back emf as a voltage drop
+\newcommand{\TotalFlux}{\ensuremath{\Psi}} % Total flux seen by SMA
+\newcommand{\frequency}{\ensuremath{f}} % Primary side frequency
+\newcommand{\Inductance}{\ensuremath{L}} % Inductance of the flux linkage between SMA and primary coil
+\newcommand{\ResisSMA}{\ensuremath{R_\text{SMA}}} %Effective resistance of the SMA
+\newcommand{\InducedCurrent}{\ensuremath{I_\text{induced}}} %Indued current
+\newcommand{\PJoules}{\ensuremath{P_\text{Joules}}} % Joules losses
+\newcommand{\PrimaryCurrent}{\ensuremath{I_\text{prim}}} % Primary current
+\newcommand{\AreaCoil}{\ensuremath{A}} % Effective area covered by the coil
+\newcommand{\Nturns}{\ensuremath{N}} % number of turns
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Miscellaneous %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Xsymbol}{\mathbin{\protect\rotatebox[origin=c]{45}{$+$}}} % Used to define the X type of mandrel
+
+\newcommand{\freqCritMONO}{\ensuremath{\frequency_c^\text{mono}}} % critical frequency for monolithic wire
+\newcommand{\freqCritLITZ}{\ensuremath{\frequency_c^\text{litz}}} % critical frequency for Litz wire
