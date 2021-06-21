@@ -71,7 +71,7 @@ The current objective governing the design of the generated compliant mechanisms
 
 In \cref{fig:Invert_ProbFinal}, the basic design problem is displayed using the common force inverter scenario. Due to the symmetry of the problem, the domain space can be restricted to half the surface while adding rolling supports at the symmetry axis. In \cref{fig:ForceInverter_evol}, the evolution of the optimisation can be observed. Here the domain space is uniformly initialised with intermediate materials such that the volume limitation is satisfied so as to have the design converge to a solution that is only composed of full materials.
 
-\section{Benchmark problems}\label{sec:benchmark-problems}
+\section{Testing using Benchmark problems}\label{sec:benchmark-problems}
 Before designing complex multi-output compliant SMA elements, the shape memory effect of the generated geometries must be validated. In this regard, a common practice is to use some traditional benchmark problems. The problems, while being simple problems, can be used to validate the generated designs using a commercially available Finite Element Modelling (FEM) software such as ANSYS\textsuperscript{\textregistered}. Using an FEM, the shape memory effect of the generated topologies can be simulated, verifying the efficiency of the algorithm for designing compliant SMA mechanisms.
 
 The proposed design method is applied to three benchmark problems : an inverter, a crimper, and a gripper. They are all fixed at their bottom and top left corners (which corresponds to ideal pivots) but each have their own input and output forces. The design problems and the resulting geometries are shown in \cref{fig:Invert_ProbFinal}, \cref{fig:Crimper_ProbFinal}, and \cref{fig:Gripper_ProbFinal}. This half domain space has been discretised into $10^4$ elements and the design variables are initialised uniformly with a volume fraction constraint of 30\%. The stiffness of each artificial spring is equal to 0.1 and the input forces are equal to 1. When run on a Windows workstation with an Intel i7 3.6 GHz, 8-core processor and 32 GB of memory, the complete process takes less than 1 minute to converge to solution. It is important to note that the computational time would have been significantly higher if a non-linear and multi-physic analysis was executed. Due to the short computational time, this design method can be extended to 3-Dimensional problems.
@@ -251,14 +251,14 @@ In this section, various novel multi-output actuators fabricated from compliant 
     \label{fig:TopologyEvolution-mandrel}
 \end{figure}
 
-\newpage
+% \newpage
 \begin{figure}[ht!]
     \centering
     \includegraphics[width=\textwidth]{images/chap5/05_final_SIMO_schematics.pdf}
     \caption{Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state. The input forces are shown in red and the output forces in green. The artificial springs present in the topology optimisation are shown in brown while the bias-springs of the actuators are shown in grey.}
     \label{fig:simo-results}
 \end{figure}
-\newpage
+% \newpage
 
 Using the FEM simulation of these multi-output compliant mechanisms and the strain retention factor, the presence of the shape memory effect within the generated topologies is validated. A fixed input strain of $10\%$ is applied at each input, where the bias-spring is attached, to have comparable results for each design. The results of the FEM simulation of the design are presented in \cref{tab:simo-results}. The obtained strain retention factor for each actuator topology shows that the majority fo the strain applied by the biasing spring is retained and will be recovered when heated using the proposed induction heating methodology. This implies that this design methodology could be an attractive tool for designing novel multi-output biased-spring SMA actuators.
 
