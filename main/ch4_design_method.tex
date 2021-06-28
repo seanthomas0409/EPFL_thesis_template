@@ -1,6 +1,6 @@
 % !TEX root = ../sethomas_thesis_main.tex
 
-\chapter{Sizing Methodology for Integrated SMA Actuators}\label{chap:design-methodology}
+\chapter{Sizing Methodology of Biasing Kinematics Stages for SMA Actuators}\label{chap:design-methodology}
 % In this chapter, a novel design methodology is present. Here, the traditional SMA actuators are adapted such that the various building blocks presented in \cref{chap:sma-actuator-design} are integrated together. The basic working principle of the new design methodology consists of taking the traditional building blocks of SMA actuator design and create novel building blocks that are combined to create more integrated solutions. This method allows the design of SMA actuators that are more integrated and further improves the, already, high work volume density of the smart material. Furthermore, the modelling techniques employed in \cref{chap:sma-model} are adapted based on the novel design methodology such that the novel systems described can be adequately sized for any application.
 
 % Goal : Show a general way to size SMA actuators with novel biasing elements
@@ -65,7 +65,7 @@ In the case of grippers and mesoscale actuators where the SMA element is passive
 % Combining biasing element and motion conversion system
 In \cref{sec:simplified-sma-model}, a simplified model of the SMAs are used to size the active element for bias-spring and antagonistic SMA actuators. In the traditional sizing strategy, a simplified linear model of the SMA and the curve of the spring are used to find the operating points of the actuator which is represented by the intersection of the two curves. This simplification allows a relatively simpler sizing of the components by abstracting the complex nonlinear behaviours of the shape memory effect.
 
-\subsection{Passive Biasing Compliant Mechanisms}
+\subsection{Passive Biasing Compliant Mechanisms}\label{subsec:passive-biasing-compliant-mech}
 % Adding complex systems to antagonistic SMA pairs
 The compliant mechanism, as mentioned previously, acts as the biasing element and as the kinematic stage that produces the desired actuator motion. Here, the basic principle is that the inherent stiffness of the compliant flexure mechanism is harnessed to pre-load the SMA for activation. In this case, at lower temperatures, the SMA is deformed using the energy stored in the compliant mechanism while at higher temperatures, the strain recovered by the shape memory effect is used to deform the compliant mechanism. Based on the design of the compliant mechanism, the SMA actuator can be made to actuate reversibly in a single degree of freedom while being rigid in the others.
 
@@ -214,7 +214,7 @@ Using this principle, if the mechanism is designed such that  $\mathbb{X}_\text{
 \end{table}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Integration of Compliant Mechanisms in Antagonistic SMA Actuators}
+\subsection{Integration of Compliant Mechanisms in Antagonistic SMA Actuators}\label{subsec:design-methodology-antagonistic}
 
 The concept of augmenting traditional bias-spring SMA actuators with compliant mechanisms can be extended to Antagonistic SMA actuators. Traditionally, these actuators consist of a pair of active SMA elements where the SMAs are heated and cooled alternately. These actuators are relatively more complex due to the nonlinear nature of the SME. But, antagonistic SMA actuators have the advantage of an additional degree of freedom during activation. As the first SMA is heated, the antagonistic SMA is deformed and activated. Similarly, only upon heating the antagonistic SMA will the actuator be actuated in the opposite direction.
 

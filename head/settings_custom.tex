@@ -20,6 +20,7 @@
 \usepackage{multirow}
 \usepackage{makecell}
 \usepackage{overpic} % picture in picture
+\usepackage{pict2e} % For the polygon function in overpic
 \usepackage{siunitx}
 \usepackage{tabu}
 \usepackage{array}
@@ -32,6 +33,7 @@
 \usepackage{lscape}
 \usepackage{afterpage}
 \usepackage{standalone} % For seperature figure tex files
+
 % \usepackage[shortlabels]{enumitem}
 % % Reduce spacing in bibliography
 % \setlength{\bibsep}{0pt plus 0.3ex}
@@ -66,8 +68,6 @@
 \DeclareRobustCommand \circled[1]{\tikz[baseline=(char.base)]{
             \node[shape=circle,draw,inner sep=0.4pt] (char) {#1};}}
 
-% Dotted line for legends
-\newcommand{\dottedrule}{ \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm} \rule[2pt]{1.5pt}{0.5mm}}
 
 \newcommand{\degreeC}{$^{\circ}$C~}
 
@@ -79,6 +79,20 @@
 }
 \newcolumntype{"}{@{\hskip\tabcolsep\vrule width 1pt\hskip\tabcolsep}}
 \makeatother
+
+%%%%%%%%% FIGURE LEGENDS %%%%%%%%%%%%%
+
+% Dotted line for legends
+\newcommand{\dottedrule}{ \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm}}
+
+\newcommand{\dhorline}[3][0]{%
+    \tikz[baseline]{\path[decoration={markings,
+      mark=between positions 0 and 1 step 2*#3
+      with {\node[fill, circle, minimum width=#3, inner sep=0pt, anchor=south west] {};}},postaction={decorate}]  (0,#1+1.5pt) -- ++(#2,0);}}
+\newcommand{\dvertline}[3][0]{%
+    \tikz[baseline]{\path[decoration={markings,
+      mark=between positions 0 and 1 step 2*#2
+      with {\node[fill, circle, minimum width=#2, inner sep=0pt, anchor=south west] {};}},postaction={decorate}] (0, #1) -- ++(0,#3);}}
 
 %%%%%%%%% ANNOTATING IMAGES %%%%%%%%%%%%%
 \usepackage{tikz-imagelabels}
