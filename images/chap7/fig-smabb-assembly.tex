@@ -1,0 +1,15 @@
+% !TEX root = ../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{annotationimage}{width=0.25\textwidth}{images/chap7/Gripper rendu.JPG}
+ \draw[annotation left = {\begin{tabular}{r} Limit \\ Switch \end{tabular} at 0.8}] to (0.45,0.8);
+ \draw[annotation left = {Jaw at 0.15}] to (0.22,0.15);
+ \draw[annotation right = {\begin{tabular}{l} SMA Prestretching \\ Stage \end{tabular} at 0.42}] to (0.7,0.42);
+ \draw[annotation right = {\begin{tabular}{l} Bistable\\Layer\end{tabular} at 0.6}] to (0.85,0.6);
+ \draw[annotation left = {SMA Coil at 0.65}] to (0.165,0.65);
+ \draw[annotation right = {Lever Arm at 0.87}] to (0.7,0.87);
+\end{annotationimage}
+\end{document}

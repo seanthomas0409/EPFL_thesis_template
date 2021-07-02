@@ -1,0 +1,28 @@
+% !TEX root = ../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+% \newcommand{\microm}{$\mu$m}
+\begin{document}
+\def\arraystretch{1.2}
+{\rowcolors{1}{black!10}{black!5}
+\begin{tabular}{rrl}
+\hline
+\rowcolor{black}                     & \textbf{\color{white}Parameter}       & \textbf{\color{white}Value}\\
+\cellcolor{black!10}  & $E$         & 220 GPa      \\
+\cellcolor{black!10}   \multirow{-2}{*}{Material (B\"{o}hler K390)}                  & $\sigma_y$      & 2300 MPa     \\
+Structure Width        & $b$             & 10 mm        \\
+Preloading Stage       & $\Delta l$       & 1.25 mm      \\
+          & $h$             & 150 $\mu$m   \\
+\cellcolor{black!5}      & $L$             & 40 mm        \\
+\multirow{-3}{*}{Buckled Beam}     & $p$             & 2 mm         \\
+           & $h_p$           & 60 $\mu$m    \\
+\cellcolor{black!10}                   & $L_p$           & 11.2 mm      \\
+\multirow{-3}{*}{Input Pivot}                      & $K_\textrm{in}=K_p$    & 28.3 Nmm/rad \\
+           & $r$             & 14 mm        \\
+\cellcolor{black!5}    \multirow{-2}{*}{Jaw Guidance} & $K_\textrm{out}$       & 205 Nmm/rad  \\
+\cellcolor{black!10}      & ${\varepsilon }_0$  & 12.8         \\
+\cellcolor{black!10}  \multirow{-2}{*}{Relative Stiffness} & ${\varepsilon }_l$  & 1.77         \\
+\end{tabular}}
+\def\arraystretch{1.5}
+\end{document}

@@ -1,0 +1,26 @@
+% !TEX root = ../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\resizebox{0.9\columnwidth}{!}{\input{images/chap7/smabb-sizing-adapted3.pgf}}};
+	% Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+        \node[] at (0.320,0.823) {\footnotesize\bigcircled{2}};
+        \node[] at (0.695,0.555) {\footnotesize\bigcircled{1}};
+        \node[] at (0.450,0.355) {\footnotesize\bigcircled{$1^\prime$}};
+        \node[rotate=55] at (0.455,0.815)
+        {\footnotesize Snap-through};
+        % \path[tips, ->, color=mygreen] (0.5,0.5);
+        \draw[->,>={LaTeX[scale=1.5]},draw opacity=0, color=mygreen] (0.5815,0.70) -- (0.581,0.701);
+        \draw[->,>={LaTeX[scale=1.5]},draw opacity=0, color=mygreen] (0.4106,0.671) -- (0.410,0.67);
+        \draw[->,>={LaTeX[scale=1.5]},draw opacity=0, color=mygreen] (0.3723,0.75) -- (0.372,0.751);
+        \draw[->,>={LaTeX[scale=1.5]},draw opacity=0, color=mygreen] (0.4457,0.481) -- (0.446,0.48);
+    % For old adapted graph
+    % \filldraw[black] (0.355,0.783) circle (1.5pt) node[anchor=east] {\circled{2}};
+    % \filldraw[black] (0.646,0.58) circle (1.5pt) node[anchor=north west] {\circled{1}};
+    \end{scope}
+  \end{tikzpicture}
+\end{document}

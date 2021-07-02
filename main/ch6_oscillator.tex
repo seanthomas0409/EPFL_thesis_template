@@ -1,6 +1,6 @@
 % !TEX root = ../sethomas_thesis_main.tex
 
-\chapter{Integrating Control Systems into SMA Actuators}
+\chapter{Integrating Control Systems into SMA Actuators}\label{chap:integrated-control}
 % Here, in this chapter, a novel control mechanical control strategy and SMA actuator is showcased and studied.
 
 % Goal : Present the principle of integrated control systems in SMA Actuators
@@ -72,7 +72,7 @@ As mentioned earlier, using a flexure-based mechanism permits the omission of a 
 \end{equation}
 where $K_s$ is the rigidity of the leaf spring which depends on the dimensions of the cantilever beams and can be calculated using the analytical model described in the works by \cite{rubbertIsotropicSpringsBased2016} and \cite{heneinParallelSpringStages1998}.
 
-\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \begin{tikzpicture}
     \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
@@ -83,7 +83,7 @@ where $K_s$ is the rigidity of the leaf spring which depends on the dimensions o
   \label{fig:proto-full}
 \end{figure}
 
-\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \begin{annotationimage}{trim={0 0cm 0 20cm},clip, width=0.75\textwidth}{images/chap6/proto-closeup.jpg}
    \draw[annotation right = {SMA Coil at 0.6}] to (0.85,0.48);
@@ -119,7 +119,7 @@ where $T_R$ is the ambient room temperature and $t$ is time. Thus, the cooling t
 \end{equation}
 where the subscripts, 1 and 2, represents the operating points of the actuator as shown in \cref{chap:design-methodology}. The physical properties of the SMA were obtained by consulting the data given by the supplier at \textit{Dynalloy}.
 
-\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.8\textwidth}{!}{\input{images/chap6/thermal-fitting.pgf}}
   % \begin{tabular}{r@{ : }l r@{ : }l}
@@ -131,7 +131,7 @@ where the subscripts, 1 and 2, represents the operating points of the actuator a
 
 Using a thermal camera with an optical zoom that allows for high spatial resolution and using equation \ref{eq:thermalmodel}, least-squares minimization is used to fit this thermal model to the cooling time of an SMA coil of 250 $\mu$m wire diameter. By doing so, the heat transfer coefficient, $H$, can be estimated. Using the model and the estimated parameters, the time constant and cooling times of other diameter SMA springs can be extrapolated. By extrapolating the cooling times of different diameter SMA springs, these values can be used to size this oscillator control system for other applications. In \cref{fig:cooling-time-extrapolation}, the cooling based on wire diameter of different SMA springs can be seen. Using these values, the fall time of the oscillator can be estimated for any wire diameter.
 
-\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.8\textwidth}{!}{\input{images/chap6/cooling-time-extrapolation.pgf}}
   % \begin{tabular}{r@{ : }l r@{ : }l}
