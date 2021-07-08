@@ -7,13 +7,29 @@
 % Introduction to miniaturisation and Actuators
 In the recent decades, there has been a wave of technological progress due to the advancements in miniaturisation. This trend to create smaller and more efficient devices has led to giant leaps in technological advancement. This era of miniaturisation, often referred to as the Second Industrial Revolution, was sparked by the creation of the integrated circuit. The exponential scaling and miniaturisation of silicon transistors has led to computers, filling entire rooms, being transformed into handheld devices that fit in one's pockets. This trend has allowed electronics to have faster performance, lower power consumption and be cheaper than its predecessor. This translates to market share as well as miniaturisation has given a competitive edge to technological and commercial products over its competitors. This age of miniaturisation has not been restricted to electronics but has also impact mechanical and optical devices. Motors, sensors and other such devices have all gone through the same trend in reduce footprint and increase performances resulting in a market where miniature actuators and sensors are readily available for relatively low prices.
 
+\begin{figure}[hbt!]
+    \centering
+    \resizebox{0.8\textwidth}{!}{\input{images/chap0/smart-actuators-examples-small.tex}}
+    % \includegraphics[width=0.85\textwidth,trim={0 0cm 0 0},clip]{images/chap0/smart-actuator-examples-small.pdf}
+    \caption{Miniature actuators powered by Smart Materials. (a) A piezo-powered flapping insect robot by \cite{sreetharanMonolithicFabricationMillimeterscale2012} (b) an untethered shape memory alloy- powered beetle robot powered by \cite{yang88milligramInsectscaleAutonomous2020a} (c) A soft gripper based on electrostatic actuation by \cite{shintakeVersatileSoftGrippers2016} (d) A dielectric elastomer actuator-based flying micro-robot by \cite{chenControlledFlightMicrorobot2019}.}
+    \label{fig:smart-actuator-examples}
+\end{figure}
+
 % Introduction to Smart materials
-The basic component of any robotic system is the actuator which is responsible for moving and controlling the system. The principle behind creating miniature robotics systems, thus, consists of downsizing actuators. The design and sizing criteria for actuators can not be necessarily applied from the macro scale when downsizing. However, the primary agent for the miniaturization of actuators has been the proliferation of Smart Materials. These materials , often referred to as artificial muscles, are able to provide some form of work when exposed to a certain stimulus such as stress, an electric or magnetic field.
+The basic component of any robotic system is the actuator which is responsible for moving and controlling the system. The principle behind creating miniature robotics systems, thus, consists of downsizing actuators. The design and sizing criteria for actuators can not be necessarily applied from the macro scale when downsizing. However, the primary agent for the miniaturization of actuators has been the proliferation of Smart Materials. These materials, often referred to as artificial muscles, are able to provide some form of work as a response to a certain stimulus such as stress, an electric or magnetic field. The reactive nature of these materials allows them to be used as actuators or sensors in creating compact and integrated actuators. These materials can be integrated and tailored to fit within a certain use case based on the physical requirements of the application. These applications can range from micro-grippers, biomimetic robots to crawling robots as shown in figure \cref{fig:smart-actuator-examples}.
 
 % Shape memory alloys and its high work density
+The choice of smart material depends on a range of parameters notably the activation stimulus, the time response, and its work density. When considering miniaturisation and creating actuators for compact and lightweight systems, the work density is often used as the leading parameter in choosing the smart material. As shown in \cref{fig:smart-material-comparison}, among most smart materials, the material, that presents with the highest work density and is, thus, the primary candidate for miniature actuators, is the Shape Memory Alloy (SMA). These alloys, often composed on Nickel and Titanium, is a brand of smart material that reacts to temperature. Variants of these alloys that react to a magnetic field are also present. But the thermoelastic variant of the shape memory alloys are more widely used and can be obtained in different shapes and sizes. There are different varieties of the thermally activated SMAs but the alloy that is the most widely available is the Nickel-Titanium alloy, often known as NiTiNOL. The properties of the material can be changed by modifying the atomic percentages of the alloy or by doping the alloy with other metals.
+
+\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.8\textwidth}{!}{\input{images/chap0/smart-material-comparison.pgf}}
+  \caption{Comparison of different smart materials based on their work density and their time response (from \cite{preumontMechatronicsDynamicsElectromechanical20064})}
+  \label{fig:smart-material-comparison}
+\end{figure}
 
 % Examples of SMA applications and its fields
-
+As stated, due to the high work density of the material, SMAs are generally used in applications where low weight and a compact footprint is required. However, as observed in the \cref{fig:smart-material-comparison}, the requirement to heat the active element, results in SMAs having relatively low time responses. Cooling, when executed passively, results in extended waiting time before the repeated actuation of the SMA actuator. This results in the material being primarily used in systems that do not require high bandwidths. 
 % Commonality of such actuators (common design parameters)
 
 % Challenges of designing SMA actuators
@@ -23,7 +39,7 @@ The basic component of any robotic system is the actuator which is responsible f
 % Goal of the thesis
 
 % How the goal is achieved
-Smart materials and smart actuators design
+
 \section*{Design Considerations}
 
 \section*{Challenges of SMA Actuator Design}
