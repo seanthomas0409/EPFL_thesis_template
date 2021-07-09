@@ -24,26 +24,27 @@ The choice of smart material depends on a range of parameters notably the activa
 \begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.8\textwidth}{!}{\input{images/chap0/smart-material-comparison.pgf}}
-  \caption{Comparison of different smart materials based on their work density and their time response (from \cite{preumontMechatronicsDynamicsElectromechanical20064})}
+  \caption{Comparison of different smart materials based on their work density and their time response (from \cite{preumontMechatronicsDynamicsElectromechanical2006})}
   \label{fig:smart-material-comparison}
 \end{figure}
 
 % Examples of SMA applications and its fields
-As stated, due to the high work density of the material, SMAs are generally used in applications where low weight and a compact footprint is required. However, as observed in the \cref{fig:smart-material-comparison}, the requirement to heat the active element, results in SMAs having relatively low time responses. Cooling, when executed passively, results in extended waiting time before the repeated actuation of the SMA actuator. This results in the material being primarily used in systems that do not require high bandwidths. 
+\section*{Design Considerations}
+As stated, due to the high work density of the material, SMAs are generally used in applications where low weight and a compact footprint is required. However, as observed in the \cref{fig:smart-material-comparison}, the requirement to heat the active element, results in SMAs having relatively low time responses. Cooling, when executed passively, results in extended waiting time before the repeated actuation of the SMA actuator. This results in the material being primarily used in systems that do not require high bandwidths. However, when downsizing the actuator, the volume-to-surface area ratio increases, resulting in faster cooling times. Thus, SMAs are often used in applications such as micro-actuators and grippers. Furthermore, due to the bio-compatible nature of the alloy, they have been used in biomedical applications for smart catheters and minimally invasive surgery robots. Recently, there has also been a surge of work done where SMAs are used in create autonomous, walking robots and self-reconfigurable robots. All of these applications require actuators that have high work outputs while remaining light and compact. Thus, SMAs have become an ideal candidate for these use cases.
+
 % Commonality of such actuators (common design parameters)
+As the commonality in these application is the limitations in space and weight, the design specification of the required actuators often take into account the final weight and size of the system. These SMAs are able to return to revert back to their original shape when heated. This behaviour, often referred to as the Shape Memory Effect (SME), is exploited to create these actuators. After some deformation alters its shape, this behaviour simply alloys the active element to perform some work when heated. This, these SMA actuators requires various transmission stages and sensors when implemented for a certain application. Thus, as SMA actuator are required to output more work while staying compact, the implementation of such actuators take into consideration how the final work density is affected by the additional of these external components. Due to the strengths of the SMA with regards to its work density, the main design consideration taken into account is the design of these external components and the minimisation of the extra weight and volume added to the overall actuator.
 
 % Challenges of designing SMA actuators
+SMA actuators when implementing into compact system result in noiseless operation and their high force-to-weight ration and muscle-like actuation make them suitable for soft robotics and biomimetic/bio-inspired robots. However, as previously mentioned, they have small bandwidth and low operating frequencies, primarily due to their large cooling times. As explored in the work by \cite{sootherChallengesPracticalApplications2020}, this poses the principle challenge when designing SMA actuators. Furthermore, the force output of SMAs are relatively low and this is, often, counteracted by using bundles of SMA wires. However, by increasing the volume of SMAs also increase the cooling time and further decreases the operating frequency, creating a trade-off between the two parameters. Finally, the shape memory effect and the thermo-mechanical behaviour of the SMA is highly non-linear and complex. This makes the actuators difficult to control and requires special methods and sensors to control them.
 
-% Design Requirements
+When combined, these factors make the design of SMA actuators and their integration into complex applications difficult and cumbersome. Due to the various trade-offs that exists when designing the active element, accurate sizing of the actuator is critical to optimize the final footprint and weight of the system. When volume and weight constraints are present, a holistic design approach is required where the entire system and the actuator is considered in the design process. Due to the complex nature of the smart material and the sometimes complex nature of the application, the sizing of the active element becomes difficult and results in a system that is not fully optimised or is oversized. These concessions in the design process results in a degradation of the overall work density of the SMA actuator.
+
+\section*{Thesis Statement}
+% Design Problems
 
 % Goal of the thesis
 
 % How the goal is achieved
-
-\section*{Design Considerations}
-
-\section*{Challenges of SMA Actuator Design}
-
-\section*{Thesis Statement}
 
 \section*{Thesis outline and Contributions}
