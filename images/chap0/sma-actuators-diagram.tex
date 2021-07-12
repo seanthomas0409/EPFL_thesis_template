@@ -1,0 +1,73 @@
+% !TEX root = ../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+% \usepackage{tikz}
+% \usetikzlibrary{decorations.pathmorphing,patterns}
+% trim={<left> <lower> <right> <upper>}
+
+\begin{document}
+\begin{tikzpicture}[every node/.style={draw,outer sep=0pt,ultra thick,font=\footnotesize}]
+\tikzstyle{sma}=[ultra thick,decorate,decoration={zigzag,pre length=4mm,post length=4mm,segment length=4mm, amplitude=2.5mm}]
+\tikzstyle{spring}=[ultra thick,decoration={aspect=0.5,pre length=4mm,post length=4mm,segment length=2mm, amplitude=2.5mm,coil},decorate]
+\tikzstyle{ground}=[pattern=north east hatch, hatch distance=3mm, hatch thickness=.5pt, fill,draw=none,minimum width=2mm,minimum height=0.1mm]
+% \tikzstyle{ground}=[fill,pattern=north east lines,draw=none,minimum width=2mm,minimum height=0.1mm]
+% \tikzstyle{damper}=[thick,decoration={markings,
+%   mark connection node=dmp,
+%   mark=at position 0.5 with
+%   {
+%     \node (dmp) [thick,inner sep=0pt,transform shape,rotate=-90,minimum width=15pt,minimum height=3pt,draw=none] {};
+%     \draw [thick] ($(dmp.north east)+(2pt,0)$) -- (dmp.south east) -- (dmp.south west) -- ($(dmp.north west)+(2pt,0)$);
+%     \draw [thick] ($(dmp.north)+(0,-5pt)$) -- ($(dmp.north)+(0,5pt)$);
+% }
+%   }, decorate]
+
+    % SMA - Spring
+    \node (M) [minimum width=20,minimum height=20] {};
+    \node (ground) [ground,anchor=north,yshift=-0.25cm,minimum width=1cm] at (M.south) {};
+    \draw[ultra thick] (ground.north east) -- (ground.north west);
+    \draw [ultra thick] (M.south west) ++ (0.2cm,-0.125cm) circle (0.1cm)  (M.south east) ++ (-0.2cm,-0.125cm) circle (0.1cm);
+    \node (groundL) at (M.east) [ground, xshift=-3cm, rotate=-90, minimum height=0.1mm, minimum width=8mm] {};
+    \draw[ultra thick] (groundL.north west) -- (groundL.north east);
+    \node (groundR) at (M.west) [ground, xshift=+3cm, rotate=90, minimum height=0.1mm, minimum width=8mm] {};
+    \draw[ultra thick] (groundR.north west) -- (groundR.north east);
+    \draw[spring, color=mygreen] (M.east) -- node[draw=none, anchor=south, yshift=+4mm] {Bias-Spring} (groundR.north);
+    \draw[sma, color=myred] (M.west) -- node[draw=none, anchor=south, yshift=+4mm] {SMA} (groundL.north);
+
+    % SMA - SMA
+    \begin{scope}[xshift=7cm]
+    \node (M) [minimum width=20,minimum height=20] {};
+    \node (ground) [ground,anchor=north,yshift=-0.25cm,minimum width=1cm] at (M.south) {};
+    \draw[ultra thick] (ground.north east) -- (ground.north west);
+    \draw [ultra thick] (M.south west) ++ (0.2cm,-0.125cm) circle (0.1cm)  (M.south east) ++ (-0.2cm,-0.125cm) circle (0.1cm);
+    \node (groundL) at (M.east) [ground, xshift=-3cm, rotate=-90, minimum height=0.1mm, minimum width=8mm] {};
+    \draw[ultra thick] (groundL.north west) -- (groundL.north east);
+    \node (groundR) at (M.west) [ground, xshift=+3cm, rotate=90, minimum height=0.1mm, minimum width=8mm] {};
+    \draw[ultra thick] (groundR.north west) -- (groundR.north east);
+    \draw[sma, color=mygreen] (M.east) -- node[draw=none, anchor=south, yshift=+4mm] {Antagonist SMA} (groundR.north);% Ant SMA
+    \draw[sma, color=myred] (M.west) -- node[draw=none, anchor=south, yshift=+4mm] {SMA} (groundL.north);
+    \end{scope}
+
+    % SMA - Deadweight
+    \begin{scope}[xshift=3.5cm, yshift=-2cm]
+    \node (M) [minimum width=20,minimum height=20] {};
+    \node (ground) [ground,anchor=north,yshift=-0.25cm,minimum width=1cm] at (M.south) {};
+    \draw[ultra thick] (ground.north east) -- (ground.north west);
+    \draw [ultra thick] (M.south west) ++ (0.2cm,-0.125cm) circle (0.1cm)  (M.south east) ++ (-0.2cm,-0.125cm) circle (0.1cm);
+    \node (groundL) at (M.east) [ground, xshift=-3cm, rotate=-90, minimum height=0.1mm, minimum width=8mm] {};
+    \draw[ultra thick] (groundL.north west) -- (groundL.north east);
+    \node (DW) [minimum width=15,minimum height=15, xshift=+2cm, yshift=-1.5cm, color=mygreen] {$m$};
+    \node[draw=none, below=1mm of DW.south, color=mygreen] {Deadweight};
+    % Pulley
+    \node (intermDW) [right=2.5cm of M.east, above=1cm of DW, draw=none] {};
+    \draw[ultra thick] ($(intermDW)-(4mm,3mm)$) circle (4mm);
+    \draw[ultra thick, rounded corners=4mm, color=mygreen] (M.east) -| (DW.north);
+    \draw[ultra thick,fill] ($(intermDW)-(4mm,3mm)$) circle (0.5mm);
+    \draw[ultra thick, fill] ($(intermDW)-(4mm,3mm)$) -- ++(2mm,7mm) -- ++(-4mm,0) -- cycle;
+    \draw[sma, color=myred] (M.west) -- node[draw=none, anchor=south, yshift=+4mm] {SMA} (groundL.north);
+    \end{scope}
+
+    % \draw [sma] (ground1.north) -- ($(M.south east)!(ground1.north)!(M.south west)$);
+
+\end{tikzpicture}
+\end{document}
