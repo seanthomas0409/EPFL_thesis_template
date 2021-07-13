@@ -1,0 +1,29 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+% trim={<left> <lower> <right> <upper>}
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {
+        \begin{annotationimage}{trim={0 0cm 0 0cm},clip, width=0.9\textwidth}{images/chap1/industrial-examples-v2.pdf}
+        % Gripper annotations
+        \draw[coordinate label = {\color{black}{\normalfont\tiny{SMA linear actuator}} at (0.565,0.536)}];
+        \draw[coordinate label = {\color{black}\normalfont\scriptsize{\makecell[r]{Gripper\\jaw}} at (0.58,0.27)}];
+        \draw[coordinate label = {\color{black}\normalfont\scriptsize{Cross-shear\\kinematic stage} at (0.805,0.29)}];
+        % Suction annotations
+        \draw[coordinate label = {\color{black}\normalfont\scriptsize{Spring adjustment screws} at (0.13,0.525)}];
+         \draw[coordinate label = {\color{black}\normalfont\scriptsize{Membrane adjustment} at (0.14,0.47)}];
+         \draw[coordinate label = {\color{black}\normalfont\scriptsize{Upper SMA fixation} at (0.16,0.41)}];
+         \draw[coordinate label = {\color{black}\normalfont\scriptsize{Bias-spring} at (0.194,0.355)}];
+         \draw[coordinate label = {\color{black}\normalfont\scriptsize{SMA wire} at (0.205,0.29)}];
+         \draw[coordinate label = {\color{black}\normalfont\scriptsize{Electrical contacts} at (0.165,0.23)}];
+         \draw[coordinate label = {\color{black}\normalfont\scriptsize{Lower SMA fixation} at (0.16,0.15)}];
+
+         \draw[coordinate label = {\color{white}\textbf{(a)} at (0.03,0.59)}];
+         \draw[coordinate label = {\color{black}\textbf{(b)} at (0.445,0.035)}];
+         \draw[coordinate label = {\color{black}\textbf{(c)} at (0.98,0.035)}];
+       \end{annotationimage}};
+\end{tikzpicture}
+\end{document}

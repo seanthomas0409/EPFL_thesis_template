@@ -1,0 +1,27 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+% trim={<left> <lower> <right> <upper>}
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {
+        \begin{annotationimage}{trim={0 0cm 0 0cm},clip, width=0.75\textwidth}{images/chap1/auto-examples.pdf}
+         \draw[annotation left = {\makecell[r]{SMA\\wire} at 0.7}] to (0.235,0.7);
+         \draw[annotation left = {Bias-spring at 0.79}] to (0.24,0.79);
+         \draw[annotation left = {Mirror at 0.9}] to (0.1,0.9);
+         \draw[annotation right = {\makecell[l]{SMA\\coil} at 0.79}] to (0.74,0.79);
+         \draw[annotation right = {\makecell[l]{Power\\electronics} at 0.9}] to (0.7,0.9);
+         \draw[annotation right = {Output at 0.7}] to (0.95,0.75);
+         \draw[coordinate label = {\color{white}\textbf{(a)} at (0.03,0.96)}];
+         \draw[coordinate label = {\color{white}\textbf{(b)} at (0.4,0.96)}];
+         \draw[coordinate label = {\color{black}\textbf{(c)} at (0.03,0.56)}];
+       \end{annotationimage}};
+    % \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    % \node (a) at (0.14,0.97) {\color{white}\textbf{(a)}};
+    % \node (b) at (0.43,0.97) {\color{white}\textbf{(b)}};
+    % \node (c) at (0.14,0.56) {\textbf{(c)}};
+    % \end{scope}
+\end{tikzpicture}
+\end{document}

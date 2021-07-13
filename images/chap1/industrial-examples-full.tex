@@ -1,0 +1,36 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+% trim={<left> <lower> <right> <upper>}
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {
+        \begin{annotationimage}{trim={0 0cm 0 0cm},clip, width=0.9\textwidth}{images/chap1/industrial-examples.pdf}
+        % Gripper annotations
+        \draw[coordinate label = {\color{black}\scalebox{.5}{SMA linear actuator} at (0.06,0.536)}];
+        \draw[coordinate label = {\color{black}\scalebox{.7}{\makecell[r]{Gripper\\jaw}} at (0.06,0.27)}];
+        \draw[coordinate label = {\color{black}\scalebox{.7}{\makecell[c]{Cross-shear\\kinematic stage}} at (0.275,0.3)}];
+        % Suction annotations
+        \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Spring adjustment\\screws}} at (0.73,0.52)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Membrane\\adjustment}} at (0.73,0.46)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Upper SMA\\fixation}} at (0.732,0.4)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Bias-spring}} at (0.735,0.355)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{SMA wire}} at (0.735,0.29)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Electrical\\contacts}} at (0.75,0.23)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Lower SMA\\fixation}} at (0.73,0.15)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Membrane}} at (0.741,0.09)}];
+         \draw[coordinate label = {\color{black}\scalebox{.5}{\makecell[c]{Sealing}} at (0.72,0.03)}];
+
+         \draw[coordinate label = {\color{white}\textbf{(a)} at (0.03,0.59)}];
+         \draw[coordinate label = {\color{black}\textbf{(b)} at (0.03,0.03)}];
+         \draw[coordinate label = {\color{black}\textbf{(c)} at (0.98,0.03)}];
+       \end{annotationimage}};
+    % \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    % \node (a) at (0.14,0.97) {\color{white}\textbf{(a)}};
+    % \node (b) at (0.43,0.97) {\color{white}\textbf{(b)}};
+    % \node (c) at (0.14,0.56) {\textbf{(c)}};
+    % \end{scope}
+\end{tikzpicture}
+\end{document}

@@ -166,6 +166,28 @@
 \newcommand*\annotatedFigureText[4]{\node[draw=none, anchor=south west, text=#2, inner sep=0, text width=#3\linewidth,font=\sffamily] at (#1){#4};}
 \newenvironment {annotatedFigure}[1]{\centering\begin{tikzpicture}
 \node[anchor=south west,inner sep=0] (image) at (0,0) { #1};\begin{scope}[x={(image.south east)},y={(image.north west)}]}{\end{scope}\end{tikzpicture}}
+
+%%%%% ROUNDED CORNERS IMAGE %%%%%%
+\newsavebox{\picbox}
+\newcommand{\cutpic}[3]{
+  \savebox{\picbox}{\includegraphics[width=#2]{#3}}
+  \tikz\node [draw, rounded corners=#1, line width=4pt,
+    color=white, minimum width=\wd\picbox,
+    minimum height=\ht\picbox, path picture={
+      \node at (path picture bounding box.center) {
+        \usebox{\picbox}};
+    }] {};}
+%%%% GET WIDTH AND HEIGHT OF NODE %%%%%%%%
+\makeatletter
+% Stuff for calc compatiability.
+\let\real=\pgfmath@calc@real
+\let\minof=\pgfmath@calc@minof
+\let\maxof=\pgfmath@calc@maxof
+\let\ratio=\pgfmath@calc@ratio
+\let\widthof=\pgfmath@calc@widthof
+\let\heightof=\pgfmath@calc@heightof
+\let\depthof=\pgfmath@calc@depthof
+\makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%% COLORS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
