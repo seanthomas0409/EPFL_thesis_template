@@ -1,0 +1,22 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+% trim={<left> <lower> <right> <upper>}
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {
+        \begin{annotationimage}{trim={0 0cm 0 0cm},clip, width=0.8\textwidth}{images/chap3/sma-mandrel-forcesetup-top.jpg}
+         \draw[annotation right = {\makecell[l]{Force\\sensor} at 0.86}] to (0.72,0.86);
+         \draw[annotation left = {\makecell[r]{Biasing\\Compliant\\Mechanism} at 0.3}] to (0.32,0.43);
+         \draw[annotation right = {\makecell[l]{SMA\\coil} at 0.3}] to (0.56,0.5);
+         \draw[annotation left = {\makecell[r]{Mandrel\\prong} at 0.61}] to (0.39,0.61);
+       \end{annotationimage}};
+    % \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    % \node (a) at (0.14,0.97) {\color{white}\textbf{(a)}};
+    % \node (b) at (0.43,0.97) {\color{white}\textbf{(b)}};
+    % \node (c) at (0.14,0.56) {\textbf{(c)}};
+    % \end{scope}
+\end{tikzpicture}
+\end{document}

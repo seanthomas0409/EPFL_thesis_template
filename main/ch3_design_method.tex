@@ -24,7 +24,7 @@ Recently, there has been a shift in creating novel motion control mechanisms usi
 
 These flexure-based mechanisms are still often integrated into the SMA actuators as discrete mechanisms. In this chapter, the concept of integrating the biasing element as a flexural mechanism is explored. In this case, the kinematic stage and the biasing element are combined and are no longer discrete systems within the mechanism. Some research has been shown to take into account flexure mechanisms in SMA actuators but they lack a suitable sizing strategy due to the complexity of the shape memory effect and the nonlinear nature of flexures\todocite. Thus, in this chapter, this novel design methodology is presented and analysed using an analytical model. The goal of the proposed design methodology where SMAs paired with an integrated biasing kinematic stage, can be adequate sized for the required project specifications.
 
-Furthermore, in this chapter, the design methodology for extending this approach to anatagonistic SMA actuators are also presented. When using flexure-based kinematic stage, they present with an inherent stiffness but can also be designed to exhibit interesting mechanical behaviours such as multi-stability. This chapter, will present a design methodology and a sizing strategy that allows antagonistic SMA actuators to be appropriately sized for pairing with complex flexure-based kinematic stages. These design methodologies will be validated using case studies in the following chapters.
+Furthermore, in this chapter, the design methodology for extending this approach to antagonistic SMA actuators are also presented. When using flexure-based kinematic stage, they present with an inherent stiffness but can also be designed to exhibit interesting mechanical behaviours such as multi-stability. This chapter, will present a design methodology and a sizing strategy that allows antagonistic SMA actuators to be appropriately sized for pairing with complex flexure-based kinematic stages. This design methodologies will be validated using a case study and further extrapolated in the following chapters.
 
 \section{Adapted Design Concept}
 % Present new design concept and methodology
@@ -47,7 +47,7 @@ As mentioned previously, most SMA actuators are composed of an active element, a
   \label{fig:building-blocks-pt}
 \end{figure}
 
-This integration can be accomplished with the use of flexure-based mechanisms. Generally, flexures have been used in creating an alternative solution for traditional hinges and linear slides. These flexures are comprised of cantilever beams which allows the mechanism to be compliant in a specific degree of freedom while being rigid in the others. The advantages of such a system is that when adequately design can result in a kinematic stage that is lightweight, lacks any assembly and has high precision.
+This integration can be accomplished with the use of flexure-based mechanisms. Generally, flexures have been used in creating an alternative solution for traditional hinges and linear slides. These flexures are comprised of cantilever beams which allows the mechanism to be compliant in a specific direction while being rigid in the others. As stated earlier, the advantages of such a system is that when adequately designed can result in a kinematic stage that is lightweight, lacks any assembly and has high precision.
 
 % Figure with example of flexure mechanism
 
@@ -65,7 +65,7 @@ In the case of grippers and mesoscale actuators where the SMA element is passive
 
 \section{Adapting the Simplified Models}
 % Combining biasing element and motion conversion system
-In \cref{sec:simplified-sma-model}, a simplified model of the SMAs are used to size the active element for bias-spring and antagonistic SMA actuators. In the traditional sizing strategy, a simplified linear model of the SMA and the curve of the spring are used to find the operating points of the actuator which is represented by the intersection of the two curves. This simplification allows a relatively simpler sizing of the components by abstracting the complex nonlinear behaviours of the shape memory effect.
+In \cref{sec:simplified-sma-model}, a simplified model of the SMAs is used to size the active element for bias-spring and antagonistic SMA actuators. In the traditional sizing strategy, a simplified linear model of the SMA and the curve of the spring are used to find the operating points of the actuator which is represented by the intersection of the two curves. This simplification allows a relatively simpler sizing of the components by abstracting the complex nonlinear behaviours of the shape memory effect.
 
 \subsection{Passive Biasing Compliant Mechanisms}\label{subsec:passive-biasing-compliant-mech}
 % Adding complex systems to antagonistic SMA pairs
@@ -73,39 +73,46 @@ The compliant mechanism, as mentioned previously, acts as the biasing element an
 
 In order to size the actuator and its corresponding passive biasing compliant element, an analytical model can be devised and exploited to predict the various operating points of the final SMA actuator. A pseudo-rigid body model (PSBM) based on the work by \cite{heneinConceptionStructuresArticulees2005} can be used to devise the analytical models of the flexures. The flexure hinges are considered to behave like torsional springs with constant angular stiffness, $K_\theta$. The analytical model can be derived by considering the reaction force exerted by the mechanism on the SMA wire or coil when acting as the biasing element.
 
-While a Newtonian approach is possible, the simplest way to compute the force is to consider the elastic potential energy stored in the flexure hinges as the mechanism deforms. This potential energy stored in one torsional spring as a function of the input displacement of the mechanism, $x$, as given by :
+While a Newtonian approach is possible, the simplest way to compute the force is to consider the elastic potential energy stored in the flexure hinges as the mechanism deforms. This potential energy stored in one torsional spring as a function of the input displacement of the mechanism, $x$, is given by :
 \begin{equation}\label{eq:flexure-pot-energy}
         U(x) = \frac{1}{2}K_{\theta} \left(\theta(x)-\theta_0 \right)^2
 \end{equation}
-where, in the case of a notch flexure hinge, as shown in \cref{fig:notch-flexure}, when rotating by an angle of $\theta$, has a stiffness, as described in \cite{heneinConceptionStructuresArticulees2005}, equal to:
+where, in the case of a notch flexure hinge, as shown in \cref{fig:flexure-hinge-types}, when rotating by an angle of $\theta$, has a stiffness, as described in \cite{heneinConceptionStructuresArticulees2005}, equal to:
 \begin{equation}\label{eq:flexure-hinge-stiffness}
         K_{\theta} = \frac{2Ebe^{2.5}}{9\pi \sqrt{r}}
 \end{equation}
-Here, $E$ is the Young modulus of the material, and $e$,$b$ and $r$ the design parameters of the flexure hinge shown in \cref{fig:notch-flexure}.
+Here, $E$ is the Young modulus of the material, and $e$,$b$ and $r$ the design parameters of the flexure hinge shown in \cref{fig:flexure-hinge-types}.
 
-\begin{figure}[h] % t for top of the page, H could be put to impose the position of the float
-  \centering
-  \begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[width=0.4\textwidth]{images/chap4/pivot_notch.pdf}};
-	% Insert a relative reference based on image dimensions
-    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
-        \node[] at (0.29, 0.45) {\Large $r$};
-        \node[] at (0.83, 0.29) {\Large $b$};
-        \node[] at (0.58, 0.73) {\Large $e$};
-    \end{scope}
-    \end{tikzpicture}
-%   \begin{tikzpicture} % Comment to remove border
-    % \node (table) [inner sep=1pt] { % Comment to remove border
-  % \begin{tabular}{r@{ }l r@{ }l}
-  %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & SMA at Low Temperature & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & SMA at High Temperature\\
-  %   {\color{mygreen} \rule[2pt]{10pt}{0.5mm} } & Compliant Mechanism &  & \\
-  % \end{tabular}
-%   };% Comment to remove border
-% \draw [rounded corners=.2em] (table.north west) rectangle (table.south east);% Comment to remove border
-% \end{tikzpicture}% Comment to remove border
-  \caption{A diagram of the notch flexure hinge.}
-  \label{fig:notch-flexure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{images/chap4/flexure-hinge-types.tex}
+    \caption{The various types of flexure hinges (adapted from \cite{wuGeneralizedAnalyticalCompliance2015}) (a) Notch (b) Leaf spring (c) Cross-strip (d) Cartwheel hinge}
+    \label{fig:flexure-hinge-types}
 \end{figure}
+
+% \begin{figure}[h] % t for top of the page, H could be put to impose the position of the float
+%   \centering
+%   \begin{tikzpicture}
+%     \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[width=0.4\textwidth]{images/chap4/pivot_notch.pdf}};
+% 	% Insert a relative reference based on image dimensions
+%     \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+%         \node[] at (0.29, 0.45) {\Large $r$};
+%         \node[] at (0.83, 0.29) {\Large $b$};
+%         \node[] at (0.58, 0.73) {\Large $e$};
+%     \end{scope}
+%     \end{tikzpicture}
+% %   \begin{tikzpicture} % Comment to remove border
+%     % \node (table) [inner sep=1pt] { % Comment to remove border
+%   % \begin{tabular}{r@{ }l r@{ }l}
+%   %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & SMA at Low Temperature & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & SMA at High Temperature\\
+%   %   {\color{mygreen} \rule[2pt]{10pt}{0.5mm} } & Compliant Mechanism &  & \\
+%   % \end{tabular}
+% %   };% Comment to remove border
+% % \draw [rounded corners=.2em] (table.north west) rectangle (table.south east);% Comment to remove border
+% % \end{tikzpicture}% Comment to remove border
+%   \caption{A diagram of the notch flexure hinge.}
+%   \label{fig:flexure-hinge-types}
+% \end{figure}
 
 In this approach, the important relationship to obtain is the influence of the contraction of the SMA on the rotation of the hinge, $\theta(x)$. When the flexure-based system is comprised of multiple flexural hinges, the total potential energy can be calculated by the sum of the potential elastic energy of each flexure, $U_\mathrm{tot}=\sum U(x)$. The required force to deform the structure can be deduced using :
 \begin{equation}\label{eq:flexure-hinge-force}
@@ -138,7 +145,7 @@ In this approach, the important relationship to obtain is the influence of the c
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-As in the case of the traditional SMA sizing methodology, the intersection between the adapted biasing curve and the simplified SMA curves represents the operating points of the SMA actuator, visualised in \cref{fig:smaactwp-pt} as \circled{1} and \circled{2}. The stroke of the actuator can be estimated by taking the different between the x-coordinate of the operating points, $\Delta x = x_1-x_2$. It is important to note that the there is a maximum pull force that the SMA wire or coil can exert, as seen in table \todocite. Thus, the SMA element must be sized such that $F_1 < F_\mathrm{max}$ so as to obtain the thinnest SMA wire or coil which can still exert enough force to deform the compliant mechanism to the required stroke.
+As in the case of the traditional SMA sizing methodology, the intersection between the adapted biasing curve and the simplified SMA curves represents the operating points of the SMA actuator, visualised in \cref{fig:smaactwp-pt} as \circled{1} and \circled{2}. The stroke of the actuator can be estimated by taking the difference between the x-coordinate of the operating points, $\Delta x = x_1-x_2$. The variable $x_\mathrm{off}$ represents the distance by which the SMA element is pre-stretched. This parameter allows the element to work at an operating range with higher forces. But it is important to note that the there is a maximum pull force that the SMA wire or coil can exert, which can often be obtained from the supplier. Thus, the SMA element must be sized such that $F_1 < F_\mathrm{max}$ so as to obtain the thinnest SMA wire or coil which can still exert enough force to deform the compliant mechanism to the required stroke.
 
 In \cref{fig:flowchart-pt}, the design methodology for sizing a biased-compliant mechanism SMA actuator is presented. The methodology consists of designing the SMA active element based on the desired time response ($\tau$) specifications of the application. As explained previously, in the case of passive cooling applications, the wire diameter can be reduced to decrease cooling times and increase $\tau$. Once the diameter of the SMA wire or coil is determined, the biasing element can be designed. In the case of a biasing compliant mechanism, the flexure hinges can be designed based on the desired stroke of the application. As \cref{fig:flowchart-pt} details, the operating points must be estimated using the design of the compliant mechanism. The structure and design of the compliant mechanism can be used to determine the relationship between the strain recovered by the SME and rotation of the flexural hinges, $\theta(x)$. This relationship can be used to determine the force-displacement curve of the resulting biasing element using the equation presented in \cref{eq:flexure-pot-energy}. Finally, the individual flexural hinges can be adjusted such that the desired stroke,$x$, is obtained and that the maximum pull force of the SMA wire or coil is not exceeded.
 
@@ -166,7 +173,7 @@ In \cref{fig:flowchart-pt}, the design methodology for sizing a biased-compliant
 \end{figure}
 
 % table with sizing impacts
-Flexure-based hinges, however, exhibit a limited anuglar stroke. The maximum angle allowed before plastic deformation occurs has to be considered when designing such hinges. This admissible deformation, as described in the work by \cite{heneinConceptionStructuresArticulees2005}, can be calculated using :
+Flexure-based hinges, however, exhibit a limited angular stroke. The maximum angle allowed before plastic deformation occurs has to be considered when designing such hinges. This admissible deformation, as described in the work by \cite{heneinConceptionStructuresArticulees2005}, can be calculated using :
 \begin{equation}\label{eq:theta_adm}
     \Delta\theta_\mathrm{adm}\cong \frac{3\pi \sigma_\text{adm}\sqrt{r}}{4E\sqrt{e}}
 \end{equation}
@@ -215,6 +222,8 @@ Using this principle, if the mechanism is designed such that  $\mathbb{X}_\text{
     \end{tabular}
 \end{table}
 
+In \cref{tab:sma-pt-tradeoffs}, the trade-offs determine how the various parameters of the compliant mechanism and the parameters of the SMA actuator interface affects the final performances of the actuator. By increasing the dimensions of the flexural hinges, the admissible range of operating points increase but comes at the cost of the output force of the actuator. Using these trade-offs, decisions can be made about the biasing complaint mechanism such that the resulting actuator can be sized to the required project specifications. When applying this design methodology, as shown in later sections of this chapter, further trade-offs can appear but the ones present in this table will appear in most applications.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Integration of Compliant Mechanisms in Antagonistic SMA Actuators}\label{subsec:design-methodology-antagonistic}
 
@@ -247,7 +256,7 @@ In the traditional antagonistic SMA actuator, the first SMA, when heated and ret
 %   };% Comment to remove border
 % \draw [rounded corners=.2em] (table.north west) rectangle (table.south east);% Comment to remove border
 % \end{tikzpicture}% Comment to remove border
-  \caption{The adapted sizing methodology of an antagonistic SMA actuator paired with compliant mechanism using the simplified SMA curves.}
+  \caption{The adapted sizing methodology of an antagonistic SMA actuator paired with compliant mechanism using the simplified SMA curves. Here, the compliant mechanism behaves as a bistable element.}
   \label{fig:smaactwp-bb}
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -290,12 +299,14 @@ Recently, there has been considerable work in developing bistable or multistable
 \input{main/ch3_1_case_study_mandrel}
 
 \section{Summary and Conclusion}
-In this chapter, the traditional sizing methodology has been adapted to fit the case where biasing springs are replaced with passive biasing compliant mechanism. This approach stems from the concept where the traditional SMA actuators consisting of an active element, a biasing element and a kinematic stage is transformed into a more integrated solution where the biasing element and the kinematic stage are combined.
+In this chapter, the traditional sizing methodology has been adapted to fit the case where biasing springs are replaced with passive biasing compliant mechanism. This approach stems from the concept where the traditional SMA actuators consisting of an active element, a biasing element and a kinematic stage is transformed into a more integrated solution where the biasing element and the kinematic stage are combined and fully integrated.
 
-Using pseudo-rigid body models described in the work by \cite{heneinConceptionStructuresArticulees2005}, the analytical models of the compliant mechanisms are used to estimate the stroke and behaviour of the novel SMA actuator. Using the simplified SMA curves, these alloys can be sized such that the time response of the SMA actuator is minimized.
+Using pseudo-rigid body models described in the work by \cite{heneinConceptionStructuresArticulees2005}, the analytical models of the compliant mechanisms are used to estimate the stroke and behaviour of the novel SMA actuator. Using the simplified SMA curves, these alloys can be sized such that the time response of the SMA actuator is minimized. These simplified curves can be obtained using the models presented in \cref{chap:sma-model} or as in this case, obtained using a linear regression of experimental data.
 
 Furthermore, this novel approach to designing SMA actuators paired with compliant mechanisms has been adapted for antagonistic SMA actuators. By altering the design methodology, the often used antagonistic SMA actuators can be sized such that when paired with compliant mechanisms, the actuator does not present any unintended behaviours and reduces the time response. This methodology will be further validated using case studies in \cref{chap:case-study}.
 
-Most SMA actuators that make use of kinematic stages to convert the linear motion of the actuator into more complex behaviours, also integrate a passive spring in the design. By applying the presented design approach, SMA actuators can be designed such that compliant mechanisms can be used as biasing elements. In this chapter, the presented design methodology has been validated using a case study. The methodology proposed a novel way to design compact and integrated SMA actuators. Here, using the proposed approach and techniques, a gripper powered by shape memory alloy coils were conceived and fabricated. The novel methodology also proposed a simplified method with which the SMA and the biasing elements can be sized so as to harness the shape memory effect when a thermal load is applied to the SMA. Finally, the gripper was fabricated using machining techniques that allowed a reduced number of parts and a simplified assembly process, showing one of the key advantages of this proposed integrated approach.
+Most SMA actuators that make use of kinematic stages to convert the linear motion of the actuator into more complex behaviours, also integrate a passive spring in the design. By applying the presented design approach, SMA actuators can be designed such that compliant mechanisms can be used as biasing elements further improving the work density of the actuator. In this chapter, the presented design methodology has been validated using a case study featuring a 4-prong radial gripper. The methodology proposed a novel way to design compact and integrated SMA actuators. Here, using the proposed approach and techniques, a gripper powered by shape memory alloy coils were conceived and fabricated. The novel methodology also proposed a simplified method with which the SMA and the biasing elements can be sized so as to harness the shape memory effect when a thermal load is applied to the SMA. Finally, the gripper was fabricated using machining techniques that allowed a reduced number of parts and a simplified assembly process, showing one of the key advantages of this proposed integrated approach.
 
-Finally, a four prong mandrel gripper is designed and fabricated. In this prototype, the gripper consists of just an SMA coil and a kinematic stage. Based on the design methodology, the kinematic stage is created using compliant flexure-based mechanisms that, while acting as a motion conversion mechanism, also behaves as a biasing spring. The kinematic stage conceived using topology optimization and improved using flexure-based hinges is able to convert the shape memory effect of one SMA coil into a more complex multi-output gripping motion. Based on the design approach presented in this chapter, the compliant mechanism has been sized to optimize the stroke of the SMA actuator while reducing the required SMA coil wire diameter. Using the established and validated analytical models of the kinematic stage and the traditional simplified SMA models, the operating points and the stroke of the gripper, around 4 mm, was estimated. The final prototype of this four prong gripper weighs less than 17 g and is able to exert around 1.78 N of force, which leads to a maximum force-weight density of around 105 N/kg compared to $41$ N/kg for conventional DC motor-based gripper as shown in the work by \cite{leeClosedStructureCompliantGripper2021}. This shows that by using the proposed design methodology, a lightweight and compact gripper can be fabricated for applications such as drone-deliveries.
+Finally, the four prong mandrel gripper is sized and fabricated. In this prototype, the gripper consists of just an SMA coil and an entirely 3D printed kinematic stage. Based on the design methodology, the kinematic stage is created using compliant flexure-based mechanisms that, while acting as a motion conversion mechanism, also behaves as a biasing spring. The kinematic stage conceived using topology optimization and improved using flexure-based hinges is able to convert the shape memory effect of one SMA coil into a more complex multi-output gripping motion. Based on the design approach presented in this chapter, the compliant mechanism has been sized to optimize the stroke of the SMA actuator while reducing the required SMA coil wire diameter. Using the established and validated analytical models of the kinematic stage and the traditional simplified SMA models, the operating points and the stroke of the gripper, around 4 mm, was estimated. The final prototype of this four prong gripper weighs less than 17 g and is able to exert around 1.78 N of force, which leads to a maximum force-weight density of around 105 N/kg compared to $41$ N/kg for conventional DC motor-based gripper as shown in the work by \cite{leeClosedStructureCompliantGripper2021}. This shows that by using the proposed design methodology, a lightweight and compact gripper can be fabricated for applications such as drone-deliveries.
+
+Now, with the design methodology for biasing kinematic stages validated, novel SMA actuators can be create with highly integrated and compact features can be designed and sized. This tendency to integrate the different subsystems of the conventional SMA actuator to create actuator with higher work densities and fewer pieces to assemble can be further extrapolated to other subsystems. In the next chapter, a novel approach to integrating the control and the kinematic subsystems of the actuator to create mechanically intelligent SMA actuators is presented.

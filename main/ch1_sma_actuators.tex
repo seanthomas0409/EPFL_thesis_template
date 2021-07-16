@@ -8,7 +8,7 @@ In this chapter, an overview of the different implementations of SMA actuators a
 % application of sma actuators
 
 \section{Working Principle of SMA Actuators}
-Shape Memory Alloys are subclass of smart materials that react to heat. This special brand of material where the can mechanically react with the help of some micro-structural changes when subjected to an external non-mechanical stimulus, in this case, temperature. The shape memory effect that occurs in this alloys occurs due to some phase transformation that happens when heated and cooled around a certain transition temperature. At low temperatures, the material exists in its Martensitic (M) phase where the material can be deformed easily. These deformations, similar to plastic deformation, results in the material being permanently deformed at these low temperatures. As the alloy is heated up its transition temperature, the material transforms from the M phase to the Austenitic (A) phase, recovering any of the \textit{"permanent"} strain imposed on it at low temperatures. This capacity to recover any strain imposed on it and return back to its original shape is often referred to as the shape memory effect. As the material cools below the transition temperature, the alloy returns back to the M phase, allowing the material to be \textit{"plastically"} deformed once again. The detailed description, along with the analytical and numerical models, is detailed in \cref{chap:sma-model}.
+Shape Memory Alloys are subclass of smart materials that react to heat. This special brand of material where the can mechanically react with the help of some micro-structural changes when subjected to an external non-mechanical stimulus, in this case, temperature. The shape memory effect that occurs in this alloys occurs due to some phase transformation that happens when heated and cooled around a certain transition temperature. At low temperatures, the material exists in its Martensite (M) phase where the material can be deformed easily. These deformations, similar to plastic deformation, results in the material being permanently deformed at these low temperatures. As the alloy is heated up its transition temperature, the material transforms from the M phase to the Austenite (A) phase, recovering any of the \textit{"permanent"} strain imposed on it at low temperatures. This capacity to recover any strain imposed on it and return back to its original shape is often referred to as the shape memory effect. As the material cools below the transition temperature, the alloy returns back to the M phase, allowing the material to be \textit{"plastically"} deformed once again. The detailed description, along with the analytical and numerical models, is detailed in \cref{chap:sma-model}.
 
 The basic idea behind the implementation of the actuator powered by SMAs is to pair the active material with a biasing element. As stated previously, the SMA element requires a deformation at low temperatures to produce any work when heated to its transition temperature. This implies that for the actuator to behave reversibly and create work cycle, a system is required to deform the SMA at low temperature so as to enable the SMA to produce the actuation when heated. A one-directional SMA actuator is also possible where the SMA is stretched and then heated to revert back to its original shape or constrained to generate an increasing stress based on the applied temperature. These actuators can be used for single actuation application such as deployment mechanisms as shown in the work by \todocite (Mohd Jani 2017 Designing SMA linear actuators). However, in this work, the two-directional SMA actuators are explored and studied. These two-directional actuators require a biasing force as the SMA elements can only in one direction. These linear actuators, thus, require some kind of biasing mechanism that can apply a biasing force in the opposite direction. As shown in the work by \todocite (bellouard), the most common mechanisms used to return the SMA back to its neutral position are bias-springs, dead-weights or another SMA element in an antagonistic configuration as shown in \cref{fig:sma-actuators-diagram}.
 
@@ -33,7 +33,9 @@ As stated previously, the principal advantage of actuators powered by SMAs are t
 
 % Biomedical
 \subsection{Biomedical Applications}
-Due to the tight volume constraints in the biomedical field, actuators that prioritize compact footprints have been favoured. Furthermore, in the medical field, reduced noise, vibration and contamination are necessary. A high time response is also not required and slower actuation can be tolerated. This makes it an ideal domain for SMA actuators to flourish. The choice of the examples presented in this section is to examine various types of SMA actuators implemented in the biomedical field to extrapolate the various design parameters and choices used for this specific application.
+Due to the tight volume constraints in the biomedical field, actuators that prioritize compact footprints have been favoured. Furthermore, in the medical field, reduced noise, vibration, and contamination are necessary. A high time response is not required and slower actuation can be tolerated. This makes it an ideal domain for SMA actuators to flourish. The choice of the examples presented in this section is to examine various types of SMA actuators implemented in the biomedical field to extrapolate the various design parameters and choices used for this specific application.
+
+In the first example, the authors, \todocite, have a developed a mesoscale actuator used to main the visual clarity of the lens in endoscopes during invasive robotic surgeries as shown in \cref{fig:biomed-examples}(a). Here the main design criteria was the limitation of contaminants and the extreme volume constraints. The actuator must fit on the end of the tip of the endoscope which is inserted within the body during surgery. The tight footprint required for the project specifications has created a need for smart materials, specifically shape memory alloys, to be used in this application. The alloy being bio-compatible has also played a key role in the choice of smart material. The actuator, proposed in this work, consists of a simple bias-spring SMA actuator where the active element consists of a thin SMA wire and the biasing element consists of a passive tractional spring. Here, the actuator, using a pin as a simple pivot, transforms the linear motion of the SMA actuator into a rotation of the lens cover. This cover, considered the output, is used to clear the surgical camera maintain the visual clarity during the surgery. 
 \begin{figure}[hbt!]
     \centering
     \input{images/chap1/biomed-examples.tex}
@@ -42,6 +44,7 @@ Due to the tight volume constraints in the biomedical field, actuators that prio
 \end{figure}
 
 % Automotive / Aerospace
+\subsection{Automotive and Aerospace Applications}
 \begin{figure}[hbt!]
     \centering
     \input{images/chap1/auto-examples.tex}
@@ -50,6 +53,7 @@ Due to the tight volume constraints in the biomedical field, actuators that prio
 \end{figure}
 
 % Industrial
+\subsection{Industrial Applications}
 \begin{figure}[hbt!]
     \centering
     \input{images/chap1/industrial-examples.tex}
@@ -58,6 +62,7 @@ Due to the tight volume constraints in the biomedical field, actuators that prio
 \end{figure}
 
 % Bio-inspired
+\subsection{Bio-inspired Robotic Applications}
 \begin{figure}[hbt!]
     \centering
     \input{images/chap1/bio-examples.tex}
