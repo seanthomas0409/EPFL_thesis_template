@@ -1,0 +1,29 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+
+\begin{document}
+ {\rowcolors{3}{black!5}{black!10}
+% \begin{tabular}{lccccc}
+\begin{tabular}{p{3.25cm}P{1cm}P{1.5cm}P{1.25cm}P{1.25cm}P{2cm}P{1.25cm}}
+ % \begin{tabu} to 1\textwidth {X[l, 2] X[l, 0.75] X[l,0.75] X[l,1] X[l,1] X[l,1.25]}
+   % \rowcolor{black} & \textbf{\color{white} Robot length (BL)} & \textbf{\color{white} Speed} & \textbf{\color{white} Speed} & \textbf{\color{white} Total weight}  & \textbf{\color{white} Speed / weight} \\
+   % \rowcolor{black} \multirow{-2}{2cm}{\textbf{\color{white} Smart Material Technology}} & \textbf{\color{white} [mm]} & \textbf{\color{white} [mms$^{-1}$]} & \textbf{\color{white} [BLs$^{-1}$]} & \textbf{\color{white} [g]} & \textbf{\color{white} [BLs$^{-1}$ per g]} \\
+   \rowcolor{black} \textbf{\color{white} Smart Material Technology} & \textbf{\color{white} Tether} & \textbf{\color{white} Robot length (BL) [mm]} & \textbf{\color{white} Speed [mms$^{-1}$]} & \textbf{\color{white} Speed [BLs$^{-1}$]} & \textbf{\color{white} Total weight [g]}  & \textbf{\color{white} Speed / weight [BLs$^{-1}$ per g]}\\
+   \textbf{SMA [This work]} & No & 60 & 1.55 & 0.03 & 9.7 & $3\times10^{-3}$                          \\
+   SMA [\cite{meng_mechanically_2020}] & No & 280 & 0.95 & 0.0034 & 354 & $1\times10^{-5}$\\
+   SMA [\cite{kimEarthwormlikeMicroRobot2006}]& No & 50 & 0.17 & 0.0034 & $\sim$3 & $1\times10^{-3}$\\
+   SMA [\cite{huangChasingBiomimeticLocomotion2018}] & No & 57 & 34 & 0.6 & $\sim$20 & $3\times10^{-2}$\\
+   ECF [\cite{uenoMicroInchwormRobot2014}] & Yes & 23 & 5.2 & 0.23 & 1.9 & $1\times10^{-1}$\\
+   SMA [\cite{liangShapeMemoryAlloy2020}] & Yes & 54 & 0.34 & 0.006 & 9.8 & $6\times10^{-4}$\\
+   SMA [\cite{mansourCompliantClosedchainRolling2020}] & Yes & 200 & 130 & 0.65 & 191 & $3\times10^{-3}$\\
+   Pneumatic [\cite{shengMultimaterial3DPrinting2020}] & Yes & 66 & 10.5 & 0.16 & 29 & $5\times10^{-3}$\\
+   DEA [\cite{jiAutonomousUntetheredFast2019}] & No & 40 & 12  & 0.3 & 0.97 & $3\times10^{-1}$\\
+   SMA [\cite{kohOmegaShapedInchwormInspiredCrawling2013}] & Yes & 150 & 10 & 0.07 & 1.2 & 0.055\\
+   DEA [\cite{caoUntetheredSoftRobot2018}] & No & 200 & 4 & 0.02 & 252.6 & $8\times10^{-5}$\\
+   Pneumatic actuator [\cite{tolleyResilientUntetheredSoft2014}] & No & 650 & 5 & 0.008 & $\sim$4000 & $2\times10^{-6}$\\
+   IPMC [\cite{mustIonicCapacitiveArtificial2015}] & No & 45 & 0.45 & 0.01 & 0.83 & $1\times10^{-2}$\\
+ % \end{tabu}
+\end{tabular}}
+\end{document}

@@ -1,6 +1,6 @@
 % !TEX root = ../sethomas_thesis_main.tex
 
-\chapter{Design Approach for Mechanically Intelligent SMA Actuators}\label{chap:integrated-control}
+\chapter{Mechanically-Intelligent Approach to SMA Actuator Control}\label{chap:integrated-control}
 % \chapter{Integrating Control Systems into SMA Actuators}\label{chap:integrated-control}
 % Here, in this chapter, a novel control mechanical control strategy and SMA actuator is showcased and studied.
 
@@ -14,9 +14,9 @@ Shape Memory Alloys, often referred to as artificial muscles, are often used in 
 
 Due to the complex nature of the shape memory effect, sensors or complex control strategies are required for the accurate control of the SMA element, as shown in the work by \todocite and \todocite. The SMA, if overheated, can result in the permanent reprogramming of the shape or the destruction of the SMA wire or coil. In the case of smaller, more compact applications, the SMA element used are thin wires or coil. In these cases, using sensors that can measure the temperature can be quite difficult to implement due to the low thermal mass of the SMA element. Recent work such as \todocite, have implemented sensorless systems where the change in resistivity is measure as the SMA changes phase to create more compact control solutions. Here, due to the complex nonlinear nature of the shape memory effect requires complex control strategies and micro-controllers to efficiently control the SMA and prevent overheating.
 
-Often, when considering the volumetric work density of SMA actuators, the electronics, sensors and control strategies are not taken into account. In certain applications, for example untethered crawling robots, the control plays an important role in the final work-weight density of the robot as seen in the work by \todocite. Improvements made in the sensorless and control strategies can, thus, have a major impact in the final dimensions and weight of the SMA actuator.
+Often, when considering the volumetric work density of SMA actuators, the electronics, sensors and control strategies are not taken into account. In certain applications, for example untethered crawling robots, the control plays an important role in the final work-weight density of the robot as seen in the work by \todocite. Often, due to the volume and weight restrictions present in the design of mesoscale robotics, the electronics and control systems cannot be integrated into the design and, thus, results in robots that are often tethered and limited in their range as shown in the work by \todocite and \todocite. Improvements made in the sensorless and control strategies can, thus, have a major impact in the final dimensions and weight of the SMA actuator.
 
-In this chapter, a novel design concept is presented to further integrate the discrete building blocks present in the traditional SMA actuator. By exploiting the dependence of the mechanical behaviour of the SMA and its temperature, a mechanical oscillator system can be developed such that an electronics-free SMA actuator can be designed. This design language can be implemented into SMA actuators to create a simple but effective solution to create a sensorless, micro-controller-free control strategy that intrinsically present SMA overheating. Furthermore, in this chapter, a crawling robot is conceived using this methodology to validate this novel design approach.
+In this chapter, a novel design concept using mechanical intelligence is presented to further integrate the discrete building blocks present in the traditional SMA actuator. By exploiting the dependence of the mechanical behaviour of the SMA and its temperature, a mechanical intelligent oscillator system can be developed such that the actuator is controlled using a mechanical system rather than using electronics. This design language can be implemented into SMA actuators to create a simple but effective solution to create a sensorless, micro-controller-free control strategy that intrinsically prevents SMA overheating. Furthermore, in this chapter, a crawling robot is conceived using this methodology to validate this novel design approach.
 
 \section{Design Methodology for the Control System}
 % Concept and working principle
@@ -405,7 +405,27 @@ Often, in the case of mobile robots, especially bio-inspired robots, the cost of
 \begin{equation}\label{eq:CoT}
     \textrm{CoT} = \frac{E}{mgd}
 \end{equation}
-where $E$ is the energy required to heat the SMA, $m$ is the total mass of the robot including the battery, $g$ is the acceleration due to gravity and $d$ is the step length of the robot. Using the equation, the CoT was calculated to be around 1620 Jkg$^{-1}$m$^{-1}$. This is comparable to other untethered inchworm robots like in the work by \cite{jiAutonomousUntetheredFast2019} whose CoT is measured to be 1670 Jkg$^{-1}$m$^{-1}$. However, when compared to other inchworm robots, as shown in \cref{tab:literature-compare}, this work is limited in the overall speed. This can be explained due to the inefficiency in the claw design and the dependence on the friction with the ground. The design, while being cheap and easily fabricated using 3D printing, it is limited by the PLA material. By optimizing the material to create thinner leaf springs, the size of the robot can be greatly reduced. Future work will have to include the optimization of the claw design and improve the overall efficiency of the insect robot's claw design to prevent slipping.
+where $E$ is the energy required to heat the SMA, $m$ is the total mass of the robot including the battery, $g$ is the acceleration due to gravity and $d$ is the step length of the robot. Using the equation, the CoT was calculated to be around 1620 Jkg$^{-1}$m$^{-1}$. This is comparable to other untethered inchworm robots like in the work by \cite{jiAutonomousUntetheredFast2019} whose CoT is measured to be 1670 Jkg$^{-1}$m$^{-1}$. Furthermore, when compared to other SMA powered inchworm robots, as shown in \cref{fig:inchworm-compare-speed-weight} and \cref{fig:inchworm-compare-speedweight-weight}, this work has performances comparable to its tethered alternatives. In the mesoscale range, this untethered inchworm robot is able to reach higher work densities. This shows the advantage of the proposed design methodology and showcases the advantage of a mechanically intelligent control strategy. The limitations of this robot arise from the inefficiency in the claw design and the dependence on the friction with the ground. The design, while being cheap and easily fabricated using 3D printing, it is limited by the PLA material. By optimizing the material to create thinner leaf springs, the size of the robot can be greatly reduced. Future work will have to include the optimization of the claw design and improve the overall efficiency of the insect robot's claw design to prevent slipping.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.9\columnwidth}{!}{\input{images/chap4/inchworm-speed-weight-comparison.pgf}}
+  % \begin{tabular}{r@{ }l r@{ }l}
+  %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
+  % \end{tabular}
+  \caption{The distribution of various different inchworm robots powered by smart materials based on their total weight and speed (in Body Lengths (BL) per second).}
+  \label{fig:inchworm-compare-speed-weight}
+\end{figure}
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.9\columnwidth}{!}{\input{images/chap4/inchworm-weight-speedweight-comparison.pgf}}
+  % \begin{tabular}{r@{ }l r@{ }l}
+  %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
+  % \end{tabular}
+  \caption{The compairson of various different smart material powered inchworm robots with respect to the speed / weight ratio.}
+  \label{fig:inchworm-compare-speedweight-weight}
+\end{figure}
 
 % \afterpage{%
 % \clearpage% Flush earlier floats (otherwise order might not be correct)
@@ -413,33 +433,20 @@ where $E$ is the energy required to heat the SMA, $m$ is the total mass of the r
 \begin{table}[hbt!]
  \centering
  \hfill
- \caption{Comparison of various different smart material based mobile robots using data from the work by \cite{jiAutonomousUntetheredFast2019}}
+ \caption{Comparison of various different smart material based crawling robots based on their speed and weight}
  \label{tab:literature-compare}
- {\rowcolors{3}{black!5}{black!10}
-% \begin{tabular}{lccccc}
-\begin{tabular}{p{3.5cm}P{2cm}P{1.5cm}P{1.5cm}P{1.25cm}P{2.25cm}}
- % \begin{tabu} to 1\textwidth {X[l, 2] X[l, 0.75] X[l,0.75] X[l,1] X[l,1] X[l,1.25]}
-   % \rowcolor{black} & \textbf{\color{white} Robot length (BL)} & \textbf{\color{white} Speed} & \textbf{\color{white} Speed} & \textbf{\color{white} Total weight}  & \textbf{\color{white} Speed / weight} \\
-   % \rowcolor{black} \multirow{-2}{2cm}{\textbf{\color{white} Smart Material Technology}} & \textbf{\color{white} [mm]} & \textbf{\color{white} [mms$^{-1}$]} & \textbf{\color{white} [BLs$^{-1}$]} & \textbf{\color{white} [g]} & \textbf{\color{white} [BLs$^{-1}$ per g]} \\
-   \rowcolor{black} \textbf{\color{white} Smart Material Technology} & \textbf{\color{white} Robot length (BL) [mm]} & \textbf{\color{white} Speed [mms$^{-1}$]} & \textbf{\color{white} Speed [BLs$^{-1}$]} & \textbf{\color{white} Total weight [g]}  & \textbf{\color{white} Speed / weight [BLs$^{-1}$ per g]} \\
-   \textbf{SMA [This work]}          & 60                         & 1.55              & 0.03              & 9.7                  & 0.003                          \\
-   SMA [\cite{kohOmegaShapedInchwormInspiredCrawling2013}] & 150 & 10 & 0.07 & 1.2 & 0.055\\
-   SMA [\cite{huangChasingBiomimeticLocomotion2018}]                          & 57                         & 34                & 0.6               & $\sim$20             & 0.03                           \\
-   DEA [\cite{jiAutonomousUntetheredFast2019}]                         & 40                         & 12                & 0.3               & 0.97                 & 0.3                            \\
-   DEA [\cite{caoUntetheredSoftRobot2018}]                          & 200                        & 4                 & 0.02              & 252.6                & $8\times10^{-5}$                         \\
-   Pneumatic actuator [\cite{tolleyResilientUntetheredSoft2014}] & 650                        & 5                 & 0.008             & $\sim$4000           & $2\times10^{-6}$                         \\
-   IPMC [\cite{mustIonicCapacitiveArtificial2015}]                         & 45                         & 0.45              & 0.01              & 0.83                 & 0.01                           \\
- % \end{tabu}
-\end{tabular}}
+ \input{images/chap4/inchworm-comparison-table.tex}
 \end{table}
 % \end{landscape}
 % \clearpage% Flush page
 % }
 \section{Summary and Conclusion}
-In this chapter, a novel approach to design a mechanical control system is presented. In this methodology, the control stage of a traditional SMA actuator is integrated into the kinematic stage of the actuator. This results in a control mechanism that uses the thermomechanical behaviour of the SMA such that the system no longer requires any sensors or electronics.
+In this chapter, a novel approach to design a mechanically intelligent control system is presented. In this methodology, the control stage of a traditional SMA actuator is integrated into the kinematic stage of the actuator. This results in a control mechanism that uses the thermomechanical behaviour of the SMA such that the system no longer requires any sensors or electronics and is controlled entirely mechanically.
 
-Furthermore, a basic implementation of such a system is presented using a magnetic latch-based system. Using a magnet and flexure-based cantilever leaf springs, a magnetic latch was designed and implemented where after a certain stroke threshold, results in an instantaneous snap-through. This rapid bifurcation is exploited to instantly disconnect mechanically the electrical contact across the SMA and thus, preventing any overheating. This design principle was implemented by fabricating a basic SMA mechanical oscillator that requires no sensors or electronics to oscillate.
+Furthermore, a basic implementation of such a system is presented using a magnetic latch-based system. Using a magnet and flexure-based cantilever leaf springs, a magnetic latch was designed and implemented where after a certain stroke threshold, results in an instantaneous snap-through. This rapid bifurcation is exploited to instantly and mechanically disconnect the electrical contact across the SMA and thus, preventing any overheating. This design principle was implemented by fabricating a basic SMA mechanical oscillator that requires no sensors or electronics to oscillate.
 
-Lastly, the design methodology was validated using a case study consisting of an untethered crawling insect robot powered by a single SMA coil. Here, based on the presented design methodology, a biasing flexure-based SMA actuator was modelled and sized to power the crawling robot. Furthermore, the control system presented in this chapter, was implement using the magnetic latch system so as to create a reversible control scheme for the SMA actuator. The kinematic stage, which acts as the biasing element of the SMA actuator, is exploited within the control system. Based on the results from the locomotion of the insect robot, a regular step size and walking speed is observed, thus, validating the design approach presenting in this chapter.
+Lastly, the design methodology was validated using a case study consisting of an untethered crawling insect robot powered by a single SMA coil. Here, based on the presented design methodology, a biasing flexure-based SMA actuator was modelled and sized to power the crawling robot. Furthermore, the control system presented in this chapter, was implemented using the magnetic latch system so as to create a reversible control scheme for the SMA actuator. The kinematic stage, which acts as the biasing element of the SMA actuator, is exploited within the control system. Based on the results from the locomotion of the untethered insect robot, a regular step size and walking speed is observed, thus, validating the design approach presenting in this chapter. When compared to similar mesoscale crawling robots, the mechanically intelligent design approach has allowed the speed-weight ratio of the robot to be similar to other tethered alternatives.
 
-Using the methodology presented in this chapter, a novel control system can be designed and sized such that the SMA actuator can be controlled without the need for bulky sensors and micro-controllers and without the risk of overheating the SMA element.
+Using the methodology presented in this chapter, a novel control system can be designed and sized such that the SMA actuator can be controlled without the need for bulky sensors and micro-controllers and without the risk of overheating the SMA element and greatly increasing the volumetric work density of the actuator.
+
+With the design principles presented in this chapter, the traditional discrete building blocks of an SMA actuator is further integrated. In the follow chapter, the same principle can be extended to create actuators where the active SMA element acts as a kinematic stage. Traditionally, the SMA elements are fabricated and designed using simple geometries such as wires, coils and sheets. By extending the kinematic stages that convert or amplify the of the SMA elements to harness the shape memory effect directly, the work density of the actuator can be further improved. In the next chapter, this design principle will be explored along with tools and strategies to generate such integrated SMA actuators.
