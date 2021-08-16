@@ -67,7 +67,7 @@ The implementation of this oscillator mechanism in the scope of a simple biased-
 
 
 % Bias spring using flexural linear stage
-As mentioned earlier, using a flexure-based mechanism permits the omission of a dedicated spring in the design. As seen in \cref{fig:proto-full}, a proof-of-concept of this design methodology is implemented. Here, the linear stage is comprised of two parallel cantilever beams that also behaves as leaf springs. These biasing leaf springs apply a tractional return force on the SMA coil at a lower temperature while also preventing any unwanted degrees of freedom in the other axis. Another leaf spring is used to apply the return spring force required in the magnetic latch. Here, the SMA actuator is heated using the magnetic latch system and the snap-through of the latch occurs when the return force of the leaf spring exceeds the attractive force of the magnet, $F_\textrm{S}>F_\textrm{mag}$. Therefore, the required contraction of the SMA coil, $\varepsilon$, can be controlled by sizing the leaf spring associated with the magnet.
+As mentioned earlier, using a flexure-based mechanism permits the omission of a dedicated spring in the design. As seen in \cref{fig:proto-full}, a proof-of-concept of this design methodology is implemented. Here, the linear stage is comprised of two parallel cantilever beams that also behaves as leaf springs. These biasing leaf springs apply a tractional return force on the SMA coil at a lower temperature while also preventing any unwanted degrees of freedom in the other axis. Another leaf spring is used to apply the return spring force required in the magnetic latch. Here, the SMA actuator is heated using the magnetic latch system and the snap-through of the latch occurs when the return force of the leaf spring exceeds the attractive force of the magnet, $F_\mathrm{snap} = F_\textrm{S}>F_\textrm{mag}$. Therefore, the required contraction of the SMA coil, $\varepsilon$, can be controlled by sizing the leaf spring associated with the magnet.
 \begin{equation}\label{eq:osc-stroke-sizing}
     \varepsilon = \frac{F_\textrm{mag}}{K_s}
 \end{equation}
@@ -176,7 +176,15 @@ The control system was supplied with a constant current and left to oscillate fo
 
 The rise time and cooling times of the latch-based control system were measured by detecting the peaks and troughs of the measured signals. The mean and standard deviation of these values were then calculated. Furthermore, the cooling time predicted, in \cref{fig:cooling-time-extrapolation}, based on the SMA geometry corresponds to the measured values, thus, validating the thermal model. Also, the cooling time remains relatively constant with respect to the varying current across the SMA. The cooling times can, thus, be predicted using the analytical model and the value remains constant, even while varying the current. This implies that the control system can be sized for a fixed fall time by appropriately sizing the SMA wire diameter.
 
-This magnetic latch system allowed the bias-spring SMA actuator to be actuated without any sensors or risk of overheating the SMA. The latch was required to allow the SMA to be heated during the entire stroke of the latch. A system using pogo pins, which are electric contacts consisting of a plunger and a spring mounted inside a barrel, was also tested. This resulted in a behaviour where the bias-spring SMA actuator oscillated at the tip of the pin. This, unfortunately, showcased the need for a latch system to bring the electric contact back to the starting position such that the actuator can carry out its entire stroke during the cooling phase. A latch system based on friction and snap-fits can be designed as an alternative. This pogo pin solution had the unexpected effect of allowing the SMA coil to be maintained at a stable temperature. This effect could be potentially used to stabilise an SMA at a fixed temperature based on the stroke of the pogo pin. The behaviour was not further explored in this paper.
+%%%%%%%% Design Methodology Oscillator %%%%%%%%%%%
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \input{images/chap4/mechanical-intelligence-control-flowchart.tex}
+  \caption{The generalised schematic of the mechanically-intelligent control strategy.}
+  \label{fig:mi-osc-flowchart}
+\end{figure}
+
+This magnetic latch system allowed the bias-spring SMA actuator to be actuated without any sensors or risk of overheating the SMA. The latch was required to allow the SMA to be heated during the entire stroke of the latch. A system using pogo pins, which are electric contacts consisting of a plunger and a spring mounted inside a barrel, was also tested. This resulted in a behaviour where the bias-spring SMA actuator oscillated at the tip of the pin. This, unfortunately, showcased the need for a latch system to bring the electric contact back to the starting position such that the actuator can carry out its entire stroke during the cooling phase. A latch system based on friction and snap-fits can be designed as an alternative. This pogo pin solution had the unexpected effect of allowing the SMA coil to be maintained at a stable temperature. This effect could be potentially used to stabilise an SMA at a fixed temperature based on the stroke of the pogo pin. The behaviour was not further explored in this work. However, as seen in \cref{fig:mi-osc-flowchart}, a generalised approach to creating the proposed mechanically-intelligent control strategy is described. The basic principle consists of exploiting the snap-through of the latch system. Here, the latch system is sized such that the force required to attain the snap-through is lower than the maximum pull force of the SMA element. This resulting mechanically-intelligent oscillator can be sized and its rise time and fall time can be estimated by using the geometrical dimensions of the active SMA element. Using this principle, the control system of the SMA actuator can be sized so as to allow a cyclical oscillation with a constant stroke and frequency while preventing any chance of SMA overheating. Furthermore, as no sensors or micro-controllers are present, the overall work density of the SMA actuator is conserved.
 
 \section{Validation of the Approach using a Case Study}
 % Validation of the approach using a case study (introduction)
@@ -427,19 +435,6 @@ where $E$ is the energy required to heat the SMA, $m$ is the total mass of the r
   \label{fig:inchworm-compare-speedweight-weight}
 \end{figure}
 
-% \afterpage{%
-% \clearpage% Flush earlier floats (otherwise order might not be correct)
-% \begin{landscape}
-\begin{table}[hbt!]
- \centering
- \hfill
- \caption{Comparison of various different smart material based crawling robots based on their speed and weight}
- \label{tab:literature-compare}
- \input{images/chap4/inchworm-comparison-table.tex}
-\end{table}
-% \end{landscape}
-% \clearpage% Flush page
-% }
 \section{Summary and Conclusion}
 In this chapter, a novel approach to design a mechanically intelligent control system is presented. In this methodology, the control stage of a traditional SMA actuator is integrated into the kinematic stage of the actuator. This results in a control mechanism that uses the thermomechanical behaviour of the SMA such that the system no longer requires any sensors or electronics and is controlled entirely mechanically.
 
@@ -450,3 +445,17 @@ Lastly, the design methodology was validated using a case study consisting of an
 Using the methodology presented in this chapter, a novel control system can be designed and sized such that the SMA actuator can be controlled without the need for bulky sensors and micro-controllers and without the risk of overheating the SMA element and greatly increasing the volumetric work density of the actuator.
 
 With the design principles presented in this chapter, the traditional discrete building blocks of an SMA actuator is further integrated. In the follow chapter, the same principle can be extended to create actuators where the active SMA element acts as a kinematic stage. Traditionally, the SMA elements are fabricated and designed using simple geometries such as wires, coils and sheets. By extending the kinematic stages that convert or amplify the of the SMA elements to harness the shape memory effect directly, the work density of the actuator can be further improved. In the next chapter, this design principle will be explored along with tools and strategies to generate such integrated SMA actuators.
+
+% \afterpage{%
+% \clearpage% Flush earlier floats (otherwise order might not be correct)
+% \begin{landscape}
+\begin{table}[hbt!]
+ \centering
+ \hfill
+ \caption{Comparison of the proposed mechanically-intelligent inchworm robot with various different smart material based crawling robots based on their speed and weight}
+ \label{tab:literature-compare}
+ \input{images/chap4/inchworm-comparison-table.tex}
+\end{table}
+% \end{landscape}
+% \clearpage% Flush page
+% }

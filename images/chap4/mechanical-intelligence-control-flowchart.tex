@@ -1,0 +1,58 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+
+\begin{document}
+
+\begin{tikzpicture}[node distance=3.5cm]
+    \node (latch) [textbox, align=center] {Latch Control\\$F(x)$};
+    \node (power) [textbox, right of=latch, align=center, xshift=1.5cm] {Power Supply\\$I$};
+    \node (sma) [textbox, below of=power, yshift=1.0cm] {SMA};
+    \node (rtemp) [textbox, right of=power, align=center, xshift=1.5cm] {Room Temp.\\$T_R, H$};
+    \node (snap) [textbox, below of=sma, yshift=1.0cm] {Snap-Through\\$F(\varepsilon) = F_\textrm{snap}$\\$< F_\mathrm{max}$};
+    \node (tctemp) [textbox, below of=rtemp, draw=none, yshift=1.0cm] {};
+    \node (latchtemp) [textbox, below of=latch, draw=none, yshift=1.0cm] {};
+
+    \draw [arrow] (power) -- node[anchor=west, align=left] {$t_h$} (sma);
+    \draw [arrow] (rtemp) |- node[anchor=west, align=left] {} (sma);
+    \draw (rtemp) -- node[anchor=west, align=left] {$t_c$} (tctemp);
+
+    \draw (latch) -- node[anchor=west, align=left] {$F_\mathrm{snap}$\\$=F(x_\mathrm{snap})$} (latchtemp);
+    \draw [arrow] (latch) |- node[anchor=west, align=left] {} (snap);
+
+    \draw [arrow] (sma) -- node[anchor=west, align=left] {$F_\mathrm{max}$} (snap);
+    \draw [arrow] (sma) -- node[anchor=east, align=right] {$F(\varepsilon)$} (snap);
+
+    \coordinate (South snap) at ($(snap.south)-(0,0.5cm)$);
+    \coordinate (Left snap) at ($(snap.south)-(7.0cm,0.5cm)$);
+    \draw [arrow] (snap.south) -- (South snap) |- (Left snap) node[anchor=south, align=center, xshift=3cm] {Stroke $\varepsilon$} |-  (latch.west);
+
+
+    % \node (tau) [textbox, align=center] {Time Response\\$\tau$};
+    % \node (sma) [textbox, below of=tau] {SMA};
+    % \node (asma) [textbox, right of=tau, align=center, xshift=1.5cm] {Antagonistic\\SMA};
+    % \node (op) [textbox, right of=sma, xshift=1.5cm, align=center] {Operating\\Points};
+    % \node (bcm) [textbox, right of=op, xshift=1.5cm, align=center] {Biasing\\Compliant Mechanism};
+    % \node (erb) [textbox, above of=bcm, align=center] {Flexure Hinge\\$e,r,b$};
+    % \node (dx) [textbox, below of=op, align=center] {Stroke\\$\Delta x$};
+    %
+    % \draw [arrow] (tau) -- node[anchor=west, align=left] {Wire\\Diameter} (sma);
+    % \draw [arrow] (tau) -- node[anchor=north, align=center] {Wire\\Diameter} (asma);
+    % \draw [arrow] (asma) -- node[anchor=east, align=center] {$F(x)+F_\mathrm{C}(\theta(x))$} node[anchor=west] {$x_\mathrm{off}$} (op);
+    % \draw [arrow] (sma) -- node[anchor=north] {$F_\mathrm{max}$} node[anchor=south] {$F(x)$} (op);
+    % \draw [arrow] (erb) -- node[anchor=east] {$K_\theta$} (bcm);
+    %
+    % \draw [arrow] let \p1=(bcm.west), \p2=(asma.east) in (bcm.west) -- (\x1-0.5*\x1+0.5*\x2,\y1) -- node[anchor=west] {$F_\mathrm{C}(\theta(x))$} (\x2+0.5*\x1-0.5*\x2,\y2) -- (asma.east);
+    % \draw [arrow] (op) -- node[anchor=east] {$F < F_\mathrm{max}$} (dx);
+    %
+    % \coordinate (Right erb) at ($(erb.east)+(0.5cm,0)$);
+    % \coordinate (Right dx) at ($(dx.east)+(5.5cm,0)$);
+    % \draw [arrow] (dx.east) -- (Right dx) |- (Right erb) -- (erb.east);
+\end{tikzpicture}
+%   };% Comment to remove border
+% \draw [rounded corners=.2em] (table.north west) rectangle (table.south east);% Comment to remove border
+% \end{tikzpicture}% Comment to remove border
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}
