@@ -151,23 +151,7 @@ In \cref{fig:flowchart-pt}, the design methodology for sizing a biased-compliant
 
 \begin{figure}[ht]
     \centering
-    \begin{tikzpicture}[node distance=3.5cm]
-        \node (tau) [textbox, align=center] {Time Response\\$\tau$};
-        \node (sma) [textbox, below of=tau] {SMA};
-        \node (op) [textbox, right of=sma, xshift=1.5cm, align=center] {Operating\\Points};
-        \node (bcm) [textbox, right of=op, xshift=1.5cm, align=center] {Biasing\\Compliant Mechanism};
-        \node (erb) [textbox, above of=bcm, align=center] {Flexure Hinge\\$e,r,b$};
-        \node (dx) [textbox, below of=op, align=center] {Stroke\\$\Delta x$};
-
-        \draw [arrow] (tau) -- node[anchor=west, align=left] {Wire\\Diameter} (sma);
-        \draw [arrow] (sma) -- node[anchor=north] {$F_\mathrm{max}$} node[anchor=south] {$F(x)$} (op);
-        \draw [arrow] (erb) -- node[anchor=east] {$K_\theta$} (bcm);
-        \draw [arrow] (bcm) -- node[anchor=south] {$F(\theta(x))$} (op);
-        \draw [arrow] (op) -- node[anchor=east] {$F_1 < F_\mathrm{max}$} (dx);
-        \coordinate (Right erb) at ($(erb.east)+(0.5cm,0)$);
-        \coordinate (Right dx) at ($(dx.east)+(5.5cm,0)$);
-        \draw [arrow] (dx.east) -- (Right dx) |- (Right erb) -- (erb.east);
-    \end{tikzpicture}
+    \input{images/chap3/bias-compliant-flowchart.tex}
     \caption{Design methodology for sizing biased-compliant mechanism SMA actuators.}
     \label{fig:flowchart-pt}
 \end{figure}
@@ -231,11 +215,9 @@ The concept of augmenting traditional bias-spring SMA actuators with compliant m
 
 As with most SMA actuators fabricated using SMA wires or coils, the actuation of the actuator results in a linear motion. In application where complex motions are required, the antagonistic SMA actuator is paired with a kinematic stage that converts the linear movement to the required complex motion. Furthermore, they can be implemented into these antagonistic SMA actuators such that they present different behaviours based on the direction of actuation. As mentioned previously, flexure-based kinematic stages have the advantage of increased precision and reduced weight but presents with an inherent stiffness. Thus, this increased rigidity must be taken into account when sizing the SMA active elements.
 
-In the traditional antagonistic SMA actuator, the first SMA, when heated and returns to its original length, deforms the antagonistic SMA. Thus, in this case, the heated SMA must overcome the rigidity of the cold SMA. The operating points of such a system can be deduced by taking the intersections between the hot and cold SMA curves as shown in chapter \todocite. In the case of a compliant mechanism, the system is connected to both SMAs at all times. Thus, the inherent stiffness of the compliant mechanism must be taken into account when actuated both SMAs. Therefore, the force-displacement curve of the compliant mechanism, $F_\mathrm{C}(x)$, can be added to the curve of the antagonistic cold SMA, $F(x)$, to obtain the apparent load observed by the heated SMA, as shown in \cref{fig:smaactwp-bb}. The design methodology can thus be adjusted, as shown in \cref{fig:flowchart-bb}, such that when the SMA elements are sized and operating points are determined, no unintended behaviours occur. It is important to note that due to the complexity of the compliant mechanism curves, these unintended operating points can emerge causing shorter strokes.
-
 % General Ant. SMA + compliant mech. curve
 %%%%%%%% WORKING PRINCIPLE FIGURE %%%%%%%%%%%
-\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \begin{tikzpicture}
     \node[anchor=south west,inner sep=0] (graph) at (0,0) {\resizebox{0.85\columnwidth}{!}{\input{images/chap4/smabb-sizing-wp.pgf}}};
@@ -261,41 +243,22 @@ In the traditional antagonistic SMA actuator, the first SMA, when heated and ret
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-In summary, as illustrated in \cref{fig:flowchart-bb}, the design methodology consists of deriving the force-displacement curves of the SMA elements and the relationship between the input displacement, $x$, and the hinge rotation, $\theta(x)$. Once these relationships are deduced, the force-displacement relationship of the compliant mechanism, $F_\mathrm{C}(\theta(x))$ can be added to the force-displacement curve of the cold antagonistic SMA element. An important parameter to note is the prestretched length, $x_\mathrm{off}$ of the SMAs. As the SMA is prestretched, when heated, the SMA can exert higher levels of force but could result in forces that exceed $F_\mathrm{max}$. Using the two curves, the operating points can be estimated and verified such that the resulting stroke, $\Delta x$, fits within the requirements of the application. Furthermore, the geometric parameters of the hinge design of the compliant mechanism can be adjusted such that there are no unintended operating points and that the maximum pull force of the SMA is not exceeded.
+In the traditional antagonistic SMA actuator, the first SMA, when heated and returns to its original length, deforms the antagonistic SMA. Thus, in this case, the heated SMA must overcome the rigidity of the cold SMA. The operating points of such a system can be deduced by taking the intersections between the hot and cold SMA curves as shown in chapter \todocite. In the case of a compliant mechanism, the system is connected to both SMAs at all times. Thus, the inherent stiffness of the compliant mechanism must be taken into account when actuated both SMAs. Therefore, the force-displacement curve of the compliant mechanism, $F_\mathrm{C}(x)$, can be added to the curve of the antagonistic cold SMA, $F(x)$, to obtain the apparent load observed by the heated SMA, as shown in \cref{fig:smaactwp-bb}. The design methodology can thus be adjusted, as shown in \cref{fig:flowchart-bb}, such that when the SMA elements are sized and operating points are determined, no unintended behaviours occur. It is important to note that due to the complexity of the compliant mechanism curves, these unintended operating points can emerge causing shorter strokes.
 
 % Design Methodology for ant. SMA + compliant mech.
 \begin{figure}[hbt!]
     \centering
-    \begin{tikzpicture}[node distance=3.5cm]
-        \node (tau) [textbox, align=center] {Time Response\\$\tau$};
-        \node (sma) [textbox, below of=tau] {SMA};
-        \node (asma) [textbox, right of=tau, align=center, xshift=1.5cm] {Antagonistic\\SMA};
-        \node (op) [textbox, right of=sma, xshift=1.5cm, align=center] {Operating\\Points};
-        \node (bcm) [textbox, right of=op, xshift=1.5cm, align=center] {Biasing\\Compliant Mechanism};
-        \node (erb) [textbox, above of=bcm, align=center] {Flexure Hinge\\$e,r,b$};
-        \node (dx) [textbox, below of=op, align=center] {Stroke\\$\Delta x$};
-
-        \draw [arrow] (tau) -- node[anchor=west, align=left] {Wire\\Diameter} (sma);
-        \draw [arrow] (tau) -- node[anchor=north, align=center] {Wire\\Diameter} (asma);
-        \draw [arrow] (asma) -- node[anchor=east, align=center] {$F(x)+F_\mathrm{C}(\theta(x))$} node[anchor=west] {$x_\mathrm{off}$} (op);
-        \draw [arrow] (sma) -- node[anchor=north] {$F_\mathrm{max}$} node[anchor=south] {$F(x)$} (op);
-        \draw [arrow] (erb) -- node[anchor=east] {$K_\theta$} (bcm);
-
-        \draw [arrow] let \p1=(bcm.west), \p2=(asma.east) in (bcm.west) -- (\x1-0.5*\x1+0.5*\x2,\y1) -- node[anchor=west] {$F_\mathrm{C}(\theta(x))$} (\x2+0.5*\x1-0.5*\x2,\y2) -- (asma.east);
-        \draw [arrow] (op) -- node[anchor=east] {$F < F_\mathrm{max}$} (dx);
-
-        \coordinate (Right erb) at ($(erb.east)+(0.5cm,0)$);
-        \coordinate (Right dx) at ($(dx.east)+(5.5cm,0)$);
-        \draw [arrow] (dx.east) -- (Right dx) |- (Right erb) -- (erb.east);
-    \end{tikzpicture}
+    \input{images/chap3/bias-compliant-antagonistic-flowchart.tex}
     \caption{Design methodology for sizing antagonistic SMA actuators paired with compliant mechanism.}
     \label{fig:flowchart-bb}
 \end{figure}
 
+In summary, as illustrated in \cref{fig:flowchart-bb}, the design methodology consists of deriving the force-displacement curves of the SMA elements and the relationship between the input displacement, $x$, and the hinge rotation, $\theta(x)$. Once these relationships are deduced, the force-displacement relationship of the compliant mechanism, $F_\mathrm{C}(\theta(x))$ can be added to the force-displacement curve of the cold antagonistic SMA element. An important parameter to note is the prestretched length, $x_\mathrm{off}$ of the SMAs. As the SMA is prestretched, when heated, the SMA can exert higher levels of force but could result in forces that exceed $F_\mathrm{max}$. Using the two curves, the operating points can be estimated and verified such that the resulting stroke, $\Delta x$, fits within the requirements of the application. Furthermore, the geometric parameters of the hinge design of the compliant mechanism can be adjusted such that there are no unintended operating points and that the maximum pull force of the SMA is not exceeded.
+
 % State of the art
 Recently, there has been considerable work in developing bistable or multistable actuators. These actuators are able to main a stable position without required any holding energy. This property could be highly beneficial in applications such as grippers. Here, the gripper can stay in the open or closed position without requiring any additional energy. These bistable systems can be created using flexure-based structures, as shown in the work by \cite{jinqiuCurvedbeamBistableMechanism2004}. A axially compressed cantilever beam exhibits bistability and has been implemented in various smart material actuators. In the work by \cite{chouinardBistableAntagonisticDielectric2012}, a dielectric elastomer actuator is paired with a buckled beam to create a compact bistable actuator. Furthermore, in the work by \cite{zhangCompliantBistableGrippers2020}, a bistable drone-ready gripper is fabricated and is actuator using an electric motor. This principle can be implemented and actuated using SMAs, as shown in the work by \cite{welschVacuumGripperSystem2018}. However, the sizing of such a system are missing due to the complex nature of the bistable mechanism and the nonlinear nature of the SMA. Using the proposed, methodology, as shown in \cref{fig:flowchart-bb}, the SMA can be sized to present with higher time responses while still able to trigger the bistable positions of the actuator. The accurate sizing of such a bistable SMA actuator is validated later in \cref{sec:smabb-gripper}.
 
-\newpage
+% \newpage
 \input{main/ch3_1_case_study_mandrel}
 
 \section{Summary and Conclusion}
@@ -310,3 +273,9 @@ Most SMA actuators that make use of kinematic stages to convert the linear motio
 Finally, the four prong mandrel gripper is sized and fabricated. In this prototype, the gripper consists of just an SMA coil and an entirely 3D printed kinematic stage. Based on the design methodology, the kinematic stage is created using compliant flexure-based mechanisms that, while acting as a motion conversion mechanism, also behaves as a biasing spring. The kinematic stage conceived using topology optimization and improved using flexure-based hinges is able to convert the shape memory effect of one SMA coil into a more complex multi-output gripping motion. Based on the design approach presented in this chapter, the compliant mechanism has been sized to optimize the stroke of the SMA actuator while reducing the required SMA coil wire diameter. Using the established and validated analytical models of the kinematic stage and the traditional simplified SMA models, the operating points and the stroke of the gripper, around 4 mm, was estimated. The final prototype of this four prong gripper weighs less than 17 g and is able to exert around 1.78 N of force, which leads to a maximum force-weight density of around 105 N/kg compared to $41$ N/kg for conventional DC motor-based gripper as shown in the work by \cite{leeClosedStructureCompliantGripper2021}. This shows that by using the proposed design methodology, a lightweight and compact gripper can be fabricated for applications such as drone-deliveries.
 
 Now, with the design methodology for biasing kinematic stages validated, novel SMA actuators can be create with highly integrated and compact features can be designed and sized. This tendency to integrate the different subsystems of the conventional SMA actuator to create actuator with higher work densities and fewer pieces to assemble can be further extrapolated to other subsystems. In the next chapter, a novel approach to integrating the control and the kinematic subsystems of the actuator to create mechanically intelligent SMA actuators is presented.
+
+\vspace*{\fill}
+\noindent\hrulefill \\
+\textbf{\large Publications related to this chapter :}\\
+
+S. Thomas, G. Maquignaz, A. Thabuis, and Y. Perriard, \textit{“A Self-Biasing Shape Memory Alloy Gripper for Lightweight Applications,”} in 2021 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2021), Prague, Czech Republic, 2021, p. 6.\\

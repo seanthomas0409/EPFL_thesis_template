@@ -4,6 +4,7 @@
                preview]{standalone}
 \usepackage{tikz}
 \begin{document}
+\renewcommand{\arraystretch}{1} % to increase the space between rows
 \begin{annotationimage}{width=0.25\textwidth}{images/chap7/Gripper rendu.JPG}
  \draw[annotation left = {\begin{tabular}{r} Limit \\ Switch \end{tabular} at 0.8}] to (0.45,0.8);
  \draw[annotation left = {Jaw at 0.15}] to (0.22,0.15);
@@ -12,4 +13,5 @@
  \draw[annotation left = {SMA Coil at 0.65}] to (0.165,0.65);
  \draw[annotation right = {Lever Arm at 0.87}] to (0.7,0.87);
 \end{annotationimage}
+\renewcommand{\arraystretch}{1.5} % to increase the space between rows
 \end{document}

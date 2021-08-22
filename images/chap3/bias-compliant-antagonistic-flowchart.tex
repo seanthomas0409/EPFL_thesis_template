@@ -1,0 +1,30 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+% trim={<left> <lower> <right> <upper>}
+\begin{document}
+\begin{tikzpicture}[node distance=3.5cm]
+    \node (tau) [textbox, align=center, fill=black] {\color{white}Time Response\\$\tau$};
+    \node (sma) [textbox, below of=tau] {SMA};
+    \node (asma) [textbox, right of=tau, align=center, xshift=1.5cm] {Antagonistic\\SMA};
+    \node (op) [textbox, right of=sma, xshift=1.5cm, align=center] {Operating\\Points};
+    \node (bcm) [textbox, right of=op, xshift=1.5cm, align=center] {Biasing\\Compliant Mechanism};
+    \node (erb) [textbox, above of=bcm, align=center, fill=black] {\color{white}Flexure Hinge\\$e,r,b$};
+    \node (dx) [textbox, below of=op, align=center, fill=black] {\color{white}Stroke\\$\Delta x$};
+
+    \draw [arrow] (tau) -- node[anchor=west, align=left] {Wire\\Diameter} (sma);
+    \draw [arrow] (tau) -- node[anchor=north, align=center] {Wire\\Diameter} (asma);
+    \draw [arrow] (asma) -- node[anchor=east, align=center] {$F(x)+F_\mathrm{C}(\theta(x))$} node[anchor=west] {$x_\mathrm{off}$} (op);
+    \draw [arrow] (sma) -- node[anchor=north] {$F_\mathrm{max}$} node[anchor=south] {$F(x)$} (op);
+    \draw [arrow] (erb) -- node[anchor=east] {$K_\theta$} (bcm);
+
+    \draw [arrow] let \p1=(bcm.west), \p2=(asma.east) in (bcm.west) -- (\x1-0.5*\x1+0.5*\x2,\y1) -- node[anchor=west] {$F_\mathrm{C}(\theta(x))$} (\x2+0.5*\x1-0.5*\x2,\y2) -- (asma.east);
+    \draw [arrow] (op) -- node[anchor=east] {$F < F_\mathrm{max}$} (dx);
+
+    \coordinate (Right erb) at ($(erb.east)+(0.5cm,0)$);
+    \coordinate (Right dx) at ($(dx.east)+(5.5cm,0)$);
+    \draw [arrow] (dx.east) -- (Right dx) |- (Right erb) -- (erb.east);
+\end{tikzpicture}
+\end{document}

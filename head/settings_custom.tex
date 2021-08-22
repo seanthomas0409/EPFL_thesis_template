@@ -54,6 +54,11 @@
 \tikzstyle{textbox} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, text width=3cm, draw=black, fill=white]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
+%%%%%%%%%% CIRCUIT TIKZ %%%%%%%%%%%
+\usetikzlibrary{spy,shapes.multipart,babel}
+\usepackage[siunitx,europeanresistors,EFvoltages]{circuitikz} % To have the european convention for the drawing of electrical components. Also to have the current and voltage arrows going from high to low potential
+\ctikzset{voltage/bump b=18pt,voltage/european label distance=15pt,voltage/distance from node=.1}
+
 %%%%%%%%%% DIAGRAMS %%%%%%%%%%%%%
 %See https://tex.stackexchange.com/a/29367/1952
 \makeatletter

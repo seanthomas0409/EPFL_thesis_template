@@ -12,7 +12,7 @@
 % Present different control structures : sensors and sensorless
 Shape Memory Alloys, often referred to as artificial muscles, are often used in applications where a compact and lightweight solution is required. When paired with a biasing element such as a spring or compliant mechanism, a lightweight reversible actuator can be fabricated. By heating and cooling the active SMA element, a reversible back and forth motion can be created.
 
-Due to the complex nature of the shape memory effect, sensors or complex control strategies are required for the accurate control of the SMA element, as shown in the work by \todocite and \todocite. The SMA, if overheated, can result in the permanent reprogramming of the shape or the destruction of the SMA wire or coil. In the case of smaller, more compact applications, the SMA element used are thin wires or coil. In these cases, using sensors that can measure the temperature can be quite difficult to implement due to the low thermal mass of the SMA element. Recent work such as \todocite, have implemented sensorless systems where the change in resistivity is measure as the SMA changes phase to create more compact control solutions. Here, due to the complex nonlinear nature of the shape memory effect requires complex control strategies and micro-controllers to efficiently control the SMA and prevent overheating.
+Due to the complex nature of the shape memory effect, sensors or complex control strategies are required for the accurate control of the SMA element, as shown in the work by \todocite and \todocite. The overheating of the SMA can result in the permanent reprogramming of the shape or the destruction of the SMA wire or coil. In the case of smaller, more compact applications, the SMA element used are thin wires or coil. In these cases, using sensors that can measure the temperature can be quite difficult to implement due to the low thermal mass of the SMA element. Recent work such as \todocite, have implemented sensorless systems where the change in resistivity or inductance is measure as the SMA changes phase to create more compact control solutions. Here, due to the complex nonlinear nature of the shape memory effect, complex control strategies and micro-controllers to efficiently control the SMA and prevent overheating are required.
 
 Often, when considering the volumetric work density of SMA actuators, the electronics, sensors and control strategies are not taken into account. In certain applications, for example untethered crawling robots, the control plays an important role in the final work-weight density of the robot as seen in the work by \todocite. Often, due to the volume and weight restrictions present in the design of mesoscale robotics, the electronics and control systems cannot be integrated into the design and, thus, results in robots that are often tethered and limited in their range as shown in the work by \todocite and \todocite. Improvements made in the sensorless and control strategies can, thus, have a major impact in the final dimensions and weight of the SMA actuator.
 
@@ -46,7 +46,7 @@ A basic linear SMA actuator consists of an SMA and a biasing spring that when he
 
 The SMA element in most cases is heating using Joule's heating by simply passing a current through the SMA and allowing the internal resistance of the SMA element to heat up by Joule's losses as shown in the work by \todocite. The cooling of the SMA generally consists of passively extracting the heat from the active element using natural convection with the cooler surrounding air. This simple strategy is often used in the control of SMA actuators due to not requiring any additional mechanisms and thus, does not reduce the work-density of the actuator while keeping the system compact.
 
-Thus, by using the mechanical behaviour of the actuator to cut the current flow across the SMA will immediately cool the active element before it has a chance to overheat. In this manner, the control of the SMA actuator is mechanical controlled by the shape memory effect. Here, as a current is passed through the SMA wire or coil, it heats up the SMA resulting in a strain recovery and the SMA returning to its original length. This change in length, after a certain threshold, can be made to physically cut the electrical contact between the SMA element and the power supply. This cause the immediate cooling of the SMA through heat exchange with the surrounding air. As the SMA cools down, the biasing element will, once again, deform the SMA which will re-establish the electrical contact across the SMA, restarting the oscillating motion. Thus, this design strategy when integrated into the kinematic stage can render the entire SMA actuator compact and electronics-free.
+Thus, by using the mechanical behaviour of the actuator to cut the current flow across the SMA will immediately cool the active element before it has a chance to overheat. In this manner, the control of the SMA actuator is mechanically controlled by the shape memory effect. Here, as a current is passed through the SMA wire or coil, it heats up the SMA resulting in a strain recovery and the SMA returning to its original length. This change in length, after a certain threshold, can be made to physically cut the electrical contact between the SMA element and the power supply. This cause the immediate cooling of the SMA through heat exchange with the surrounding air. As the SMA cools down, the biasing element will, once again, deform the SMA which will re-establish the electrical contact across the SMA, restarting the oscillating motion. Thus, this design strategy when integrated into the kinematic stage can render the entire SMA actuator compact and electronics-free.
 
 % Advantages (maybe examples)
 This approach, when properly implemented, can result in an robotic system where a reversible actuation can be observed without the need for any electronics, micro-controllers or sensors, preserving the work-weight density of the system. A mechanical control of the SMA element can result in a system where the SMA element, due to the physical electrical contacts being interrupted, can never overheat.
@@ -55,16 +55,24 @@ This approach, when properly implemented, can result in an robotic system where 
 % Implementation
 The basic implementation of such as system consists of using a latch system or multi-stable mechanism where after a certain stroke or force threshold results in a snap-through effect that can be exploited to disconnect the electrical contacts across the SMA wire or coil. The rapid bifurcation or spring back from a latch system is used to cut the flow of current across from the SMA and the slow return of the SMA actuator due to cooling can be used to re-establish the electrical connection to create this oscillating effect.
 
-The implementation of this oscillator mechanism in the scope of a simple biased-spring SMA actuator consists of a magnetic or mechanical latch system. A diagram of the working principle of the proof-of-concept can be in \cref{fig:oscillator-schematic}. The latch, here, consists of a magnet mounted on a leaf spring that is attracted to the end-effector of the bias-spring SMA actuator. The electrical current, in this case, is made to flow across the conductive magnet and into the SMA coil. Thus, only as the the magnet attaches to the end-effector of the SMA actuator will the SMA coil be heated using Joule's losses. Essentially, as the magnet and the SMA coil makes contact, the SMA element is heated and reduces in size due to the shape memory effect. During this phase, the magnet, which is mounted to a leaf spring, experiences a return force, $F_\textrm{S}$, and will continue to follow the actuator. Once, this force exceeds the attractive magnetic force, $F_\textrm{mag}$, between the magnet and the SMA coil, the latch detaches and immediately returns to its original location. This spring back occurs due to the resting return force of the leaf spring attached to the magnet. This concept can be implement in numerous ways including a mechanical latch mounted on a passive spring. Once this snap-through occurs, the electrical connection and the electrical current across the SMA is cut and will only be re-established when the bias spring of the SMA deforms the SMA coil and extends it back towards the latch. In this manner, the oscillating behaviour is observed without any sensors, micro-controllers or electronics.
+The implementation of this oscillator mechanism in the scope of a simple biased-spring SMA actuator consists of a magnetic or mechanical latch system. A diagram of the working principle of the proof-of-concept can be in \cref{fig:oscillator-schematic}. The latch, here, consists of a magnet mounted on a leaf spring that is attracted to the end-effector of the bias-spring SMA actuator. The electrical current, in this case, is made to flow across the conductive magnet and into the SMA coil. Thus, only as the the magnet attaches to the end-effector of the SMA actuator will the SMA coil be heated using Joule's losses. Essentially, as the magnet and the SMA coil makes contact, the SMA element is heated and reduces in size due to the shape memory effect. During this phase, the magnet, which is mounted to a leaf spring, experiences a return force, $F_\textrm{S}$, and will continue to follow the actuator. Once, this force exceeds the attractive magnetic force, $F_\textrm{mag}$, between the magnet and the SMA coil, the latch detaches and immediately returns to its original location. This spring back occurs due to the resting return force of the leaf spring attached to the magnet. This concept can be implement in numerous ways including a mechanical latch mounted on a passive spring. Once this snap-through occurs, the electrical connection and the electrical current across the SMA is cut and will only be re-established when the bias spring of the SMA deforms the SMA coil and extends it back towards the latch as shown in \cref{fig:latch-wp}. In this manner, the oscillating behaviour is observed without any sensors, micro-controllers or electronics.
 
-
-\begin{figure}[ht] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.6\textwidth}{!}{\input{images/chap6/proto-schematic.eps_tex}}
   \caption{Diagram showing the working principle of the magnetic latch system implemented in the SMA oscillator.}
   \label{fig:oscillator-schematic}
 \end{figure}
 
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.75\textwidth}{!}{\input{images/chap4/sma-osc-latch-wp.pgf}}
+  % \begin{tabular}{r@{ }l r@{ }l}
+  %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
+  % \end{tabular}
+  \caption{A schematic of the working principle of the magnetic latch control system. This diagram can be extended to represent any latch based system where there exists a snap-through at a certain stroke.}
+  \label{fig:latch-wp}
+\end{figure}
 
 % Bias spring using flexural linear stage
 As mentioned earlier, using a flexure-based mechanism permits the omission of a dedicated spring in the design. As seen in \cref{fig:proto-full}, a proof-of-concept of this design methodology is implemented. Here, the linear stage is comprised of two parallel cantilever beams that also behaves as leaf springs. These biasing leaf springs apply a tractional return force on the SMA coil at a lower temperature while also preventing any unwanted degrees of freedom in the other axis. Another leaf spring is used to apply the return spring force required in the magnetic latch. Here, the SMA actuator is heated using the magnetic latch system and the snap-through of the latch occurs when the return force of the leaf spring exceeds the attractive force of the magnet, $F_\mathrm{snap} = F_\textrm{S}>F_\textrm{mag}$. Therefore, the required contraction of the SMA coil, $\varepsilon$, can be controlled by sizing the leaf spring associated with the magnet.
@@ -77,7 +85,7 @@ where $K_s$ is the rigidity of the leaf spring which depends on the dimensions o
   \centering
   \begin{tikzpicture}
     \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
-        \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.75\textwidth]{images/chap6/proto-full.jpg}};
+        \node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=0.66\textwidth]{images/chap6/proto-full.jpg}};
     \end{scope}
   \end{tikzpicture}%
   \caption{The integrated SMA control system implemented using a flexure-based magnetic latch creating an SMA mechanical oscillator.}
@@ -98,7 +106,26 @@ where $K_s$ is the rigidity of the leaf spring which depends on the dimensions o
 
 Here, in this proof-of-concept, the magnetic latch consists of a small magnet, with an attractive force of $150$ g, mounted on a thin leaf spring measuring $500\mu\mathrm{m}\times2.5\mathrm{mm}\times30\mathrm{mm}$. An M2 screw is used to clamp an electrically conductive wire to the magnet and acts as the ground of the electrical circuit. The magnet latches onto another ferromagnetic M2 screw which is mounted to the end-effector of the SMA actuator, as seen in \cref{fig:proto-closeup}. The SMA is supplied by \textit{Dynalloy, Inc} (Irvine, CA) and is a 90\degreeC Flexinol\textsuperscript{\textregistered} coil with wire diameter of 200 $\mu$m and an outer diameter of 1.4 mm. The coil contains around 40 coils and with a solid length of 8 mm. The SMA is mounted on a 3D printed support containing a flexure-based linear stage which supports the free end of the SMA. The linear stage is 3D printed from PLA and consists of 2 parallel leaf springs with dimensions 500 $\mu$m x 10 mm x 30 mm.
 
-This basic concept can be implemented in using different methods. The latch system can be replaced by a bistable mechanism and can then be paired with antagonistic SMA actuators. Here, the control system can be linked to the snap-through of the bistable mechanism where each stable position controls the heating of each SMA element. In this way, the first SMA can be heated till the snap-through of the bistable mechanism which will then change the electrical contact across the antagonistic SMA. This concept has been implemented and validated in \cref{sec:smabb-gripper}.
+This basic concept can be implemented in using different methods. The latch system can be replaced by a bistable mechanism and can then be paired with antagonistic SMA actuators. Here, the control system can be linked to the snap-through of the bistable mechanism where each stable position controls the heating of each SMA element. In this way, the first SMA can be heated till the snap-through of the bistable mechanism which will then change the electrical contact across the antagonistic SMA. This concept has been implemented and validated in \cref{chap:case-study}.
+
+% Measurement of frequency and duty cycle
+\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  % \begin{subfigure}[b]{\textwidth}
+      % \centering
+      \resizebox{0.75\textwidth}{!}{\input{images/chap6/sma-osc-temp.pgf}}
+  % \end{subfigure}
+  % ~
+  % \begin{subfigure}[b]{\textwidth}
+  %     \centering
+  %     \resizebox{0.75\textwidth}{!}{\input{images/chap6/sma-osc-pos.pgf}}
+  % \end{subfigure}
+  \begin{tabular}{r@{ }l r@{ }l}
+    {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
+  \end{tabular}
+  \caption{Effect of the current on the evolution of the SMA spring's temperature. This shows that the control system averts any risk of overheating.}
+  \label{fig:thermal-osc}
+\end{figure}
 
 \subsection{Sizing of the oscillator}
 % Sizing strategies (thermal model) + results
@@ -155,25 +182,6 @@ The rise time of the oscillator, $t_h$, can be estimated by calculating the time
 
 The control system was supplied with a constant current and left to oscillate for 2 minutes to test the repeatability and consistency of the rise and fall times. The temperature of the SMA coil was measured using a thermal camera with high spatial resolution and the stroke of the SMA actuator was measured using a laser displacement sensor. In \cref{fig:thermal-osc}, the temperature and position fluctuations of the oscillator are shown. The rise time of the magnetic latch-based control system when supplied with $340$ mA was measured to be $3.8 \pm 0.18$ s while the rise time when supplied with $840$ mA was measured to be $0.64 \pm 0.09$ s. The cooling time when supplied with $340$ mA and $840$ mA was found to be $5.71 \pm 0.09$ s and $5.82 \pm 0.2$ s, respectively. Thus, the period of the oscillations for the two measurements were found to be $9.60 \pm 0.17$ s and $6.47 \pm 0.22$ s which corresponds to a frequency of $0.10$ Hz and $0.16$ Hz.
 
-% Measurement of frequency and duty cycle
-\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
-  \centering
-  \begin{subfigure}[b]{\textwidth}
-      \centering
-      \resizebox{0.75\textwidth}{!}{\input{images/chap6/sma-osc-temp.pgf}}
-  \end{subfigure}
-  ~
-  \begin{subfigure}[b]{\textwidth}
-      \centering
-      \resizebox{0.75\textwidth}{!}{\input{images/chap6/sma-osc-pos.pgf}}
-  \end{subfigure}
-  \begin{tabular}{r@{ }l r@{ }l}
-    {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
-  \end{tabular}
-  \caption{Effect of the current on the evolution of the SMA spring's temperature and position.}
-  \label{fig:thermal-osc}
-\end{figure}
-
 The rise time and cooling times of the latch-based control system were measured by detecting the peaks and troughs of the measured signals. The mean and standard deviation of these values were then calculated. Furthermore, the cooling time predicted, in \cref{fig:cooling-time-extrapolation}, based on the SMA geometry corresponds to the measured values, thus, validating the thermal model. Also, the cooling time remains relatively constant with respect to the varying current across the SMA. The cooling times can, thus, be predicted using the analytical model and the value remains constant, even while varying the current. This implies that the control system can be sized for a fixed fall time by appropriately sizing the SMA wire diameter.
 
 %%%%%%%% Design Methodology Oscillator %%%%%%%%%%%
@@ -188,7 +196,7 @@ This magnetic latch system allowed the bias-spring SMA actuator to be actuated w
 
 \section{Validation of the Approach using a Case Study}
 % Validation of the approach using a case study (introduction)
-As stated previously, the requirement of sensors and complex control strategies in certain applications were compactness and being lightweight are required, pollute the overall work-weight density of the robotic system. In this section, to validate the novel design methodology for mechanical control solutions, a lightweight and compact crawling robot powered by shape memory alloys is designed and fabricated. Here, in the creation of an untethered crawling robot, the presence of sensors or micro-controllers will play an important role in the final work density of the system.
+As stated previously, the requirement of sensors and complex control strategies in certain applications where compactness and being lightweight are required, pollute the overall work-weight density of the robotic system. In this section, to validate the novel design methodology for mechanically-intelligent control solutions, a lightweight and compact crawling robot powered by shape memory alloys is designed and fabricated. Here, in the creation of an untethered crawling robot, the presence of sensors or micro-controllers will play an important role in the final work density of the system.
 
 In this SMA driven crawling robot, the magnetic latch-based control system is implemented so as to create a small scale robot that can be driven without any sensors or electronics. In this mechanism, the high work density of the SMA is not compromised due to the lack of large biasing-springs and control electronics when compared to examples such as the work by \todocite.
 
@@ -250,7 +258,7 @@ The insect robot operates in a similar manner to the inchworm presented in \cref
 
 \subsection{Analytical model of the Biasing Compliant Mechanism}
 
-When sizing the design and SMA of the insect robot, an analytical model of the compliant mechanism is required. This models allows dimensioning the SMA coil such that sufficient stroke is observed during the shape memory effect. Here, the stroke of the SMA actuator or the contraction of the SMA coil corresponds to the estimated step length of the insect robot.
+When sizing the design and SMA of the insect robot, an analytical model of the compliant mechanism is required. This model allows dimensioning the SMA coil such that sufficient stroke is observed during the shape memory effect. Here, the stroke of the SMA actuator or the contraction of the SMA coil corresponds to the estimated step length of the insect robot.
 
 The crux of the design revolves around the flexure-based biasing element and kinematic stage which, in this design, consists of a simple cantilever leaf spring. This flexural structure converts the linear contraction of the SMA coil into the rotation of the insect legs while also serving as the bias spring for SMA actuator allowing the coil to be stretched during the cooling phase based on the design approach detailed in \cref{chap:design-methodology}.
 
@@ -348,7 +356,7 @@ Thus, based on the contraction or strain recovery of the SMA coil ($\varepsilon$
 
 % \subsection{Results and Discussion}
 \subsection{Implications of the Prototype}
-As detailed in the methodology, the analytical model of the inchworm robot that determines the relationship between the contraction of the SMA during actuation and the estimated step length was first estimated. This design was simulated using a commercial finite element modelling (FEM) software which was then used to validate the analytical model, as shown in \cref{fig:insect-am-fem-compare}. Furthermore, the experimental results obtained from the inchworm prototype was used to validate the model, as shown in the same figure. This comparison shows that the pseudo-rigid body model used to model the design is quite accurate and can thus be used to further optimize the step length in future iterations.
+As detailed in the methodology, the analytical model of the inchworm robot that determines the relationship between the contraction of the SMA during actuation and the estimated step length was first estimated. This design was simulated using a commercial finite element modelling (FEM) software which was then used to validate the analytical model, as shown in \cref{fig:insect-am-fem-compare}. Furthermore, the experimental results obtained from the inchworm prototype were used to validate the model, as shown in the same figure. This comparison shows that the pseudo-rigid body model used to model the design is quite accurate and can thus be used to further optimize the step length in future iterations.
 
 % Step figures
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
@@ -389,7 +397,7 @@ As detailed in the methodology, the analytical model of the inchworm robot that 
      SMA dimensions & \begin{tabular}[c]{@{}l@{}}Coil: $\varnothing1.37\times12\,\mathrm{mm}$\\Wire: $\varnothing0.2\,\mathrm{mm}$\end{tabular}                                                                                         \\
      Biasing Leaf Spring & $30\times10\times0.6\,\mathrm{mm}$                                                                                    \\
      Magnet Leaf Spring  & $30\times2.5\times0.6\,\mathrm{mm}$                                                                                    \\
-     Magnet force        & $250$ g                                                                                         \\
+     Magnet force        & $1$ N                                                                                         \\
      Battery Life        & $1.6$ min @ $20$ mAh                                                                               \\
      % Leg dimensions      & \begin{tabular}[c]{@{}c@{}}$L_i = [20\,\mathrm{mm}, 33.5\,\mathrm{mm}]$\\ $ \alpha_i = [0$\textdegree$, 26.6$\textdegree]\end{tabular} \\ \thickhline
  \end{tabular}}
@@ -431,7 +439,7 @@ where $E$ is the energy required to heat the SMA, $m$ is the total mass of the r
   % \begin{tabular}{r@{ }l r@{ }l}
   %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
   % \end{tabular}
-  \caption{The compairson of various different smart material powered inchworm robots with respect to the speed / weight ratio.}
+  \caption{The compairson of various different smart material powered inchworm robots with respect to the speed / weight ratio (in Body Lengths (BL) per second per gram).}
   \label{fig:inchworm-compare-speedweight-weight}
 \end{figure}
 
@@ -440,16 +448,24 @@ In this chapter, a novel approach to design a mechanically intelligent control s
 
 Furthermore, a basic implementation of such a system is presented using a magnetic latch-based system. Using a magnet and flexure-based cantilever leaf springs, a magnetic latch was designed and implemented where after a certain stroke threshold, results in an instantaneous snap-through. This rapid bifurcation is exploited to instantly and mechanically disconnect the electrical contact across the SMA and thus, preventing any overheating. This design principle was implemented by fabricating a basic SMA mechanical oscillator that requires no sensors or electronics to oscillate.
 
-Lastly, the design methodology was validated using a case study consisting of an untethered crawling insect robot powered by a single SMA coil. Here, based on the presented design methodology, a biasing flexure-based SMA actuator was modelled and sized to power the crawling robot. Furthermore, the control system presented in this chapter, was implemented using the magnetic latch system so as to create a reversible control scheme for the SMA actuator. The kinematic stage, which acts as the biasing element of the SMA actuator, is exploited within the control system. Based on the results from the locomotion of the untethered insect robot, a regular step size and walking speed is observed, thus, validating the design approach presenting in this chapter. When compared to similar mesoscale crawling robots, the mechanically intelligent design approach has allowed the speed-weight ratio of the robot to be similar to other tethered alternatives.
+Lastly, the design methodology was validated using a case study consisting of an untethered crawling insect robot powered by a single SMA coil. Here, based on the presented design methodology, a biasing flexure-based SMA actuator was modelled and sized to power the crawling robot. Furthermore, the control system presented in this chapter, was implemented using the magnetic latch system so as to create a reversible control scheme for the SMA actuator. The kinematic stage, which acts as the biasing element of the SMA actuator, is exploited within the control system. Based on the results from the locomotion of the untethered insect robot, a regular step size and walking speed is observed while weighing less than $10$ g, thus, validating the design approach presenting in this chapter. When compared to similar mesoscale crawling robots, the mechanically intelligent design approach has allowed the speed-weight ratio of the robot to be similar to other tethered alternatives.
 
 Using the methodology presented in this chapter, a novel control system can be designed and sized such that the SMA actuator can be controlled without the need for bulky sensors and micro-controllers and without the risk of overheating the SMA element and greatly increasing the volumetric work density of the actuator.
 
-With the design principles presented in this chapter, the traditional discrete building blocks of an SMA actuator is further integrated. In the follow chapter, the same principle can be extended to create actuators where the active SMA element acts as a kinematic stage. Traditionally, the SMA elements are fabricated and designed using simple geometries such as wires, coils and sheets. By extending the kinematic stages that convert or amplify the of the SMA elements to harness the shape memory effect directly, the work density of the actuator can be further improved. In the next chapter, this design principle will be explored along with tools and strategies to generate such integrated SMA actuators.
+With the design principles presented in this chapter, the traditional discrete building blocks of an SMA actuator are further integrated. In the follow chapter, the same principle of integration can be extended to create actuators where the active SMA element acts as a kinematic stage. Traditionally, the SMA elements are fabricated and designed using simple geometries such as wires, coils and sheets. By extending the kinematic stages that convert or amplify the of the SMA elements to harness the shape memory effect directly, the work density of the actuator can be further improved. In the next chapter, this design principle will be explored along with tools and strategies to generate such integrated SMA actuators.
+
+\vspace*{\fill}
+\noindent\hrulefill \\
+\textbf{\large Publications related to this chapter :}\\
+
+S. Thomas, P. Germano, T. Martinez, and Y. Perriard, \textit{“An Untethered Control-Free Inchworm Robot Powered by a Shape Memory Alloy Mechanical Oscillator,”} Sensors and Actuators A: Physical, p. 8, 2022. (pending)\\
+
+S. Thomas, P. Germano, T. Martinez, and Y. Perriard, \textit{“Control-Free Mechanical Oscillator Powered by Shape Memory Alloys,”} in 2021 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Delft, The Netherlands, 2021, p. 5.\\
 
 % \afterpage{%
 % \clearpage% Flush earlier floats (otherwise order might not be correct)
 % \begin{landscape}
-\begin{table}[hbt!]
+\begin{table}[htp!]
  \centering
  \hfill
  \caption{Comparison of the proposed mechanically-intelligent inchworm robot with various different smart material based crawling robots based on their speed and weight}

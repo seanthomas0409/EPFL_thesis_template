@@ -6,13 +6,16 @@
 \begin{document}
 
 \begin{tikzpicture}[node distance=3.5cm]
-    \node (latch) [textbox, align=center] {Latch Control\\$F(x)$};
-    \node (power) [textbox, right of=latch, align=center, xshift=1.5cm] {Power Supply\\$I$};
+    \node (latch) [textbox, align=center, fill=black] {\color{white}Latch Control\\$F(x)$};
+    \node (power) [textbox, right of=latch, align=center, xshift=1.5cm, fill=black] {\color{white}Power Supply\\$I$};
     \node (sma) [textbox, below of=power, yshift=1.0cm] {SMA};
-    \node (rtemp) [textbox, right of=power, align=center, xshift=1.5cm] {Room Temp.\\$T_R, H$};
-    \node (snap) [textbox, below of=sma, yshift=1.0cm] {Snap-Through\\$F(\varepsilon) = F_\textrm{snap}$\\$< F_\mathrm{max}$};
+    \node (rtemp) [textbox, right of=power, align=center, xshift=1.5cm, fill=black] {\color{white}Room Temp.\\$T_R, H$};
+    \node (snap) [textbox, below of=sma, yshift=1.0cm] {Snap-Through\\$F_\mathrm{SMA}(\varepsilon) = F_\textrm{snap}$};
     \node (tctemp) [textbox, below of=rtemp, draw=none, yshift=1.0cm] {};
     \node (latchtemp) [textbox, below of=latch, draw=none, yshift=1.0cm] {};
+    \node (stroke) [textbox, right of=snap, xshift=1.5cm, fill=black] {\color{white}Total Stroke $\varepsilon$};
+
+    \draw (snap) --  node[anchor=south, align=left] {$< F_\mathrm{SMA}^\mathrm{max}$} (stroke);
 
     \draw [arrow] (power) -- node[anchor=west, align=left] {$t_h$} (sma);
     \draw [arrow] (rtemp) |- node[anchor=west, align=left] {} (sma);
@@ -21,12 +24,12 @@
     \draw (latch) -- node[anchor=west, align=left] {$F_\mathrm{snap}$\\$=F(x_\mathrm{snap})$} (latchtemp);
     \draw [arrow] (latch) |- node[anchor=west, align=left] {} (snap);
 
-    \draw [arrow] (sma) -- node[anchor=west, align=left] {$F_\mathrm{max}$} (snap);
-    \draw [arrow] (sma) -- node[anchor=east, align=right] {$F(\varepsilon)$} (snap);
+    \draw [arrow] (sma) -- node[anchor=west, align=left] {$F_\mathrm{SMA}^\mathrm{max}$} (snap);
+    \draw [arrow] (sma) -- node[anchor=east, align=right] {$F_\mathrm{SMA}(\varepsilon)$} (snap);
 
-    \coordinate (South snap) at ($(snap.south)-(0,0.5cm)$);
-    \coordinate (Left snap) at ($(snap.south)-(7.0cm,0.5cm)$);
-    \draw [arrow] (snap.south) -- (South snap) |- (Left snap) node[anchor=south, align=center, xshift=3cm] {Stroke $\varepsilon$} |-  (latch.west);
+    \coordinate (South stroke) at ($(stroke.south)-(0,0.5cm)$);
+    \coordinate (Left stroke) at ($(stroke.south)-(12.0cm,0.5cm)$);
+    \draw [arrow] (stroke.south) -- (South stroke) |- (Left stroke) |-  (latch.west);
 
 
     % \node (tau) [textbox, align=center] {Time Response\\$\tau$};

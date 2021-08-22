@@ -13,7 +13,8 @@ In this application, the SMA coil is heating using Joule's heating by applying a
 
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.6\textwidth}{!}{\input{images/chap7/gripper-working-principle.pgf}}
+  \resizebox{0.9\textwidth}{!}{\input{images/chap3/gripper-working-principle.pgf}}
+  % \resizebox{0.6\textwidth}{!}{\input{images/chap7/gripper-working-principle.pgf}}
   \caption{The sizing methodology of the biased-compliant SMA gripper based on the proposed designing methodology.}
   \label{fig:mandrel-gripperwp}
 \end{figure}
@@ -24,7 +25,7 @@ The main goal of the design presented in this section is to create a multi-outpu
 \subsubsection{Articulated Parallelogram Core and Analytical Geometry Approach}
 The algorithmically generated mandrel topology consists of an articulated symmetrical parallelogram (rhombus). The topology can be reduced to four identical triangles joined at one vertex by a pivot as shown in \cref{fig:mandrel-kinematic}(a). The kinematics of the design is adapted from the generated one by using hinges instead of distributed deformation. In the figure, the blue arrows represent the input while the black arrows represent the output. The design has been generated such that the SMA coils can be placed at the inputs so as to generate a radial output towards the centre when actuated.
 
-\begin{figure}[t] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{\textwidth}{!}{\input{images/chap7/mandrel-kinematic-stage.tex}}
   \caption{Kinematic diagram of proposed design where the black dots represent ideal pivots, the blue and black arrows represent the input and output displacement, respectively. On the left: the outward-triangle configuration with a) the initial position and b) the displaced one. On the right-hand side: the inward-triangle configuration achieving a stroke amplification with c) the initial position and d) the displaced one. e) represents mandrel topology generated with 2D topology optimization which behaves similarly to the outward version. f) shows the 2.5D adaptation of the inward version into a flexure-based mechanism distributed over multiple layers, and with a reversed actuation direction.}
@@ -57,9 +58,9 @@ Here, $L_h$ represents the length of the hypotenuse of each triangle, $\theta$ r
 \subsubsection{Simple Kinematics to a Compliant Mechanism}
 The kinematic schematic is composed of only simple hinges and rigid links. This makes it the ideal candidate for implementation using flexure-based hinges. In this case, as shown in \cref{fig:mech_stages}, truncated semi-circular flexure hinges were selected for their ability to avoid high localised stress concentration and allow for an acceptable angular stroke as displayed in the work by \todocite.
 
-\begin{figure}[t] % t for top of the page, H could be put to impose the position of the float
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{\textwidth}{!}{\input{images/chap7/mandrel-mech-stages.tex}}
+  \resizebox{0.9\textwidth}{!}{\input{images/chap7/mandrel-mech-stages.tex}}
   \caption{Different views of the flexure-based compliant mechanism spreading over multiple stages, and parametrized flexure pivot.}
   \label{fig:mech_stages}
 \end{figure}
@@ -91,7 +92,7 @@ The force-displacement characteristic of the mechanism is then given by :
 The resulting characteristic is plotted as shown in \cref{fig:mandrel-am-expt-compare}. Furthermore, the model is validated using experimental results obtained using a pull-tester. As the experimental results follow the model quite closely, it validates the working hypothesis and approximations used during the definition of the analytical model.
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.7\textwidth}{!}{\input{images/chap7/am-expt-compare.pgf}}
+  \resizebox{0.9\textwidth}{!}{\input{images/chap3/am-expt-compare.pgf}}
   \caption{Validation of the analytical model of the biasing compliant mechanism using experimental results obtained using a pull-tester. Here, the small discrepency arises due to the creep present in the plastic structure as the mechanism returns to its original shape.}
   \label{fig:mandrel-am-expt-compare}
 \end{figure}
@@ -154,7 +155,7 @@ The gripping force, however, is dependant on the size of the gripped object. For
 
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.7\textwidth}{!}{\input{images/chap7/force-temp-filt.pgf}}
+  \resizebox{0.9\textwidth}{!}{\input{images/chap3/force-temp-filt.pgf}}
   \caption{Results of the gripping force performed at different object diameters. The temperature and force output were recorded in real-time using a thermal imaging camera and a force sensor, respectively.}
   \label{fig:mandrel-force-temp}
 \end{figure}
