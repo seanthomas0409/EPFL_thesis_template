@@ -16,30 +16,169 @@ When working with thin wires, placing them in parallel to augment the overall fo
 In this section, a novel approach will look at a new kirigami-based approach to designing SMA sheets to obtain an actuator that can provide higher force output while being able to also provide high strokes. Kirigami is a variation of origami that involves the cutting of the substrate to create different shapes and behaviours. The pattern presented in this paper is based on the work by \cite{shyuKirigamiApproachEngineering2015} where a nanocomposite substrate is patterned to create a stretchable element. This approach allows an SMA sheet to reach strains over 100\% without losing its capacity to deliver a high force output.
 
 \subsection{Proposed Patterns}
-The pattern plays the most important role when creating a kirigami-inspired SMA actuator. The pattern when cut into the SMA sheet creates a meta-material that alters the mechanical properties from the original material. Based on the pattern used, various different behaviours such as stroke amplification or movement conversion can be imparted into the sheet. In this work, as seen in \todocite, two patterns are explored. The $\Omega$-pattern, taken from the work by \cite{shyuKirigamiApproachEngineering2015}, provides an amplification of the stroke while also deforming the SMA in flexion which is favourable for the overall fatigue of the material. The second pattern consists of the Lotus-pattern which allows the material to rotate and create a smart pivot.
+The pattern plays the most important role when creating a kirigami-inspired SMA actuator. The pattern when cut into the SMA sheet creates a meta-material that alters the mechanical properties from the original material. Based on the pattern used, various different behaviours such as stroke amplification or movement conversion can be imparted into the sheet. In this work, as seen in \cref{fig:sma-kiri-patterns}, two patterns are explored. The $\Omega$-pattern, taken from the work by \cite{shyuKirigamiApproachEngineering2015}, provides an amplification of the stroke while also deforming the SMA in flexion which is favourable for the overall fatigue of the material. The second pattern consists of the Lotus-pattern which allows the material to rotate around its centre. Furthermore, if fabricated using SMA and actuated, this pattern can be used to an active smart pivot.
 
 % insert undeformed (maybe deformed also) picture of the patterns
-\begin{figure}
+\begin{figure}[hbt]
      \centering
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
-         \includegraphics[height=0.5\textwidth]{images/chap5/sma-kiri-unit-grey.png}
-         \caption{$\Omega$-Pattern}
+         \includegraphics[height=0.66\textwidth,angle=180]{images/chap5/sma-kiri-unit-grey.png}
+         \caption{$\Omega$-pattern}
          \label{fig:omega-pattern-simple}
      \end{subfigure}
      % \hfill
      \begin{subfigure}[b]{0.45\textwidth}
          \centering
-         \includegraphics[height=0.5\textwidth]{images/chap5/sma-kiri-lotus-fixation.png}
-         \caption{Lotus-Pattern}
+         \includegraphics[height=0.66\textwidth]{images/chap5/sma-kiri-lotus-fixation-grey.png}
+         \caption{Lotus-pattern}
          \label{fig:lotus-pattern-simple}
      \end{subfigure}
-    \caption{The proposed kirigami patterns for the SMA actuator.}
+    \caption{The proposed kirigami patterns for the SMA actuator where (a) allows for a large stroke linear elongation while (b) allows a rotation around its centre.}
     \label{fig:sma-kiri-patterns}
 \end{figure}
 
-% Talk about the FEM models of both patterns
+These patterned structures make use of out-of-plane deformation to create the desired mechanical properties such as stroke amplification. These highly stretchable sheets, when exposed to an imposed force or moment, make use of the out-of-plane deformation of each individual pattern to elongate beyond the capabilities of the material on its own. Due to the fact that these deformations are irregular and can be sophistic to predict, an FEM model where the large deformations of the individual patterns are simulated can be an essential tool in determining the resulting behaviour of the metamaterial. In \cref{fig:kirigami-patterns-deformed}, the proposed kirigami-inspired patterns are simulated showing their highly extensible nature and their respective out-of-plane deformations.
 
-% Talk about the analytical models of the omega pattern
-\subsection{Implementation}
+\begin{figure}[hbt!]
+    \centering
+    \resizebox{0.48\textwidth}{!}{\input{images/chap5/deformed-long-ohm-kiri.tex}}
+    \resizebox{0.48\textwidth}{!}{\input{images/chap5/deformed-lotus-kiri.tex}}
+    \caption{The out-of-plane deformation of the $\Omega$-pattern and the Lotus-pattern using an FEM model.}
+    \label{fig:kirigami-patterns-deformed}
+\end{figure}
+
+% Talk about the FEM models of both patterns
+The FEM simulation was constructed such that rolling supports are placed on the sides to simulate the adjacent patterns. In the case the $\Omega$-pattern, one end of the pattern is fixed while an elongation is applied at the opposite end while measuring the reaction force of the pattern. Similarly, in the Lotus-pattern, the outer circumference is fixed while a rotation is applied on the inside circumference and the reaction moment is measured. The primary goal of simulated these proposed patterns is to establish a force-elongation profile so as to determine the rigidity of the metamaterial.
+
+% Figure : Force-displacement FEM
+
+% Talk about buckling load and and then large deformation of individual beams
+As seen in \todocite, the force-displacement characteristics of the patterns are highly non-linear. However, the characteristic shows two distinct regions which can be simplified linearly. Initially, the metamaterial is highly rigid and requires a large force to create some deformation. This behaviour can be explained by the buckling load required to create the out-of-plane deformation. Initially, the individual beams present in the patterns are compressed axially as the structure is force to elongate. As soon as the buckling load is reached, these beams will buckle and deviate from the plane create a slight deformation. This deviation allows each beam to deform from the plane which drastically reduces the stiffness of the metamaterial creating the second region of rigidity. This principle can be also extended to other kirigami-inspired patterns such as the lotus-pattern and other out-of-plane deforming patterns presented in \cite{shyuKirigamiApproachEngineering2015}. In the case of the $\Omega$-pattern, the individual beams, post-buckling, are deformed in flexion and undergoes large deformations. The deflection and deformations of the individual patterns can be used to deduce the rigidity of the final resulting metamaterial.
+
+% Introduce modelling of omega-pattern (why the need for a model - based on sizing methodology)
+The design of a basic SMA actuator consists of estimating the output stroke of the actuator based on the force- displacement curves of the SMA and the biasing element as shown in the work by \todocite. By establishing the aforementioned force-displacement cruves of the SMA kirigami-patterns and the biasing element, the intersection of these curves represent the operating points of the actuator. However, due to the highly complex multi-physic behaviour of the shape memory effect, these alloys are often simplified and represented as having two separate force-displacement curves: the high temperature and low temperature states as described in chapter \todocite. The intersection of these curves will, thus, represent the operating points of the actuator before and after actuation and can then be used to obtain the final stroke of the actuator. It is, therefore, quite pertinent to elaborate the force-displacement curves of the biasing element and the active SMA element as shown in figure \todocite.
+% Figure of sizing methodology
+
+\subsection{Case Study: Modelling of the $\Omega$-Pattern}
+In this section, the active SMA element of the actuator consists of a thin sheet of SMA. As shown in the work by \cite{morikawaUltrastretchableKirigamiBioprobes2018}, thin sheets of metal when machined with repeated kirigami-inspired patterns can result in structures that can provide higher strokes and create stretchable structures. In this approach, by making use of this concept, an SMA structure can be created such that higher actuation strokes can be achieved when compared to an actuator made from just the thin sheet. Here, in this section, the $\Omega$-pattern presented in the work by \cite{shyuKirigamiApproachEngineering2015} as illustrated in \cref{fig:omega-pattern-simple}, is used to create the kirigami-inspired SMA element. This pattern, in the original study, has not been fully studied but presents a valuable resource when created an SMA actuator due to the fact that the pattern allowing the stretching of the sheet using out-of-plane flexion. As mentioned earlier, flexural stress in SMAs results in better fatigue life and thus, is advantageous when fabricating an actuator and thus, makes it an ideal pattern for creating a long lasting large displacement linear actuator.
+
+The $\Omega$-pattern has been parametrised as shown in \cref{fig:kirigami-param}. The stretchable nature of the patterned sheet changes its mechanical properties when compared to the sheet on its own. Thus, based on these parameters, the stiffness of this resulting metamaterial is sized in this section. The stiffness of the structure can be estimated by calculating the resulting elongation based on the imposed force at one of the extremities. Here, the Young's modulus of the base material is considered linear whereas in the case of an active SMA element, this assumption can be consequential but nevertheless the resulting study can prove to be useful in determining the effects of the various parameters.
+
+\begin{figure}[hbt!]
+    \centering
+    \input{images/chap5/kirigami-parametrisation.tex}
+    \caption{Parametrisation of the $\Omega$-pattern with the thickness of the sheet denoted by $t$.}
+    \label{fig:kirigami-param}
+\end{figure}
+
+\subsubsection{Simplifying the Out-of-plane Deformation}
+The stretchability or stroke amplification of this 2D structure is due to the out-of-plane deformation of the generated beams in the pattern as shown in \cref{fig:ohm-pattern-deformed}. This out-of-plane deflection causes a displacement of the extremities resulting in an increased effective length of the structure which can be viewed as an elongation of the metamaterial. As seen in the figure, the pattern can be reduced to two buckling beams coupled by an undeformed beam. These deflected beams, referred to as the buckling beam, is denoted with the subscript $\mathrm{BB}$. While the rigid beam is referred to as the coupling beam and is denoted with the subscript $\mathrm{CB}$ as shown in \cref{fig:kirigami-param}.
+
+\begin{figure}[hbt]
+    \centering
+    \input{images/chap5/ohm-kirigami-deformed.tex}
+    \caption{A visualisation of the out-of-plane deformation of the $\Omega$-pattern based on the FEM model. Here, only half the pattern is simulated to reduce the computational time of the FEM simulation.}
+    \label{fig:ohm-pattern-deformed}
+\end{figure}
+
+When examining the deformation behaviour in \cref{fig:ohm-pattern-deformed}, as the force is applied to one end, the initial deformation occurs when the buckling beams approach a critical load and buckles out-of-plane. This critical load can be calculated by using the Euler's critical load as given by \eqref{eq:bucklingLoad}, with the column effective length factor $K=2$.
+\begin{equation}\label{eq:bucklingLoad}
+    P_\mathrm{cr} = \frac{\pi^2EI_\mathrm{BB}}{Kl_\mathrm{BB}}
+\end{equation}
+Once the beams buckle, the deflection of the beams continues as the coupling beam applies a moment, $M$, around its centre, as denoted by $P$ in \cref{fig:ohm-pattern-deformed}. Thus, the buckling beam is deflected out-of-plane due to this applied moment caused by the imposed force at the extremities. This deflection can thus be calculated using \eqref{eq:deflectionAngle}.
+\begin{equation}\label{eq:deflectionAngle}
+     \theta = \frac{Ml_\mathrm{CB}}{EI_\mathrm{BB}}
+\end{equation}
+with $M = Fl_\mathrm{CB}/2$ as the coupling beam rotates around the pivot $P$ located at half its length, $F$ denotes the applied force at the extremity of the pattern and $EI$ denotes the flexural rigidity of the beam. This deflection of the buckling beam can be converted to a translation of the ends of the beams using \eqref{eq:deltaX}.
+\begin{equation}\label{eq:deltaX}
+     \Delta x = \frac{l_\mathrm{CB}}{2}\left(1-\cos\theta\right)
+\end{equation}
+
+\subsubsection{Estimating the Apparent Young's Modulus}
+As previously stated, by machining specific patterns into a sheet of material, the resulting structure exhibits mechanical properties different to the material on its own. Thus, this resulting structure can be viewed as a new metamaterial with an apparent stiffness and Young's modulus.
+
+The resulting virtual rigidity of the metamaterial can be estimated by measuring the slope of the force-displacement curves. Thus, the apparent stiffness of the $\Omega$-pattern can be estimated using the above equations as follows :
+\begin{equation}\label{eq:apparentStiffness}
+    k_\Omega = \frac{\partial}{\partial x}(F+P_\mathrm{cr})
+\end{equation}
+
+\begin{figure}[htb] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.6\textwidth}{!}{\input{images/chap5/ohm-kiri-am-fem-comparison.pgf}}
+  \caption{Comparison of the analytical model and the FEM results of the $\Omega$-pattern. The stiffness of the metamaterial is calculated using an exponentially weighted linear regression. Here, the dimensions of the pattern are based on the values shown in \cref{tab:pattern-dimensions}.}
+  \label{fig:ohm-kiri-am-fem-comparison}
+\end{figure}
+
+The analytical model of the pattern is validated using a finite element method (FEM) simulation. As shown in \cref{fig:ohm-pattern-deformed}, only half the pattern is simulated due to the symmetry of the pattern and to cut down on the computational cost of the simulation. Here, in the FEM simulation, one end of the sheet is fixed while a displacement is imposed on the opposite end of the pattern to observe and measure the reaction force required for the displacement. The resulting apparent stiffness of the pattern can be estimated by using an exponentially weighted linear regression fit. The weighted regression allows the fit to ignore the initial buckling load and obtain the slope of the linear section of the force-displacement curve after the initial buckling condition.
+
+The comparison between the analytical model and the FEM results can be seen in \cref{fig:ohm-kiri-am-fem-comparison}. Based on the figure, the results of the FEM simulation are quite similar to the analytical model, showing that the approximations made during the description of the model are valid. Here, the parameters and dimensions used in the simulation of the pattern can be seen in \cref{tab:pattern-dimensions} which are also the same values used in the analytical model during the comparison.
+
+\begin{table}[hbt!]
+\centering
+\caption{The dimensions of the simulated $\Omega$-pattern.}
+\label{tab:pattern-dimensions}
+\renewcommand{\arraystretch}{1.2}
+{\rowcolors{1}{black!10}{black!5}
+\begin{tabular}{clcl}
+    \rowcolor{black} {\color{white}\textbf{Parameter}} & {\color{white}\textbf{Value}} & {\color{white}\textbf{Parameter}} & {\color{white}\textbf{Value}}\\
+    $W$         & $5$ mm  & $l_\mathrm{BB}$       & $4.7$ mm \\
+    $L$         & $10$ mm  & $\phi$       & $120^\circ$   \\
+    $\alpha$     & $0.8$    & $w$         & $1.1$ mm \\
+    $l_\mathrm{CB}$       & $6.3$ mm & $t$         & $100~\mu$m    \\
+    $\beta$      & $0.27$   & $l_\mathrm{bulk}$    & $1$ mm \\
+    Material & CuBe (TM08) & $E$ & 1.25 GPa
+\end{tabular}}
+\end{table}
+
+The apparent Young's modulus of the metamaterial, $E_\Omega$, can be calculated using the rigidity and the geometrical dimensions of the sheet where the force, $F$, can be transformed into stress using $\sigma = F/W\cdot t$ and the elongation, $\Delta x$, can be transformed into strain using $\varepsilon = \Delta x/L$. Thus, using these equations and the analytical model of the $\Omega$-pattern, this virtual Young's modulus can be easily sized for the required specifications of the use case scenario.
+
+
+\subsection{Implementation of a Kirigami-inspired Linear Actuator}
 % Talk about the implementation of the two types of actuator
+As previously mentioned, a basic SMA actuator consists of the active SMA element, the biasing element and the kinematic stage. In this section, however, the active element is based on the proposed kirigami-inspired SMA element. The goal of the kirigami structure is to modify the mechanical properties of the SMA sheet such that the stroke amplification can be implemented. In this section, a prototype is fabricated using the kirigami-inspired SMA actuator paired with a flexure-based biasing element. As shown in \cref{chap:integrated-control}, a flexure-based linear stage has been used to constrain the movement of the SMA element such that the actuator has a linear stroke and does not result in any undesired buckling. As the flexure-based linear guide presents with an inherent stiffness, this structure is used as a biasing spring for the activation of the active SMA element. Essentially, the flexure allows the subsystem to function as both the kinematic stage and as the biasing element preventing the degradation of the work density of the active material. Furthermore, the kirigami-based actuator allows for a stroke amplification of the SMA element without requiring an additional kinematic stage.
+
+The design of a basic SMA linear actuator consists of estimating the output stroke of the actuator based on the force-displacement curves of the SMA and the biasing element as presented in \cref{chap:design-methodology}. As stated in the sizing methodology, the force-displacement curves of the kirigami-inspired SMA element can be used to determine the operating points of the actuator and estimate the final stroke. In \cref{fig:sma-kiri-working-principle}, the schematic of the sizing methodology when considering the highly non-linear SMA kirigami structure and the flexure-based biasing element.
+
+\begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.75\textwidth}{!}{\input{images/chap5/sma-kiri-working-principle.pgf}}
+  \caption{A schematic of the working principle and sizing methodology of the kirigami-inspired SMA actuator.}
+  \label{fig:sma-kiri-working-principle}
+\end{figure}
+
+The kirigami-inspired SMA element can be easily fabricated by using a thin sheet of the alloy and cutting the desired pattern using laser cutting or water-jet cutting. The SMA sheet has been purchased from Memry Corporation and is composed of NiTiNOL. The primary advantage to this methodology consists in the fact that based on the pattern imbued into the sheet, various novel mechanical properties can be imparted into the material, in this case, stroke amplification. Using the $\Omega$-pattern, compared to a simple rectangular sheet of the material, the structure can be made to reach elongations up to 100\% as opposed to the traditional 4 - 8\%. This stroke amplification can be achieved using multiple springs arranged in parallel, but with the proposed kirigami pattern, the same amplification can be achieved with a single piece and reduced assembly. Furthermore, as the pattern consists of beams that deform out-of-plane in flexion, the fatigue life of the material is conserved compared to if the sheet were elongated in pure traction.
+
+The rigidity of the resulting metamaterial produced from a passive material such as Copper Berryllium can be determined using the analytical model of the $\Omega$-pattern, as confirmed in \cref{fig:ohm-kiri-am-fem-comparison}. When building the kirigami-based active SMA element for the actuator, however, the analytical model must be updated for the shape memory effect's non-linear behavior, and only then can it be used to establish the actuator. The prototype in this section makes use of the flexure-based biasing element whose stiffness can be sized using the work by \cite{heneinParallelSpringStages1998}.
+
+\begin{figure}[htb] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.75\textwidth}{!}{
+    \input{images/chap5/sma-kiri-expt-results-side.tex}
+  }
+  \caption{Results of the pull-tester of the single $\Omega$-pattern sample cut from a 100 $\mu$m NiTiNOL sheet showing the force-displacement curve of the metamaterial.}
+  \label{fig:ohm-kiri-sma-expt-results}
+\end{figure}
+
+In order to understand the effects of using an active non-linear material such as the SMA on the properties of the metamaterial, a single $\Omega$-pattern is cut in a small sheet of the SMA as opposed to the passive linear material. As plotted in \cref{fig:ohm-kiri-sma-expt-results}, the results of the pull-tester can be seen and the mechanical behaviour of the single ($1\times1$) unit pattern test is observed. Here, one can deduce that the highly non-linear behaviour of the SMA active material has a large effect on the properties of the resulting metamaterial. This highly extensible nature of the pattern is attractive for large stroke linear applications. This non-linearity in the metamaterial force-displacement curve can be attributed to the non-linear nature of the SMA at low temperatures. In order to further understand the effects of the kirigami patterns on the metamaterial, the metamaterials containing the unit pattern in series ($2\times1$) and parallel ($1\times2$) are tested and whose force-displacement curves are shown \cref{fig:ohm-kiri-sma-expt-results}. As one can see from the experimental results obtained from the pull-tester, adding patterns in series or in parallel can be exploited to vary the stiffness of the resulting metamaterial and can be used to size the active material based on the requirements of the actuator.
+
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[height=0.75\columnwidth, trim={30cm 10cm 30cm 10cm}, clip, angle=90]{images/chap5/sma-kiri-flat.jpg}
+%     \caption{Fabrication of the kirigami SMA actuator based on the $\Omega$-pattern.}
+%     \label{fig:sma-kiri-cut}
+% \end{figure}
+
+\begin{figure}[hbt]
+    \centering
+    % \includegraphics[width=0.9\columnwidth, trim={0 10cm 0 20cm}, clip]{images/chap5/sma-kiri-actuator-green-iso.jpg}
+    \resizebox{0.75\textwidth}{!}{
+      \input{images/chap5/kirigami-actuator-prototype.tex}
+    }
+    \caption{A linear actuator powered by a kirigami-inspired SMA active element. Here, using flexure-based structures, the final dimensions and complexity of the system has been further optimised.}
+    \label{fig:sma-kiri-actuator}
+\end{figure}
+
+The kirigami SMA actuator is fabricated by laser cutting the repeating $\Omega$-pattern into the 100 $\mu$m thin NiTiNOL sheet. Using 5 patterns arranged in series, the structure is conceived to have increased output strokes. The kirigami structure can extend by $20$ mm displacement an elongation up to 60\%. As observed in \cref{fig:sma-kiri-actuator}, pairing this active metamaterial with the linear stage flexure, a lightweight compliant linear actuator is designed and fabricated using 3D printing. The actuator is actuated by simply passing a current across the ends of the SMA element. The internal resistance of the kirigami-based metamaterial allows Joule's losses to raise the temperature and activate the shape memory effect. As the material cools down passively, the biasing flexure spring deforms the metamaterial back to its deformed state.
+
+As shown in \cref{fig:sma-kiri-actuator}, this proof-of-concept prototype is created using the proposed kirigami SMA actuator paired with a flexure-based linear stage, as detailed in \cref{chap:design-methodology}, to create the large stroke linear actuator. With a $9.6$ mm wide SMA sheet, the final prototype is able to produce pulling forces equivalent to multiple springs attached in parallel with considerably less complexity and assembly time. The kirigami-inspired SMA linear actuator, fabricated from the 100 $\mu$m SMA sheet, is able to produce strokes up to $5$ mm and apply a pulling force of $2.1$ N as opposed to the $0.4$ N of pull-force for a 200 $\mu$m diameter SMA spring. This shows the advantage of this proposed methodology and shows the possibility of preventing the work density deterioration of the SMA actuator.

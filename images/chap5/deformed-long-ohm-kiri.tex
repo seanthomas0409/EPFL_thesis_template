@@ -1,0 +1,19 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+  % \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip]{images/chap5/ohm-dual-kirigami-deformed-shadows.png}};
+  \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip, width=0.66\textwidth]{images/chap5/ohm-dual-kirigami-deformed-shadows.png}};
+  % Insert a relative reference based on image dimensions
+  \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    \draw[-latex,>=stealth',very thick] (0.875,0.125) -- (0.925,0.075);
+    \node[anchor=center] at (0.97,0.15) (M) {\large$F(\Delta x)$};
+    % \draw[-latex,>=stealth',very thick] (0.4,0.57) arc[radius=0.09, start angle=150, end angle=330];
+    % \node[anchor=center] at (0.48,0.535) (M) {$M(\Delta\theta)$};
+  \end{scope}
+\end{tikzpicture}
+\end{document}
