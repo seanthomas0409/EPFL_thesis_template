@@ -1,0 +1,22 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+ {\footnotesize\rowcolors{1}{black!5}{black!10}
+% \begin{tabular}{p{2cm}P{2cm}P{2cm}P{2cm}P{2cm}P{2cm}}
+\begin{tabular}{p{0.17\textwidth-2\tabcolsep}
+                p{0.14\textwidth-2\tabcolsep}
+                p{0.17\textwidth-2\tabcolsep}
+                p{0.16\textwidth-2\tabcolsep}
+                p{0.16\textwidth-2\tabcolsep}
+                p{0.18\textwidth-2\tabcolsep}}
+   \rowcolor{black}  & \textbf{\color{white} \parbox[t]{1.5cm}{Active\\Element}} & \textbf{\color{white} \parbox[t]{1.5cm}{Biasing\\Element}} & \textbf{\color{white} Kinematic Stage} & \textbf{\color{white} \parbox[t]{1.5cm}{Heating\\Strategy}} & \textbf{\color{white} Sensor}\\
+   \cite{rodrigueCurvedShapeMemory2017a} & Wire & PDMS matrix & Shape setting & Joule's heating & None\\
+   \cite{motzkiEnergyefficientSMAVacuum2016} & Wire & Spring & Bistable mechanism & Joule's heating & None\\
+   \cite{luNovelDesignParallel2019} & Wires (in series) & Spring & Cross-shear coupler & Joule's heating & External position sensor\\
+\end{tabular}}
+\renewcommand{\arraystretch}{1}
+\end{document}

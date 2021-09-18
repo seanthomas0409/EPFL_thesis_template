@@ -1,5 +1,4 @@
 % !TEX root = ../sethomas_thesis_main.tex
-
 \chapter{Overview of SMA Actuator Design}\label{chap:sma-actuator-design}
 \section{Introduction}
 In the scope of miniaturisation, creating highly integrated robotic system has become possible with the help of smart materials, notably Shape Memory Alloys (SMA). These alloys, having the highest work density, has made it possible to create miniature artificial muscles that can be integrated into compact and lightweight applications. SMAs have an interesting behaviour which consists of recovery any strain imposed on it when heated above a certain critical temperature threshold, often referred to as the Shape Memory Effect (SME). These alloys exploit the SME to create reversible actuators that are lightweight and compact. This effect is highly non-linear and is dependant on multiple variables, resulting in a highly complex and difficult to model behaviour. Thus, designing and sizing these alloys to create optimised actuators for complex applications is difficult and cumbersome.
@@ -70,15 +69,28 @@ As shown in these examples, the high force output and the ability to create ligh
 
 % Industrial
 \subsection{Industrial Applications}
-\begin{figure}[hbt!]
+% Intro to industrial application
+The primary reason that SMAs have started to be integrated into industrial applications has been the need for lightweight and powerful actuators. The high power and energy densities of the SMA has made it an ideal candidate to save weight and construction space when compared to traditional electric and pneumatic actuators. Furthermore, these SMA industrial actuators operate with reduced noise and emissions with is often overlooked in industrial applications but can be essential in clean-room applications. In this section, various examples of industrial gripper powered by shape memory alloys are presented so as to understand an establish a clearer picture of the various design requirements and constraints present in the domain.
+
+\begin{figure}[h]
     \centering
     \input{images/chap1/industrial-examples.tex}
     \caption{An example of an SMA powered actuator used for visual clarity in Surgical cameras taken from the work by \todocite}
     \label{fig:industrial-examples}
 \end{figure}
 
+In the first example, the authors, \todocite, have designed and fabricated a soft robotic gripper powered by an SMA wire. Here, the SMA wire-based soft bending actuator was designed so as to exploit the power-to-weight ratio of the material to create a lightweight robotic finger as shown in \cref{fig:industrial-examples}(a). In the work, the proposed actuator consists of a curved polydimethylsiloxane (PDMS) matrix with an embedded SMA wire. Here, the wire, acting as the active element, is biased by the PDMS matrix. During the activation, the SMA wire attempts to straighten itself when heated and is reverted back to its curved state by the PDMS matrix during cooling. The high power-to-weight ratio allows three $200~\mu$m SMA wires to exert $1.5$ N of gripping force. The use of the biasing PDMS matrix allows the repeated actuation of the actuator. The curved nature of the PDMS matrix and the actuator acts as the kinematic stage that converts the actuation of the SMA into the required gripping motion. In this work, the authors have prioritized creating an actuator that is lightweight and has soft actuation to not damage the grasped object. The use of SMAs in this application has allowed the authors to create a lightweight actuator while still enabling a high grasping force.
+
+In this second case study, the authors, \todocite, have developed an SMA-powered vacuum gripper. The gripper, as shown in \cref{fig:industrial-examples}(b), consists of a bias-spring surrounded by a long SMA wire in traction. Here, the SMA wire is wound around multiple screws to create the illusion of multiple independent SMA wires that work in parallel to increase the output forces. Furthermore, a bistable mechanism is used to convert the SMA actuation into a constant holding force that require no additional energy from the SMA after the initial trigger force. The gripper is actuated using Joule's heating by passing a current across the SMA wire and the authors have implement a resistance measurement and self-sensing capability for the control of the gripper. In this work, the leading design criteria was the energy efficiency of the bistable mechanism and the high output forces of the SMA wire. The SMA wire system allowed the final vacuum gripper to be lightweight while still offering the required forces to trigger the snap-through of the bistable mechanism.
+
+In the final example, the authors, \todocite, have designed and fabricated a robotic gripper which aims to grasp to uncooperative objects as shown in \cref{fig:industrial-examples}(c). In this work, the authors have chosen to replace traditional hydraulic actuators with an SMA-powered actuator due to their reduced complexity and points of failure and their high energy density, low energy consumption and quick response. The robotic gripper consists of three major subsystems: the SMA linear actuator, the hinge coupler mechanism and the gripping claws. The SMA linear actuator consists of a eight SMA wires fixed on one end and fixed to a sliding shaft on the other end. This allows a stroke amplification of the linear actuator without reducing the output forces. The system offers some redundancy where if one of the wires fails, the other wires allows the continued operation of the SMA gripper. The coupler mechanism makes use of cross-shear hinge mechanism to convert the linear actuator of the SMA actuator into the required dual motion of the claws. The mechanism also offers a stroke amplification to the overall actuator. The biasing element allows the repeated actuation of the system and is accomplished using a simple passive spring. In this work, the authors have prioritized the high work density of the alloy to create a compact system with higher energy efficiency and higher longevity.
+
+As shown in the presented examples, the key design criteria of SMA actuators in industrial applications are the lightweight and compact nature of the resulting SMA actuators. The use of SMAs and their high power-to-weight ratio has allowed actuators to be created that are lightweight and are, thus, highly attractive as end-effectors for robotic arms. Furthermore, using bistable mechanisms and bias springs has allowed SMA-powered industrial grippers to be energy efficient by not requiring continuous energy to grasp objects. The biasing elements also allow the repeated actuation of the gripper without introducing any contaminants or complex assemblies. The slow cooling time and the reduce operating frequency has always been a challenge in industrial applications but has been outweighed by the high work density of the alloy.
+
 % Bio-inspired
 \subsection{Bio-inspired Robotic Applications}
+In the hunt for creating bio-inspired robotic system, there has been a intentional effort to finding smart materials that have similar performances to biological muscles. In this regards, the high volumetric work density of SMAs and its naturally compliant natures has made it comparable to biological muscles and has made it a primary candidate for bio-inspired applications. When creating bio-inspired robotic systems, the primary design constraints are often the weight and volume of the system. SMAs, being the primary candidate for lightweight systems, allows robotic systems to be highly integrated and make use of the energy density of the material. Implementing traditional electromagnetic and pneumatic systems can be useful in creating tethered systems but when designing untethered systems that have a focus on reduced weight have been forced to implement SMA-powered actuators.
+
 \begin{figure}[hbt!]
     \centering
     \input{images/chap1/bio-examples.tex}
@@ -86,8 +98,98 @@ As shown in these examples, the high force output and the ability to create ligh
     \label{fig:bio-examples}
 \end{figure}
 
-\section{Design Requirements of SMA Actuators}
-\section{Traditional SMA Actuator Design}
-\subsection{Types of SMA Actuators}
-\subsection{Building Blocks of SMA Actuator Design}
+In this first example, the authors, \todocite, have designed an SMA-actuated soft crawling robot. In this work, the authors have focused on creating a lightweight actuator that is able to propel itself across a surface with a gait similar to an inchworm as shown in \cref{fig:bio-examples}(a). Due to the tight volume and weight constrains of the application, the authors have incorporated the elastic nature of the robot body as the biasing element to the SMA coil. However, the robot requires a passive spring as an auxiliary biasing element to accelerate the robot recovery and improve the gait coordination of the insect robot. The slow cooling of the SMA coil results in a slow gait for the insect robot but reducing the diameter of the coil can drastically increase the robot speed. However, the control of the robot and the electronics have not been integrated into the system. This tethered crawling robot has exploited the high energy density of the SMA to create a small lightweight robot.
+
+In the second example, the work by \todocite, presents a highly dynamic SMA-powered moving robot. Here, as shown in \cref{fig:bio-examples}(b), the authors exploit the naturally compliant nature and the high work density of the alloy to create the actuator that powered the moving robot. In this work, the SMA actuator consists of a single SMA wire encased in a biasing silicone elastomer. Furthermore, a thermally conductive elastomer is used to dissipate the heat from the SMA, acting as a heat sink, to increase the time response of the robot. Miniaturised power electronics has been added to the robot to allow the robot to move untethered. The flexural response of the SMA wire is used to actuate the robot and is also used as the crawling motion. The authors, by creating a highly integrated system, has allowed them to fully exploit the high work density of the smart material.
+
+In the last example, the authors, \todocite, have developed an ultra-lightweight crawling robot that is powered by a shape memory alloy wire. This autonomous sub-gram micro-robot, as shown in \cref{fig:bio-examples}(c), makes use a thin SMA wire attached to a small hinge that allows the actuation of the legs when the SMA is heated. The biasing element in this case is composed of a thin leaf spring that is used to create the two-way activation of the SMA actuator. The authors have achieved such a lightweight SMA-powered robot by avoiding the use of any senors or electronics with the use a chemical heating element. A reservoir of methanol is used to heat the SMA wire using vents that are opened and closed based on the position of the robot legs. This mechanical control has allowed the authors to fully harness the high work density of the SMA wire and create an ultra-lightweight robot. In this case, the primary design principle that motivated the design of the robot was the final weight and energy density of the system.
+
+When considering the different examples of bio-inspired robotic system, the main design criteria considered by the different authors has been to reduce the overall weight and complexity of the system. When creating such miniature and lightweight systems, designing monolithic parts with reduced complexity and assembly has been critical in harnessing the work density of the SMA actuator. In these examples, the SMA actuator has been integrated into the body of the robot as opposed to separating the actuator and robot body into discrete subsystems.
+
+\section{Design Criteria}
+The various actuators shown in the previous section displays the diversity and variety of designs that exist to create an SMA actuator. When considering the domains in which SMAs are used shows that these alloys have become an attraction option to replace traditional pneumatic and electromagnetic actuators. Furthermore, the domain in which the SMA is used has a large impact on the design and implementation of the actuator. This implies that when designing SMA-powered actuators, a holistic approach must be taken where the application and the entire system is considered.
+
+In the case of biomedical applications, the SMA actuators are implemented based on the design constraints imposed by the human body. The various examples of biomedical applications are summarised in \cref{tab:biomed-subsystems-examples}. In this domain, the fact that SMA actuators have smooth operation and do not introduce any particulate matter makes them an attraction alternative. Furthermore, when dealing with the tight volume constraints imposed by the human body, the high work density of the material becomes a crucial detail in the choice of active material. Furthermore, as the SMA can be heated rapidly, using Joule's heating which involves simply passing a current across the SMA, a rapid actuation can be obtained which is highly attractive in this domain. As shown in the examples, small and powerful SMA wires and springs are used to create the actuators while passive micro-springs are employed to enable two-way actuation.
+
+\begin{table}[hbt]
+    \centering
+    \caption{A summary of the various implementations of the biomedical SMA actuators.}
+    \input{images/chap1/sma-actuator-biomed-subsystems.tex}
+    \label{tab:biomed-subsystems-examples}
+\end{table}
+
+When it comes to SMA actuators designed for automotive and aerospace applications, they are often conceived with high force outputs as a priority. Since the shape memory effect is scalable, these alloys can be used in micro and macro applications. Here, traditionally actuators used in this field at this scale tend to be bulky and heavy. The high work density of the alloy allows creating powerful actuators with large force outputs that are still lightweight when compared to similar traditional actuators. Furthermore, the rapid actuation and the low bandwidth required in these application has also allowed SMAs to penetrate the market. The fact that, often, SMA-powered actuators have a simple design and reduce complexity allowing these actuators to be used in this domain that values longer lifespan and reduced failure points. In \cref{tab:auto-subsystems-examples}, the implementation summary of the different examples are shown.
+
+\begin{table}[hbt]
+    \centering
+    \caption{A summary of the various implementations of the aerospace and automotive SMA actuators from the different examples.}
+    \input{images/chap1/sma-actuator-auto-subsystems.tex}
+    \label{tab:auto-subsystems-examples}
+\end{table}
+
+However in industrial applications, the requirement to higher operating bandwidth has often limited the use of SMAs. In cases where a soft gripper or a gripper that is lightweight, the natural compliance and the work density of the material has allowed it to adapt to the requirements of the industry. In some cases, the absence of contaminant as in the case of pneumatic grippers can be an attractive characteristic that force the adoption of SMA-based grippers. In this domain, the weight and force outputs of the actuator are the primary design constraints when considering the choice of active material. When designing SMA-powered grippers for industrial application, the weight if often factored into the design process. Furthermore, as the primary challenge of SMA actuators is the low operating bandwith due to the cooling requirements, adequate sizing must be considered when designing the active SMA element for the use case scenario. In \cref{tab:industrial-subsystems-examples}, a summary of the different implementation strategies are shown when creating such SMA-based industrial grippers.
+
+\begin{table}[hbt]
+    \centering
+    \caption{A summary of the various implementations of the industrial SMA actuators.}
+    \input{images/chap1/sma-actuator-industrial-subsystems.tex}
+    \label{tab:industrial-subsystems-examples}
+\end{table}
+
+In the last major domain in which SMAs are often employed, they are favoured due to their resemblance to human muscles with respect to their volumetric work density. In the case of bio-inspired actuators, the goal has always been to create the smallest and lightest actuator such that the system can remain in the mesoscale. This often imposed a strict weight and volume constraint for the actuator when dealing with bio-inspired robotic systems. SMAs have often been the first choice for such system as creating lightweight actuators are its speciality. In \cref{tab:bioinspired-subsystems-examples}, the different implementations are displayed for the previously presented examples. Often, these robotic systems have been designed around the material rather than the other way around. This holistic approach, often used in this domain, is rarely exploited in the other applications. The tight weight and volume constraints have force the authors to create highly integrated systems.
+
+\begin{table}[hbt]
+    \centering
+    \caption{A summary of the various implementations of the bio-inspired SMA-powered systems.}
+    \input{images/chap1/sma-actuator-bioinspired-subsystems.tex}
+    \label{tab:bioinspired-subsystems-examples}
+\end{table}
+
+% Summary of the design criteria of SMA actuators
+As observed with the various examples, the constraints of the application plays a major role in the implementation and design of the SMA actuator. When studying the different applications, the major design constraints that are considered when designing these SMA-powered actuators, include :
+\begin{itemize}
+    \item a weight constraint
+    \item a volume constraint
+    \item a high force or stroke output requirement
+    \item a reduce contaminants or biocompatibility requirement
+    \item a rapid actuation requirement
+    \item or a two-way actuation requirement
+\end{itemize}
+Using these design constraints, the sizing and design choices can be made to create an SMA-powered actuator that is more suited for the desired application. In this work, these constraints and lessons learned from the various examples in the different applications are exploited and translated to other situations.
+
+\section{Traditional Design Elements of an SMA-based System}
+Using the various examples of SMA actuators, that were explored in the previous section, a holistic approach to SMA actuator design can be taken. In each case, the primary goal of the actuator was to exploit the high work density of the smart material to create a lightweight or compact actuator. Often, sub-optimal solutions were employed when compared with the implementations in other domains. In the case of bio-inspired systems, the SMA actuators had a large focus on the work density and the final weight of the system, however, in other domains such as industrial applications, these techniques could be employed to further improve the performances of the grippers. By translating lessons learned from one domain to another, the hope is to allow the entire robotic system to fully harness the high work density of the SMAs.
+
+With the goal of improving the work density of the final system, the different SMA-powered examples can be studied to establish the areas in which a more integrated approach can be taken. As shown in the previous section, there are common subsystems that exist when designing the SMA-based robotic system. By establishing a commonality between the different types of actuators, the strategies employed in one domain can be easily translated to another. As shown in \cref{fig:hexahon-base-layer}, the SMA actuator can be divided to four different basic building blocks. These subsystems each have a specific role and allows the SMA actuator perform the require output when actuated using a thermal load.
+
+% Building blocks figure
+\begin{figure}[hbt] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip, width=0.8\textwidth]{images/chap1/hexgon-base-layer.pdf}};
+	% Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    \node[] at (0.19, 0.5) {\textcolor{white}{\large Active Element}};
+    \node[] at (0.5, 0.75) {\textcolor{white}{\large Kinematic Stage}};
+    \node[] at (0.5, 0.24) {\textcolor{white}{\large Control Stage}};
+    \node[] at (0.81, 0.5) {\textcolor{white}{\large Biasing Element}};
+    \end{scope}
+    \end{tikzpicture}
+  \caption{A visual representation of the different subsystems that exist in the traditional SMA-based systems.}
+  \label{fig:hexahon-base-layer}
+\end{figure}
+
+% Basic tradition subsystems of SMA actuators
+\subsection{Building Blocks of an SMA Actuator}
+Often, these different subsystems exists as discrete building blocks in the SMA-based robotic system. These subsystems each fulfil a different role in the operation of the SMA actuator.
+
+The \textbf{Active Element} is the SMA element that is present within the system and is responsible to providing the work for actuation. The SMA, as shown in the examples, can be fabricated in various shapes. Often, they are used as wires when space is limited, low strokes and high force outputs are required. When higher strokes are required, SMA coils are used as they are able to elongate over 100\% of their length with a trade-off in force output. In certain cases, thin SMA sheets are used for higher force output. In most cases, however, as passive cooling is employed, the geometry of the SMA element plays a major role in the operating frequency of the actuator. Here, thinner and smaller SMA sheets or wires allow for faster time responses.
+
+In applications where two-way or repeatable activation is required, the \textbf{Biasing Element} is added to the actuator. The role of the biasing element consists of deforming the SMA at low temperatures so that the shape memory effect can occur when the active element is heated. As mentioned previously, the most simple forms of biasing elements consist of a deadweight, a passive spring or an antagonistic SMA. These elements allow the actuator to be actuated repeatedly or in both directions. The dependence of the SMA actuator for such a biasing subsystem greatly degrades the work density of the SMA actuator when considered as a whole. Often, in the case of SMA actuators, these passive elements allow the repeated actuation of the active element without adding any additional work.
+
+As the traditional SMA-based actuator is often a linear actuation, some kind of \textbf{Kinematic Stage} is present to convert the linear movement of the actuator into the required output motion. In most cases, such as grippers, the simple linear motion of the SMA actuator is not sufficient. In such cases, the kinematic stage is employed using pins, hinges, gears and bearings, to convert the linear motion of the actuator into a more complex motion. In certain cases, this stage is used to amplify the stroke or output forces of the actuator. In the most simple applications, a hinge or lever arm is used to convert the linear rotation of the actuator into a rotational one. The kinematic stage is, often, a critical subsystem when designing an SMA-powered robotics system.
+
+The last subsystem, the \textbf{Control Stage}, consists of the electronics, sensors or heating mechanism used to active and control the shape memory effect. In the case of SMAs, a thermal load must be applied to the active material to activate the shape memory effect and initiate the strain recovery of the alloy. In most cases, the simplest solution consists of harnessing the internal resistance of the SMA and heat the alloy using Joule's heating. Here, a current is passed across the SMA to allow Joule's losses to heat the material above its transition temperature and produce the required stroke. In such a case, considerable care must be taken to not overheat the material which will results in permanent shape setting of the SMA or destruction of the SMA wire or coil. In such cases, a temperature sensor, position sensor or even sensorless control is employed to control the heating process of the active element. This additional stage consisting of sensors or control electronics is not considered in the work density of the actuator and often degrades the density and efficiency. In cases where space or weight is limited, the control stage is an expensive addition to the actuator.
+% with examples of types of implementations of each subsystem
 \section{Summary and Conclusion}
+In this chapter, the working principle of the traditional SMA-powered actuator and the various examples of different implementations of SMA actuators in literature is presented. Here, the working principle of the different
