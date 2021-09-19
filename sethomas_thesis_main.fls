@@ -2251,6 +2251,11 @@ INPUT ./images/chap2/sma-phase-transformations.pdf
 INPUT images/chap2/sma-phase-transformations.pdf
 INPUT ./images/chap2/sma-phase-transformations.pdf
 INPUT ./images/chap2/sma-phase-transformations.pdf
+INPUT ./images/chap2/dsc-graph.pdf
+INPUT ./images/chap2/dsc-graph.pdf
+INPUT images/chap2/dsc-graph.pdf
+INPUT ./images/chap2/dsc-graph.pdf
+INPUT ./images/chap2/dsc-graph.pdf
 INPUT ./main/ch3_design_method.tex
 INPUT ./main/ch3_design_method.tex
 INPUT ./main/ch3_design_method.tex
@@ -3406,9 +3411,12 @@ INPUT tail/cv.aux
 INPUT tail/cv.aux
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-bb.pfb
 INPUT /usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-mcl.pfb
