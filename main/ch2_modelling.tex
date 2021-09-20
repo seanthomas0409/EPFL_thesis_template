@@ -26,17 +26,83 @@
     \centering
     \includegraphics[width=0.75\textwidth]{images/chap2/dsc-graph.pdf}
     \caption{Schematic representation of a differential scanning calorimetry (DSC) graph showing the energy required during the SME.}
-    \label{fig:sma-phase-transformations}
+    \label{fig:dsc-graph}
 \end{figure}
+
+\begin{figure}[hbt]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/chap2/phase-diagram-graph.pdf}
+    \caption{Graphical representation of the phase transformations showing the thermal and mechanical properties of the material. This graph presents the change in the transformation temperature based on the imposed stress on the SMA.}
+    \label{fig:phase-diagram-graph}
+\end{figure}
+
 \section{Analytical Modelling of the SME}
 % Phenomenological modelling
 % DSC
 % Types and history of models
 % Brinson model
+
+As mentioned previously, the shape memory effect is a different process to model analytical due to the different phase transformations and variables. The work by \cite{liangDesignShapeMemory1997} presented a unified one-dimensional phenomenological model that takes into account the M phase transformation. However this model does not accurately describe the detwinning process. The Brinson model in the worky by \cite{brinsonOneDimensionalConstitutiveBehavior1993} improves the model by separating the internal variable into two based on the stress and temperature.
+
+The basic constitutive model presented by Brinson is as follows,
+\begin{equation}
+  \label{eq:brinson_model_1}
+  d\sigma = \frac{\delta\sigma}{\delta\epsilon}d\epsilon + \frac{\delta\sigma}{\delta\xi_S}d\xi_S + \frac{\delta\sigma}{\delta\xi_T}d\xi_T + \frac{\delta\sigma}{\delta T}dT
+\end{equation}
+ which can be further simplified using constant material functions as
+\begin{equation}
+  \label{eq:brinson_model_2}
+  d\sigma = Dd\epsilon + \Omega_Sd\xi_S + \Omega_Td\xi_T + \Theta dT
+\end{equation}
+where $D(\epsilon,\xi,T)$ represents the Young's modulus of the SMA material, $\Omega(\epsilon,\xi,T)$ represents the transformation tensor and $\Theta(\epsilon,\xi,T)$ is the thermal coefficient of expansion of the SMA.
+
+An important aspect of the work presented by Brinson was the adaptation of the transformation equations and transformation stresses. The work was able to deduce an analytical model for the detwinning process by adapted the transformations equations present earlier by Liang. For $T > M_\mathrm{s}$ and $\sigma_\mathrm{s}^\mathrm{cr} + C_M(T - M_\mathrm{s}) < \sigma < \sigma_\mathrm{f}^\mathrm{cr} + C_M(T-M_\mathrm{s})$ :
+
+\begin{equation}
+  \label{eq:brinson_conv_xis}
+  \xi_S = \cos\left(\frac{\pi}{\sigma_\mathrm{s}^\mathrm{cr}-\sigma_\mathrm{f}^\mathrm{cr}}[\sigma - \sigma_\mathrm{f}^\mathrm{cr} - C_M(T-M_\mathrm{s})]\right)\frac{1-\xi_{S0}}{2} + \frac{1+\xi_{S0}}{2}
+\end{equation}
+
+\begin{equation}
+  \label{eq:brinson_conv_xit}
+  \xi_T = \xi_{T0} - \frac{\xi_{T0}}{1-\xi_{S0}}(\xi_S-\xi_{S0})
+\end{equation}
+
+Due to the complexity of the shape memory effect, the constitutive model must be divided into three phases : the detwinning process, the stress relaxation and the austenitic transformation. The detwinning process can be calculated by using equation \ref{eq:brinson_conv_xis} combined with equation \ref{eq:brinson_model_2}. The stress relaxation phase occurs when $\xi_S$ is kept constant at 1 and the stress is reduced back to 0. Lastly, the austenitic phase transformation can be calculated using equation \ref{eq:brinson_model_2} and the following equation :
+
+\begin{equation}
+  \label{eq:A_transf}
+  \xi = \frac{\xi_0}{2}\left\{\cos\left[a_A(T-A_\mathrm{s}-\frac{\sigma}{C_A})\right]+1\right\}
+\end{equation}
+\begin{equation}
+    \label{eq:a-transf_1}
+    \xi_S = \xi_{S0} - \frac{\xi_{S0}}{\xi_0}(\xi_0-\xi)
+\end{equation}
+\begin{equation}
+    \label{eq:a-transf_2}
+    \xi_T = \xi_{T0} - \frac{\xi_{T0}}{\xi_0}(\xi_0-\xi)
+\end{equation}
+
+where $\Ms$ and $\As$ are the Martensitic and Austenitic transformation start temperatures and finish temperatures. While $C_M$ and $C_A$ are material properties that tie the internal stresses to a change in transformation temperatures. More information on the constitutive models and the material constants can be found in work by \cite{brinsonOneDimensionalConstitutiveBehavior1993}. In \cref{fig:brinson-model-stress-strain}, the results of the analytical model based on the Brinson constitutive equations can be observed.
+
 % Temp vs Martensite %
+\begin{figure}[hbt]
+    \centering
+    \resizebox{0.75\textwidth}{!}{\input{images/chap2/sma-temperature-transformation-model.pgf}}
+    \caption{The relationship between the temperature and the martensitic fraction based on the \cite{brinsonOneDimensionalConstitutiveBehavior1993} constitutive equations. The strain recovery of the SMA is directly proportional to the martensite fraction.}
+    \label{fig:sma-temperature-transformation-model}
+\end{figure}
 % SME graph
+\begin{figure}[hbt]
+    \centering
+    \resizebox{0.75\textwidth}{!}{\input{images/chap2/sma-brinson-model.pgf}}
+    \caption{The analytical model of the SMA based on the \cite{brinsonOneDimensionalConstitutiveBehavior1993} constitutive equations. Here, the detwinning of the SMA, represented by the green plateau, and the heating of the SMA, represented in red, is shown}
+    \label{fig:brinson-model-stress-strain}
+\end{figure}
 \section{Finite Element Modelling}
 \section{Stroke Estimation of SMA Actuators}
+% SMA - Bias spring diagram with variables
+% Stroke estimation using spring model
 \subsection{Mechanical Modelling}
 \subsection{Thermal Model}
 \section{Simplified SMA Actuator Model}\label{sec:simplified-sma-model}

@@ -10,6 +10,11 @@
 \definecolor{mygreen}{HTML}{258F1B}
 \definecolor{myred}{HTML}{C4000C}
 
+\newcommand{\Ms}{\ensuremath{M_\mathrm{s}}} % Martensite start Temperature
+\newcommand{\Mf}{\ensuremath{M_\mathrm{f}}} % Martensite finish Temperature
+\newcommand{\As}{\ensuremath{A_\mathrm{s}}} % Austenite start Temperature
+\newcommand{\Af}{\ensuremath{A_\mathrm{f}}} % Austenite finish Temperature
+
 \usetikzlibrary{decorations.pathreplacing,arrows,shapes,positioning,shadows,calc}
 \usetikzlibrary{decorations, decorations.text,backgrounds}
 \tikzset{every picture/.style={font issue=\footnotesize},
@@ -29,11 +34,11 @@
         \node [anchor=center] (MA) at (0.67,1.03) {\large $M\rightarrow A$};
         \node [anchor=center] (AM) at (0.33,-0.03) {\large $M\leftarrow A$};
 
-        \node [anchor=center] (mf) at (0.22,0.41) {\large $M_f$};
-        \node [anchor=center] (ms) at (0.47,0.41) {\large $M_s$};
+        \node [anchor=center] (mf) at (0.22,0.41) {\large \Mf};
+        \node [anchor=center] (ms) at (0.47,0.41) {\large \Ms};
 
-        \node [anchor=center] (af) at (0.78,0.59) {\large $A_f$};
-        \node [anchor=center] (as) at (0.535,0.59) {\large $A_s$};
+        \node [anchor=center] (af) at (0.78,0.59) {\large \Af};
+        \node [anchor=center] (as) at (0.535,0.59) {\large \As};
 
         % \draw[help lines, color=black, dotted] (-0.1,-0.1) grid (1.18,1.18);
         % \draw[black,ultra thick,rounded corners] (0.62,0.65) rectangle (0.78,0.75);

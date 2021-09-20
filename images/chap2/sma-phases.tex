@@ -6,6 +6,7 @@
 
 \definecolor{myblue}{HTML}{0072BD}
 \definecolor{mygreen}{HTML}{258F1B}
+\definecolor{mygreendark}{HTML}{417D4D}
 \definecolor{myred}{HTML}{C4000C}
 \definecolor{colorNi}{HTML}{B46F84}
 \definecolor{colorTi}{HTML}{3D5B7A}
@@ -31,7 +32,7 @@
     \node[anchor=center,yshift=50] (twMtext)[below = of twM] {\Huge\makecell[c]{Twinned\\Martensite}};
     \node[anchor=center,yshift=50] (detMtext)[below = of detwM] {\Huge\makecell[c]{Detwinned\\Martensite}};
     % Arrows
-    \path [-latex,ultra thick,bend left,color=mygreen] (twM.north) edge node [xshift=-20,pos=0.4,above,outer sep=10,color=mygreen] {\Huge$\sigma\uparrow$} (detwM.west);
+    \path [-latex,ultra thick,bend left,color=mygreendark] (twM.north) edge node [xshift=-20,pos=0.4,above,outer sep=10,color=mygreendark] {\Huge$\sigma\uparrow$} (detwM.west);
     \draw [-latex,ultra thick,color=mygreen] ($(detwM.east)+(0,0.5)$) arc(-90:180:3cm) node [xshift=30,pos=0.3,above,outer sep=10,color=mygreen] {\Huge$\sigma\downarrow$};
     \path [-latex,ultra thick, bend left,color=myred] (detwM.east) edge node [xshift=25,pos=0.6,above,outer sep=10,color=myred] {\Huge$T\uparrow$} (A.north);
     \draw [-latex,ultra thick,color=myblue] (A.west) -- node [midway,above,outer sep=10,color=myblue] {\Huge$T\downarrow$} (twM.east);

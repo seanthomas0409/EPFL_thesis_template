@@ -8,6 +8,11 @@
 \definecolor{mygreen}{HTML}{258F1B}
 \definecolor{myred}{HTML}{C4000C}
 
+\newcommand{\Ms}{\ensuremath{M_\mathrm{s}}} % Martensite start Temperature
+\newcommand{\Mf}{\ensuremath{M_\mathrm{f}}} % Martensite finish Temperature
+\newcommand{\As}{\ensuremath{A_\mathrm{s}}} % Austenite start Temperature
+\newcommand{\Af}{\ensuremath{A_\mathrm{f}}} % Austenite finish Temperature
+
 \usetikzlibrary{decorations.pathreplacing,arrows,shapes,positioning,shadows,calc}
 \usetikzlibrary{decorations, decorations.text,backgrounds}
 \tikzset{every picture/.style={font issue=\footnotesize},
@@ -29,8 +34,8 @@
     \node[anchor=center,yshift=50] (twM2text)[below = of twM2] {\Large Twinned Martensite};
 
     % Axes with ticks
-    \draw [-latex,ultra thick] (0,7.5) -- node[pos=0.325] {\tick} node[pos=0.4] {\tick} node[pos=0.6] {\tick} node[pos=0.6,yshift=-30] {\huge $A_s$} node[pos=0.675] {\tick} node[pos=0.675,yshift=-30] {\huge $A_f$} node[pos=1,yshift=-25] {\huge$T$} (22,7.5);
-    \draw [-latex,ultra thick] (0,-0.25) -- node[pos=0.325] {\tick} node[pos=0.325,yshift=-30] {\huge $M_f$} node[pos=0.4] {\tick} node[pos=0.4,yshift=-30] {\huge $M_s$} node[pos=0.6] {\tick} node[pos=0.675] {\tick} node[pos=1,yshift=-25] {\huge$T$} (22,-0.25);
+    \draw [-latex,ultra thick] (0,7.5) -- node[pos=0.325] {\tick} node[pos=0.4] {\tick} node[pos=0.6] {\tick} node[pos=0.6,yshift=-30] {\huge \As} node[pos=0.675] {\tick} node[pos=0.675,yshift=-30] {\huge \Af} node[pos=1,yshift=-25] {\huge$T$} (22,7.5);
+    \draw [-latex,ultra thick] (0,-0.25) -- node[pos=0.325] {\tick} node[pos=0.325,yshift=-30] {\huge \Mf} node[pos=0.4] {\tick} node[pos=0.4,yshift=-30] {\huge \Ms} node[pos=0.6] {\tick} node[pos=0.675] {\tick} node[pos=1,yshift=-25] {\huge$T$} (22,-0.25);
     % Phase transformations arrow and labels
     \draw [-latex,ultra thick,color=myblue] (A1.west) -- node [midway,above,outer sep=10,color=myblue] {\Huge$T\downarrow$} node [midway,below,outer sep=10,color=black] {\Huge$M\leftarrow A$} (twM1.east);
     \draw [-latex,ultra thick,color=myred] (twM2.east) -- node [midway,above,outer sep=10,color=myred] {\Huge$T\uparrow$} node [midway,below,outer sep=10,color=black] {\Huge$M\rightarrow A$} (A2.west);

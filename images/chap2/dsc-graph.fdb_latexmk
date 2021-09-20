@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1632034936 "dsc-graph.tex" "dsc-graph.pdf" "dsc-graph" 1632034937
-  "/dev/null" 1632034937 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1632121009 "dsc-graph.tex" "dsc-graph.pdf" "dsc-graph" 1632149354
+  "/dev/null" 1632149350 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
@@ -16,7 +16,6 @@
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
-  "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1248133631 35469 70d41d2b9ea31d5d813066df7c99281c ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
@@ -193,9 +192,9 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1621450891 2724737 fcb23d85d910321617c459518d49a9e6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "dsc-curve.pdf" 1631997366 2329 09818af4926c557bdc955277bb214f92 ""
-  "dsc-graph.aux" 1632034937 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "dsc-graph.tex" 1632034934 3393 3a28524c930efd1d0890873ecf5481f1 ""
+  "dsc-graph.aux" 1632121010 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "dsc-graph.tex" 1632121008 3686 7531cd625144d2675d38bb2eff83ca90 ""
   (generated)
+  "dsc-graph.pdf"
   "dsc-graph.aux"
   "dsc-graph.log"
-  "dsc-graph.pdf"
