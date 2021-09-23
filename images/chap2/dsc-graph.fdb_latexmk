@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1632121009 "dsc-graph.tex" "dsc-graph.pdf" "dsc-graph" 1632149354
-  "/dev/null" 1632149350 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1632299799 "dsc-graph.tex" "dsc-graph.pdf" "dsc-graph" 1632299800
+  "/dev/null" 1632299799 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/usr/local/texlive/2021/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm" 1136768653 1324 c910af8c371558dc20f2d7822f66fe64 ""
   "/usr/local/texlive/2021/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
@@ -192,9 +192,9 @@
   "/usr/local/texlive/2021/texmf-var/web2c/pdftex/pdflatex.fmt" 1621450891 2724737 fcb23d85d910321617c459518d49a9e6 ""
   "/usr/local/texlive/2021/texmf.cnf" 1616695596 577 4c1911a7228e554c6032256d3cf5567d ""
   "dsc-curve.pdf" 1631997366 2329 09818af4926c557bdc955277bb214f92 ""
-  "dsc-graph.aux" 1632121010 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "dsc-graph.tex" 1632121008 3686 7531cd625144d2675d38bb2eff83ca90 ""
+  "dsc-graph.aux" 1632299800 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "dsc-graph.tex" 1632299798 3676 6fbf4f382a34f8b49703b096cd8fb24c ""
   (generated)
-  "dsc-graph.pdf"
-  "dsc-graph.aux"
   "dsc-graph.log"
+  "dsc-graph.aux"
+  "dsc-graph.pdf"

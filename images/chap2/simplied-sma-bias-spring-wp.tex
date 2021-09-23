@@ -1,0 +1,50 @@
+\documentclass[margin=10pt]{standalone}
+\usepackage{color,xcolor}
+\usepackage{makecell}
+\usepackage{tikz-qtree, tikz}
+\usepackage[utf8]{inputenc}
+
+\definecolor{myblue}{HTML}{0072BD}
+\definecolor{mygreen}{HTML}{258F1B}
+\definecolor{myred}{HTML}{C4000C}
+
+\newcommand{\Ms}{\ensuremath{M_\mathrm{s}}} % Martensite start Temperature
+\newcommand{\Mf}{\ensuremath{M_\mathrm{f}}} % Martensite finish Temperature
+\newcommand{\As}{\ensuremath{A_\mathrm{s}}} % Austenite start Temperature
+\newcommand{\Af}{\ensuremath{A_\mathrm{f}}} % Austenite finish Temperature
+
+% \usetikzlibrary{decorations.pathreplacing,arrows,shapes,positioning,shadows,calc}
+% \usetikzlibrary{decorations, decorations.text,backgrounds}
+% \tikzset{every picture/.style={font issue=\footnotesize},
+%     font issue/.style={execute at begin picture={#1\selectfont}}
+% }
+
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\input{simplied-sma-bias-spring-wp.pgf}};
+        % Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+        % \draw[black, thin](0.084,0.958) -- (0.121,1.002);
+        \node[anchor=east,rotate=-30] (MA) at (0.58,0.41) {\color{myblue}\Large Cooling: $A\rightarrow M$};
+        \node[anchor=west,rotate=-30] (MA) at (0.34,0.69) {\color{myred}\Large Heating: $A\leftarrow M$};
+        \node[circle,draw=black,thick,anchor=center] (MA) at (0.65,0.34) {\large \textbf{1}};
+        \node[circle,draw=black,thick,anchor=center] (MA) at (0.25,0.65) {\large \textbf{2}};
+        % \draw[black,ultra thick,rounded corners] (0.62,0.65) rectangle (0.78,0.75);
+        % \draw[help lines,xstep=.01,ystep=.05] (0,0) grid (1,1);
+        % \foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+        % \foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+    \end{scope}
+
+
+    % \node[anchor=center,yshift=50] (A2text)[below = of A2] {\Large Austenite};
+    % \node[anchor=center,yshift=50] (twM1text)[below = of twM1] {\Large Twinned Martensite};
+    % \node[anchor=center,yshift=50] (twM2text)[below = of twM2] {\Large Twinned Martensite};
+
+    % % Axes with ticks
+    % \draw [-latex,ultra thick] (0,7.5) -- node[pos=0.325] {\tick} node[pos=0.4] {\tick} node[pos=0.6] {\tick} node[pos=0.6,yshift=-30] {\huge \As} node[pos=0.675] {\tick} node[pos=0.675,yshift=-30] {\huge \Af} node[pos=1,yshift=-25] {\huge$T$} (22,7.5);
+    % \draw [-latex,ultra thick] (0,-0.25) -- node[pos=0.325] {\tick} node[pos=0.325,yshift=-30] {\huge \Mf} node[pos=0.4] {\tick} node[pos=0.4,yshift=-30] {\huge \Ms} node[pos=0.6] {\tick} node[pos=0.675] {\tick} node[pos=1,yshift=-25] {\huge$T$} (22,-0.25);
+    % % Phase transformations arrow and labels
+    % \draw [-latex,ultra thick,color=myblue] (A1.west) -- node [midway,above,outer sep=10,color=myblue] {\Huge$T\downarrow$} node [midway,below,outer sep=10,color=black] {\Huge$M\leftarrow A$} (twM1.east);
+    % \draw [-latex,ultra thick,color=myred] (twM2.east) -- node [midway,above,outer sep=10,color=myred] {\Huge$T\uparrow$} node [midway,below,outer sep=10,color=black] {\Huge$M\rightarrow A$} (A2.west);
+\end{tikzpicture}
+\end{document}
