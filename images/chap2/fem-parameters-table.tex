@@ -1,0 +1,26 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+ {\footnotesize\rowcolors{3}{black!5}{black!10}
+% \begin{tabular}{p{2cm}P{2cm}P{2cm}P{2cm}P{2cm}P{2cm}}
+\begin{tabular}{p{0.35\textwidth-2\tabcolsep}
+                P{0.075\textwidth-2\tabcolsep}
+                p{0.5\textwidth-2\tabcolsep}}
+   \rowcolor{black} \textbf{\color{white} Parameter} & & \textbf{\color{white} Definition}\\
+   Density & $\rho$       & SMA density\\
+   Young's Modulus & $E_A$       & Ausenite Young's modulus\\
+   Poisson's Ratio & $\theta_A$       & Austenite Poisson's ratio\\
+   Hardening Parameter & $H$       & Slope of $\sigma-\varepsilon$ curve during $A\rightarrow M$\\
+   Reference Temperature & $T_\mathrm{ref}$       & Temperature at which critical stresses are estimated\\
+   Elastic Limit & $\sigmasamplus$       & Critical starting stress for $A\rightarrow M$\\
+   Temperature Scaling Parameter & $C$       & Slope of the $\sigma-T$ relationship for both transformations\\
+   Maximum transformation strain & $\eL$       & Maximum recoverable strain, $\mathrm{max}(||\etrprime||)$\\
+   Martensite Modulus & $E_M$       & Martensite Young's modulus\\
+   Lode dependency parameter & $\beta$       & Parameter that determines asymmetrical behaviour between compression and tension\\
+\end{tabular}}
+\renewcommand{\arraystretch}{1}
+\end{document}

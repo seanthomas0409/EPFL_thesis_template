@@ -42,7 +42,12 @@ The Shape Memory Effect (SME) is a difficult process to model analytically due t
   \label{eq:liang_model_3}
   \sigma-\sigma_0 = E(\varepsilon-\varepsilon_0) + \Omega(\xi-\xi_0) + \Theta(T-T_0)
 \end{equation}
-where $E(\varepsilon,\xi,T)$ represents the Young's modulus of the SMA material, $\Omega(\varepsilon,\xi,T)$ represents the transformation tensor and $\Theta(\varepsilon,\xi,T)$ is the thermal coefficient of expansion of the SMA. In the case of SMAs, a material limit must be imposed such that the maximum residual strain, $\varepsilon_L$ of the SME is incorporated into the model. This imposition creates a relationship between the Young's modulus and the transformation tensor :
+where $E(\varepsilon,\xi,T)$ represents the Young's modulus of the SMA material, $\Omega(\varepsilon,\xi,T)$ represents the transformation tensor and $\Theta(\varepsilon,\xi,T)$ is the thermal coefficient of expansion of the SMA. Based on experimental evidence, as stated in the work by \cite{liangConstitutiveModelingShape1990a}, the Young's Modulus, $E$, of the SMA is directly proportional to the martensite fraction of the material. Thus, the following assumption is made to estimate the Young's modulus :
+\begin{equation}
+  \label{eq:youngs-modulus}
+  E(\varepsilon,\xi,T) = E(\xi) = E_A + \xi(E_M-E_A)
+\end{equation}
+where, $E_A$ and $E_M$ represent the Young's modulus of the SMA when it is entirely in the Austenite phase or the Martensite phase, respectively. Furthermore, in the case of SMAs, a material limit must be imposed such that the maximum residual strain, $\varepsilon_L$ of the SME is incorporated into the model. This imposition creates a relationship between the Young's modulus and the transformation tensor :
 \begin{equation}
   \label{eq:tensor-youngsmodulus}
   \Omega = -\varepsilon_L E
@@ -78,6 +83,13 @@ The material property $C_M$ and $C_A$, as shown in \cref{fig:phase-diagram-graph
     \label{fig:sma-temperature-transformation-model}
 \end{figure}
 
+\begin{figure}[hbt]
+    \centering
+    \includegraphics[width=0.75\textwidth]{images/chap2/dsc-graph.pdf}
+    \caption{Schematic representation of a differential scanning calorimetry (DSC) graph showing the energy required during the SME.}
+    \label{fig:dsc-graph}
+\end{figure}
+
 The \cite{liangConstitutiveModelingShape1990a} model is effective at modelling the transformations from the martensite to the austenite phase and vice versa. This model is quite accurate when sizing actuators that have higher strokes where the material has always reached its maximum residual strain. However, the model does not take into account the crystal structure changes that exist in the M phase at lower temperatures. This crystal structure change, referred to as detwinning, as shown in \cref{fig:sma-phases}, occurs entirely within the M phase and results in a highly non-linear behaviour when a critical stress is imposed on the material.
 
 The current model has modelled the internal state variable, $\xi$, to represent only the percentage of the material that has been changed into the M phase and does not consider the detwinning process. However, in the work by \cite{brinsonOneDimensionalConstitutiveBehavior1993}, the authors have separated the internal state variable into two parts, the temperature-induced M phase $\xi_T$ and the stress-induced M phase $\xi_T$ as described by the following relationship:
@@ -101,7 +113,7 @@ Now, based on the changes made using the Brinson model, the original constitutiv
   \label{eq:brinson_model_3}
   \sigma-\sigma_0 = E(\varepsilon-\varepsilon_0) + \Omega_S(\xi_S-\xi_{S0}) + \Omega_T(\xi_T-\xi_{T0}) + \Theta (T-T_0)
 \end{equation}
-where the suffix $0$ indicates the initial conditions between the current phase transformations.
+where the suffix $0$ indicates the initial conditions between the current phase transformations. Here, based on the material restrictions, $\Omega_S=-\varepsilon_L E$ and $\Omega_T\equiv0$.
 
 An important aspect of the work presented by Brinson was the adaptation of the transformation equations and transformation stresses. The work was able to deduce an analytical model for the detwinning process by adapted the transformations equations present earlier by Liang. Due to the complexity of the shape memory effect, the constitutive model must be divided into three phases : the detwinning process, the stress relaxation and the austenitic transformation. The detwinning process can be calculated by using equation \ref{eq:brinson_conv_xis} combined with equation \ref{eq:brinson_model_2}, as presented below, with $T > M_\mathrm{s}$ and $\sigma_\mathrm{s}^\mathrm{cr} + C_M(T - M_\mathrm{s}) < \sigma < \sigma_\mathrm{f}^\mathrm{cr} + C_M(T-M_\mathrm{s})$ :
 
@@ -161,30 +173,140 @@ However, a 3D graph is required to properly display the entire cycle of the shap
 \begin{figure}[hbt]
     \centering
     \resizebox{0.75\textwidth}{!}{\input{images/chap2/sma-brinson-model-3d.pgf}}
-    \caption{The 3D graph showing the analytical model of the Shape Memory Effect cycle.}
+    \caption{The 3D graph showing the \cite{brinsonOneDimensionalConstitutiveBehavior1993} analytical model of the entire Shape Memory Effect cycle.}
     \label{fig:brinson-model-3d}
 \end{figure}
 
 \section{Finite Element Modelling}
-\section{Stroke Estimation of SMA Actuators}
-% SMA - Bias spring diagram with variables
-% Stroke estimation using spring model
-\subsection{Mechanical Modelling}
-% \subsection{Thermal Model}
-\begin{figure}[hbt]
+The Shape Memory Effect is a complex behaviour that depends on various different material properties and variables. When working with SMA structures that are complex and are actuated in multiple dimensions, the simple one-dimensional constitutive models are no longer feasible. Recent development in modelling of the constitutive models of Shape Memory Alloys has allowed various commercial FEM simulation software to be able to simulate the shape memory effect and superelasticity of the alloy. In this work, \textit{ANSYS, Inc.} was used to simulate the material and predict the effects of applying mechanical and thermal loads to SMA structures. The shape memory effect was predicted using a three-dimensional thermomechanical model for stress-induced solid phase changes based on the work by \todocite. The model is able to simulate all of the fundamental properties of shape memory materials in a 3-D stress state within the context of conventional irreversible thermodynamics. The model used to simulate the SME within the FEM software is based on the free energy potential:
+
+\begin{equation}
+    \label{eq:fem-free-energy}
+    \Psi(\varepsilon,T,\etr)=\frac{1}{2}(\varepsilon-\etr):E:(\varepsilon-\etr)+\tau_M(T)||\etrprime||+\frac{1}{2}H||\etrprime||^2+\Ietrprime(\etrprime)
+\end{equation}
+
+where $E$ is the material elastic stiffness tensor, $\varepsilon$ is the total strain, $\etr$ is the total transformation strain, $\etrprime$ is the deviatoric transformation strain, $C$ is the material parameter, $\tau_M(T)$ is a positive monotonically increasing function based on $C(T-\Tref)$, $T$ is the temperature, $\Tref$ is the reference temperature, $H$ is a material parameter related to the hardening of the material during phase transformation and $\Ietrprime(\etrprime)$ is an indicator function that satisfies the constraint on the transformation norm based on \todocite. From this, the stress $\sigma$ and transformation strain $X_\mathrm{tr}$ can be deduced as :
+\begin{equation}
+    \label{eq:fem-stress-transf-stress}
+    \sigma = \frac{\delta\Psi}{\delta\varepsilon},~X_\mathrm{tr}\in-\frac{\delta\Psi}{\delta\etrprime}
+\end{equation}
+
+In order to model the shape memory effect of the alloy, a customised material is described by initialising the material data table on \textit{ANSYS}. The shape memory effect option is defined by the density, the Young's modulus in the A phase, the Poisson's ratio and seven material constants as described in \cref{tab:fem-parameters}. These define the stress-strain behaviour of the alloy during the loading and unloading cycles and during thermal loading.
+
+\begin{table}[hbt]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/chap2/dsc-graph.pdf}
-    \caption{Schematic representation of a differential scanning calorimetry (DSC) graph showing the energy required during the SME.}
-    \label{fig:dsc-graph}
+    \caption{The definitions of the parameters used to define the SME in the commercial FEM software, ANSYS (based on the work by \cite{jaberAnsysParametersShape2018}).}
+    \label{tab:fem-parameters}
+    \input{images/chap2/fem-parameters-table.tex}
+\end{table}
+
+The shape memory effect is defined by the stress-strain curves based on the different mechanical and thermal loading cycles as shown in \cref{fig:fem-wp-graph}. Each parameter defined within the material data within the FEM software has an effect on the curves. The effect of each parameter has been described and explored in the work by \cite{jaberAnsysParametersShape2018}. Furthermore, the various material parameters used in the material data table can be defined by their relationship to the critical transformation stress and temperatures as shown below. The hardening parameter, $H$, as defined below, defines the change in the slope of the $\sigma-\varepsilon$ curve during the detwinning process.
+
+\begin{figure}[hbt!]
+    \centering
+    % \resizebox{0.75\textwidth}{!}{\input{images/chap2/fem-wp-graph-center.pgf}}
+    % \resizebox{0.75\textwidth}{!}{\input{images/chap2/fem-phase-graph.pgf}}
+    \includegraphics[width=0.75\textwidth]{images/chap2/fem-wp-graph.pdf}
+    \caption{A visual representation of the various parameters required to define the Shape Memory Effect within the FEM model based on the work by \cite{jaberAnsysParametersShape2018}.}
+    \label{fig:fem-wp-graph}
 \end{figure}
-\section{Simplified SMA Actuator Model}\label{sec:simplified-sma-model}
-% Chapter 12 Shape Memory Alloy Engineering
-% Conversion from Stress to Force p.495 Shape Memory Alloy Engineering
+
+\begin{equation}
+    \label{eq:fem-h}
+    H = \frac{\sigmafamplus-\sigmasamplus}{\frac{\sigmafamplus}{E_M}+\eL-\frac{\sigmasamplus}{E_A}}
+\end{equation}
+
+The temperature scaling parameter is defined, as defined in \cref{eq:fem-C}, and is shown in \cref{fig:fem-wp-graph} by the relationship between the transformation temperature and stress.
+
+\begin{equation}
+    \label{eq:fem-C}
+    C = C^{AM}=C^{MA}=\frac{\sigmafmaplus}{T_\mathrm{ref}-\Af}
+\end{equation}
+
+In most constitutive models, the SMA behaves symmetrically in tension and compression. However, numerous experimental tests show that there is an asymmetrical behaviour between the two and in this model, the lode dependency parameter, $\beta$, as defined below, takes into account this asymmetry.
+
+\begin{equation}
+    \label{eq:fem-beta}
+    \beta = \frac{|\sigmasamminus|-\sigmasamplus}{|\sigmasamminus|+\sigmasamplus}
+\end{equation}
+
+Using the FEM simulations of the SMA, complex structures composed of the alloy can be used to predict the behaviour of the SME when the thermal load is applied. This strategy can be used to estimate the force requirements when sizing the biasing elements and the stroke output of the overall actuator when activated. However, the computation time of the simulation can be high and thus, using this strategy to optimize design might not be feasible. Using the one-dimensional analytical models validated by the FEM simulations can be effective in designing SMA actuators.
+
+\section{Stroke Estimation of SMA Actuators}
+As the biasing element plays a major role in the operation of the SMA actuator, the first step in estimating the stroke and force characteristics of the actuator consists of determining the force-displacement profile of the biasing element. In this section, the biasing element is considered to be a linear spring as this is the most common type of SMA actuator implementation. However, this methodology can be applied to any biasing element as soon as its behaviour has been modelled. With the help of \cref{eq:f-x-sma} and the dimensions of the SMA, such as the cross-section area of the SMA, $A_\mathrm{SMA}$, and the length of the SMA, $L_\mathrm{SMA}$, the stress-strain characteristics of the SMA can be converted into the required force-displacement profile used to compare with the biasing element. In the case of a linear spring with stiffness, $K_\mathrm{BS}$, \cref{eq:bias-spring} can be used to obtain the relevant force-displacement curve of the biasing spring.
+
+\begin{equation}
+    \label{eq:f-x-sma}
+    F = A_\mathrm{SMA}\sigma,~x = L_\mathrm{SMA}\varepsilon
+\end{equation}
+
+\begin{equation}
+    \label{eq:bias-spring}
+    \sigma A_\mathrm{SMA} = -K_\mathrm{BS}\left(L_\mathrm{SMA}\varepsilon-x_\mathrm{off}\right)
+\end{equation}
+
+In \cref{fig:bias-spring-diagram}, the schematic of a standard bias-spring SMA actuator shown the simplified operation of the actuator. Here, the SMA and the biasing are separated by a distance, $x_\mathrm{off}$, so as to apply the initial prestress to the SMA element. This offset allows the SMA to be biasing and detwinned at the lower temperatures. As shown in the diagram, when heated the SMA contracts to a length $L_\mathrm{SMA}+x_2$ and when cooled, the SMA elongates to a length $L_\mathrm{SMA}+x_1$. Thus, the stroke of the actuator, $\Delta x$, can be easily deduce by taking the difference between the two lengths, $x_1-x_2$, as shown in the figure.
+% SMA - Bias spring diagram with variables
 \begin{figure}[hbt]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/chap2/simplied-sma-bias-spring-wp.pdf}
-    \caption{The simplified sizing methodology of an Bias spring-SMA actuator. Here, the force-displacement characteristics of the SMA are simplied as shown in the work by \todocite.}
+    \includegraphics[width=0.66\textwidth]{images/chap2/bias-spring-diagram.pdf}
+    \caption{A schematic representation of the Bias-spring SMA actuator showing the different variables and the stroke estimation based on the SMA temperature.}
+    \label{fig:bias-spring-diagram}
+\end{figure}
+
+% Stroke estimation using spring model
+The stroke of the bias-spring SMA actuator can be estimated using the \cite{brinsonOneDimensionalConstitutiveBehavior1993} model. Firstly, with a known temperature, $T < \As$, the martensite fraction can be deduced using \cref{eq:brinson_conv_xis} and \cref{eq:brinson_conv_xit}. When substituting $\sigma$ with the bias-spring equation \ref{eq:bias-spring}, a relationship between $\xi$ and $\varepsilon$ can be obtained. This relationship, combined with \cref{eq:brinson_model_3}, the strain, $\varepsilon$, and consequently, the elongation, $x$, of the SMA can be estimated with respect to its temperature, $T$. In most cases, however, the cold state exists completely within the detwinned state and the hot state exists entirely in the A phase so as to maximise the stroke of the SMA actuator. This consideration can simplify the analytical model.
+
+In the case of the cold state, with $T_1 < \Mf$, $\xi_S=1$ and $\xi_T=0$, the elongation of the cold bias-spring SMA actuator, $x_1$ can be estimated as:
+\begin{equation}
+    \label{eq:bias-spring-sma-cold-elongation}
+    x_1 = \frac{\KBS\xoff-\ASMA(\Omega_S+\Theta(T_1-T_0))}{\frac{\ASMA E_M}{\LSMA}+\KBS}
+\end{equation}
+Similarly, in the case of the hot state, where the SMA has been completely transformed into the A phase, with $T_2 < \Af$, $\xi=0$, the elongation of the hot bias-spring SMA actuator, $x_2$ can be estimated as:
+\begin{equation}
+    \label{eq:bias-spring-sma-hot-elongation}
+    x_2 = \frac{\KBS\xoff-\ASMA\Theta(T_1-T_0)}{\frac{\ASMA E_A}{\LSMA}+\KBS}
+\end{equation}
+
+\begin{figure}[hbt]
+    \centering
+    \resizebox{0.75\textwidth}{!}{\input{images/chap2/brinson-sma-spring.pgf}}
+    \caption{A plot showing the stroke estimation of a 100 $\mu$m SMA wire actuator using the equations adapted from the \cite{brinsonOneDimensionalConstitutiveBehavior1993} analytical model. Here, the bias spring is offset from the SMA with a distance of $6$ mm and where $\varepsilon_i = x_i / \LSMA$ }
+    \label{fig:brinson-sma-spring}
+\end{figure}
+
+Thus, as stated previously, the stroke of the system can be deduced as $\Delta x = x_1-x_2$ as shown in \cref{fig:brinson-sma-spring}. This graph shows the sizing of an SMA actuator comprised of a 100 $\mu$m SMA wire of length 30 mm and a biasing spring with a spring constant of 3.5 N/mm separated by a distance of 6 mm. As presented in the previous equations, the Brinson model has been adapted such that the operating points of the actuator and the stroke can be easily estimated. The required forces can be easily obtained by using the spring model described in \cref{eq:bias-spring}. This one-dimensional model can be quite effective when sizing actuators powered by sheets or wires. However, when designing designing actuator with more complex biasing elements or additional mechanical stages, the analytical models of the system can become quite complicated.
+
+\begin{table}[hbt]
+    \centering
+    \caption{Some examples of the material properties used in the analytical modelling of the SMA actuator.}
+    \label{tab:brinson-material-properties}
+    \input{images/chap2/brinson-material-properties.tex}
+\end{table}
+% \subsection{Thermal Model}
+\section{Simplifying the Sizing of the SMA Actuator}\label{sec:simplified-sma-model}
+Owing to their high power densities, SMA-based actuators are extensively used in for mini- and micro-actuation when compared to traditional actuators. However, when considered for applications where high-output forces and strokes are required, they are limited. When under tension in the form of SMA wires, this alloy can generate high forces but can only exert it for up to 8\% of their length. Thus, in many cases where higher strokes are required, these SMA wires are wound into helical springs which allows them to have high strokes but comes at the cost of their output forces.
+
+As state previously, the one-dimensional model is quite effective at sizing simple SMA-powered systems. However, when employing SMAs in more complex applications, a simpler methodology has been adopted to size these actuators. When dealing with SMA wires, under uniaxial tension, the highly non-linear \cite{brinsonOneDimensionalConstitutiveBehavior1993} model is an accurate tool in sizing the actuator. However, when considering an SMA helical spring, the constitutive models appear more linear in its low temperature state \todocite. Thus, for most design cases, some experimentally-validated assumptions, as state in the work by \cite{dragoniDesignDevelopmentAdvanced2021}, can be made such that the material behaviours can be linearised. Here, the stress-strain curves, as shown in \cref{fig:simplied-sma-bias-spring-wp}, can be replaced with straight lines. Here, in this model, the high temperature or Austenitic SMA curve can be replaced a straight line originating from the centre with a slope of $E_A$ while the low temperature or Martensitic SMA curve can be replaced by a straight line with slope of $E_M$ and offset by $\sigma_0$.
+% Chapter 12 Shape Memory Alloy Engineering
+\begin{figure}[hbt]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/chap2/simplied-sma-bias-all-wp.pdf}
+
+    \begin{tabular}{l@{ }l l@{ }l}
+      {\color{myred} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize SMA at $T\uparrow$} & {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize SMA at $T\downarrow$}\\
+    \end{tabular}
+    \caption{The simplified sizing methodology of an SMA actuators. Here, the force-displacement characteristics of the SMA are simplified as shown in the work by \todocite.}
     \label{fig:simplied-sma-bias-spring-wp}
 \end{figure}
+
+The A phase of the SMA occurs when the material is heated above its transition temperature, $\Af$ and reverts back to the M phase when the temperature drops back down below the martensitic transition temperature, $\Mf$. However, as shown in \cref{fig:phase-diagram-graph}, there is a relationship between the stress imposed on the alloy and its transition temperatures. This implies that that when sufficiently above a certain critical stress threshold, $\sigma_\mathrm{s}^{AM}$, the A phase SMA will revert back to the M phase reducing the rigidity of the material. As the SMA actuator operates by the change in material rigidity between the high temperature and low temperature phases, this change in rigidity at the critical stress threshold will cause the actuator to have a reduced stroke. Thus, when designing SMA actuators, this maximum stress or force output must be taken into account using \cref{eq:critical-M-stress}. In the case, the biasing element exceeds this critical stress, the final stroke of the material is greatly reduced as the material will be operating within its super-elastic region.
+
+\begin{equation}\label{eq:critical-M-stress}
+    \sigma_\mathrm{s}^{AM} = C_M (T-\Ms)
+\end{equation}
+
+In this work, SMA helical springs are used due to their availability and the requirement for large strokes. The material properties was obtained experimentally and by curve-fitting the resulting force-displacement profile. In this case, 
+
 \section{Summary and Conclusion}
 In this chapter, different modelling strategies, such as finite element modelling and analytical modelling, are presented. Here, the modelling techniques are employed in the context of the traditional SMA actuator design methodology. Furthermore, the bias spring actuator model and a simplified model are presented.

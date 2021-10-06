@@ -1,0 +1,27 @@
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+
+\begin{document}
+\renewcommand{\arraystretch}{1.5}
+ {\footnotesize\rowcolors{3}{black!5}{black!10}
+% \begin{tabular}{p{2cm}P{2cm}P{2cm}P{2cm}P{2cm}P{2cm}}
+\begin{tabular}{p{0.35\textwidth-2\tabcolsep}
+                P{0.1\textwidth-2\tabcolsep}
+                p{0.15\textwidth-2\tabcolsep}}
+   \rowcolor{black} \textbf{\color{white} Material Property} & & \textbf{\color{white} Value}\\
+   Martensite Start Temperature & $\Ms$       & 80 $^\circ$C\\
+   Martensite Finish Temperature & $\Mf$       & 75 $^\circ$C\\
+   Austenite Start Temperature & $\As$       & 85 $^\circ$C\\
+   Austenite Finish Temperature & $\Af$       & 90 $^\circ$C\\
+   Martensitic Young's Modulus & $E_M$       & 40 GPa\\
+   Austenitic Young's Modulus & $E_A$       & 75 GPa\\
+   Temperature Scaling Parameter & $C_M,~C_A$ & 5.6 MPa/$^\circ$C\\
+   Thermoelastic Constant & $\Theta$ & 0.55 MPa\\
+   Maximum Recoverable Strain & $\eL$ & 7.5\% \\
+   Detwinning Critical Start Stress & $\sigmacrf$ & 140 MPa\\
+   Detwinning Critical Finish Stress & $\sigmacrs$ & 370 MPa\\
+\end{tabular}}
+\renewcommand{\arraystretch}{1}
+\end{document}

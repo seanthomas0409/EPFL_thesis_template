@@ -9,6 +9,7 @@
 \definecolor{myblue}{HTML}{0072BD}
 \definecolor{mygreen}{HTML}{258F1B}
 \definecolor{myred}{HTML}{C4000C}
+\definecolor{darkgreen}{HTML}{0D330A}
 
 \usetikzlibrary{decorations.pathreplacing,arrows,shapes,positioning,shadows,calc}
 \usetikzlibrary{decorations, decorations.text,backgrounds}
@@ -82,14 +83,14 @@
     \fill[fill=black,opacity=0.1] (0,0) -- (Mf) -- (ssline) -- (ss) -- cycle;
     \node[anchor=center] (twMtext) at (1.25,1.25) {\tiny Twinned Martensite};
     \node[anchor=center] (detwMtext) at (1.4,3.75) {\tiny Detwinned Martensite};
-    \node[anchor=center] (twtodetw) at (1.4,2.5) {\tiny $M^\mathrm{t}\rightarrow M^\mathrm{d}$};
+    \node[anchor=center] (twtodetw) at (1.4,2.5) {\color{darkgreen}\tiny $M^\mathrm{t}\rightarrow M^\mathrm{d}$};
 
-    \node[anchor=center] (Atext) at (7.25,1.25) {\tiny Austenite};
+    \node[anchor=center] (Atext) at (7.25,2.25) {\tiny Austenite};
 
     \coordinate (M2As) at ($(As)+(1.5,3)$);
-    \draw[->,>=latex] (M2As) -- node[above,sloped,scale=0.85,yshift=2] {\tiny $M^\mathrm{d}\rightarrow A$} ($(Af)!(M2As)!(Af_)$);
+    \draw[->,>=latex,color=myred] (M2As) -- node[above,sloped,scale=0.85,yshift=2] {\color{myred}\tiny $M^\mathrm{d}\rightarrow A$} ($(Af)!(M2As)!(Af_)$);
 
     \coordinate (A2Ms) at ($(Ms)+(1.75,3.5)$);
-    \draw[->,>=latex] (A2Ms) -- node[above,sloped,scale=0.85,yshift=2] {\tiny $M^\mathrm{d}\leftarrow A$} ($(Mf)!(A2Ms)!(Mf_)$);
+    \draw[->,>=latex,color=myblue] (A2Ms) -- node[above,sloped,scale=0.85,yshift=2] {\color{myblue}\tiny $M^\mathrm{d}\leftarrow A$} ($(Mf)!(A2Ms)!(Mf_)$);
 \end{tikzpicture}
 \end{document}

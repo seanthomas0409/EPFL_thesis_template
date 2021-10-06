@@ -1,0 +1,157 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {3}Development and Modelling of Biased Kinematic Stages for SMA Actuators}{39}{chapter.3}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:design-methodology}{{3}{39}{Development and Modelling of Biased Kinematic Stages for SMA Actuators}{chapter.3}{}}
+\newlabel{chap:design-methodology@cref}{{[chapter][3][]3}{[1][39][]39}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Introduction}{39}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Adapted Design Concept}{40}{section.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Diagram of the adapted building blocks of the SMA actuator.\relax }}{40}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:building-blocks-pt}{{3.1}{40}{Diagram of the adapted building blocks of the SMA actuator.\relax }{figure.caption.33}{}}
+\newlabel{fig:building-blocks-pt@cref}{{[figure][1][3]3.1}{[1][40][]40}}
+\citation{maffiodo_three-fingered_2017}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Challenges of the Approach}{41}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Adapting the Simplified Models}{41}{section.3.4}\protected@file@percent }
+\citation{heneinConceptionStructuresArticulees2005}
+\citation{heneinConceptionStructuresArticulees2005}
+\gincltex@bb{images/chap4/flexure-hinge-types.tex}{0}{0}{426.76314}{126.2139}
+\citation{wuGeneralizedAnalyticalCompliance2015}
+\citation{wuGeneralizedAnalyticalCompliance2015}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Passive Biasing Compliant Mechanisms}{42}{subsection.3.4.1}\protected@file@percent }
+\newlabel{subsec:passive-biasing-compliant-mech}{{3.4.1}{42}{Passive Biasing Compliant Mechanisms}{subsection.3.4.1}{}}
+\newlabel{subsec:passive-biasing-compliant-mech@cref}{{[subsection][1][3,4]3.4.1}{[1][41][]42}}
+\newlabel{eq:flexure-pot-energy}{{3.1}{42}{Passive Biasing Compliant Mechanisms}{equation.3.4.1}{}}
+\newlabel{eq:flexure-pot-energy@cref}{{[equation][1][3]3.1}{[1][42][]42}}
+\newlabel{eq:flexure-hinge-stiffness}{{3.2}{42}{Passive Biasing Compliant Mechanisms}{equation.3.4.2}{}}
+\newlabel{eq:flexure-hinge-stiffness@cref}{{[equation][2][3]3.2}{[1][42][]42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces The various types of flexure hinges (adapted from \cite  {wuGeneralizedAnalyticalCompliance2015}) (a) Notch (b) Leaf spring (c) Cross-strip (d) Cartwheel hinge\relax }}{42}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:flexure-hinge-types}{{3.2}{42}{The various types of flexure hinges (adapted from \cite {wuGeneralizedAnalyticalCompliance2015}) (a) Notch (b) Leaf spring (c) Cross-strip (d) Cartwheel hinge\relax }{figure.caption.34}{}}
+\newlabel{fig:flexure-hinge-types@cref}{{[figure][2][3]3.2}{[1][42][]42}}
+\newlabel{eq:flexure-hinge-force}{{3.3}{43}{Passive Biasing Compliant Mechanisms}{equation.3.4.3}{}}
+\newlabel{eq:flexure-hinge-force@cref}{{[equation][3][3]3.3}{[1][43][]43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces The adapted sizing principle of the novel biasing compliant mechanism SMA actuator based on the simplified SMA curves.\relax }}{43}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:smaactwp-pt}{{3.3}{43}{The adapted sizing principle of the novel biasing compliant mechanism SMA actuator based on the simplified SMA curves.\relax }{figure.caption.35}{}}
+\newlabel{fig:smaactwp-pt@cref}{{[figure][3][3]3.3}{[1][43][]43}}
+\citation{heneinConceptionStructuresArticulees2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Design methodology for sizing biased-compliant mechanism SMA actuators.\relax }}{44}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:flowchart-pt}{{3.4}{44}{Design methodology for sizing biased-compliant mechanism SMA actuators.\relax }{figure.caption.36}{}}
+\newlabel{fig:flowchart-pt@cref}{{[figure][4][3]3.4}{[1][44][]44}}
+\newlabel{eq:theta_adm}{{3.4}{44}{Passive Biasing Compliant Mechanisms}{equation.3.4.4}{}}
+\newlabel{eq:theta_adm@cref}{{[equation][4][3]3.4}{[1][44][]44}}
+\newlabel{eq:X_eq}{{3.5}{45}{Passive Biasing Compliant Mechanisms}{equation.3.4.5}{}}
+\newlabel{eq:X_eq@cref}{{[equation][5][3]3.5}{[1][44][]45}}
+\newlabel{eq:X_adm}{{3.6}{45}{Passive Biasing Compliant Mechanisms}{equation.3.4.6}{}}
+\newlabel{eq:X_adm@cref}{{[equation][6][3]3.6}{[1][45][]45}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces The trade-offs observed during the sizing of the biasing compliant mechanism for the SMA actuator with a given SMA wire or coil. Here, $S_{\text  {mech}}$ and $t_{\text  {mech}}$ are the surface area and the thickness of the compliant mechanism, respectively.\relax }}{45}{table.caption.37}\protected@file@percent }
+\newlabel{tab:sma-pt-tradeoffs}{{3.1}{45}{The trade-offs observed during the sizing of the biasing compliant mechanism for the SMA actuator with a given SMA wire or coil. Here, $S_{\text {mech}}$ and $t_{\text {mech}}$ are the surface area and the thickness of the compliant mechanism, respectively.\relax }{table.caption.37}{}}
+\newlabel{tab:sma-pt-tradeoffs@cref}{{[table][1][3]3.1}{[1][45][]45}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Integration of Compliant Mechanisms in Antagonistic SMA Actuators}{45}{subsection.3.4.2}\protected@file@percent }
+\newlabel{subsec:design-methodology-antagonistic}{{3.4.2}{45}{Integration of Compliant Mechanisms in Antagonistic SMA Actuators}{subsection.3.4.2}{}}
+\newlabel{subsec:design-methodology-antagonistic@cref}{{[subsection][2][3,4]3.4.2}{[1][45][]45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces The adapted sizing methodology of an antagonistic SMA actuator paired with compliant mechanism using the simplified SMA curves. Here, the compliant mechanism behaves as a bistable element.\relax }}{46}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:smaactwp-bb}{{3.5}{46}{The adapted sizing methodology of an antagonistic SMA actuator paired with compliant mechanism using the simplified SMA curves. Here, the compliant mechanism behaves as a bistable element.\relax }{figure.caption.38}{}}
+\newlabel{fig:smaactwp-bb@cref}{{[figure][5][3]3.5}{[1][46][]46}}
+\citation{jinqiuCurvedbeamBistableMechanism2004}
+\citation{chouinardBistableAntagonisticDielectric2012}
+\citation{zhangCompliantBistableGrippers2020}
+\citation{welschVacuumGripperSystem2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Design methodology for sizing antagonistic SMA actuators paired with compliant mechanism.\relax }}{47}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:flowchart-bb}{{3.6}{47}{Design methodology for sizing antagonistic SMA actuators paired with compliant mechanism.\relax }{figure.caption.39}{}}
+\newlabel{fig:flowchart-bb@cref}{{[figure][6][3]3.6}{[1][47][]47}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Validation using a Case Study: A Multi-Output SMA Mandrel}{48}{section.3.5}\protected@file@percent }
+\newlabel{sec:smacm-mandrel}{{3.5}{48}{Validation using a Case Study: A Multi-Output SMA Mandrel}{section.3.5}{}}
+\newlabel{sec:smacm-mandrel@cref}{{[section][5][3]3.5}{[1][48][]48}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Motivation and Background}{48}{subsection.3.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Working Principle of the Gripper}{48}{subsection.3.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces The sizing methodology of the biased-compliant SMA gripper based on the proposed designing methodology.\relax }}{49}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:mandrel-gripperwp}{{3.7}{49}{The sizing methodology of the biased-compliant SMA gripper based on the proposed designing methodology.\relax }{figure.caption.40}{}}
+\newlabel{fig:mandrel-gripperwp@cref}{{[figure][7][3]3.7}{[1][49][]49}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Designing the Integrated Biased Kinematic Stage}{50}{subsection.3.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{Articulated Parallelogram Core and Analytical Geometry Approach}{50}{subsection.3.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Kinematic diagram of proposed design where the black dots represent ideal pivots, the blue and black arrows represent the input and output displacement, respectively. On the left: the outward-triangle configuration with a) the initial position and b) the displaced one. On the right-hand side: the inward-triangle configuration achieving a stroke amplification with c) the initial position and d) the displaced one. e) represents mandrel topology generated with 2D topology optimization which behaves similarly to the outward version. f) shows the 2.5D adaptation of the inward version into a flexure-based mechanism distributed over multiple layers, and with a reversed actuation direction.\relax }}{51}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:mandrel-kinematic}{{3.8}{51}{Kinematic diagram of proposed design where the black dots represent ideal pivots, the blue and black arrows represent the input and output displacement, respectively. On the left: the outward-triangle configuration with a) the initial position and b) the displaced one. On the right-hand side: the inward-triangle configuration achieving a stroke amplification with c) the initial position and d) the displaced one. e) represents mandrel topology generated with 2D topology optimization which behaves similarly to the outward version. f) shows the 2.5D adaptation of the inward version into a flexure-based mechanism distributed over multiple layers, and with a reversed actuation direction.\relax }{figure.caption.41}{}}
+\newlabel{fig:mandrel-kinematic@cref}{{[figure][8][3]3.8}{[1][50][]51}}
+\@writefile{toc}{\contentsline {subsubsection}{Determining the Relationship between the Hinges and the SMA Stroke}{51}{figure.caption.41}\protected@file@percent }
+\newlabel{eq:1}{{3.8}{51}{Determining the Relationship between the Hinges and the SMA Stroke}{equation.3.5.8}{}}
+\newlabel{eq:1@cref}{{[equation][8][3]3.8}{[1][51][]51}}
+\newlabel{eq:7}{{3.9}{52}{Determining the Relationship between the Hinges and the SMA Stroke}{equation.3.5.9}{}}
+\newlabel{eq:7@cref}{{[equation][9][3]3.9}{[1][51][]52}}
+\newlabel{eq:theta}{{3.10}{52}{Determining the Relationship between the Hinges and the SMA Stroke}{equation.3.5.10}{}}
+\newlabel{eq:theta@cref}{{[equation][10][3]3.10}{[1][52][]52}}
+\@writefile{toc}{\contentsline {subsubsection}{Simple Kinematics to a Compliant Mechanism}{52}{equation.3.5.10}\protected@file@percent }
+\citation{heneinConceptionStructuresArticulees2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Different views of the flexure-based compliant mechanism spreading over multiple stages, and parametrized flexure pivot.\relax }}{53}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:mech_stages}{{3.9}{53}{Different views of the flexure-based compliant mechanism spreading over multiple stages, and parametrized flexure pivot.\relax }{figure.caption.42}{}}
+\newlabel{fig:mech_stages@cref}{{[figure][9][3]3.9}{[1][52][]53}}
+\@writefile{toc}{\contentsline {subsubsection}{Sizing of the Biasing Compliant Mechanism}{53}{figure.caption.42}\protected@file@percent }
+\citation{heneinConceptionStructuresArticulees2005}
+\newlabel{eq:mandrel-theta-model}{{3.11}{54}{Sizing of the Biasing Compliant Mechanism}{equation.3.5.11}{}}
+\newlabel{eq:mandrel-theta-model@cref}{{[equation][11][3]3.11}{[1][54][]54}}
+\newlabel{eq:mandrel-potential-energy-model}{{3.12}{54}{Sizing of the Biasing Compliant Mechanism}{equation.3.5.12}{}}
+\newlabel{eq:mandrel-potential-energy-model@cref}{{[equation][12][3]3.12}{[1][54][]54}}
+\newlabel{eq:mandrel-force-model}{{3.13}{54}{Sizing of the Biasing Compliant Mechanism}{equation.3.5.13}{}}
+\newlabel{eq:mandrel-force-model@cref}{{[equation][13][3]3.13}{[1][54][]54}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Validation of the analytical model of the biasing compliant mechanism using experimental results obtained using a pull-tester. Here, the small discrepency arises due to the creep present in the plastic structure as the mechanism returns to its original shape.\relax }}{54}{figure.caption.43}\protected@file@percent }
+\newlabel{fig:mandrel-am-expt-compare}{{3.10}{54}{Validation of the analytical model of the biasing compliant mechanism using experimental results obtained using a pull-tester. Here, the small discrepency arises due to the creep present in the plastic structure as the mechanism returns to its original shape.\relax }{figure.caption.43}{}}
+\newlabel{fig:mandrel-am-expt-compare@cref}{{[figure][10][3]3.10}{[1][54][]54}}
+\newlabel{eq:adm-theta-theory}{{3.14}{55}{Sizing of the Biasing Compliant Mechanism}{equation.3.5.14}{}}
+\newlabel{eq:adm-theta-theory@cref}{{[equation][14][3]3.14}{[1][55][]55}}
+\newlabel{eq:adm}{{3.15}{55}{Sizing of the Biasing Compliant Mechanism}{equation.3.5.15}{}}
+\newlabel{eq:adm@cref}{{[equation][15][3]3.15}{[1][55][]55}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Additional trade-offs observed when sizing the flexural compliant mechanism actuated by a given SMA wire or coil. Here, $S_{\text  {mech}}$ and $t_{\text  {mech}}$ are the surface area and the thickness of the entire compliant mechanism, respectively.\relax }}{56}{table.caption.44}\protected@file@percent }
+\newlabel{tab:mandrel-tradeoffs}{{3.2}{56}{Additional trade-offs observed when sizing the flexural compliant mechanism actuated by a given SMA wire or coil. Here, $S_{\text {mech}}$ and $t_{\text {mech}}$ are the surface area and the thickness of the entire compliant mechanism, respectively.\relax }{table.caption.44}{}}
+\newlabel{tab:mandrel-tradeoffs@cref}{{[table][2][3]3.2}{[1][55][]56}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.4}Implementation and Experimental Results}{56}{subsection.3.5.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces The working prototype of the biased-compliant SMA gripper (a) opened configuration with a $0.2$mm wire diameter SMA coil (framed in red), (b) closed configuration grasping an object.\relax }}{57}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:mandrel-finalproto}{{3.11}{57}{The working prototype of the biased-compliant SMA gripper (a) opened configuration with a $0.2$mm wire diameter SMA coil (framed in red), (b) closed configuration grasping an object.\relax }{figure.caption.45}{}}
+\newlabel{fig:mandrel-finalproto@cref}{{[figure][11][3]3.11}{[1][56][]57}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces The sizing diagram of the SMA mandrel based on the developed analytical model of the compliant mechanism and the models of the SMA coils obtained from experimental results. Here, based on the estimations a maximum stroke of $4.5$ mm is observed.\relax }}{58}{figure.caption.46}\protected@file@percent }
+\newlabel{fig:mandrel-stroke-estimation}{{3.12}{58}{The sizing diagram of the SMA mandrel based on the developed analytical model of the compliant mechanism and the models of the SMA coils obtained from experimental results. Here, based on the estimations a maximum stroke of $4.5$ mm is observed.\relax }{figure.caption.46}{}}
+\newlabel{fig:mandrel-stroke-estimation@cref}{{[figure][12][3]3.12}{[1][56][]58}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces The experimental setup, using a pair of force sensors, to measure the gripping force of two opposing jaws.\relax }}{58}{figure.caption.47}\protected@file@percent }
+\newlabel{fig:mandrel-forcesetup}{{3.13}{58}{The experimental setup, using a pair of force sensors, to measure the gripping force of two opposing jaws.\relax }{figure.caption.47}{}}
+\newlabel{fig:mandrel-forcesetup@cref}{{[figure][13][3]3.13}{[1][57][]58}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Summary and Conclusion}{58}{section.3.6}\protected@file@percent }
+\citation{heneinConceptionStructuresArticulees2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces Results of the gripping force performed at different object diameters. The temperature and force output were recorded in real-time using a thermal imaging camera and a force sensor, respectively.\relax }}{59}{figure.caption.48}\protected@file@percent }
+\newlabel{fig:mandrel-force-temp}{{3.14}{59}{Results of the gripping force performed at different object diameters. The temperature and force output were recorded in real-time using a thermal imaging camera and a force sensor, respectively.\relax }{figure.caption.48}{}}
+\newlabel{fig:mandrel-force-temp@cref}{{[figure][14][3]3.14}{[1][57][]59}}
+\citation{leeClosedStructureCompliantGripper2021}
+\@setckpt{main/ch3_design_method}{
+\setcounter{page}{61}
+\setcounter{equation}{16}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{3}
+\setcounter{section}{6}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{14}
+\setcounter{table}{2}
+\setcounter{NAT@ctr}{0}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{AM@survey}{0}
+\setcounter{ttlp@side}{0}
+\setcounter{myparts}{0}
+\setcounter{parentequation}{0}
+\setcounter{nlinenum}{0}
+\setcounter{caption@flags}{0}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{currfiledepth}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{0}
+}

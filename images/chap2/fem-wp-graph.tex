@@ -1,0 +1,44 @@
+\documentclass[margin=10pt]{standalone}
+\usepackage{color,xcolor}
+\usepackage{makecell}
+\usepackage{tikz-qtree, tikz}
+\usepackage[utf8]{inputenc}
+
+\definecolor{myblue}{HTML}{0072BD}
+\definecolor{mygreen}{HTML}{258F1B}
+\definecolor{myred}{HTML}{C4000C}
+
+\newcommand{\Ms}{\ensuremath{M_\mathrm{s}}} % Martensite start Temperature
+\newcommand{\Mf}{\ensuremath{M_\mathrm{f}}} % Martensite finish Temperature
+\newcommand{\As}{\ensuremath{A_\mathrm{s}}} % Austenite start Temperature
+\newcommand{\Af}{\ensuremath{A_\mathrm{f}}} % Austenite finish Temperature
+
+% \usetikzlibrary{decorations.pathreplacing,arrows,shapes,positioning,shadows,calc}
+% \usetikzlibrary{decorations, decorations.text,backgrounds}
+% \tikzset{every picture/.style={font issue=\footnotesize},
+%     font issue/.style={execute at begin picture={#1\selectfont}}
+% }
+
+\begin{document}
+\begin{tikzpicture}
+    \node[anchor=north west,inner sep=0] (graph-phase) at (0,0) {\input{fem-phase-graph.pgf}};
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\input{fem-wp-graph-center.pgf}};
+        % Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+        \node[thick,anchor=center,rotate=10] (H) at (0.75,0.84) {\large H};
+        \node[thick,anchor=center,rotate=52] (EM) at (0.8325,0.78) {\large $E_M$};
+        \node[thick,anchor=center,rotate=62] (EA) at (0.6075,0.72) {\large $E_A$};
+
+        % \draw[black,ultra thick,rounded corners] (0.62,0.65) rectangle (0.78,0.75);
+        % \draw[help lines,xstep=.01,ystep=.05] (0,0) grid (1,1);
+        % \foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+        % \foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+    \end{scope}
+    \node[thick,anchor=center,rotate=40] (CMA2) at (16,-7.62) {\large $C_{MA}$};
+    \node[thick,anchor=center,rotate=40] (CAM1) at (16,-5.72) {\large $C_{MA}$};
+    \node[thick,anchor=center,rotate=40] (CMA2) at (13,-1.72) {\large $C_{AM}$};
+    \node[thick,anchor=center,rotate=40] (CAM1) at (13,-3.62) {\large $C_{AM}$};
+
+
+\end{tikzpicture}
+\end{document}
