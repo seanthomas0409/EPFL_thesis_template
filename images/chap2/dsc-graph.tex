@@ -1,4 +1,4 @@
-\documentclass[margin=10pt]{standalone}
+\documentclass[margin=1pt]{standalone}
 \usepackage{color,xcolor}
 \usepackage{makecell}
 \usepackage{tikz-qtree, tikz}
@@ -26,8 +26,8 @@
 % [every node/.style={inner sep=0,outer sep=60}]
     \node[anchor=south west] (dsc) at (0,0) {\includegraphics{dsc-curve.pdf}};
     \begin{scope}[x={(dsc.south east)},y={(dsc.north west)}]
-        \draw[->,thick] (-0.11,-0.1)--(1.2,-0.1) node[pos=0.5,below,outer sep=10]{\textbf{\huge Temperature [$^\circ$C]}};
-        \draw[->,thick] (-0.1,-0.11)--(-0.1,1.2) node[pos=0.5,above,sloped,outer sep=10]{\textbf{\huge Heat Flow [W]}};
+        \draw[-,thick] (0,-0.1)--(1,-0.1) node[pos=0.5,below,outer sep=10]{\textbf{\huge Temperature [$^\circ$C]}} -- (1,1.2);
+        \draw[-,thick] (0,-0.1)--(0,1.2) node[pos=0.5,above,sloped,outer sep=10]{\textbf{\huge Heat Flow [W]}} -- (1,1.2);
         \node [anchor=center] (hheating) at (0.66,0.74) {\large $\Delta L_\mathrm{MA}$};
         \node [anchor=center] (hcooling) at (0.34,0.26) {\large $\Delta L_\mathrm{AM}$};
 
@@ -42,7 +42,7 @@
 
         % \draw[help lines, color=black, dotted] (-0.1,-0.1) grid (1.18,1.18);
         % \draw[black,ultra thick,rounded corners] (0.62,0.65) rectangle (0.78,0.75);
-        \draw[help lines, color=black, dotted,xstep=.1,ystep=.1] (-0.1,-0.1) grid (1.18,1.18);
+        \draw[help lines, color=black, dotted,xstep=.1,ystep=.1] (0,-0.1) grid (1,1.18);
         % \foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
         % \foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
     \end{scope}

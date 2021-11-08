@@ -28,7 +28,7 @@ The algorithmically generated mandrel topology consists of an articulated symmet
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{\textwidth}{!}{\input{images/chap7/mandrel-kinematic-stage.tex}}
-  \caption{Kinematic diagram of proposed design where the black dots represent ideal pivots, the blue and black arrows represent the input and output displacement, respectively. On the left: the outward-triangle configuration with a) the initial position and b) the displaced one. On the right-hand side: the inward-triangle configuration achieving a stroke amplification with c) the initial position and d) the displaced one. e) represents mandrel topology generated with 2D topology optimization which behaves similarly to the outward version. f) shows the 2.5D adaptation of the inward version into a flexure-based mechanism distributed over multiple layers, and with a reversed actuation direction.}
+  \caption[Kinematic diagram of proposed design]{Kinematic diagram of proposed design where the black dots represent ideal pivots, the blue and black arrows represent the input and output displacement, respectively. On the left: the outward-triangle configuration with a) the initial position and b) the displaced one. On the right-hand side: the inward-triangle configuration achieving a stroke amplification with c) the initial position and d) the displaced one. e) represents mandrel topology generated with 2D topology optimization which behaves similarly to the outward version. f) shows the 2.5D adaptation of the inward version into a flexure-based mechanism distributed over multiple layers, and with a reversed actuation direction.}
   \label{fig:mandrel-kinematic}
 \end{figure}
 
@@ -93,7 +93,7 @@ The resulting characteristic is plotted as shown in \cref{fig:mandrel-am-expt-co
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.9\textwidth}{!}{\input{images/chap3/am-expt-compare.pgf}}
-  \caption{Validation of the analytical model of the biasing compliant mechanism using experimental results obtained using a pull-tester. Here, the small discrepency arises due to the creep present in the plastic structure as the mechanism returns to its original shape.}
+  \caption[Validation of the analytical model of the biasing compliant mechanism using experimental results obtained using a pull-tester]{Validation of the analytical model of the biasing compliant mechanism using experimental results obtained using a pull-tester. Here, the small discrepency arises due to the creep present in the plastic structure as the mechanism returns to its original shape.}
   \label{fig:mandrel-am-expt-compare}
 \end{figure}
 As the force characteristic flattens unlike a traditional linear spring, the operating points of the actuator will offer higher strokes for a given SMA coil. Furthermore, as the curve also decreases in value near the low-temperature operating point \circled{1}, its implies that the gripper can exert higher gripping forces for objects with a larger diameter. This shows that the current force-displacement characteristic of the proposed compliant mechanism is well suited as a biasing element in an SMA actuator. Finally, in the figure, some plastic deformation can be observed as the mechanism was deformed beyond above its admissible range during the test. The flexural hinges exhibit a limited angular stroke which is one of the limitations of such a design. However, the maximal admissible angle before permanent plastic deformation can be estimated using the work by \cite{heneinConceptionStructuresArticulees2005} as :
@@ -118,7 +118,7 @@ In this case, the output stroke of the gripper can be maximised by maximising th
 
 \begin{table}[hbt!]
     \centering
-    \caption{Additional trade-offs observed when sizing the flexural compliant mechanism actuated by a given SMA wire or coil. Here, $S_{\text{mech}}$ and $t_{\text{mech}}$ are the surface area and the thickness of the entire compliant mechanism, respectively.}
+    \caption[Additional trade-offs observed when sizing the flexural compliant mechanism actuated by a given SMA wire or coil]{Additional trade-offs observed when sizing the flexural compliant mechanism actuated by a given SMA wire or coil. Here, $S_{\text{mech}}$ and $t_{\text{mech}}$ are the surface area and the thickness of the entire compliant mechanism, respectively.}
     \label{tab:mandrel-tradeoffs}
     \input{images/chap7/mandrel-tradeoffs.tex}
 \end{table}
@@ -131,7 +131,7 @@ One of the main advantages of this integrated design is the simplicity of fabric
 \begin{figure}[hbt!]
     \centering
     \resizebox{0.9\textwidth}{!}{\input{images/chap7/mandrel-final-proto.tex}}
-    \caption{The working prototype of the biased-compliant SMA gripper (a) opened configuration with a $0.2$mm wire diameter SMA coil (framed in red), (b) closed configuration grasping an object.}
+    \caption[The working prototype of the biased-compliant SMA gripper]{The working prototype of the biased-compliant SMA gripper (a) opened configuration with a $0.2$mm wire diameter SMA coil (framed in red), (b) closed configuration grasping an object.}
     \label{fig:mandrel-finalproto}
 \end{figure}
 
@@ -140,7 +140,7 @@ In \cref{fig:mandrel-stroke-estimation}, the validated analytical models are plo
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.7\textwidth}{!}{\input{images/chap7/mandrel-stroke-estimation.pgf}}
-  \caption{The sizing diagram of the SMA mandrel based on the developed analytical model of the compliant mechanism and the models of the SMA coils obtained from experimental results. Here, based on the estimations a maximum stroke of $4.5$ mm is observed.}
+  \caption[The sizing diagram of the SMA mandrel based on the developed analytical model of the compliant mechanism and the models of the SMA coils obtained from experimental results]{The sizing diagram of the SMA mandrel based on the developed analytical model of the compliant mechanism and the models of the SMA coils obtained from experimental results. Here, based on the estimations a maximum stroke of $4.5$ mm is observed.}
   \label{fig:mandrel-stroke-estimation}
 \end{figure}
 
@@ -156,7 +156,7 @@ The gripping force, however, is dependant on the size of the gripped object. For
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.9\textwidth}{!}{\input{images/chap3/force-temp-filt.pgf}}
-  \caption{Results of the gripping force performed at different object diameters. The temperature and force output were recorded in real-time using a thermal imaging camera and a force sensor, respectively.}
+  \caption[Results of the gripping force performed at different object diameters]{Results of the gripping force performed at different object diameters. The temperature and force output were recorded in real-time using a thermal imaging camera and a force sensor, respectively.}
   \label{fig:mandrel-force-temp}
 \end{figure}
 

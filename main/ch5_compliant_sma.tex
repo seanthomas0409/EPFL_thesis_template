@@ -84,27 +84,27 @@ The proposed design method is applied to three benchmark problems : an inverter,
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.65\columnwidth]{images/chap5/Inverter_Schematic_FinalCAD.pdf}
-    \caption{Inverter: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
+    \caption[Inverter: Design problem (left), Interpolated final topology (right)]{Inverter: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
     \label{fig:Invert_ProbFinal}
 \end{figure}
 
 \begin{figure}[hbt!]
     \centering
     \input{images/chap5/SubFigs_Inverter_Evolution_v2.tex}
-    \caption{Evolution of the inverter design throughout the optimization. The grayscale represent the value of the filtered artificial density.}
+    \caption[Evolution of the inverter design throughout the optimization]{Evolution of the inverter design throughout the optimization. The grayscale represent the value of the filtered artificial density.}
     \label{fig:ForceInverter_evol}
 \end{figure}
 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.65\columnwidth]{images/chap5/Crimper_Schematic_FinalCAD.pdf}
-    \caption{Crimper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
+    \caption[Crimper: Design problem (left), Interpolated final topology (right)]{Crimper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
     \label{fig:Crimper_ProbFinal}
 \end{figure}
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.65\columnwidth]{images/chap5/Gripper_Schematic_FinalCAD.pdf}
-    \caption{Gripper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
+    \caption[Gripper: Design problem (left), Interpolated final topology (right)]{Gripper: Design problem (left), Interpolated final topology (right). Input force is shown in red while the output force is shown green.}
     \label{fig:Gripper_ProbFinal}
 \end{figure}
 
@@ -113,21 +113,21 @@ Here, in the hopes of validating the shape memory effect, a four time-step simul
 \begin{figure}[hbt!]
     \centering
     \input{images/chap5/BM_Inverter30_FEM.tex}
-    \caption{Results of the shape memory effect simulation of the Inverter design. Here, the displacements are calculated relatively to the design domain size $L$. The displacements observed between time steps 1 and 2 show a strain retention of $\alpha_\epsilon$ = 77.6\% confirming the presence of the shape memory effect.}
+    \caption[Results of the shape memory effect simulation of the Inverter design]{Results of the shape memory effect simulation of the Inverter design. Here, the displacements are calculated relatively to the design domain size $L$. The displacements observed between time steps 1 and 2 show a strain retention of $\alpha_\epsilon$ = 77.6\% confirming the presence of the shape memory effect.}
     \label{fig:InverterAnsysSimu}
 \end{figure}
 
 \begin{figure}[hbt!]
     \centering
     \input{images/chap5/BM_Crimper30_FEM.tex}
-    \caption{Results of the shape memory effect simulation of the Crimper design showing a strain retention of $\alpha_\epsilon$ = 75.2\%.}
+    \caption[Results of the shape memory effect simulation of the Crimper design]{Results of the shape memory effect simulation of the Crimper design showing a strain retention of $\alpha_\epsilon$ = 75.2\%.}
     \label{fig:CrimperAnsysSimu}
 \end{figure}
 
 \begin{figure}[hbt!]
     \centering
     \input{images/chap5/BM_Gripper30_FEM.tex}
-    \caption{Results of the shape memory effect simulation of the Inverter design showing a strain retention of $\alpha_\epsilon$ = 77.6\%.}
+    \caption[Results of the shape memory effect simulation of the Inverter design]{Results of the shape memory effect simulation of the Inverter design showing a strain retention of $\alpha_\epsilon$ = 77.6\%.}
     \label{fig:GripperAnsysSimu}
 \end{figure}
 
@@ -142,7 +142,7 @@ The amount of detwinned material in the geometry can be roughly estimated using 
 with $\epsilon_\text{loaded}$ and $\epsilon_\text{free}$ representing the domain space normalised input displacement at time step 1 and 2 respectively. It is important to note that this factor can never be equal to 1 as there is some natural elastic spring back of the material even when fully detwinned and thus, is only a qualitative measure of the shape memory capabilities of the topology. It is still an effective way to compare the different topologies presented using the benchmark problems. The FEM results of the strain retention of each benchmark problem can be seen in \cref{tab:bm-fem-results}. This principle can be further extended to more complex designs where goal is to create compliant SMA structures that can have multiple outputs using just a single input biasing element which will be presented in future sections.
 \begin{table}[hbt!]
     \centering
-    \caption{The simulation results of the strain retention factor for each of the benchmark problems: $\boldsymbol{\mathcal{I}}$ Inverter; $\boldsymbol{\mathcal{C}}$ Crimper; $\boldsymbol{\mathcal{G}}$ Gripper}
+    \caption[The simulation results of the strain retention factor for each of the benchmark problems]{The simulation results of the strain retention factor for each of the benchmark problems: $\boldsymbol{\mathcal{I}}$ Inverter; $\boldsymbol{\mathcal{C}}$ Crimper; $\boldsymbol{\mathcal{G}}$ Gripper}
     \label{tab:bm-fem-results}
     {\rowcolors{1}{black!5}{black!10}
      \begin{tabular}{r c c c c c c}
@@ -162,7 +162,7 @@ When fabricating the prototype, the cost of machining a monolithic block of NiTi
 \begin{figure}[t!]
     \centering
     \resizebox{\textwidth}{!}{\input{images/chap5/inverter-prototype-setup.tex}}
-    \caption{The experimental setup of the inverter prototype. The prototype is cut from a thin SMA sheet and is sandwiched between PMMA sheets to prevent buckling. The input load is applied using the pull-tester while measuring the input displacement and force. The output displacement is recorded using a microscopic camera.}
+    \caption[The experimental setup of the laser-cut inverter prototype]{The experimental setup of the laser-cut inverter prototype. The prototype is fabricated from a thin SMA sheet and is sandwiched between PMMA sheets to prevent buckling. The input load is applied with the help of the pull-tester while the input displacement and force are measured. The output displacement is recorded and measured using a camera.}
     \label{fig:inverter-proto-setup}
 \end{figure}
 
@@ -172,7 +172,7 @@ The goal of this section is to experimentally validate the proposed design metho
 
 \begin{figure}[hbt!]
     \centering
-    \resizebox{0.7\textwidth}{!}{\input{images/chap5/prototype-pull-tester-forcedisp.pgf}}
+    \resizebox{0.85\textwidth}{!}{\input{images/chap5/prototype-pull-tester-forcedisp.pgf}}
     \caption{The experimental results of the inverter prototype are obtained using a pull-tester and a strain retention of 84.3\% is observed.}
     \label{fig:results-proto-inverter}
 \end{figure}%
@@ -198,7 +198,7 @@ Various works have been established where surface mounted coils have been instal
 
 Due to the complex geometry of the inverter prototype, the current paths for Joule's heating are no longer unique, nor trivial anymore. Here, in this case, multiple electrodes with multiple external wires are required to heat the structure. Thus, here, the proposed heating solution consists of a contactless, wireless strategy where a current is induced within the SMA structures using external induction coils.
 \subsection{Magnetic Induction Heating}
-The basic working principle of the proposed heating methodology and its application in the inverter mechanism can be seen in \cref{fig:induction_schematic}. By passing an alternating current at a high frequency is passed through the primary coil and generates a magnetic field. When any electric conductor, the SMA structure in this case, is placed inside the generated magnetic field, a secondary electric current, $\InducedCurrent$, is induced inside the structure. This induced current will generate Joule's losses, $\PJoules$, heating the SMA :
+The basic working principle of the proposed heating methodology and its application in the inverter mechanism can be seen in \cref{fig:induction_schematic}. By passing an alternating current at a high frequency through the primary coil and generates a magnetic field. When any electric conductor, the SMA structure in this case, is placed inside the generated magnetic field, a secondary electric current, $\InducedCurrent$, is induced inside the structure. This induced current will generate Joule's losses, $\PJoules$, heating the SMA :
 \begin{equation}
     \PJoules = \ResisSMA \cdot \InducedCurrent^2 = \frac{\VoltageEMF^2}{\ResisSMA}.
 \end{equation}
@@ -212,7 +212,7 @@ where $\TotalFlux$ is the total flux linkage between the primary and SMA side, $
 \begin{figure}[hbt!]
   \centering
   \includegraphics[width=\textwidth]{images/chap5/07_final_schematic_induction.pdf}
-  \caption{Induction heating - (a) General principle, (b) 2D view of the coil designed for the deformed inverter, with the direction of the generated magnetic flux normal to the plane, (c) 3D view of the induction system for the inverter problem.}
+  \caption[Working principle of the induction heating strategy]{Working principle of the induction heating strategy - (a) General principle, (b) 2D view of the coil designed for the deformed inverter, with the direction of the generated magnetic flux normal to the plane, (c) 3D view of the induction system for the inverter problem.}
   \label{fig:induction_schematic}
 \end{figure}
 
@@ -225,18 +225,20 @@ As mentioned previously, the working frequency plays an important role in this p
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/chap5/10_final_Coil_BodeDiagram_2.pdf}
-    \caption{Comparison of primary coil with different types of wire. As the impedance becomes mainly capacitive over its critical frequency, the inductance's values after $\freqCritMONO = 17$MHz and $\freqCritLITZ  = 41$MHz are removed for the monolithic and Litz wire respectively.}
+    % \includegraphics[width=0.75\textwidth]{images/chap5/10_final_Coil_BodeDiagram_2.pdf}
+    \includegraphics[width=0.9\textwidth]{images/chap5/impedance-analysis.pdf}
+    \caption[A comparison of primary coils with different wire types]{A comparison of primary coils with different wire types. As the impedance becomes mainly capacitive over its critical frequency, the inductance's values after $\freqCritMONO = 17$MHz and $\freqCritLITZ  = 41$MHz are removed for the monolithic and Litz wire respectively.}
     \label{fig:induction-coil-freq}
 \end{figure}
 
-Here a working frequency of around $4$ Mhz has been chosen so as to ensure that it sits safely above the critical frequency. At this frequency, the inductance of the coil is $L=7.4~\mu$H and its resistance $R=0.4~\Omega$. A capacitor of $C = 230$ pF is attached in series with the primary coil to create an LC circuit with a resonating frequency $\frequency=(2\pi\sqrt{LC})^{-1} = 3.86$ MHz. Here, the input source is constructed using a half-bridge inverter based on GaN transistors (EPC$9024$). With the Litz coil, a primary current of $I= 1.5$ A is generated at the working frequency while dissipating $0.9$ W of heat. This increased temperature is negligible and implies a stable operation. However, the coil made from the monolithic wire would result in higher temperatures at the primary resulting in a change in resistance and inductance values.
+Here a working frequency of around $4$ Mhz has been chosen so as to ensure that it sits safely below the critical frequency. At this frequency, the inductance of the coil is $L=7.4~\mu$H and its resistance $R=0.4~\Omega$. A capacitor of $C = 230$ pF is attached in series with the primary coil to create an LC circuit with a resonating frequency $\frequency=(2\pi\sqrt{LC})^{-1} = 3.86$ MHz. Here, the input source is constructed using a half-bridge inverter based on GaN transistors (EPC$9024$). With the Litz coil, a primary current of $I= 1.5$ A is generated at the working frequency while dissipating $0.9$ W of heat. This increased temperature is negligible and implies a stable operation. However, the coil made from the monolithic wire would result in higher temperatures at the primary resulting in a change in resistance and inductance values.
 
 \begin{figure}[t]
     \centering
-    \includegraphics[width=0.75\textwidth]{images/chap5/11_final_results_experiments_heating.pdf}
+    \includegraphics[width=0.9\textwidth]{images/chap5/induction-heating-temp-annotated.pdf}
+    % \includegraphics[width=0.75\textwidth]{images/chap5/11_final_results_experiments_heating.pdf}
     % \vspace{-0.3cm}
-    \caption{Implementation of induction heating system. When activated, it resulted in the heating of the SMA structure, reverted the deformed structure back to its original shape.}
+    \caption[Implementation of induction heating system]{Implementation of induction heating system. When activated, it resulted in the heating of the SMA structure, reverted the deformed structure back to its original shape.}
     \label{fig:induction-heating-temp}
 \end{figure}
 
@@ -252,7 +254,7 @@ In this section, various novel multi-output actuators fabricated from compliant 
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.7\textwidth]{images/chap5/06_final_evolve_mandrel_2.pdf}
-    \caption{$4$-point Mandrel $\Xsymbol$ : Evolution throughout the optimization. The grayscale represents the value of the filtered artificial density. The input force is shown in red and the output force in green.}
+    \caption[$4$-point Mandrel $\Xsymbol$ : Evolution throughout the optimization]{$4$-point Mandrel $\Xsymbol$ : Evolution throughout the optimization. The grayscale represents the value of the filtered artificial density. The input force is shown in red and the output force in green.}
     \label{fig:TopologyEvolution-mandrel}
 \end{figure}
 
@@ -260,7 +262,7 @@ In this section, various novel multi-output actuators fabricated from compliant 
 \begin{figure}[htp!]
     \centering
     \includegraphics[width=\textwidth]{images/chap5/05_final_SIMO_schematics.pdf}
-    \caption{Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state. The input forces are shown in red and the output forces in green. The artificial springs present in the topology optimisation are shown in brown while the bias-springs of the actuators are shown in grey.}
+    \caption[Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state]{Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state. The input forces are shown in red and the output forces in green. The artificial springs present in the topology optimisation are shown in brown while the bias-springs of the actuators are shown in grey.}
     \label{fig:simo-results}
 \end{figure}
 % \newpage
@@ -295,14 +297,14 @@ Using these proposed design methodologies, in the next chapter, the work aims to
 
 \vspace*{\fill}
 \noindent\hrulefill \\
-\textbf{\large Publications related to this chapter :}\\
+\textbf{\large Publications related to this chapter :}
 
-S. Thomas, A. Thabuis, T. Martinez, P. Germano, and Y. Perriard, \textit{“Designing compliant mechanisms composed of shape memory alloy and actuated by induction heating,”} Smart Mater. Struct., Aug. 2021, doi: 10.1088/1361-665X/ac1b15.\\
+\underline{S. Thomas}, A. Thabuis, T. Martinez, P. Germano, and Y. Perriard, \textit{“Designing compliant mechanisms composed of shape memory alloy and actuated by induction heating,”} Smart Mater. Struct., Aug. 2021, doi: 10.1088/1361-665X/ac1b15.
 
-S. Thomas, A. Thabuis, T. Martinez, and Y. Perriard, \textit{“Shape Memory Effect of Benchmark Compliant Mechanisms Designed With Topology Optimization,”} in 2020 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Jul. 2020, pp. 571–576. doi: 10.1109/AIM43001.2020.9158984.\\
+\underline{S. Thomas}, A. Thabuis, T. Martinez, and Y. Perriard, \textit{“Shape Memory Effect of Benchmark Compliant Mechanisms Designed With Topology Optimization,”} in 2020 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Jul. 2020, pp. 571–576. doi: 10.1109/AIM43001.2020.9158984.
 
-S. Thomas, A. Thabuis, T. Martinez, and Y. Perriard, \textit{“Multi-Output Compliant Shape Memory Alloy Bias-Spring Actuators,”} in 2020 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Jul. 2020, pp. 795–800. doi: 10.1109/AIM43001.2020.9158997.\\
+\underline{S. Thomas}, A. Thabuis, T. Martinez, and Y. Perriard, \textit{“Multi-Output Compliant Shape Memory Alloy Bias-Spring Actuators,”} in 2020 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Jul. 2020, pp. 795–800. doi: 10.1109/AIM43001.2020.9158997.
 
-S. Thomas, M. Ghorbani, G. Lang, T. Martinez and Y. Perriard, \textit{“Modelling and Fabrication of a Kirigami-Inspired Shape Memory Alloy Actuator,”} in 2021 International Conference on Electrical Machines and Systems (ICEMS), Gyeongju, Oct. 2021, (in press).\\
+\underline{S. Thomas}, M. Ghorbani, G. Lang, T. Martinez and Y. Perriard, \textit{“Modelling and Fabrication of a Kirigami-Inspired Shape Memory Alloy Actuator,”} in 2021 International Conference on Electrical Machines and Systems (ICEMS), Gyeongju, Oct. 2021, (in press).
 
-S. Thomas, P. Peralta, R. Mottet, M. Lehmann, Y. Civet, and Y. Perriard, \textit{“Analysis and Reduction of Time Response in Thermally Activated Shape Memory Alloys,”} in 2018 21st International Conference on Electrical Machines and Systems (ICEMS), Oct. 2018, pp. 1783–1788. doi: 10.23919/ICEMS.2018.8549332.\\
+\underline{S. Thomas}, P. Peralta, R. Mottet, M. Lehmann, Y. Civet, and Y. Perriard, \textit{“Analysis and Reduction of Time Response in Thermally Activated Shape Memory Alloys,”} in 2018 21st International Conference on Electrical Machines and Systems (ICEMS), Oct. 2018, pp. 1783–1788. doi: 10.23919/ICEMS.2018.8549332.

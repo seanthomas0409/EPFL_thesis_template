@@ -1246,7 +1246,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.878110in,y=0.266667in,,top]{\color{textcolor}\rmfamily\fontsize{13.000000}{15.600000}\selectfont Total Weight [g]}%
+\pgftext[x=3.878110in,y=0.266667in,,top]{\color{textcolor}\rmfamily\fontsize{13.000000}{15.600000}\selectfont \textbf{Total Weight [g]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.778110in}{0.568815in}}{\pgfqpoint{6.200000in}{3.696000in}}%
@@ -2437,7 +2437,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.291037in,y=2.416815in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{13.000000}{15.600000}\selectfont Speed / weight [BLs\(\displaystyle ^{-1}\) per g]}%
+\pgftext[x=0.291037in,y=2.416815in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{13.000000}{15.600000}\selectfont \textbf{Speed / weight [BLs\(\displaystyle ^{-1}\) per g]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.778110in}{0.568815in}}{\pgfqpoint{6.200000in}{3.696000in}}%

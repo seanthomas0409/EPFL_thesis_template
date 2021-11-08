@@ -71,7 +71,7 @@ The implementation of this oscillator mechanism in the scope of a simple biased-
   % \begin{tabular}{r@{ }l r@{ }l}
   %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
   % \end{tabular}
-  \caption{A schematic of the working principle of the magnetic latch control system. This diagram can be extended to represent any latch based system where there exists a snap-through at a certain stroke.}
+  \caption[A schematic of the working principle of the magnetic latch control system]{A schematic of the working principle of the magnetic latch control system. This diagram can be extended to represent any latch based system where there exists a snap-through at a certain stroke.}
   \label{fig:latch-wp}
 \end{figure}
 
@@ -101,7 +101,7 @@ where $K_s$ is the rigidity of the leaf spring which depends on the dimensions o
    \draw[coordinate label = {Bias Leaf Spring at (0.74,0.1)}];
    \draw[coordinate label = {Leaf Spring at (0.27,0.1)}];
  \end{annotationimage}
-  \caption{The close-up structure of the magnetic latch system that acts as the oscillating electrical contact for the SMA coil. Here, the biasing leaf spring also act as a linear stage for the actuator.}
+  \caption[The close-up structure of the magnetic latch system that acts as the oscillating electrical contact for the SMA coil]{The close-up structure of the magnetic latch system that acts as the oscillating electrical contact for the SMA coil. Here, the biasing leaf spring also act as a linear stage for the actuator.}
   \label{fig:proto-closeup}
 \end{figure}
 
@@ -124,11 +124,11 @@ This basic concept can be implemented in using different methods. The latch syst
   \begin{tabular}{r@{ }l r@{ }l}
     {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
   \end{tabular}
-  \caption{Effect of the current on the evolution of the SMA spring's temperature. This shows that the control system averts any risk of overheating.}
+  \caption[Effect of the current on the evolution of the SMA spring's temperature]{Effect of the current on the evolution of the SMA spring's temperature. This shows that the control system averts any risk of overheating.}
   \label{fig:thermal-osc}
 \end{figure}
 
-\subsection{Sizing of the oscillator}
+\subsection{Sizing of the oscillator}\label{subsec:thermal-sizing}
 % Sizing strategies (thermal model) + results
 % Stroke : rigidity of flexural linear stages; make reference to LDIA paper
 As mentioned previously, the thermomechanical behaviour of the SME is exploited to create the mechanical control system. The sizing of the oscillator system is, thus, directly, dependant on the thermal properties of the active element. The rise time or time till the snap-through occurs, depends on the time required to heat the SMA using Joule's heating. This implies that the current supplied across the SMA dictates the rise time of the oscillator. The fall time or time required to re-establish the electrical contact across the SMA depends on the cooling time of the SMA wire or coil. In the case where the SMA is cooled using passive thermal exchange with the surrounding air, the fall time can be controlled by adequately sizing the diameter of the SMA wire or coil. The amplitude of the system, in this case, depends on the latch system and can be sized using the equation \ref{eq:osc-stroke-sizing}. Furthermore, the stroke of the SMA actuator can be sized using the methods presented in \cref{chap:design-methodology} so as to ensure that the actuator is capable of deforming to the levels demanded by the oscillator amplitude. This will ensure that the snap-through of the oscillator occurs before the SMA overheats.
@@ -154,7 +154,7 @@ where the subscripts, 1 and 2, represents the operating points of the actuator a
   % \begin{tabular}{r@{ : }l r@{ : }l}
   %   \fcolorbox{black}{myblue}{\rule[1pt]{0pt}{6pt}\rule[1pt]{6pt}{0pt}} & 340 mA & \fcolorbox{black}{myred}{\rule[1pt]{0pt}{6pt}\rule[1pt]{6pt}{0pt}} & 840 mA
   % \end{tabular}
-  \caption{Measurement of the heat transfer coefficient, $H$, using 250 $\mu$m wire diameter SMA spring with a mandrel size of 0.5 mm.}
+  \caption[Measurement of the heat transfer coefficient, $H$]{Measurement of the heat transfer coefficient, $H$, using 250 $\mu$m wire diameter SMA spring with a mandrel size of 0.5 mm.}
   \label{fig:thermal-fitting}
 \end{figure}
 
@@ -166,12 +166,12 @@ Using a thermal camera with an optical zoom that allows for high spatial resolut
   % \begin{tabular}{r@{ : }l r@{ : }l}
   %   \fcolorbox{black}{myblue}{\rule[1pt]{0pt}{6pt}\rule[1pt]{6pt}{0pt}} & 340 mA & \fcolorbox{black}{myred}{\rule[1pt]{0pt}{6pt}\rule[1pt]{6pt}{0pt}} & 840 mA
   % \end{tabular}
-  \caption{Extrapolation of the cooling time based on wire diameter with $H = 43.8$ W/(m$^2$K).}
+  \caption[Extrapolation of the cooling time based on wire diameter]{Extrapolation of the cooling time based on wire diameter with $H = 43.8$ W/(m$^2$K).}
   \label{fig:cooling-time-extrapolation}
 \end{figure}
 
 % Heating time
-The rise time of the oscillator, $t_h$, can be estimated by calculating the time required to heat the SMA wire using Joule heating. Using the known resistance of the SMA wire, $R$, and the current, $I$, supplied to the system the heating time can be easily measured using the basic laws of electro-thermodynamics. In the case of slower rise time with small currents, the loss of heat with the surrounding air by convection must be taken into account and can be estimated with the equation :
+By calculating the time required to the heat the SMA wire using Joule's heating, the rise time of the oscillator, $t_h$, can be estimated. The known resistance of the SMA wire, $R$, and the current, $I$, supplied to the system, which can be easily measured, can be used to calculate the heating time based on the basic laws of electro-thermodynamics. In the case of small currents and a slower rise time, the loss of heat with the surrounding air by convection must be taken into account and can be estimated with the following equation :
 
 \begin{equation}\label{eq:heatingtime}
   t_h = \int_{T_1}^{T_2} \frac{\rho Vc}{I^2R-HA_S(T-T_R)} dT
@@ -183,9 +183,9 @@ The rise time of the oscillator, $t_h$, can be estimated by calculating the time
 
 In this model, the latent heat of transformation is not considered and the resistivity of the SMA is considered to remain constant. These assumptions are not always valid but can still serve as a reasonable approximation of the heating time. The work by \cite{liuActuationFrequencyModeling2021} has established an extensive numerical model capable of predicting the heating times quite accurately but requires extensive experimental testing of the material and environmental constants. This complex nature of the heating model makes it difficult to obtain an accurate heating time. Often, this complexity makes it difficult to size the current required to heat the SMA while still preventing the SMA from overheating. Thus, when it comes to accurate control of the SMA, a temperature sensor is required to prevent the destruction of the SMA coil or wire. However, using the proposed integrated control strategy based on mechanical-intelligence, a high current can be supplied to the SMA such that the heating time is drastically reduced and have the SMA automatically disconnect the contacts so as to ensure the safety of the SMA coil or wire without requiring any sensors.
 
-The control system was supplied with a constant current and left to oscillate for 2 minutes to test the repeatability and consistency of the rise and fall times. The temperature of the SMA coil was measured using a thermal camera with high spatial resolution and the stroke of the SMA actuator was measured using a laser displacement sensor. In \cref{fig:thermal-osc}, the temperature and position fluctuations of the oscillator are shown. The rise time of the magnetic latch-based control system when supplied with $340$ mA was measured to be $3.8 \pm 0.18$ s while the rise time when supplied with $840$ mA was measured to be $0.64 \pm 0.09$ s. The cooling time when supplied with $340$ mA and $840$ mA was found to be $5.71 \pm 0.09$ s and $5.82 \pm 0.2$ s, respectively. Thus, the period of the oscillations for the two measurements were found to be $9.60 \pm 0.17$ s and $6.47 \pm 0.22$ s which corresponds to a frequency of $0.10$ Hz and $0.16$ Hz.
+This control system was supplied with a constant current and left to oscillate for 2 minutes to test the repeatability and consistency of the rise and fall times. The temperature of the SMA coil was measured using a thermal camera with high spatial resolution and the stroke of the SMA actuator was measured using a laser displacement sensor. In \cref{fig:thermal-osc}, the temperature and position fluctuations of the oscillator are shown. The rise time of the magnetic latch-based control system when supplied with $340$ mA was measured to be $3.8 \pm 0.18$ s while the rise time when supplied with $840$ mA was measured to be $0.64 \pm 0.09$ s. The cooling time when supplied with $340$ mA and $840$ mA was found to be $5.71 \pm 0.09$ s and $5.82 \pm 0.2$ s, respectively. Thus, the period of the oscillations for the two measurements were found to be $9.60 \pm 0.17$ s and $6.47 \pm 0.22$ s which corresponds to a frequency of $0.10$ Hz and $0.16$ Hz.
 
-The rise time and cooling times of the latch-based control system were measured by detecting the peaks and troughs of the measured signals. The mean and standard deviation of these values were then calculated. Furthermore, the cooling time predicted, in \cref{fig:cooling-time-extrapolation}, based on the SMA geometry corresponds to the measured values, thus, validating the thermal model. Also, the cooling time remains relatively constant with respect to the varying current across the SMA. The cooling times can, thus, be predicted using the analytical model and the value remains constant, even while varying the current. This implies that the control system can be sized for a fixed fall time by appropriately sizing the SMA wire diameter.
+The rise time and cooling times of the latch-based control system were measured by detecting the peaks and troughs of the measured signals. The mean and standard deviation of these values were then calculated. Furthermore, the cooling times with respect to the SMA geometry predicted, in \cref{fig:cooling-time-extrapolation}, fits with the measured values, thus, validating the thermal model. Furthermore, with respect to the varying current across the SMA, the cooling time remains relatively constant. This implies that the cooling times can be predicted using the analytical model and the value can be considered to remain constant, even while varying the current. The implication being that the oscillating control system can be sized for a fixed fall time by appropriately sizing the SMA wire dimensions.
 
 %%%%%%%% Design Methodology Oscillator %%%%%%%%%%%
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
@@ -195,7 +195,7 @@ The rise time and cooling times of the latch-based control system were measured 
   \label{fig:mi-osc-flowchart}
 \end{figure}
 
-This magnetic latch system allowed the bias-spring SMA actuator to be actuated without any sensors or risk of overheating the SMA. The latch was required to allow the SMA to be heated during the entire stroke of the latch. A system using pogo pins, which are electric contacts consisting of a plunger and a spring mounted inside a barrel, was also tested. This resulted in a behaviour where the bias-spring SMA actuator oscillated at the tip of the pin. This, unfortunately, showcased the need for a latch system to bring the electric contact back to the starting position such that the actuator can carry out its entire stroke during the cooling phase. A latch system based on friction and snap-fits can be designed as an alternative. This pogo pin solution had the unexpected effect of allowing the SMA coil to be maintained at a stable temperature. This effect could be potentially used to stabilise an SMA at a fixed temperature based on the stroke of the pogo pin. The behaviour was not further explored in this work. However, as seen in \cref{fig:mi-osc-flowchart}, a generalised approach to creating the proposed mechanically-intelligent control strategy is described. The basic principle consists of exploiting the snap-through of the latch system. Here, the latch system is sized such that the force required to attain the snap-through is lower than the maximum pull force of the SMA element. This resulting mechanically-intelligent oscillator can be sized and its rise time and fall time can be estimated by using the geometrical dimensions of the active SMA element. Using this principle, the control system of the SMA actuator can be sized so as to allow a cyclical oscillation with a constant stroke and frequency while preventing any chance of SMA overheating. Furthermore, as no sensors or micro-controllers are present, the overall work density of the SMA actuator is conserved.
+This magnetic latch system allowed the bias-spring SMA actuator to be actuated without any sensors or risk of overheating the SMA. The latch enables the SMA to be heated during its entire stroke. Additionally, a system using pogo pins, which are electric contacts consisting of a plunger and a spring mounted inside a barrel, was also tested. This resulted in a behaviour where the bias-spring SMA actuator oscillated at the tip of the pin. This, unfortunately, showcased the need for a latch system to rapidly bring the electric contact back to the starting position such that the actuator can carry out its entire stroke during the cooling phase as shown in \cref{fig:latch-wp}. A mechanical latch system based on friction and snap-fits can be designed as a simpler alternative. This pogo pin solution had the unexpected effect of allowing the SMA coil to be maintained at a stable temperature. This effect could be potentially used to stabilise an SMA at a fixed temperature based on the stroke of the pogo pin. The behaviour was not further explored in this work. However, as seen in \cref{fig:mi-osc-flowchart}, a generalised approach to creating the proposed mechanically-intelligent control strategy is described. The basic principle consists of exploiting the snap-through of the latch system. Here, the latch system is sized such that the force required to attain the snap-through is lower than the maximum pull force of the SMA element. This resulting mechanically-intelligent oscillator can be sized and its rise time and fall time can be estimated by using the geometrical dimensions of the active SMA element. Using this principle, the control system of the SMA actuator can be sized so as to allow a cyclical oscillation with a constant stroke and frequency while preventing any chance of SMA overheating. Furthermore, as no sensors or micro-controllers are present, the overall work density of the SMA actuator is conserved.
 
 \section{Validation of the Approach using a Case Study}
 % Validation of the approach using a case study (introduction)
@@ -210,7 +210,7 @@ The mobile robot fabricated using this design approach is inspired by the gait o
   \centering
   \def\svgwidth{\textwidth}
   \resizebox{\textwidth}{!}{\input{images/chap6/inchworm-gait-diagram.pdf_tex}}
-  \caption{The gait analysis of an inchworm showing the insect change the coefficient of friction ($\mu_s$) with respect to the ground by either gripping or sliding its legs.}
+  \caption[The gait analysis of an inchworm]{The gait analysis of an inchworm showing the change in the coefficient of friction ($\mu_s$) of the insect legs with respect to the ground by either gripping or sliding its legs.}
   \label{fig:real-inchworm-diagram}
 \end{figure}
 
@@ -322,7 +322,7 @@ The crux of the design revolves around the flexure-based biasing element and kin
      % \pic ["$\theta$", draw, -, angle eccentricity=1.2, angle radius=1.5cm] {angle = deflected-top--virtual-pivot--top};
    \end{tikzpicture}%
    }
-  \caption{The working principle of the insect robot showing the simplification of the cantilever beam to a virtual rigid body pivot. The claw design changes the coefficient of friction ($\mu_s$) of the insect with respect to the ground allowing the robot to crawl.}
+  \caption[The working principle of the insect robot showing the simplification of the cantilever beam to a virtual rigid body pivot]{The working principle of the insect robot showing the simplification of the cantilever beam to a virtual rigid body pivot. The claw design changes the coefficient of friction ($\mu_s$) of the insect with respect to the ground allowing the robot to crawl.}
   \label{fig:insect-claw-diagram}
 \end{figure}
 
@@ -352,14 +352,14 @@ Thus, based on the contraction or strain recovery of the SMA coil ($\varepsilon$
 
 \begin{figure}[hb!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.85\columnwidth}{!}{\input{images/chap6/insect-am-fem-compare.pgf}}
-  \caption{Comparison of the leg tip displacement versus the contraction of the SMA coil between the analytical model (AM) and Finite Element Model (FEM) simulation. Here, the dotted and filled lines represent the FEM results and analytical model, respectively.}
+  \resizebox{0.75\columnwidth}{!}{\input{images/chap6/insect-am-fem-compare.pgf}}
+  \caption[Comparison of the leg tip displacement with respect to the contraction of the SMA coil between the analytical model (AM) and Finite Element Model (FEM) simulation]{Comparison of the leg tip displacement with respect to the contraction of the SMA coil between the analytical model (AM) and Finite Element Model (FEM) simulation. Here, the dotted and filled lines represent the FEM results and analytical model, respectively.}
   \label{fig:insect-am-fem-compare}
 \end{figure}
 
 % \subsection{Results and Discussion}
 \subsection{Implications of the Prototype}
-As detailed in the methodology, the analytical model of the inchworm robot that determines the relationship between the contraction of the SMA during actuation and the estimated step length was first estimated. This design was simulated using a commercial finite element modelling (FEM) software which was then used to validate the analytical model, as shown in \cref{fig:insect-am-fem-compare}. Furthermore, the experimental results obtained from the inchworm prototype were used to validate the model, as shown in the same figure. This comparison shows that the pseudo-rigid body model used to model the design is quite accurate and can thus be used to further optimize the step length in future iterations.
+As detailed in the methodology, the analytical model of the inchworm robot that determines the relationship between the contraction of the SMA during actuation and the estimated step length was first estimated. This design was simulated using a commercial finite element modelling (FEM) software which was then used to validate the analytical model, as shown in \cref{fig:insect-am-fem-compare}. Furthermore, the experimental results obtained from the inchworm prototype were used to validate the model, as shown in the same figure. This comparison shows that the pseudo-rigid body model used to model the design is quite accurate and can thus be used to further optimise the step length in future iterations.
 
 % Step figures
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
@@ -385,7 +385,7 @@ As detailed in the methodology, the analytical model of the inchworm robot that 
      \end{annotationimage}
       \label{subfig:step-3}
   \end{subfigure}
-\caption{The untethered gait of the insect robot with a step length of $8.4$ mm. As predicted, the snap-through of the magnetic latch halts the heating of the SMA coil.}
+\caption[The untethered gait of the insect robot with a step length of $8.4$ mm]{The untethered gait of the insect robot with a step length of $8.4$ mm. As predicted, the snap-through of the magnetic latch halts the heating of the SMA coil.}
 \label{fig:insect-gait}
 \end{figure}
 
@@ -410,11 +410,11 @@ Due to the design being based on flexure-based structure, the inchworm could be 
 
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.9\columnwidth}{!}{\input{images/chap6/insect-disp.pgf}}
+  \resizebox{0.75\columnwidth}{!}{\input{images/chap6/insect-disp.pgf}}
   % \begin{tabular}{r@{ }l r@{ }l}
   %   {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & 340 mA & {\color{myred} \rule[2pt]{10pt}{0.5mm} } & 840 mA
   % \end{tabular}
-  \caption{The displacement of the insect robot. The average speed of the robot is $1.55$ mms$^{-1}$. Here, the step line represents the state of the SMA. A high value denotes that the SMA coil is being heated and a low state denotes that the SMA coil is cooling down.}
+  \caption[The measured gait of the insect robot]{The measured gait of the insect robot. The average speed of the robot measured to be $1.55$ mms$^{-1}$. Here, the dotted step line represents the state of the SMA. A high value denotes that the SMA coil is being heated while a low state denotes that the SMA coil is cooling down.}
   \label{fig:insect-disp}
 \end{figure}
 
@@ -424,7 +424,7 @@ Often, in the case of mobile robots, especially bio-inspired robots, the cost of
 \begin{equation}\label{eq:CoT}
     \textrm{CoT} = \frac{E}{mgd}
 \end{equation}
-where $E$ is the energy required to heat the SMA, $m$ is the total mass of the robot including the battery, $g$ is the acceleration due to gravity and $d$ is the step length of the robot. Using the equation, the CoT was calculated to be around 1620 Jkg$^{-1}$m$^{-1}$. This is comparable to other untethered inchworm robots like in the work by \cite{jiAutonomousUntetheredFast2019} whose CoT is measured to be 1670 Jkg$^{-1}$m$^{-1}$. Furthermore, when compared to other SMA powered inchworm robots, as shown in \cref{fig:inchworm-compare-speed-weight} and \cref{fig:inchworm-compare-speedweight-weight}, this work has performances comparable to its tethered alternatives. In the mesoscale range, this untethered inchworm robot is able to reach higher work densities. This shows the advantage of the proposed design methodology and showcases the advantage of a mechanically intelligent control strategy. The limitations of this robot arise from the inefficiency in the claw design and the dependence on the friction with the ground. The design, while being cheap and easily fabricated using 3D printing, it is limited by the PLA material. By optimizing the material to create thinner leaf springs, the size of the robot can be greatly reduced. Future work will have to include the optimization of the claw design and improve the overall efficiency of the insect robot's claw design to prevent slipping.
+where $E$ is the energy required to heat the SMA, $m$ is the total mass of the robot including the battery, $g$ is the acceleration due to gravity and $d$ is the step length of the robot. Using the equation, the CoT was calculated to be around 1620 Jkg$^{-1}$m$^{-1}$. This is comparable to other untethered inchworm robots like in the work by \cite{jiAutonomousUntetheredFast2019} whose CoT is measured to be 1670 Jkg$^{-1}$m$^{-1}$. Furthermore, when compared to other SMA powered inchworm robots, as shown in \cref{fig:inchworm-compare-speed-weight} and \cref{fig:inchworm-compare-speedweight-weight}, this work has performances comparable to its tethered alternatives. In the mesoscale range, this untethered inchworm robot is able to reach higher work densities. This shows the advantage of the proposed design methodology and showcases the advantage of a mechanically intelligent control strategy. The limitations of this robot arise from the inefficiency in the claw design and the dependence on the friction with the ground. The design, while being cheap and easily manufactured using 3D printing, it is limited by the chosen PLA material. The material can be optimised to create thinner leaf springs and the final size of the robot can be greatly reduced. In the future work, the optimisation of the claw design can greatly improve the overall efficiency of the locomotion by preventing slipping.
 
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
@@ -459,11 +459,11 @@ With the design principles presented in this chapter, the traditional discrete b
 
 \vspace*{\fill}
 \noindent\hrulefill \\
-\textbf{\large Publications related to this chapter :}\\
+\textbf{\large Publications related to this chapter :}
 
-S. Thomas, P. Germano, T. Martinez, and Y. Perriard, \textit{“An Untethered Mechanically-Intelligent Inchworm Robot Powered by a Shape Memory Alloy Oscillator,”} Sensors and Actuators A: Physical, p. 113115, Oct. 2021, doi: 10.1016/j.sna.2021.113115.\\
+\underline{S. Thomas}, P. Germano, T. Martinez, and Y. Perriard, \textit{“An Untethered Mechanically-Intelligent Inchworm Robot Powered by a Shape Memory Alloy Oscillator,”} Sensors and Actuators A: Physical, p. 113115, Oct. 2021, doi: 10.1016/j.sna.2021.113115.
 
-S. Thomas, P. Germano, T. Martinez, and Y. Perriard, \textit{“Control-Free Mechanical Oscillator Powered by Shape Memory Alloys,”} in 2021 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Delft, The Netherlands, 2021, p. 5.\\
+\underline{S. Thomas}, P. Germano, T. Martinez, and Y. Perriard, \textit{“Control-Free Mechanical Oscillator Powered by Shape Memory Alloys,”} in 2021 IEEE/ASME International Conference on Advanced Intelligent Mechatronics (AIM), Jul. 2021, pp. 1119–1123. doi: 10.1109/AIM46487.2021.9517468.
 
 % \afterpage{%
 % \clearpage% Flush earlier floats (otherwise order might not be correct)

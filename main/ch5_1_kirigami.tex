@@ -34,7 +34,7 @@ The pattern plays the most important role when creating a kirigami-inspired SMA 
          \caption{Lotus-pattern}
          \label{fig:lotus-pattern-simple}
      \end{subfigure}
-    \caption{The proposed kirigami patterns for the SMA actuator where (a) allows for a large stroke linear elongation while (b) allows a rotation around its centre.}
+    \caption[The proposed kirigami patterns for the SMA actuator]{The proposed kirigami patterns for the SMA actuator where (a) allows for a large stroke linear elongation while (b) allows a rotation around its centre.}
     \label{fig:sma-kiri-patterns}
 \end{figure}
 
@@ -68,7 +68,7 @@ The $\Omega$-pattern has been parametrised as shown in \cref{fig:kirigami-param}
 \begin{figure}[hbt!]
     \centering
     \input{images/chap5/kirigami-parametrisation.tex}
-    \caption{Parametrisation of the $\Omega$-pattern with the thickness of the sheet denoted by $t$.}
+    \caption[Parametrisation of the $\Omega$-pattern]{Parametrisation of the $\Omega$-pattern with the thickness of the sheet denoted by $t$.}
     \label{fig:kirigami-param}
 \end{figure}
 
@@ -78,7 +78,7 @@ The stretchability or stroke amplification of this 2D structure is due to the ou
 \begin{figure}[hbt]
     \centering
     \input{images/chap5/ohm-kirigami-deformed.tex}
-    \caption{A visualisation of the out-of-plane deformation of the $\Omega$-pattern based on the FEM model. Here, only half the pattern is simulated to reduce the computational time of the FEM simulation.}
+    \caption[A visualisation of the out-of-plane deformation of the $\Omega$-pattern based on the FEM model]{A visualisation of the out-of-plane deformation of the $\Omega$-pattern based on the FEM model. Here, only half the pattern is simulated to reduce the computational time of the FEM simulation.}
     \label{fig:ohm-pattern-deformed}
 \end{figure}
 
@@ -106,7 +106,7 @@ The resulting virtual rigidity of the metamaterial can be estimated by measuring
 \begin{figure}[htb] % t for top of the page, H could be put to impose the position of the float
   \centering
   \resizebox{0.6\textwidth}{!}{\input{images/chap5/ohm-kiri-am-fem-comparison.pgf}}
-  \caption{Comparison of the analytical model and the FEM results of the $\Omega$-pattern. The stiffness of the metamaterial is calculated using an exponentially weighted linear regression. Here, the dimensions of the pattern are based on the values shown in \cref{tab:pattern-dimensions}.}
+  \caption[Comparison of the analytical model and the FEM results of the $\Omega$-pattern]{Comparison of the analytical model and the FEM results of the $\Omega$-pattern. The stiffness of the metamaterial is calculated using an exponentially weighted linear regression. Here, the dimensions of the pattern are based on the values shown in \cref{tab:pattern-dimensions}.}
   \label{fig:ohm-kiri-am-fem-comparison}
 \end{figure}
 
@@ -156,7 +156,7 @@ The rigidity of the resulting metamaterial produced from a passive material such
   \resizebox{0.95\textwidth}{!}{
     \input{images/chap5/sma-kiri-expt-results-side.tex}
   }
-  \caption{Results of the pull-tester of the single $\Omega$-pattern sample cut from a 100 $\mu$m NiTiNOL sheet showing the force-displacement curve of the metamaterial.}
+  \caption[Results of the pull-tester of the single $\Omega$-pattern sample]{Results of the pull-tester of the single $\Omega$-pattern sample cut from a 100 $\mu$m NiTiNOL sheet showing the force-displacement curve of the metamaterial.}
   \label{fig:ohm-kiri-sma-expt-results}
 \end{figure}
 
@@ -175,10 +175,10 @@ In order to understand the effects of using an active non-linear material such a
     \resizebox{0.75\textwidth}{!}{
       \input{images/chap5/kirigami-actuator-prototype.tex}
     }
-    \caption{A linear actuator powered by a kirigami-inspired SMA active element. Here, using flexure-based structures, the final dimensions and complexity of the system has been further optimised.}
+    \caption[A linear actuator powered by a kirigami-inspired SMA active element]{A linear actuator powered by a kirigami-inspired SMA active element. Here, using flexure-based structures, the final dimensions and complexity of the system has been further optimised.}
     \label{fig:sma-kiri-actuator}
 \end{figure}
 
 The kirigami SMA actuator is fabricated by laser cutting the repeating $\Omega$-pattern into the 100 $\mu$m thin NiTiNOL sheet. Using 5 patterns arranged in series, the structure is conceived to have increased output strokes. The kirigami structure can extend by $20$ mm displacement an elongation up to 60\%. As observed in \cref{fig:sma-kiri-actuator}, pairing this active metamaterial with the linear stage flexure, a lightweight compliant linear actuator is designed and fabricated using 3D printing. The actuator is actuated by simply passing a current across the ends of the SMA element. The internal resistance of the kirigami-based metamaterial allows Joule's losses to raise the temperature and activate the shape memory effect. As the material cools down passively, the biasing flexure spring deforms the metamaterial back to its deformed state.
 
-As shown in \cref{fig:sma-kiri-actuator}, this proof-of-concept prototype is created using the proposed kirigami SMA actuator paired with a flexure-based linear stage, as detailed in \cref{chap:design-methodology}, to create the large stroke linear actuator. With a $9.6$ mm wide SMA sheet, the final prototype is able to produce pulling forces equivalent to multiple springs attached in parallel with considerably less complexity and assembly time. The kirigami-inspired SMA linear actuator, fabricated from the 100 $\mu$m SMA sheet, is able to produce strokes up to $5$ mm and apply a pulling force of $2.1$ N as opposed to the $0.4$ N of pull-force for a 200 $\mu$m diameter SMA spring. This shows the advantage of this proposed methodology and shows the possibility of preventing the work density deterioration of the SMA actuator.
+This proof-of-concept prototype is able to produce large strokes due to the mechanical properties of the proposed kirigami SMA structure as opposed to a simple SMA sheet. As detailed in \cref{chap:design-methodology}, this large stroke linear actuator is paired with a flexure-based biasing element allowing the structure to be lightweight and compact. With a $9.6$ mm wide SMA sheet, the final prototype is able to produce pulling forces equivalent to multiple springs attached in parallel with considerably less complexity and assembly time. The kirigami-inspired SMA linear actuator, fabricated from the 100 $\mu$m SMA sheet, is able to produce strokes up to $5$ mm and apply a pulling force of $2.1$ N as opposed to the $0.4$ N of pull-force for a 200 $\mu$m diameter SMA spring. This shows the advantage of this proposed methodology and shows the possibility of preventing the work density deterioration of the SMA actuator.

@@ -1246,7 +1246,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.787150in,y=0.300000in,,top]{\color{textcolor}\rmfamily\fontsize{15.000000}{18.000000}\selectfont Frequency [Hz]}%
+\pgftext[x=3.787150in,y=0.300000in,,top]{\color{textcolor}\rmfamily\fontsize{15.000000}{18.000000}\selectfont \textbf{Frequency [Hz]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.687150in}{0.602148in}}{\pgfqpoint{6.200000in}{3.696000in}}%
@@ -2246,7 +2246,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.300000in,y=2.450148in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{15.000000}{18.000000}\selectfont Work Density [J/kg]}%
+\pgftext[x=0.300000in,y=2.450148in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{15.000000}{18.000000}\selectfont \textbf{Work Density [J/kg]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.687150in}{0.602148in}}{\pgfqpoint{6.200000in}{3.696000in}}%

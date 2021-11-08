@@ -1,0 +1,25 @@
+
+% !TEX root = ../../sethomas_thesis_main.tex
+\documentclass[border=1mm,
+               class=article
+               preview]{standalone}
+\usepackage{tikz}
+\begin{document}
+{\rowcolors{1}{black!10}{black!5}
+% \begin{tabular}{lcccccc}
+\begin{tabular}{@{}p{0.19\textwidth-2\tabcolsep}
+                P{0.12\textwidth-2\tabcolsep}
+                P{0.14\textwidth-2\tabcolsep}
+                P{0.14\textwidth-2\tabcolsep}
+                P{0.14\textwidth-2\tabcolsep}
+                P{0.14\textwidth-2\tabcolsep}
+                P{0.11\textwidth-2\tabcolsep}@{}}
+\rowcolor{black}                               & \textbf{\color{white} Material} & \textbf{\color{white} Total Weight {[}g{]}} & \textbf{\color{white} Gripping Force {[}N{]}} & \textbf{\color{white} Bandwidth {[}Hz{]}} & \textbf{\color{white} Switching Force {[}N{]}} & \textbf{\color{white} Stroke {[}mm{]}} \\
+\textbf{This work}              & SMA                          & 135                             & 1.4                             & 0.33                        & 7.8                              & 5\\
+\cite{scholtesDevelopmentBistableSMA2021} & SMA                          & 150                           & -                              & 0.75                        & -                                & 3                        \\
+\cite{zhangCompliantBistableGrippers2020}   & DC Motor                     & 8                             & 0                               & 0.5                         & 0.4                              & 20                       \\
+\cite{wangDesignAnalysisBistable2018a}    & DEA                          & -                             & 0                               & -                           & 0.05                             & 5.65                     \\
+\cite{liuDesignControlNovel2017}     & PZT                          & -                             & 0.6                             & -                           & 0.15                             & 0.2                      \\
+\cite{lernerDesignExperimentationVariable2020}   & SMP                          & 6.8                           & 0.2                             & 0.008                       & 0.5                              & 25
+\end{tabular}}
+\end{document}

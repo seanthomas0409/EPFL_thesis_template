@@ -13567,7 +13567,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=3.236250in,y=0.339583in,,top]{\color{textcolor}\rmfamily\fontsize{16.000000}{19.200000}\selectfont Time [s]}%
+\pgftext[x=3.236250in,y=0.339583in,,top]{\color{textcolor}\rmfamily\fontsize{16.000000}{19.200000}\selectfont \textbf{Time [s]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.756250in}{0.670138in}}{\pgfqpoint{4.960000in}{1.680000in}}%
@@ -34370,13 +34370,13 @@
 \definecolor{textcolor}{rgb}{0.317647,0.596078,0.423529}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.339583in,y=2.518138in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{16.000000}{19.200000}\selectfont Displacement [mm]}%
+\pgftext[x=0.339583in,y=2.518138in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{16.000000}{19.200000}\selectfont \textbf{Displacement [mm]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \definecolor{textcolor}{rgb}{0.905882,0.207843,0.219608}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=6.202361in,y=2.518138in,,top,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{16.000000}{19.200000}\selectfont Current [A]}%
+\pgftext[x=6.202361in,y=2.518138in,,top,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{16.000000}{19.200000}\selectfont \textbf{Current [A]}}%
 \end{pgfscope}%
 \end{pgfpicture}%
 \makeatother%

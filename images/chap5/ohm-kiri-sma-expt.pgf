@@ -334,7 +334,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=2.654782in,y=0.266667in,,top]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont Elongation \(\displaystyle \Delta x\) [mm]}%
+\pgftext[x=2.654782in,y=0.266667in,,top]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont \textbf{Elongation \(\displaystyle \Delta x\) [mm]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.709565in}{0.567592in}}{\pgfqpoint{3.890435in}{2.832408in}}%
@@ -613,7 +613,7 @@
 \definecolor{textcolor}{rgb}{0.000000,0.000000,0.000000}%
 \pgfsetstrokecolor{textcolor}%
 \pgfsetfillcolor{textcolor}%
-\pgftext[x=0.266667in,y=1.983796in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont Reaction Force \(\displaystyle F\) [N]}%
+\pgftext[x=0.266667in,y=1.983796in,,bottom,rotate=90.000000]{\color{textcolor}\rmfamily\fontsize{12.000000}{14.400000}\selectfont \textbf{Reaction Force \(\displaystyle F\) [N]}}%
 \end{pgfscope}%
 \begin{pgfscope}%
 \pgfpathrectangle{\pgfqpoint{0.709565in}{0.567592in}}{\pgfqpoint{3.890435in}{2.832408in}}%

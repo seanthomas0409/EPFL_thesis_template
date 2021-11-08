@@ -1,4 +1,4 @@
-\documentclass[margin=10pt]{standalone}
+\documentclass[margin=1pt]{standalone}
 \usepackage{color,xcolor}
 \usepackage{makecell}
 \usepackage{tikz-qtree, tikz}
@@ -16,8 +16,10 @@
 % \tikzset{every picture/.style={font issue=\footnotesize},
 %     font issue/.style={execute at begin picture={#1\selectfont}}
 % }
-\newcommand{\tick}{\tikz \draw[-,thick] (0,-0.2) -- +(0,0.2);}
-\newcommand{\tickH}{\tikz \draw[-,thick] (-0.2,0) -- +(0.2,0);}
+\newcommand{\tick}{\tikz \draw[-,thick] (0,0) -- +(0,0.1);}
+% \newcommand{\tick}{\tikz \draw[-,thick] (0,-0.2) -- +(0,0.2);}
+\newcommand{\tickH}{\tikz \draw[-,thick] (0,0) -- +(0.1,0);}
+% \newcommand{\tickH}{\tikz \draw[-,thick] (-0.2,0) -- +(0.2,0);}
 % \tikzset{
 %   dot/.style={shape=circle,inner sep=0pt,minimum size=+1.6mm,label={#1}},
 %   dot/.default=,
@@ -32,8 +34,8 @@
 \begin{tikzpicture}
     % \draw[style=help lines,step=0.5cm] (0,0) grid (6.2,6.2);
 
-    \draw[-latex,thick] (-0.1,0) -- (8.5,0) node[pos=0.83   ,below, yshift=-5]{\textbf{\footnotesize Temperature $T$ [$^\circ$C]}};
-    \draw[-latex,thick] (0,-0.1) -- (0,6.5) node[pos=0.8,above,rotate=90, yshift=5] {\textbf{\footnotesize Stress $\sigma$ [Pa]}};
+    \draw[-] (0,0) -- (8.5,0) node[pos=0.5   ,below, yshift=-17]{\textbf{\footnotesize Temperature $T$ [$^\circ$C]}} -- (8.5,6.0);
+    \draw[-] (0,0) -- (0,6.0) node[pos=0.5,above,rotate=90, yshift=20] {\textbf{\footnotesize Stress $\sigma$ [Pa]}} -- (8.5,6.0);
 
     % \foreach \x in {0,1,...,6} {
     %   \draw [thick](\x,-2pt) -- (\x,2pt) node[midway,below] {\x};
@@ -41,16 +43,16 @@
     % }
 
     \coordinate (Mf) at (2,0);
-    \node[label=below:$M_\mathrm{f}$] (Mftext) at (2,0) {\tick};
+    \node[label=below:\scriptsize$M_\mathrm{f}$] (Mftext) at (2,0) {\tick};
     \coordinate (Mf_) at ($(Mf)+(3,6)$);
     \coordinate (Ms) at (3,0);
-    \node[label=below:$M_\mathrm{s}$] (Mstext) at (3,0) {\tick};
+    \node[label=below:\scriptsize$M_\mathrm{s}$] (Mstext) at (3,0) {\tick};
     \coordinate (Ms_) at ($(Ms)+(3,6)$) {};
     \coordinate (As) at (4,0);
-    \node[label=below:$A_\mathrm{s}$] (Astext) at (4,0) {\tick};
+    \node[label=below:\scriptsize$A_\mathrm{s}$] (Astext) at (4,0) {\tick};
     \coordinate (As_) at ($(As)+(3,6)$) {};
     \coordinate (Af) at (5,0);
-    \node[label=below:$A_\mathrm{f}$] (Aftext) at (5,0) {\tick};
+    \node[label=below:\scriptsize$A_\mathrm{f}$] (Aftext) at (5,0) {\tick};
     \coordinate (Af_) at ($(Af)+(3,6)$) {};
 
     \coordinate (Cm) at ($(Ms)+(1,1)$) {};
@@ -71,9 +73,9 @@
     \draw[-] (As) -- (As_);
 
     \coordinate (ss) at (0,2);
-    \node[label=left:$\sigma_\mathrm{s}^\mathrm{cr}$] (sstext) at (0,2) {\tickH};
+    \node[label=left:\scriptsize$\sigma_\mathrm{s}^\mathrm{cr}$] (sstext) at (0,2) {\tickH};
     \coordinate (sf) at (0,3);
-    \node[label=left:$\sigma_\mathrm{f}^\mathrm{cr}$] (sftext) at (0,3) {\tickH};
+    \node[label=left:\scriptsize$\sigma_\mathrm{f}^\mathrm{cr}$] (sftext) at (0,3) {\tickH};
 
     \coordinate (ssline) at (intersection of ss--Mf|-ss and Mf--Mf_);
     \coordinate (sfline) at (intersection of sf--Mf|-sf and Mf--Mf_);

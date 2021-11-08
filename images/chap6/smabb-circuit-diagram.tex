@@ -1,50 +1,29 @@
-% !TEX root = ../../sethomas_thesis_main.tex
-\documentclass[border=1mm,
-               class=article
-               preview]{standalone}
+\documentclass[margin=10pt]{standalone}
+\usepackage{color,xcolor}
+\usepackage{makecell}
+\usepackage{tikz-qtree, tikz}
+\usepackage[utf8]{inputenc}
+
+\usetikzlibrary{spy,shapes.multipart,babel}
+\usepackage[siunitx,europeanresistors,EFvoltages]{circuitikz} % To have the european convention for the drawing of electrical components. Also to have the current and voltage arrows going from high to low potential
+\ctikzset{voltage/bump b=18pt,voltage/european label distance=15pt,voltage/distance from node=.1}
+\definecolor{mygreen}{HTML}{258F1B}
 
 \begin{document}
 \renewcommand{\arraystretch}{1} % to increase the space between rows
 \begin{tikzpicture}[scale=1.0, transform shape]
     % \draw (-0.25,0) -- (0.25,0);
     \ctikzset{monopoles/vcc/arrow={Latex}}
-    \draw (0,0) node[vcc,anchor=south]{$V_\mathrm{CC}$}-- ++(0,-1) -- ++(0.5,0)
-        ++(0,0) node[spdt,anchor=in,scale=2.0] (Sw) {}
-        (Sw.out 1) to[/tikz/circuitikz/bipoles/length=1.25cm,american resistor,l=$R_\mathrm{SMA,1}$] ++(2,0) coordinate(sma1east)
-        (Sw.out 2) to[/tikz/circuitikz/bipoles/length=1.25cm,american resistor,l_=$R_\mathrm{SMA,2}$] ++(2,0) coordinate(sma2east);
-    \draw let \p{Sw_c}=(Sw.in), \p{sma2east_c}=(sma2east)  in (sma2east) -- (\x{sma2east_c},\y{Sw_c}) coordinate(Sw_end) -- (sma1east);
-    \draw (Sw_end) -- ++(1,0) -- ++(0,-1) node[ground]{};
-    \draw[dashed,mygreen,thick] let \p{Sw_i}=(Sw.in), \p{Sw_o1}=(Sw.out 1), \p{Sw_o2}=(Sw.out 2)  in (Sw.in)
-    -- (\x{Sw_i},\y{Sw_o1}) |- node[anchor=north west]{\scriptsize Limit Switch} ($(Sw.out 1)+(0,0.6)$) |- ($(Sw.out 2)+(0,-0.6)$) node[anchor=north east]{\scriptsize \begin{tabular}{l} Triggered by \\ Buckled Beam \end{tabular}} -| (Sw.in);
+    \draw (0,0) node[ground] (ground){}-- ++(0,0)node[spdt,anchor=in,scale=1.5,rotate=90] (Sw) {}
+        (Sw.out 1) to[/tikz/circuitikz/bipoles/length=1.25cm,american resistor,l=$R_\mathrm{SMA,1}$] ++(0,2) coordinate(sma1top)-- ++(-1,0)node[pnp, anchor=C, xscale=1](pnp1){}
+        (Sw.out 2) to[/tikz/circuitikz/bipoles/length=1.25cm,american resistor,l_=$R_\mathrm{SMA,2}$] ++(0,2) coordinate(sma2top)-- ++(1,0)node[pnp, anchor=C, xscale=-1](pnp2){}
+        (pnp1.base) ++(-0.25,0)-- ++(-0.25,0)-- ++(0,0.25)-- ++(-0.25,0)-- ++(0,-0.25)-- ++(-0.1,0)
+        (pnp2.base) ++(0.25,0)-- ++(0.25,0)-- ++(0,0.25)-- ++(0.25,0)-- ++(0,-0.25)-- ++(0.1,0)
+        (pnp1.E) -| (0,6)
+        (pnp2.E) -| (0,6)node[vcc,anchor=south]{$V_\mathrm{CC}$};
 
-   %  \draw[dashed] (0,0) -- ++(0.5,0);
-   %  \draw (0.5,0) to[short, i = $i_{out}$] ++(1,0) coordinate(Clup) to[/tikz/circuitikz/bipoles/length=1cm,C,l^=$C_{load}$] ++(0,-2)
-   %      coordinate(Cldown) to[/tikz/circuitikz/bipoles/length=0.9cm,R,l=$R_{shunt}$] ++(0,-1) coordinate(Rsh_GND)
-   %                 node[/tikz/circuitikz/monopoles/ground/width/.initial=.18,ground]{};
-   %  \draw[->,>=stealth',node distance=3cm]
-   %  ($(Clup)+(-0.2,-0.2)$) to[bend right] node [anchor=east] {\rotatebox{0}{$V_{out}$}} ($(Rsh_GND)+(-0.2,0)$);
-   % \draw (Cldown) -- ++(2,0) to[/tikz/circuitikz/bipoles/length=0.9cm,R,l=$R$] ++(2,0)
-   %     node[op amp, anchor=+,yscale=-1](opamp){}
-   %         (opamp.+) -- ++(0,1) to[/tikz/circuitikz/bipoles/length=0.9cm,R,l_=$3\cdot R$,-*] ++(-2,0) node[anchor=south]{3.3V} coordinate(3V3Adder);
-   %
-   % \draw let \p{opamp_neg}=(opamp.-), \p{opamp_out}=(opamp.out) in (opamp.-) -- ++(0,-1) coordinate(RcrossNeg) to[/tikz/circuitikz/bipoles/length=0.9cm,R,l^=$R$] ++(\x{opamp_out}-\x{opamp_neg},0) -- (opamp.out)
-   % (RcrossNeg) to[/tikz/circuitikz/bipoles/length=0.9cm,R,l_=$3\cdot R$] ++(0,-1)
-   %                  node[/tikz/circuitikz/monopoles/ground/width/.initial=.18,ground]{};
-   % \draw (opamp.out) -- ++(1,0) node[op amp, anchor=-,yscale=-1](comparator){}
-   %     (comparator.out) -- ++(0.5,0) ++(0,-0.5) rectangle ++(2,1) node[pos=.5] {I/O port}
-   %     (comparator.+) -- ++(0,1) node[/tikz/circuitikz/bipoles/length=0.9cm,genericpotentiometershape,anchor=wiper,rotate=180](Pot1){}
-   %         (Pot1.south) node[anchor=south]{$R_{pot1}$}
-   %         (Pot1.left) -| (comparator.out)
-   %         (Pot1.right) -- ++(-1,0) node[/tikz/circuitikz/bipoles/length=0.9cm,genericpotentiometershape,anchor=wiper,rotate=-90](Pot2){}
-   %             (Pot2.south) node[anchor=east]{$R_{pot2}$}
-   %             (Pot2.right) -- ++(0,-0.5) node[/tikz/circuitikz/monopoles/ground/width/.initial=.18,ground]{}
-   %             (Pot2.left) to[short,-*] ++(0,0.5) node[anchor=south]{3.3V} coordinate(3V3Comp);
-   %  \draw[dashed,orange,thick] ($(3V3Adder)+(-0.5,1)$) -- ++(0,-5.5) coordinate(nodeAdd) -- ++(5,0) -- ++(0,3.2) -- ++(-3.7,2.3) -- ++(-1.3,0)
-   %  (nodeAdd) node[anchor=south west]{Adder};
-   %  \draw[dashed,red,thick] ($(3V3Comp)+(-1.5,0.5)$) -- ++(0,-1.9) -- ++(2.6,-1.6) -- ++(0,-1.5) coordinate(nodeComp) -- ++(3.2,0) -- ++(0,5) -- ++(-5.8,0)
-   %  (nodeComp) node[anchor=south west]{Comparator};
-   %  \draw[dashed,mygreen,thick] (0,0) ++(0,0.5) -- ++(2.8,0) -- ++(0,-4.5) -- ++(-2.8,0)
-   %  node[anchor=south west]{Flyback};
+    \draw[dashed,mygreen,thick] let \p{Sw_i}=(Sw.in), \p{Sw_o1}=(Sw.out 1), \p{Sw_o2}=(Sw.out 2)  in (Sw.in)
+    ($(\x{Sw_o1},\y{Sw_o1})+(-1,0)$) |- node[anchor=south west]{\scriptsize \begin{tabular}{l} Limit \\ Switch \end{tabular}} ($(\x{Sw_o2},\y{Sw_i})+(1,0)$) |- node[anchor=north west]{\scriptsize \begin{tabular}{l} Triggered by \\ Buckled Beam \end{tabular}} ($(\x{Sw_o1},\y{Sw_o1})+(-1,0)$);
 \end{tikzpicture}
 \renewcommand{\arraystretch}{1.5} % to increase the space between rows
 \end{document}
