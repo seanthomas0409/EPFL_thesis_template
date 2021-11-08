@@ -71,17 +71,17 @@ A beam theory model is proposed in this section to size the bistable buckled bea
   \label{fig:buckled-beam-schematic}
 \end{figure}
 
-Based on the hypothesis described in the work by \cite{tivot2021} and the Euler-Bernoulli beam theory, the beam deflection can be expressed as :
+Based on the hypothesis described in the work by \cite{tivot2021} and the Euler-Bernoulli beam theory, the beam deflection can be described using the following equation:
 \begin{equation}\label{eq:deflection}
   y(x) = \left(A\sin{kx}+B(\cos{kx}-1)+C\frac{x}{l}\right) l {\theta }_\textrm{in}
 \end{equation}
-where $k=\sqrt{P/(EI)}$ and the boundary conditions are
+with $k=\sqrt{P/(EI)}$ and the boundary conditions of the supported beam are as follows
 \[y(0)=0\]
 \[y'(0)\cong{\theta }_\textrm{out}\]
 \[M_0\cong K_\textrm{out}\theta_\textrm{out}+Vp-Pp\theta_\textrm{out}\]
 \[y(l)\cong -p(\theta_\textrm{out}+\theta_\textrm{in})\]
 \[y'(l)\cong \theta_\textrm{in}\]
-Furthermore, the deflection parameters are given by
+Furthermore, the deflection parameters of \cref{eq:deflection} are given by
 \begin{equation}\label{A_norm}
 A =    \frac{(1+2\overline{p})kl+{\varepsilon }_0\left(\overline{p}  \sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
 {kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
@@ -104,7 +104,7 @@ Here, the coefficient $H$ is expressed as
  +AC\sin{kl} + BC\left(\cos{kl}-1\right) + \frac{{C}^2}{2} +\frac{\overline{p}}{2}\left({\left( Akl+C\right)}^2+1\right)
 \end{multline}
 
-By rearranging the \cref{eq:delta_l}, the input angle is expressed as
+By rearranging \cref{eq:delta_l}, the input angle can be expressed as
 \begin{equation}\label{eq:theta_in}
  {\theta}_\textrm{in}=\pm \sqrt{\frac{\Delta l}{l}}\sqrt{\frac{1}{H}}
 \end{equation}
@@ -117,7 +117,7 @@ Finally, the input moment can be described as the following \cref{eq:M_in}
  \label{eq:M_in}
 \end{split}
 \end{equation}
-\noindent{where ${\varepsilon }_l=K_\textrm{in}/(EI/l)$.}
+\noindent{where ${\varepsilon }_l=K_\textrm{in}/(EI/l)$.} Using these equations, the moment and angular stroke requirements of the bistable element can be estimated. These values can then be utilised in sizing the bistable element so as to fit the requirements of the project specifications and to verify that the SMA active element can sufficiently provide the required moment and stroke.
 
 \subsection{Design and Fabrication of Kinematic Stage}
 With the help of this analytical model, a flexure-based kinematic stage can be designed and sized accordingly. In this case, cross-spring pivots as shown in \cref{fig:bistable-mechanism} are used for the input and output pivots that mount the buckled beam. Based on the work by \cite{heneinConceptionStructuresArticulees2005}, their angular stiffness can be estimated using the equation below
@@ -256,6 +256,10 @@ The measurements presented in \cref{fig:smabb-actuation} shows that by using the
 \section{Specifications of the Final Prototype}
 Based on the design methodology, the final prototype consists of a flexure-based bistable mechanism that acts as the kinematic stage for the SMA actuator. As mentioned previously, this stage was fabricated using electrical discharge machining from a monolithic block of \textit{Bohler K390} steel, as shown in \cref{fig:final-prototype}. As the entire stage is created from a monolithic block, the system consists of only a single piece and thus, does not require any complex micro-assembly, displaying one of the key advantages of the use of flexure-based structures and this design methodology.
 
+The SMA elements are integrated into the kinematic stage using a 2.5D design where an interface layer is used to actuate the input pivot of the kinematic stage. Using the design methodology, the pair of SMA coils, arranged in an antagonistic manner, is sized such that the thinnest SMA coils are used so as to keep the cooling time below $3$ s. The design methodology takes into account the inherent stiffness of the bistable structure and sizes the SMAs such that there are no unintended operating points during the activation and snap-through of the gripper system. The final gripper has a stroke of $2.5$ mm per jaw and has a gripping force of around $1.4$ N.
+
+Furthermore, the bistable mechanism and the thermoelastic behaviour of the SMA is exploited to create the mechanically-intelligent control strategy based on the proposed design methodology. In the final prototype, the current flowing the limit switch and into the SMA is controlled by the state of the buckled beam. The kinematic stage is able to cut the current across the SMA in less than $10$ ms. Thus, with the use of these proposed design methodologies, the entire kinematic stage with the integrated SMA actuator fits within a volume constraint of $110 \times 34 \times 26$ mm.
+
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \begin{subfigure}[b]{0.27\textwidth}
@@ -276,10 +280,6 @@ Based on the design methodology, the final prototype consists of a flexure-based
   \caption{The fabricated prototype of the bistable gripper with the wiring circuit presented on the left.}
   \label{fig:final-prototype}
 \end{figure}
-
-The SMA elements are integrated into the kinematic stage using a 2.5D design where an interface layer is used to actuate the input pivot of the kinematic stage. Using the design methodology, the pair of SMA coils, arranged in an antagonistic manner, is sized such that the thinnest SMA coils are used so as to keep the cooling time below $3$ s. The design methodology takes into account the inherent stiffness of the bistable structure and sizes the SMAs such that there are no unintended operating points during the activation and snap-through of the gripper system. The final gripper has a stroke of $2.5$ mm per jaw and has a gripping force of around $1.4$ N.
-
-Furthermore, the bistable mechanism and the thermoelastic behaviour of the SMA is exploited to create the mechanically-intelligent control strategy based on the proposed design methodology. In the final prototype, the current flowing the limit switch and into the SMA is controlled by the state of the buckled beam. The kinematic stage is able to cut the current across the SMA in less than $10$ ms. Thus, with the use of these proposed design methodologies, the entire kinematic stage with the integrated SMA actuator fits within a volume constraint of $110 \times 34 \times 26$ mm.
 
 \subsection{Comparison of the Proposed Gripper}
 Due to the complex nature of the bistable mechanism, the literature on bistable grippers powered by smart materials is limited. However, a comparison of the proposed gripper with other bistable grippers shows the innovative aspects and the advantages of the design methodology. In most cases, as shown in the work by \cite{zhangCompliantBistableGrippers2020} and \cite{scholtesDevelopmentBistableSMA2021}, the bistable gripper requires no holding energy but however also does not provide any gripping force. As the stable state exists at 0 N, the gripping force depends on the size of the object and in the case of the aforementioned works, the grasped object is retained only using friction. In the case of bistable grippers using other smart materials, as shown in \cref{tab:bistable-gripper-comparison}, they often provide lower gripping force. The proposed gripper is able to provide a constant gripping force and stroke and has been sized to show comparable bandwidth. Thus, it is clear to see the primary advantages of the proposed methodology. Additionally, the presented gripper, when compared to other works, is able to produce fixed gripping forces and strokes while also using a compliant structure to provide a parallel gripping motion, compact footprint and a decoupled input-output actuation. Furthermore, the sizing strategy can be adapted to fit the various specifications of the application and the grasped object.

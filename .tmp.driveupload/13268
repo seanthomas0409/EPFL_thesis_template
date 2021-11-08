@@ -59,7 +59,7 @@
 \contentsline {section}{\numberline {4.3}Validation of the Approach using a Case Study}{79}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Background and Biological Analysis}{79}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Working principle and Implementation of the Robot}{80}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Analytical model of the Biasing Compliant Mechanism}{82}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Analytical model of the Biasing Compliant Mechanism}{81}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Implications of the Prototype}{83}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}Summary and Conclusion}{86}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Generation of Actuators Powered by Compliant SMA Elements}{91}{chapter.5}%
@@ -95,7 +95,7 @@
 \contentsline {section}{\numberline {6.6}Actuation using the Mechanically-Intelligent Control Strategy}{137}{section.6.6}%
 \contentsline {section}{\numberline {6.7}Specifications of the Final Prototype}{139}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Comparison of the Proposed Gripper}{140}{subsection.6.7.1}%
-\contentsline {section}{\numberline {6.8}Summary and Conclusion}{140}{section.6.8}%
+\contentsline {section}{\numberline {6.8}Summary and Conclusion}{141}{section.6.8}%
 \contentsline {chapter}{Conclusion and Contributions}{143}{chapter*.116}%
 \contentsline {paragraph}{How can the work density degradation of SMAs be prevented when designing actuators?}{144}{chapter*.116}%
 \contentsline {paragraph}{How can the traditional sizing methodology be adapted for integrated SMA actuators?}{144}{chapter*.116}%
