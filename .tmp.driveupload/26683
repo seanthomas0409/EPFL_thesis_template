@@ -1,0 +1,3008 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021) (preloaded format=pdflatex 2021.10.12)  8 NOV 2021 11:34
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**sethomas_thesis_main.tex
+(./sethomas_thesis_main.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> (./head/settings_epfl_template.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
+(/usr/local/texlive/2021/texmf-dist/tex/latex/base/bk11.clo
+File: bk11.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@chapter=\count180
+\c@section=\count181
+\c@subsection=\count182
+\c@subsubsection=\count183
+\c@paragraph=\count184
+\c@subparagraph=\count185
+\c@figure=\count186
+\c@table=\count187
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip49
+\bibsep=\skip50
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count188
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2021/03/24 3.56 The Babel package
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2021/03/24 3.56 Babel common definitions
+\babel@savecnt=\count189
+\U@D=\dimen139
+\l@babelnohyphens=\language87
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count190
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-french/french.ldf
+Language: french 2020/10/10 v3.5l French support from the babel system
+Package babel Info: \l@acadian = using hyphenrules for french
+(babel)             (\language29) on input line 91.
+Package babel Info: \l@canadien = using hyphenrules for french
+(babel)             (\language29) on input line 92.
+\FB@nonchar=\count191
+Package babel Info: Making : an active character on input line 430.
+Package babel Info: Making ; an active character on input line 431.
+Package babel Info: Making ! an active character on input line 432.
+Package babel Info: Making ? an active character on input line 433.
+\FBguill@level=\count192
+\FBold@everypar=\toks17
+\FB@Mht=\dimen140
+\mc@charclass=\count193
+\mc@charfam=\count194
+\mc@charslot=\count195
+\std@mcc=\count196
+\dec@mcc=\count197
+\listindentFB=\dimen141
+\descindentFB=\dimen142
+\labelindentFB=\dimen143
+\labelwidthFB=\dimen144
+\leftmarginFB=\dimen145
+\parindentFFN=\dimen146
+\FBfnindent=\dimen147
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/german.ldf
+Language: german 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-german/germanb.ldf
+Language: germanb 2021/02/27 v2.13 German support for babel (pre-1996 orthography)
+Package babel Info: Making " an active character on input line 139.
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language21) on input line 108.
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/carlisle/scalefnt.sty) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/fourier.sty
+Package: fourier 2020/03/03 2.2 fourier-GUTenberg package
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+)
+Now handling font encoding FML ...
+... no UTF-8 mapping file for font encoding FML
+Now handling font encoding FMS ...
+... no UTF-8 mapping file for font encoding FMS
+Now handling font encoding FMX ...
+... no UTF-8 mapping file for font encoding FMX
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2020/08/10 v2.0s Standard LaTeX package
+LaTeX Font Info:    Trying to load font information for T1+futs on input line 112.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/t1futs.fd
+File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/fourier-orns.sty
+Package: fourier-orns 2020/03/03 2.2 fourier-ornaments package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 63.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/lmr/m/n --> T1/futs/m/n on input line 63.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/lmr/bx/n --> T1/futs/m/n on input line 63.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 64.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 72.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 72.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/lmm/m/it --> FML/futmi/m/it on input line 72.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 72.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/lmm/b/it --> FML/futmi/m/it on input line 72.
+\symotherletters=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 74.
+LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
+(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 75.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 76.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 77.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 78.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 79.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 80.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 81.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 82.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 83.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 84.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 85.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 86.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 126.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 126.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/lmsy/m/n --> FMS/futm/m/n on input line 126.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 126.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/lmsy/b/n --> FMS/futm/m/n on input line 126.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 127.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 127.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/lmex/m/n --> FMX/futm/m/n on input line 127.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 127.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/lmex/m/n --> FMX/futm/m/n on input line 127.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 128.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/lmr/bx/n --> T1/futs/bx/n on input line 128.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/lmr/bx/n --> T1/futs/bx/n on input line 128.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 129.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 130.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/lmr/m/it --> T1/futs/m/it on input line 130.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/lmr/bx/it --> T1/futs/m/it on input line 130.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 131.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 161.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 199.
+LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 200.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 223.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 228.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 238.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 240.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 242.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 244.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 246.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 248.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 250.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 252.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 254.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 256.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 260.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 261.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 262.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 263.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 264.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 265.
+LaTeX Font Info:    Redeclaring math accent \check on input line 266.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 267.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 268.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 269.
+\symUfutm=\mathgroup5
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen148
+\Gin@req@width=\dimen149
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen150
+\ar@mcellbox=\box47
+\extrarowheight=\dimen151
+\NC@list=\toks19
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box48
+)
+\everycr=\toks20
+\minrowclearance=\skip53
+)
+\rownum=\count198
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen152
+\lightrulewidth=\dimen153
+\cmidrulewidth=\dimen154
+\belowrulesep=\dimen155
+\belowbottomsep=\dimen156
+\aboverulesep=\dimen157
+\abovetopsep=\dimen158
+\cmidrulesep=\dimen159
+\cmidrulekern=\dimen160
+\defaultaddspace=\dimen161
+\@cmidla=\count199
+\@cmidlb=\count266
+\@aboverulesep=\dimen162
+\@belowrulesep=\dimen163
+\@thisruleclass=\count267
+\@lastruleclass=\count268
+\@thisrulewidth=\dimen164
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2021-02-18 L3 programming layer (loader) 
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count269
+\l__pdf_internal_box=\box49
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-2020-10-01.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex)))
+Package: lipsum 2021-03-03 v2.3 150 paragraphs of Lorem Ipsum dummy text
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2021-03-03 v2.3 The Lorem ipsum dummy text
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.sty
+Package: microtype 2021/03/14 v2.8c Micro-typographical refinements (RS)
+\MT@toks=\toks21
+\MT@count=\count270
+LaTeX Info: Redefining \textls on input line 790.
+\MT@outer@kern=\dimen165
+LaTeX Info: Redefining \textmicrotypecontext on input line 1374.
+\MT@listname@count=\count271
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2021/03/14 v2.8c Definitions specific to pdftex (RS)
+LaTeX Info: Redefining \lsstyle on input line 915.
+LaTeX Info: Redefining \lslig on input line 915.
+\MT@outer@space=\skip54
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2021/03/14 v2.8c microtype main configuration file (RS)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and footers
+\f@nch@headwidth=\skip55
+\f@nch@O@elh=\skip56
+\f@nch@O@erh=\skip57
+\f@nch@O@olh=\skip58
+\f@nch@O@orh=\skip59
+\f@nch@O@elf=\skip60
+\f@nch@O@erf=\skip61
+\f@nch@O@olf=\skip62
+\f@nch@O@orf=\skip63
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count272
+\lst@gtempboxa=\box50
+\lst@token=\toks22
+\lst@length=\count273
+\lst@currlwidth=\dimen166
+\lst@column=\count274
+\lst@pos=\count275
+\lst@lostspace=\dimen167
+\lst@width=\dimen168
+\lst@newlines=\count276
+\lst@lineno=\count277
+\lst@maxwidth=\dimen169
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count278
+\lst@skipnumbers=\count279
+\lst@framebox=\box51
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2020/03/24 1.8d listings language file
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2021-02-27 v7.00k Hypertext links for LaTeX
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen170
+\Hy@linkcounter=\count280
+\Hy@pagecounter=\count281
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2021-02-27 v7.00k Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
+File: hyperref-langpatches.def 2021-02-27 v7.00k Hyperref: patches for babel languages
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count282
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2021-02-27 v7.00k Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Hyper figures OFF on input line 4192.
+Package hyperref Info: Link nesting OFF on input line 4197.
+Package hyperref Info: Hyper index ON on input line 4200.
+Package hyperref Info: Plain pages OFF on input line 4207.
+Package hyperref Info: Backreferencing OFF on input line 4212.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4445.
+\c@Hy@tempcnt=\count283
+LaTeX Info: Redefining \url on input line 4804.
+\XeTeXLinkMargin=\dimen171
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count284
+\Field@Width=\dimen172
+\Fld@charsize=\dimen173
+Package hyperref Info: Hyper figures OFF on input line 6075.
+Package hyperref Info: Link nesting OFF on input line 6080.
+Package hyperref Info: Hyper index ON on input line 6083.
+Package hyperref Info: backreferencing OFF on input line 6090.
+Package hyperref Info: Link coloring OFF on input line 6095.
+Package hyperref Info: Link coloring with OCG OFF on input line 6100.
+Package hyperref Info: PDF/A mode OFF on input line 6105.
+LaTeX Info: Redefining \ref on input line 6145.
+LaTeX Info: Redefining \pageref on input line 6149.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi package
+with kernel methods
+)
+\Hy@abspage=\count285
+\c@Item=\count286
+\c@Hfootnote=\count287
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2021-02-27 v7.00k Hyperref driver for pdfTeX
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery package
+with kernel methods
+)
+\Fld@listcount=\count288
+\c@bookmark@seq@number=\count289
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip64
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 107.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count290
+\calc@Bcount=\count291
+\calc@Adimen=\dimen174
+\calc@Bdimen=\dimen175
+\calc@Askip=\skip65
+\calc@Bskip=\skip66
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count292
+\calc@Cskip=\skip67
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen176
+\ESO@tempdimb=\dimen177
+)
+\AM@pagewidth=\dimen178
+\AM@pageheight=\dimen179
+\AM@fboxrule=\dimen180
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2021/03/06 v0.5t Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count293
+\AM@pagebox=\box52
+\AM@global@opts=\toks23
+\AM@pagecnt=\count294
+\AM@toc@title=\toks24
+\c@AM@survey=\count295
+\AM@templatesizebox=\box53
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count296
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks25
+\pgfutil@tempdima=\dimen181
+\pgfutil@tempdimb=\dimen182
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box54
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfrcs.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2020/12/27 v3.1.8b (3.1.8b)
+))
+Package: pgf 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks26
+\pgfkeys@temptoks=\toks27
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.code.tex
+\pgfkeys@tmptoks=\toks28
+))
+\pgf@x=\dimen183
+\pgf@y=\dimen184
+\pgf@xa=\dimen185
+\pgf@ya=\dimen186
+\pgf@xb=\dimen187
+\pgf@yb=\dimen188
+\pgf@xc=\dimen189
+\pgf@yc=\dimen190
+\pgf@xd=\dimen191
+\pgf@yd=\dimen192
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count297
+\c@pgf@countb=\count298
+\c@pgf@countc=\count299
+\c@pgf@countd=\count300
+\t@pgf@toka=\toks29
+\t@pgf@tokb=\toks30
+\t@pgf@tokc=\toks31
+\pgf@sys@id@count=\count301
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2020/12/27 v3.1.8b (3.1.8b)
+)
+Driver file for pgf: pgfsys-pdftex.def
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-pdftex.def
+File: pgfsys-pdftex.def 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2020/12/27 v3.1.8b (3.1.8b)
+))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfsyssoftpath@smallbuffer@items=\count302
+\pgfsyssoftpath@bigbuffer@items=\count303
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen193
+\pgfmath@count=\count304
+\pgfmath@box=\box55
+\pgfmath@toks=\toks32
+\pgfmath@stack@operand=\toks33
+\pgfmath@stack@operation=\toks34
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex)))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count305
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@picminx=\dimen194
+\pgf@picmaxx=\dimen195
+\pgf@picminy=\dimen196
+\pgf@picmaxy=\dimen197
+\pgf@pathminx=\dimen198
+\pgf@pathmaxx=\dimen199
+\pgf@pathminy=\dimen256
+\pgf@pathmaxy=\dimen257
+\pgf@xx=\dimen258
+\pgf@xy=\dimen259
+\pgf@yx=\dimen260
+\pgf@yy=\dimen261
+\pgf@zx=\dimen262
+\pgf@zy=\dimen263
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.code.tex
+File: pgfcorepathconstruct.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@path@lastx=\dimen264
+\pgf@path@lasty=\dimen265
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@shorten@end@additional=\dimen266
+\pgf@shorten@start@additional=\dimen267
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfpic=\box56
+\pgf@hbox=\box57
+\pgf@layerbox@main=\box58
+\pgf@picture@serial@count=\count306
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.code.tex
+File: pgfcoregraphicstate.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgflinewidth=\dimen268
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformations.code.tex
+File: pgfcoretransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@pt@x=\dimen269
+\pgf@pt@y=\dimen270
+\pgf@pt@temp=\dimen271
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathprocessing.code.tex
+File: pgfcorepathprocessing.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowsep=\dimen272
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@max=\dimen273
+\pgf@sys@shading@range@num=\count307
+\pgf@shadingcount=\count308
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfexternal@startupbox=\box59
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransparency.code.tex
+File: pgfcoretransparency.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/basiclayer/pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodeparttextbox=\box60
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@nodesepstart=\dimen274
+\pgf@nodesepend=\dimen275
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
+\pgffor@iter=\dimen276
+\pgffor@skip=\dimen277
+\pgffor@stack=\toks35
+\pgffor@toks=\toks36
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/tikz.code.tex
+Package: tikz 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers.code.tex
+File: pgflibraryplothandlers.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@plot@mark@count=\count309
+\pgfplotmarksize=\dimen278
+)
+\tikz@lastx=\dimen279
+\tikz@lasty=\dimen280
+\tikz@lastxsaved=\dimen281
+\tikz@lastysaved=\dimen282
+\tikz@lastmovetox=\dimen283
+\tikz@lastmovetoy=\dimen284
+\tikzleveldistance=\dimen285
+\tikzsiblingdistance=\dimen286
+\tikz@figbox=\box61
+\tikz@figbox@bg=\box62
+\tikz@tempbox=\box63
+\tikz@tempbox@bg=\box64
+\tikztreelevel=\count310
+\tikznumberofchildren=\count311
+\tikznumberofcurrentchild=\count312
+\tikz@fig@count=\count313
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfmatrixcurrentrow=\count314
+\pgfmatrixcurrentcolumn=\count315
+\pgf@matrix@numberofcolumns=\count316
+)
+\tikz@expandcount=\count317
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)))
+(/usr/local/texlive/2021/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2019/10/16 v2.13 Sectioning titles
+\ttl@box=\box65
+\beforetitleunit=\skip68
+\aftertitleunit=\skip69
+\ttl@plus=\dimen287
+\ttl@minus=\dimen288
+\ttl@toksa=\toks37
+\titlewidth=\dimen289
+\titlewidthlast=\dimen290
+\titlewidthfirst=\dimen291
+)
+\c@ttlp@side=\count318
+\ttlp@side=\count319
+\c@myparts=\count320
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip70
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks38
+\ex@=\dimen292
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen293
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count321
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count322
+\leftroot@=\count323
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count324
+\DOTSCASE@=\count325
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box66
+\strutbox@=\box67
+\big@size=\dimen294
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count326
+\c@MaxMatrixCols=\count327
+\dotsspace@=\muskip17
+\c@parentequation=\count328
+\dspbrk@lvl=\count329
+\tag@help=\toks39
+\row@=\count330
+\column@=\count331
+\maxfields@=\count332
+\andhelp@=\toks40
+\eqnshift@=\dimen295
+\alignsep@=\dimen296
+\tagshift@=\dimen297
+\tagwidth@=\dimen298
+\totwidth@=\dimen299
+\lineht@=\dimen300
+\@envbody=\toks41
+\multlinegap=\skip71
+\multlinetaggap=\skip72
+\mathdisplay@stack=\toks42
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup6
+\symAMSb=\mathgroup7
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+LaTeX Font Info:    Redeclaring math symbol \blacksquare on input line 48.
+LaTeX Font Info:    Redeclaring math symbol \vDash on input line 60.
+LaTeX Font Info:    Redeclaring math symbol \leftleftarrows on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \rightrightarrows on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \leqslant on input line 101.
+LaTeX Font Info:    Redeclaring math symbol \geqslant on input line 108.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleright on input line 120.
+LaTeX Font Info:    Redeclaring math symbol \blacktriangleleft on input line 121.
+LaTeX Font Info:    Redeclaring math symbol \complement on input line 165.
+LaTeX Font Info:    Redeclaring math symbol \intercal on input line 166.
+LaTeX Font Info:    Redeclaring math symbol \nleqslant on input line 181.
+LaTeX Font Info:    Redeclaring math symbol \ngeqslant on input line 182.
+LaTeX Font Info:    Redeclaring math symbol \varsubsetneq on input line 203.
+LaTeX Font Info:    Redeclaring math symbol \subsetneqq on input line 207.
+LaTeX Font Info:    Redeclaring math symbol \nparallel on input line 215.
+LaTeX Font Info:    Redeclaring math symbol \nvDash on input line 221.
+LaTeX Font Info:    Redeclaring math symbol \nexists on input line 235.
+LaTeX Font Info:    Redeclaring math symbol \smallsetminus on input line 251.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowleft on input line 257.
+LaTeX Font Info:    Redeclaring math symbol \curvearrowright on input line 258.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 260.
+LaTeX Font Info:    Redeclaring math symbol \hslash on input line 262.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mathtools.sty
+Package: mathtools 2021/03/18 v1.25 mathematical typesetting tools
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/mathtools/mhsetup.sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count333
+\l_MT_multwidth_dim=\dimen301
+\origjot=\skip73
+\l_MT_shortvdotswithinadjustabove_dim=\dimen302
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen303
+\l_MT_above_intertext_sep=\dimen304
+\l_MT_below_intertext_sep=\dimen305
+\l_MT_above_shortintertext_sep=\dimen306
+\l_MT_below_shortintertext_sep=\dimen307
+\xmathstrut@box=\box68
+\xmathstrut@dim=\dimen308
+)) (./head/settings_custom.tex (/usr/local/texlive/2021/texmf-dist/tex/latex/cleveref/cleveref.sty
+Package: cleveref 2018/03/27 v0.21.4 Intelligent cross-referencing
+Package cleveref Info: `hyperref' support loaded on input line 2370.
+LaTeX Info: Redefining \cref on input line 2370.
+LaTeX Info: Redefining \Cref on input line 2370.
+LaTeX Info: Redefining \crefrange on input line 2370.
+LaTeX Info: Redefining \Crefrange on input line 2370.
+LaTeX Info: Redefining \cpageref on input line 2370.
+LaTeX Info: Redefining \Cpageref on input line 2370.
+LaTeX Info: Redefining \cpagerefrange on input line 2370.
+LaTeX Info: Redefining \Cpagerefrange on input line 2370.
+LaTeX Info: Redefining \labelcref on input line 2370.
+LaTeX Info: Redefining \labelcpageref on input line 2370.
+Package cleveref Info: `listings' support loaded on input line 3131.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2019/12/09 v1.8y multicolumn formatting (FMi)
+\c@tracingmulticols=\count334
+\mult@box=\box69
+\multicol@leftmargin=\dimen309
+\c@unbalance=\count335
+\c@collectmore=\count336
+\doublecol@number=\count337
+\multicoltolerance=\count338
+\multicolpretolerance=\count339
+\full@width=\dimen310
+\page@free=\dimen311
+\premulticols=\dimen312
+\postmulticols=\dimen313
+\multicolsep=\skip74
+\multicolbaselineskip=\skip75
+\partial@page=\box70
+\last@line=\box71
+\maxbalancingoverflow=\dimen314
+\mult@rightbox=\box72
+\mult@grightbox=\box73
+\mult@gfirstbox=\box74
+\mult@firstbox=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\c@minrows=\count340
+\c@columnbadness=\count341
+\c@finalcolumnbadness=\count342
+\last@try=\dimen315
+\multicolovershoot=\dimen316
+\multicolundershoot=\dimen317
+\mult@nat@firstbox=\box113
+\colbreak@box=\box114
+\mc@col@check@num=\count343
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip76
+\multirow@cntb=\count344
+\multirow@dima=\skip77
+\bigstrutjot=\dimen318
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/makecell/makecell.sty
+Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
+\rotheadsize=\dimen319
+\c@nlinenum=\count345
+\TeXr@lab=\toks43
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/overpic/overpic.sty
+Package: overpic 2020/02/22 1.3 picture overlays (RN)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/eepic/epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count346
+\d@lta=\count347
+\@delta=\dimen320
+\@@delta=\dimen321
+\@gridcnt=\count348
+\@joinkind=\count349
+\@dotgap=\dimen322
+\@ddotgap=\dimen323
+\@x@diff=\count350
+\@y@diff=\count351
+\x@diff=\dimen324
+\y@diff=\dimen325
+\@dotbox=\box115
+\num@segments=\count352
+\num@segmentsi=\count353
+\@datafile=\read4
+)
+\OVP@box=\box116
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2020/09/30 v0.4b Improved picture commands (HjG,RN,JT)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 112.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks44
+\@arclen=\dimen326
+\@arcrad=\dimen327
+\pIIe@tempdima=\dimen328
+\pIIe@tempdimb=\dimen329
+\pIIe@tempdimc=\dimen330
+\pIIe@tempdimd=\dimen331
+\pIIe@tempdime=\dimen332
+\pIIe@tempdimf=\dimen333
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
+Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2021-03-12 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box117
+\l__siunitx_tmp_dim=\dimen334
+\l__siunitx_tmp_int=\count354
+\l__siunitx_number_mantissa_length_int=\count355
+\l__siunitx_number_uncert_length_int=\count356
+\l__siunitx_round_int=\count357
+\l__siunitx_process_decimal_int=\count358
+\l__siunitx_process_uncertainty_int=\count359
+\l__siunitx_process_fixed_int=\count360
+\l__siunitx_process_integer_min_int=\count361
+\l__siunitx_process_precision_int=\count362
+\l__siunitx_group_min_int=\count363
+\l__siunitx_angle_marker_box=\box118
+\l__siunitx_angle_unit_box=\box119
+\l__siunitx_angle_marker_dim=\dimen335
+\l__siunitx_angle_unit_dim=\dimen336
+\l__siunitx_unit_int=\count364
+\l__siunitx_unit_denominator_int=\count365
+\l__siunitx_unit_numerator_int=\count366
+\l__siunitx_unit_prefix_int=\count367
+\l__siunitx_unit_prefix_base_int=\count368
+\l__siunitx_unit_prefix_gram_int=\count369
+\l__siunitx_number_product_int=\count370
+\c__siunitx_one_fill_skip=\skip78
+\l__siunitx_table_unit_align_skip=\skip79
+\l__siunitx_table_exponent_dim=\dimen337
+\l__siunitx_table_integer_dim=\dimen338
+\l__siunitx_table_mantissa_dim=\dimen339
+\l__siunitx_table_marker_dim=\dimen340
+\l__siunitx_table_result_dim=\dimen341
+\l__siunitx_table_uncert_dim=\dimen342
+\l__siunitx_table_fill_pre_dim=\dimen343
+\l__siunitx_table_fill_post_dim=\dimen344
+\l__siunitx_table_fill_mid_dim=\dimen345
+\l__siunitx_table_pre_box=\box120
+\l__siunitx_table_post_box=\box121
+\l__siunitx_table_mantissa_box=\box122
+\l__siunitx_table_result_box=\box123
+\l__siunitx_table_number_align_skip=\skip80
+\l__siunitx_table_text_align_skip=\skip81
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2020-08-03 v1.12c Easy translation of strings in LaTeX
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/tabu/tabu.sty
+Package: tabu 2019/01/11 v2.9 - flexible LaTeX tabulars (FC+tabu-fixed)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/varwidth/varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box124
+\sift@deathcycles=\count371
+\@vwid@loff=\dimen346
+\@vwid@roff=\dimen347
+)
+\c@taburow=\count372
+\tabu@nbcols=\count373
+\tabu@cnt=\count374
+\tabu@Xcol=\count375
+\tabu@alloc=\count376
+\tabu@nested=\count377
+\tabu@target=\dimen348
+\tabu@spreadtarget=\dimen349
+\tabu@naturalX=\dimen350
+\tabucolX=\dimen351
+\tabu@Xsum=\dimen352
+\extrarowdepth=\dimen353
+\abovetabulinesep=\dimen354
+\belowtabulinesep=\dimen355
+\tabustrutrule=\dimen356
+\tabu@thebody=\toks45
+\tabu@footnotes=\toks46
+\tabu@box=\box125
+\tabu@arstrutbox=\box126
+\tabu@hleads=\box127
+\tabu@vleads=\box128
+\tabu@cellskip=\skip82
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip83
+\fb@frw=\dimen357
+\fb@frh=\dimen358
+\FrameRule=\dimen359
+\FrameSep=\dimen360
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen361
+\captionmargin@=\dimen362
+\captionwidth=\dimen363
+\caption@tempdima=\dimen364
+\caption@indent=\dimen365
+\caption@parindent=\dimen366
+\caption@hangindent=\dimen367
+Package caption Info: Standard document class detected.
+Package caption Info: french babel package is loaded.
+)
+\c@caption@flags=\count378
+\c@continuedfloat=\count379
+Package caption Info: hyperref package is loaded.
+Package caption Info: listings package is loaded.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count380
+\c@subtable=\count381
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count382
+\rotFPtop=\skip84
+\rotFPbot=\skip85
+\rot@float@box=\box129
+\rot@mess@toks=\toks47
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/latex/tools/afterpage.sty
+Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
+\AP@output=\toks48
+\AP@partial=\box130
+\AP@footins=\box131
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/standalone/standalone.sty
+Package: standalone 2018/03/26 v1.3a Package to include TeX sub-files with preambles
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/tools/shellesc.sty
+Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
+Package shellesc Info: Restricted shell escape enabled on input line 77.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks49
+\XKV@tempa@toks=\toks50
+)
+\XKV@depth=\count383
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/currfile/currfile.sty
+Package: currfile 2020/09/29 v0.7d Provides the file path elements of the current input file
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/filehook/filehook.sty
+Package: filehook 2020/09/29 v0.8a Hooks for input files
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/filehook/filehook-2020.sty
+Package: filehook-2020 2020/09/29 v0.8a Hooks for input files
+))
+\c@currfiledepth=\count384
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/gincltex/gincltex.sty (/usr/local/texlive/2021/texmf-dist/tex/latex/svn-prov/svn-prov.sty
+Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
+)
+Package: gincltex 2011/09/04 v0.3 Include external LaTeX files like graphics
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back-ends (calc, etex, pgfmath)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/collectbox/collectbox.sty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box132
+)
+\tc@llx=\dimen368
+\tc@lly=\dimen369
+\tc@urx=\dimen370
+\tc@ury=\dimen371
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/adjustbox/tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen372
+\adjbox@Height=\dimen373
+\adjbox@Depth=\dimen374
+\adjbox@Totalheight=\dimen375
+\adjbox@pwidth=\dimen376
+\adjbox@pheight=\dimen377
+\adjbox@pdepth=\dimen378
+\adjbox@ptotalheight=\dimen379
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count385
+))
+\gincltex@box=\box133
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/filemod/filemod-expmin.sty
+Package: filemod-expmin 2011/09/19 v1.2 Get and compare file modification times (expandable; minimal)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytrees.code.tex
+File: tikzlibrarytrees.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\arrowsize=\dimen380
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarychains.code.tex
+File: tikzlibrarychains.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen381
+\pgfdecoratedremainingdistance=\dimen382
+\pgfdecoratedinputsegmentcompleteddistance=\dimen383
+\pgfdecoratedinputsegmentremainingdistance=\dimen384
+\pgf@decorate@distancetomove=\dimen385
+\pgf@decorate@repeatstate=\count386
+\pgfdecorationsegmentamplitude=\dimen386
+\pgfdecorationsegmentlength=\dimen387
+)
+\tikz@lib@dec@box=\box134
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.markings.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.markings.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+File: tikzlibraryshapes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+File: tikzlibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+File: pgflibraryshapes.misc.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+File: tikzlibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+File: pgflibraryshapes.symbols.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+File: tikzlibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+File: pgflibraryshapes.arrows.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.multipart.code.tex
+File: tikzlibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.multipart.code.tex
+File: pgflibraryshapes.multipart.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfnodepartlowerbox=\box135
+\pgfnodeparttwobox=\box136
+\pgfnodepartthreebox=\box137
+\pgfnodepartfourbox=\box138
+\pgfnodeparttwentybox=\box139
+\pgfnodepartnineteenbox=\box140
+\pgfnodeparteighteenbox=\box141
+\pgfnodepartseventeenbox=\box142
+\pgfnodepartsixteenbox=\box143
+\pgfnodepartfifteenbox=\box144
+\pgfnodepartfourteenbox=\box145
+\pgfnodepartthirteenbox=\box146
+\pgfnodeparttwelvebox=\box147
+\pgfnodepartelevenbox=\box148
+\pgfnodeparttenbox=\box149
+\pgfnodepartninebox=\box150
+\pgfnodeparteightbox=\box151
+\pgfnodepartsevenbox=\box152
+\pgfnodepartsixbox=\box153
+\pgfnodepartfivebox=\box154
+))) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymatrix.code.tex
+File: tikzlibrarymatrix.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryangles.code.tex
+File: tikzlibraryangles.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryquotes.code.tex
+File: tikzlibraryquotes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
+File: tikzlibrarypatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
+File: pgflibrarypatterns.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryspy.code.tex
+File: tikzlibraryspy.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\tikz@lib@spybox=\box155
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybabel.code.tex
+File: tikzlibrarybabel.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/circuitikz/circuitikz.sty
+Package: circuitikz 2021/03/14{} The CircuiTikz circuit drawing package version 1.3.2
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgfarrowinset=\dimen388
+\pgfarrowlength=\dimen389
+\pgfarrowwidth=\dimen390
+\pgfarrowlinewidth=\dimen391
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybending.code.tex
+File: tikzlibrarybending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulebending.code.tex
+File: pgfmodulebending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+ (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransformations.code.tex
+File: pgfmodulenonlineartransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgftransformnonlinearflatness=\dimen392
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.code.tex
+File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
+\pgf@curvilinear@time@a=\dimen393
+\pgf@curvilinear@length@a=\dimen394
+\pgf@curvilinear@length@b=\dimen395
+\pgf@curvilinear@length@c=\dimen396
+\pgf@curvilinear@length@d=\dimen397
+)
+\pgf@arrows@the@rigidity=\dimen398
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryfpu.code.tex))
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirc.defines.tex
+\pgf@circ@count@a=\count387
+\pgf@circ@count@b=\count388
+\pgf@circ@count@c=\count389
+\pgf@circ@res@up=\dimen399
+\pgf@circ@res@down=\dimen400
+\pgf@circ@res@zero=\dimen401
+\pgf@circ@res@left=\dimen402
+\pgf@circ@res@right=\dimen403
+\pgf@circ@res@other=\dimen404
+\pgf@circ@res@step=\dimen405
+\pgf@circ@res@temp=\dimen406
+\pgf@circ@Rlen=\dimen407
+\pgf@circ@scaled@Rlen=\dimen408
+\pgfstartlinewidth=\dimen409
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircutils.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircpath.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircshapes.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircmonopoles.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircbipoles.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirctripoles.tex
+\pgf@circ@res@count=\count390
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircquadpoles.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircmultipoles.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirclabel.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircvoltage.tex
+\pgfcirc@labelshift=\dimen410
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcirccurrent.tex)
+(/usr/local/texlive/2021/texmf-dist/tex/generic/circuitikz/pgfcircflow.tex) (/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.sty (/usr/local/texlive/2021/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count391
+\decimalpart=\count392
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)) (/usr/local/texlive/2021/texmf-dist/tex/latex/tikz-imagelabels/tikz-imagelabels.sty
+Package: tikz-imagelabels 2019/06/27 v0.2 put labels on images using TikZ
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/xifthen/xifthen.sty
+Package: xifthen 2015/11/05 v1.4.0 Extended ifthen features
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/ifmtarg/ifmtarg.sty
+Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
+)) (/usr/local/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarymath.code.tex
+\tikz@math@for@depth=\count393
+\tikz@math@dimen=\dimen411
+\tikz@math@toks=\toks51
+))
+\picbox=\box156
+) (./sethomas_thesis_main.aux (./head/dedication.aux) (./head/acknowledgements.aux) (./head/preface.aux) (./head/abstracts.aux) (./main/ch0_introduction.aux) (./main/ch1_sma_actuators.aux) (./main/ch2_modelling.aux) (./main/ch3_design_method.aux) (./main/ch4_oscillator.aux) (./main/ch5_compliant_sma.aux) (./main/ch6_case_study_buckled_beam.aux) (./main/ch7_conclusion.aux) (./tail/biblio.aux) (./tail/cv.aux))
+\openout1 = `sethomas_thesis_main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 18.
+LaTeX Font Info:    Trying to load font information for FML+futm on input line 18.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/fmlfutm.fd
+File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
+)
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for FMS+futm on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/fmsfutm.fd
+File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
+)
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for FMX+futm on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/fmxfutm.fd
+File: fmxfutm.fd futm-extension
+)
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Info: Redefining \degres on input line 18.
+LaTeX Info: Redefining \dots on input line 18.
+LaTeX Info: Redefining \up on input line 18.
+LaTeX Font Info:    Redeclaring math accent \widehat on input line 18.
+LaTeX Font Info:    Redeclaring math accent \widetilde on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count394
+\scratchdimen=\dimen412
+\scratchbox=\box157
+\nofMPsegments=\count395
+\nofMParguments=\count396
+\everyMPshowfont=\toks52
+\MPscratchCnt=\count397
+\MPscratchDim=\dimen413
+\MPnumerator=\count398
+\makeMPintoPDFobject=\count399
+\everyMPtoPDFconversion=\toks53
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \microtypecontext on input line 18.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 18.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `futs' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+\c@lstlisting=\count400
+Package hyperref Info: Link coloring ON on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/local/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count401
+)
+LaTeX Info: Redefining \ref on input line 18.
+LaTeX Info: Redefining \pageref on input line 18.
+LaTeX Info: Redefining \nameref on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Trying to load font information for FML+futmi on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/fmlfutmi.fd
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 18.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 18.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 18.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.07397pt on input line 18.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.63599pt on input line 18.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (/usr/local/texlive/2021/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 18.
+
+(/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmss.fd
+File: ot1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 18.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/ot1lmtt.fd
+File: ot1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ (./head/titlepage.tex
+<images/epfl.pdf, id=7, 612.2875pt x 265.99374pt>
+File: images/epfl.pdf Graphic file (type pdf)
+<use images/epfl.pdf>
+Package pdftex.def Info: images/epfl.pdf  used on input line 19.
+(pdftex.def)             Requested size: 113.81102pt x 49.4394pt.
+
+Overfull \hbox (23.99998pt too wide) in paragraph at lines 18--45
+ [][] 
+ []
+
+[1
+
+
+
+
+
+{/usr/local/texlive/2021/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./images/epfl.pdf>])
+\openout2 = `head/dedication.aux'.
+
+ (./head/dedication.tex [2
+
+
+]) [3]
+\openout2 = `head/acknowledgements.aux'.
+
+ (./head/acknowledgements.tex [0
+
+
+
+
+]
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 22.88956pt on input line 1.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 15.89755pt on input line 1.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 1.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 22.88956pt on input line 1.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 15.89755pt on input line 1.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 1.
+)pdfTeX warning (ext4): destination with the same identifier (name{page.i}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.25 \include{head/acknowledgements}
+                                     [1]
+\openout2 = `head/preface.aux'.
+
+ (./head/preface.texpdfTeX warning (ext4): destination with the same identifier (name{page.ii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \cleardoublepage
+                     [2
+
+
+
+
+])pdfTeX warning (ext4): destination with the same identifier (name{page.iii}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.26 \include{head/preface}
+                            [3
+
+]
+\openout2 = `head/abstracts.aux'.
+
+ (./head/abstracts.tex [4
+
+
+
+
+] [5
+
+] [6
+
+] [7
+
+] [8
+
+]) [9
+
+] [10
+
+
+
+] (./sethomas_thesis_main.toc [11
+
+] [12])
+\tf@toc=\write4
+\openout4 = `sethomas_thesis_main.toc'.
+
+ [13] [14
+
+] (./sethomas_thesis_main.lof
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [15
+
+] [16] [17])
+\tf@lof=\write5
+\openout5 = `sethomas_thesis_main.lof'.
+
+ [18] (./sethomas_thesis_main.lot)
+\tf@lot=\write6
+\openout6 = `sethomas_thesis_main.lot'.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19
+
+
+] [20]
+\openout2 = `main/ch0_introduction.aux'.
+
+ (./main/ch0_introduction.tex (./images/chap0/smart-actuators-examples-small.tex
+<images/chap0/smart-actuator-examples-small.pdf, id=572, 711.31892pt x 428.18953pt>
+File: images/chap0/smart-actuator-examples-small.pdf Graphic file (type pdf)
+<use images/chap0/smart-actuator-examples-small.pdf>
+Package pdftex.def Info: images/chap0/smart-actuator-examples-small.pdf  used on input line 9.
+(pdftex.def)             Requested size: 417.68646pt x 251.43398pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+
+ <./images/chap0/smart-actuator-examples-small.pdf>] (./images/chap0/smart-material-comparison.pgf
+LaTeX Font Info:    Calculating math sizes for size <13> on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.95998pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.08951pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.17606pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.95998pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.08951pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.17606pt on input line 97.
+) [2]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]) [8]
+\openout2 = `main/ch1_sma_actuators.aux'.
+
+ (./main/ch1_sma_actuators.tex
+Chapter 1.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [9
+
+
+
+
+] (./images/chap0/sma-actuators-diagram.tex
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 59.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 59.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 59.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 59.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [10]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [11]
+<images/chap1/domain-donut-chart.pdf, id=681, 610.91139pt x 391.38623pt>
+File: images/chap1/domain-donut-chart.pdf Graphic file (type pdf)
+<use images/chap1/domain-donut-chart.pdf>
+Package pdftex.def Info: images/chap1/domain-donut-chart.pdf  used on input line 35.
+(pdftex.def)             Requested size: 334.15044pt x 214.07465pt.
+ [12 <./images/chap1/domain-donut-chart.pdf>] (./images/chap1/biomed-examples.tex
+<images/chap1/biomed-examples.pdf, id=830, 501.3pt x 346.51077pt>
+File: images/chap1/biomed-examples.pdf Graphic file (type pdf)
+<use images/chap1/biomed-examples.pdf>
+Package pdftex.def Info: images/chap1/biomed-examples.pdf  used on input line 9.
+(pdftex.def)             Requested size: 292.37924pt x 202.10258pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13]
+Underfull \vbox (badness 4608) has occurred while \output is active []
+
+ [14 <./images/chap1/biomed-examples.pdf>] (./images/chap1/auto-examples.tex
+<images/chap1/auto-examples.pdf, id=873, 574.7457pt x 523.98506pt>
+File: images/chap1/auto-examples.pdf Graphic file (type pdf)
+<use images/chap1/auto-examples.pdf>
+Package pdftex.def Info: images/chap1/auto-examples.pdf  used on input line 10.
+(pdftex.def)             Requested size: 313.26485pt x 285.61017pt.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 11.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 11.
+LaTeX Font Info:    Trying to load font information for T1+lmss on input line 17.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/lm/t1lmss.fd
+File: t1lmss.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmss' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+)
+Overfull \hbox (6.8317pt too wide) in paragraph at lines 26--67
+ [][] 
+ []
+
+[15 <./images/chap1/auto-examples.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [16] (./images/chap1/industrial-examples.tex
+<images/chap1/industrial-examples-v2.pdf, id=919, 461.94188pt x 284.6167pt>
+File: images/chap1/industrial-examples-v2.pdf Graphic file (type pdf)
+<use images/chap1/industrial-examples-v2.pdf>
+Package pdftex.def Info: images/chap1/industrial-examples-v2.pdf  used on input line 10.
+(pdftex.def)             Requested size: 375.91525pt x 231.61093pt.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 13.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 13.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.35999pt on input line 13.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.25598pt on input line 13.
+) [17 <./images/chap1/industrial-examples-v2.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18] (./images/chap1/bio-examples.tex
+<images/chap1/bio-examples.pdf, id=969, 289.05875pt x 131.23006pt>
+File: images/chap1/bio-examples.pdf Graphic file (type pdf)
+<use images/chap1/bio-examples.pdf>
+Package pdftex.def Info: images/chap1/bio-examples.pdf  used on input line 11.
+(pdftex.def)             Requested size: 375.91525pt x 170.67712pt.
+) [19 <./images/chap1/bio-examples.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20] (./images/chap1/sma-actuator-biomed-subsystems.tex
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|[]\T1/futs/b/n/9 (+20) Kinematic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/futs/m/n/9 (+20) Elastic back-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/futs/m/n/9 (+20) Rigid link /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|[][]\T1/futs/m/n/9 (+20) Roshan et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/futs/m/n/9 (+20) Torsional
+ []
+
+) (./images/chap1/sma-actuator-auto-subsystems.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|[]\T1/futs/b/n/9 (+20) Kinematic
+ []
+
+
+Underfull \hbox (badness 3312) in paragraph at lines 17--17
+[]|[][]\T1/futs/m/n/9 (+20) Williams et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|[][]\T1/futs/m/n/9 (+20) Bellini et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/futs/m/n/9 (+20) Springs (in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/futs/m/n/9 (+20) Antagonistic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/futs/m/n/9 (+20) Thermo-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+\T1/futs/m/n/9 (+20) electric mod-
+ []
+
+
+Underfull \hbox (badness 6220) in paragraph at lines 19--19
+[]|[][]\T1/futs/m/n/9 (+20) Benafan et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/futs/m/n/9 (+20) Torsional
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/futs/m/n/9 (+20) Bearing and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/futs/m/n/9 (+20) Heater
+ []
+
+) [21] (./images/chap1/sma-actuator-industrial-subsystems.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|[]\T1/futs/b/n/9 (+20) Kinematic
+ []
+
+
+Underfull \hbox (badness 1661) in paragraph at lines 17--17
+[]|[][]\T1/futs/m/n/9 (+20) Rodrigue et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|[][]\T1/futs/m/n/9 (+20) Motzki et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--19
+[]|\T1/futs/m/n/9 (+20) Cross-shear
+ []
+
+) [22] (./images/chap1/sma-actuator-bioinspired-subsystems.tex
+Underfull \hbox (badness 10000) in paragraph at lines 16--16
+[]|[]\T1/futs/b/n/9 (+20) Kinematic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/futs/m/n/9 (+20) Elastic body
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 17--17
+[]|\T1/futs/m/n/9 (+20) Elastic body
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/futs/m/n/9 (+20) Silcome elas-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--18
+[]|\T1/futs/m/n/9 (+20) Elastomer
+ []
+
+
+Underfull \hbox (badness 5548) in paragraph at lines 18--18
+[]|\T1/futs/m/n/9 (+20) Joule's heat-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+[]|\T1/futs/m/n/9 (+20) Mechanical
+ []
+
+)
+LaTeX Font Info:    Trying to load font information for TS1+futs on input line 160.
+ (/usr/local/texlive/2021/texmf-dist/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2003/09/14 Fontinst v1.801 font definitions for TS1/futs.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `futs' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [23]
+<images/chap1/hexgon-base-layer.pdf, id=1056, 569.43552pt x 388.38533pt>
+File: images/chap1/hexgon-base-layer.pdf Graphic file (type pdf)
+<use images/chap1/hexgon-base-layer.pdf>
+Package pdftex.def Info: images/chap1/hexgon-base-layer.pdf  used on input line 178.
+(pdftex.def)             Requested size: 334.15044pt x 227.91861pt.
+ [24 <./images/chap1/hexgon-base-layer.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [25]) [26]
+\openout2 = `main/ch2_modelling.aux'.
+
+ (./main/ch2_modelling.tex
+Chapter 2.
+<images/chap2/sma-phase-transformations.pdf, id=1079, 656.95535pt x 459.05904pt>
+File: images/chap2/sma-phase-transformations.pdf Graphic file (type pdf)
+<use images/chap2/sma-phase-transformations.pdf>
+Package pdftex.def Info: images/chap2/sma-phase-transformations.pdf  used on input line 10.
+(pdftex.def)             Requested size: 271.49364pt x 189.71442pt.
+
+Underfull \vbox (badness 1831) has occurred while \output is active []
+
+ [27
+
+
+
+
+ <./images/chap2/sma-phase-transformations.pdf>] (./images/chap2/niti-properties-table.tex)
+<images/chap2/sma-phases.pdf, id=1125, 577.67418pt x 631.01347pt>
+File: images/chap2/sma-phases.pdf Graphic file (type pdf)
+<use images/chap2/sma-phases.pdf>
+Package pdftex.def Info: images/chap2/sma-phases.pdf  used on input line 28.
+(pdftex.def)             Requested size: 250.61443pt x 273.74725pt.
+ [28]
+<images/chap2/dsc-graph.pdf, id=1140, 598.80917pt x 452.2466pt>
+File: images/chap2/dsc-graph.pdf Graphic file (type pdf)
+<use images/chap2/dsc-graph.pdf>
+Package pdftex.def Info: images/chap2/dsc-graph.pdf  used on input line 37.
+(pdftex.def)             Requested size: 313.26485pt x 236.59802pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <./images/chap2/sma-phases.pdf>]
+Underfull \vbox (badness 4660) has occurred while \output is active []
+
+ [30 <./images/chap2/dsc-graph.pdf>]
+<images/chap2/phase-diagram-graph.pdf, id=1212, 292.97557pt x 227.32027pt>
+File: images/chap2/phase-diagram-graph.pdf Graphic file (type pdf)
+<use images/chap2/phase-diagram-graph.pdf>
+Package pdftex.def Info: images/chap2/phase-diagram-graph.pdf  used on input line 92.
+(pdftex.def)             Requested size: 334.15044pt x 259.27266pt.
+ (./images/chap2/sma-temperature-transformation-model.pgf
+LaTeX Font Info:    Calculating math sizes for size <16> on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 14.71997pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.18709pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.83206pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 14.71997pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.18709pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.83206pt on input line 97.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31] [32 <./images/chap2/phase-diagram-graph.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [34] (./images/chap2/sma-brinson-model.pgf) (./images/chap2/sma-brinson-model-3d.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35] (./images/chap2/fem-parameters-table.tex
+Overfull \hbox (7.31993pt too wide) in paragraph at lines 19--19
+ []|$\FML/futmi/m/it/10.95 ^^[[]$| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|\T1/futs/m/n/10.95 (+20) Maximum trans-for-ma-tion
+ []
+
+) [36]
+<images/chap2/fem-wp-graph.pdf, id=1362, 502.52142pt x 660.21454pt>
+File: images/chap2/fem-wp-graph.pdf Graphic file (type pdf)
+<use images/chap2/fem-wp-graph.pdf>
+Package pdftex.def Info: images/chap2/fem-wp-graph.pdf  used on input line 222.
+(pdftex.def)             Requested size: 313.26485pt x 411.57529pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Underfull \vbox (badness 1430) has occurred while \output is active []
+
+ [38 <./images/chap2/fem-wp-graph.pdf>]
+<images/chap2/bias-spring-diagram.pdf, id=1417, 291.19388pt x 240.54266pt>
+File: images/chap2/bias-spring-diagram.pdf Graphic file (type pdf)
+<use images/chap2/bias-spring-diagram.pdf>
+Package pdftex.def Info: images/chap2/bias-spring-diagram.pdf  used on input line 263.
+(pdftex.def)             Requested size: 275.67459pt x 227.7251pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39] (./images/chap2/brinson-sma-spring.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 <./images/chap2/bias-spring-diagram.pdf>] (./images/chap2/brinson-material-properties.tex) (./images/chap2/sma-coil-curve-fit.pgf
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 4257.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 4257.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41]
+<images/chap2/simplied-sma-bias-all-wp.pdf, id=1477, 403.30272pt x 670.35245pt>
+File: images/chap2/simplied-sma-bias-all-wp.pdf Graphic file (type pdf)
+<use images/chap2/simplied-sma-bias-all-wp.pdf>
+Package pdftex.def Info: images/chap2/simplied-sma-bias-all-wp.pdf  used on input line 315.
+(pdftex.def)             Requested size: 271.49364pt x 451.28183pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Underfull \vbox (badness 7362) has occurred while \output is active []
+
+ [44 <./images/chap2/simplied-sma-bias-all-wp.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+Underfull \hbox (badness 10000) in paragraph at lines 352--354
+
+ []
+
+) [46]
+\openout2 = `main/ch3_design_method.aux'.
+
+ (./main/ch3_design_method.tex
+Chapter 3.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47
+
+
+
+
+]
+<images/chap4/hexgon-base-layer-intersect-pt.pdf, id=1559, 568.56746pt x 391.23006pt>
+File: images/chap4/hexgon-base-layer-intersect-pt.pdf Graphic file (type pdf)
+<use images/chap4/hexgon-base-layer-intersect-pt.pdf>
+Package pdftex.def Info: images/chap4/hexgon-base-layer-intersect-pt.pdf  used on input line 37.
+(pdftex.def)             Requested size: 334.15044pt x 229.92827pt.
+ [48 <./images/chap4/hexgon-base-layer-intersect-pt.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [49] (./images/chap4/flexure-hinge-types.tex
+<images/chap4/flexure-hinge-types-arrows.pdf, id=1588, 484.82098pt x 119.87175pt>
+File: images/chap4/flexure-hinge-types-arrows.pdf Graphic file (type pdf)
+<use images/chap4/flexure-hinge-types-arrows.pdf>
+Package pdftex.def Info: images/chap4/flexure-hinge-types-arrows.pdf  used on input line 8.
+(pdftex.def)             Requested size: 417.68646pt x 103.27425pt.
+)
+File: images/chap4/flexure-hinge-types.tex Graphic file (type tex)
+ (./images/chap4/bcm-working-principle.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+Underfull \vbox (badness 1142) has occurred while \output is active []
+
+ [51 <./images/chap4/flexure-hinge-types-arrows.pdf>] (./images/chap3/bias-compliant-flowchart.tex)
+Underfull \vbox (badness 3229) has occurred while \output is active []
+
+ [52] [53] (./images/chap4/smabb-sizing-wp.pgf) [54] (./images/chap3/bias-compliant-antagonistic-flowchart.tex) [55] (./main/ch3_1_case_study_mandrel.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [56] (./images/chap3/gripper-working-principle.pgf) [57] (./images/chap7/mandrel-kinematic-stage.tex
+<images/chap7/kinematic_schematics_models_reversed_legend_3.pdf, id=1683, 582.63976pt x 208.25302pt>
+File: images/chap7/kinematic_schematics_models_reversed_legend_3.pdf Graphic file (type pdf)
+<use images/chap7/kinematic_schematics_models_reversed_legend_3.pdf>
+Package pdftex.def Info: images/chap7/kinematic_schematics_models_reversed_legend_3.pdf  used on input line 20.
+(pdftex.def)             Requested size: 417.68646pt x 149.29698pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59 <./images/chap7/kinematic_schematics_models_reversed_legend_3.pdf>] (./images/chap7/mandrel-mech-stages.tex
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+<images/chap7/mechanism_iso_axes_side.png, id=1721, 668.4975pt x 814.54312pt>
+File: images/chap7/mechanism_iso_axes_side.png Graphic file (type png)
+<use images/chap7/mechanism_iso_axes_side.png>
+Package pdftex.def Info: images/chap7/mechanism_iso_axes_side.png  used on input line 18.
+(pdftex.def)             Requested size: 167.07202pt x 203.57314pt.
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+Missing character: There is no ; in font nullfont!
+<images/chap7/pivot.pdf, id=1723, 502.79825pt x 376.81662pt>
+File: images/chap7/pivot.pdf Graphic file (type pdf)
+<use images/chap7/pivot.pdf>
+Package pdftex.def Info: images/chap7/pivot.pdf  used on input line 44.
+(pdftex.def)             Requested size: 71.13188pt x 53.30594pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61 <./images/chap7/mechanism_iso_axes_side.png> <./images/chap7/pivot.pdf>] (./images/chap3/am-expt-compare.pgf
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 12.87997pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.7887pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 7.72806pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 12.87997pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.7887pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 7.72806pt on input line 97.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62] (./images/chap7/mandrel-tradeoffs.tex)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [63] (./images/chap7/mandrel-final-proto.tex
+<images/chap7/proto_open.jpeg, id=1775, 4047.12pt x 3035.34pt>
+File: images/chap7/proto_open.jpeg Graphic file (type jpg)
+<use images/chap7/proto_open.jpeg>
+Package pdftex.def Info: images/chap7/proto_open.jpeg  used on input line 42.
+(pdftex.def)             Requested size: 409.33095pt x 206.26419pt.
+File: images/chap7/proto_open.jpeg Graphic file (type jpg)
+<use images/chap7/proto_open.jpeg>
+Package pdftex.def Info: images/chap7/proto_open.jpeg  used on input line 42.
+(pdftex.def)             Requested size: 250.61443pt x 59.44632pt.
+<images/chap7/closed_with_object.jpeg, id=1778, 2867.71375pt x 1585.925pt>
+File: images/chap7/closed_with_object.jpeg Graphic file (type jpg)
+<use images/chap7/closed_with_object.jpeg>
+Package pdftex.def Info: images/chap7/closed_with_object.jpeg  used on input line 47.
+(pdftex.def)             Requested size: 409.33095pt x 226.35965pt.
+) (./images/chap7/mandrel-stroke-estimation.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [64] (./images/chap3/mandrel-forcesetup.tex
+<images/chap3/sma-mandrel-forcesetup-top.jpg, id=1787, 4047.12pt x 3035.34pt>
+File: images/chap3/sma-mandrel-forcesetup-top.jpg Graphic file (type jpg)
+<use images/chap3/sma-mandrel-forcesetup-top.jpg>
+Package pdftex.def Info: images/chap3/sma-mandrel-forcesetup-top.jpg  used on input line 10.
+(pdftex.def)             Requested size: 334.15044pt x 250.61316pt.
+) (./images/chap3/force-temp-filt.pgf))
+Underfull \vbox (badness 1442) has occurred while \output is active []
+
+ [65 <./images/chap7/proto_open.jpeg> <./images/chap7/closed_with_object.jpeg>] [66 <./images/chap3/sma-mandrel-forcesetup-top.jpg>]
+Underfull \vbox (badness 6445) has occurred while \output is active []
+
+ [67]
+Underfull \hbox (badness 10000) in paragraph at lines 278--280
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 281--62
+
+ []
+
+[68]
+\openout2 = `main/ch4_oscillator.aux'.
+
+ (./main/ch4_oscillator.tex
+Chapter 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[][][]\T1/futs/b/n/24.88 (+20) Mechanical Ap-proach to SMA Ac-tu-a-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69
+
+
+
+
+]
+<images/chap6/hexgon-base-layer-intersect-ct.pdf, id=1840, 572.72092pt x 374.6685pt>
+File: images/chap6/hexgon-base-layer-intersect-ct.pdf Graphic file (type pdf)
+<use images/chap6/hexgon-base-layer-intersect-ct.pdf>
+Package pdftex.def Info: images/chap6/hexgon-base-layer-intersect-ct.pdf  used on input line 29.
+(pdftex.def)             Requested size: 334.15044pt x 218.5942pt.
+
+Underfull \vbox (badness 1270) has occurred while \output is active []
+
+ [70 <./images/chap6/hexgon-base-layer-intersect-ct.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [71]
+<images/chap4/oscillator-wp-diagram.pdf, id=1861, 277.39734pt x 226.08665pt>
+File: images/chap4/oscillator-wp-diagram.pdf Graphic file (type pdf)
+<use images/chap4/oscillator-wp-diagram.pdf>
+Package pdftex.def Info: images/chap4/oscillator-wp-diagram.pdf  used on input line 62.
+(pdftex.def)             Requested size: 313.26485pt x 255.33693pt.
+ (./images/chap4/sma-osc-latch-wp.pgf
+LaTeX Font Info:    Calculating math sizes for size <19> on input line 136.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 17.47997pt on input line 136.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 13.28467pt on input line 136.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.48808pt on input line 136.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 17.47997pt on input line 136.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 13.28467pt on input line 136.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.48808pt on input line 136.
+LaTeX Font Info:    Calculating math sizes for size <17> on input line 478.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 15.63997pt on input line 478.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.88628pt on input line 478.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.38406pt on input line 478.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 15.63997pt on input line 478.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.88628pt on input line 478.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.38406pt on input line 478.
+) [72 <./images/chap4/oscillator-wp-diagram.pdf>]
+<images/chap6/proto-full.jpg, id=1891, 4047.12pt x 3035.34pt>
+File: images/chap6/proto-full.jpg Graphic file (type jpg)
+<use images/chap6/proto-full.jpg>
+Package pdftex.def Info: images/chap6/proto-full.jpg  used on input line 89.
+(pdftex.def)             Requested size: 275.67459pt x 206.75238pt.
+<images/chap6/proto-closeup.jpg, id=1892, 4047.12pt x 3035.34pt>
+File: images/chap6/proto-closeup.jpg Graphic file (type jpg)
+<use images/chap6/proto-closeup.jpg>
+Package pdftex.def Info: images/chap6/proto-closeup.jpg  used on input line 98.
+(pdftex.def)             Requested size: 313.26485pt x 190.87167pt.
+
+Underfull \vbox (badness 2173) has occurred while \output is active []
+
+ [73] (./images/chap6/sma-osc-temp.pgf)
+Underfull \vbox (badness 1552) has occurred while \output is active []
+
+ [74 <./images/chap6/proto-closeup.jpg> <./images/chap6/proto-full.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [75] (./images/chap6/thermal-fitting.pgf) (./images/chap6/cooling-time-extrapolation.pgf
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 752.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 13.79997pt on input line 752.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 10.4879pt on input line 752.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.28006pt on input line 752.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 13.79997pt on input line 752.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 10.4879pt on input line 752.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.28006pt on input line 752.
+) [76] [77] (./images/chap4/mechanical-intelligence-control-flowchart.tex) [78]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79] (./images/chap6/inchworm-gait-diagram.pdf_tex
+<images/chap6/inchworm-gait-diagram.pdf, id=1954, page=1, 659.89125pt x 308.77385pt>
+File: images/chap6/inchworm-gait-diagram.pdf Graphic file (type pdf)
+<use images/chap6/inchworm-gait-diagram.pdf, page 1>
+Package pdftex.def Info: images/chap6/inchworm-gait-diagram.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 417.68646pt x 195.44258pt.
+<images/chap6/inchworm-gait-diagram.pdf, id=1955, page=2, 659.89125pt x 308.77385pt>
+File: images/chap6/inchworm-gait-diagram.pdf Graphic file (type pdf)
+<use images/chap6/inchworm-gait-diagram.pdf, page 2>
+Package pdftex.def Info: images/chap6/inchworm-gait-diagram.pdf , page2 used on input line 59.
+(pdftex.def)             Requested size: 417.68646pt x 195.44258pt.
+<images/chap6/inchworm-gait-diagram.pdf, id=1956, page=3, 659.89125pt x 308.77385pt>
+File: images/chap6/inchworm-gait-diagram.pdf Graphic file (type pdf)
+<use images/chap6/inchworm-gait-diagram.pdf, page 3>
+Package pdftex.def Info: images/chap6/inchworm-gait-diagram.pdf , page3 used on input line 61.
+(pdftex.def)             Requested size: 417.68646pt x 195.44258pt.
+)
+<images/chap6/insect-proto-bentleg.jpg, id=1962, 4047.12pt x 3035.34pt>
+File: images/chap6/insect-proto-bentleg.jpg Graphic file (type jpg)
+<use images/chap6/insect-proto-bentleg.jpg>
+Package pdftex.def Info: images/chap6/insect-proto-bentleg.jpg  used on input line 249.
+(pdftex.def)             Requested size: 292.37924pt x 308.0907pt.
+ [80 <./images/chap6/inchworm-gait-diagram.pdf> <./images/chap6/inchworm-gait-diagram.pdf
+
+pdfTeX warning: pdflatex (file ./images/chap6/inchworm-gait-diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+> <./images/chap6/inchworm-gait-diagram.pdf
+
+pdfTeX warning: pdflatex (file ./images/chap6/inchworm-gait-diagram.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [81 <./images/chap6/insect-proto-bentleg.jpg>]
+<images/chap6/insect-walking-diagram.pdf, id=1983, 808.14876pt x 694.48044pt>
+File: images/chap6/insect-walking-diagram.pdf Graphic file (type pdf)
+<use images/chap6/insect-walking-diagram.pdf>
+Package pdftex.def Info: images/chap6/insect-walking-diagram.pdf  used on input line 277.
+(pdftex.def)             Requested size: 208.84323pt x 179.46918pt.
+ [82 <./images/chap6/insect-walking-diagram.pdf>] (./images/chap6/insect-am-fem-compare.pgf)
+<images/chap6/insect-gait-1_8092617,000.png, id=2005, 1927.2pt x 1084.05pt>
+File: images/chap6/insect-gait-1_8092617,000.png Graphic file (type png)
+<use images/chap6/insect-gait-1_8092617,000.png>
+Package pdftex.def Info: images/chap6/insect-gait-1_8092617,000.png  used on input line 369.
+(pdftex.def)             Requested size: 167.07202pt x 130.77702pt.
+<images/chap6/insect-gait-2_9270812,000.png, id=2007, 1927.2pt x 1084.05pt>
+File: images/chap6/insect-gait-2_9270812,000.png Graphic file (type png)
+<use images/chap6/insect-gait-2_9270812,000.png>
+Package pdftex.def Info: images/chap6/insect-gait-2_9270812,000.png  used on input line 376.
+(pdftex.def)             Requested size: 167.07202pt x 130.77702pt.
+<images/chap6/insect-gait-3_14228023,000.png, id=2009, 1927.2pt x 1084.05pt>
+File: images/chap6/insect-gait-3_14228023,000.png Graphic file (type png)
+<use images/chap6/insect-gait-3_14228023,000.png>
+Package pdftex.def Info: images/chap6/insect-gait-3_14228023,000.png  used on input line 383.
+(pdftex.def)             Requested size: 167.07202pt x 130.77702pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [83] (./images/chap6/insect-disp.pgf) [84]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [85 <./images/chap6/insect-gait-1_8092617,000.png (PNG copy)> <./images/chap6/insect-gait-2_9270812,000.png (PNG copy)> <./images/chap6/insect-gait-3_14228023,000.png (PNG copy)>] (./images/chap4/inchworm-speed-weight-comparison.pgf) (./images/chap4/inchworm-weight-speedweight-comparison.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [86]
+Underfull \vbox (badness 2856) has occurred while \output is active []
+
+ [87]
+Underfull \hbox (badness 10000) in paragraph at lines 461--463
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
+
+ []
+
+[88] (./images/chap4/inchworm-comparison-table.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|\T1/futs/m/n/9 (+20) SMA [[][]Man-sour et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|\T1/futs/m/n/9 (+20) SMA [[][]Koh and Cho[][]
+ []
+
+)) [89]
+\openout2 = `main/ch5_compliant_sma.aux'.
+
+ (./main/ch5_compliant_sma.tex [90
+
+
+
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[][][]\T1/futs/b/n/24.88 (+20) Generation of Ac-tu-a-tors Pow-ered by
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [91] (./images/chap5/hexagon-base-layer-intersect-at.tex
+<images/chap5/hexagon-base-layer-intersect-at.pdf, id=2123, 568.56746pt x 391.23006pt>
+File: images/chap5/hexagon-base-layer-intersect-at.pdf Graphic file (type pdf)
+<use images/chap5/hexagon-base-layer-intersect-at.pdf>
+Package pdftex.def Info: images/chap5/hexagon-base-layer-intersect-at.pdf  used on input line 7.
+(pdftex.def)             Requested size: 334.15044pt x 229.92827pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [92]
+<images/chap5/TOM-wp.pdf, id=2135, 310.81296pt x 174.2298pt>
+File: images/chap5/TOM-wp.pdf Graphic file (type pdf)
+<use images/chap5/TOM-wp.pdf>
+Package pdftex.def Info: images/chap5/TOM-wp.pdf  used on input line 37.
+(pdftex.def)             Requested size: 208.84323pt x 117.07364pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [93 <./images/chap5/hexagon-base-layer-intersect-at.pdf>]
+Underfull \vbox (badness 4229) has occurred while \output is active []
+
+ [94 <./images/chap5/TOM-wp.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [95]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [96]
+<images/chap5/Inverter_Schematic_FinalCAD.pdf, id=2206, 389.4728pt x 163.45624pt>
+File: images/chap5/Inverter_Schematic_FinalCAD.pdf Graphic file (type pdf)
+<use images/chap5/Inverter_Schematic_FinalCAD.pdf>
+Package pdftex.def Info: images/chap5/Inverter_Schematic_FinalCAD.pdf  used on input line 86.
+(pdftex.def)             Requested size: 271.49364pt x 113.94218pt.
+ (./images/chap5/SubFigs_Inverter_Evolution_v2.tex
+<images/chap5/Inverter_evo_00.png, id=2207, 330.033pt x 168.02776pt>
+File: images/chap5/Inverter_evo_00.png Graphic file (type png)
+<use images/chap5/Inverter_evo_00.png>
+Package pdftex.def Info: images/chap5/Inverter_evo_00.png  used on input line 3.
+(pdftex.def)             Requested size: 100.24704pt x 51.03687pt.
+<images/chap5/Inverter_evo_02.png, id=2208, 330.033pt x 168.02776pt>
+File: images/chap5/Inverter_evo_02.png Graphic file (type png)
+<use images/chap5/Inverter_evo_02.png>
+Package pdftex.def Info: images/chap5/Inverter_evo_02.png  used on input line 15.
+(pdftex.def)             Requested size: 100.24704pt x 51.03687pt.
+<images/chap5/Inverter_evo_03.png, id=2209, 330.033pt x 168.02776pt>
+File: images/chap5/Inverter_evo_03.png Graphic file (type png)
+<use images/chap5/Inverter_evo_03.png>
+Package pdftex.def Info: images/chap5/Inverter_evo_03.png  used on input line 21.
+(pdftex.def)             Requested size: 100.24704pt x 51.03687pt.
+<images/chap5/Inverter_evo_04.png, id=2210, 330.033pt x 168.02776pt>
+File: images/chap5/Inverter_evo_04.png Graphic file (type png)
+<use images/chap5/Inverter_evo_04.png>
+Package pdftex.def Info: images/chap5/Inverter_evo_04.png  used on input line 27.
+(pdftex.def)             Requested size: 100.24704pt x 51.03687pt.
+<images/chap5/Inverter_evo_05.png, id=2211, 330.033pt x 168.02776pt>
+File: images/chap5/Inverter_evo_05.png Graphic file (type png)
+<use images/chap5/Inverter_evo_05.png>
+Package pdftex.def Info: images/chap5/Inverter_evo_05.png  used on input line 33.
+(pdftex.def)             Requested size: 104.42162pt x 53.16232pt.
+<images/chap5/Inverter_evo_final.png, id=2212, 330.033pt x 168.02776pt>
+File: images/chap5/Inverter_evo_final.png Graphic file (type png)
+<use images/chap5/Inverter_evo_final.png>
+Package pdftex.def Info: images/chap5/Inverter_evo_final.png  used on input line 39.
+(pdftex.def)             Requested size: 104.42162pt x 53.16232pt.
+)
+<images/chap5/Crimper_Schematic_FinalCAD.pdf, id=2213, 365.46376pt x 197.43384pt>
+File: images/chap5/Crimper_Schematic_FinalCAD.pdf Graphic file (type pdf)
+<use images/chap5/Crimper_Schematic_FinalCAD.pdf>
+Package pdftex.def Info: images/chap5/Crimper_Schematic_FinalCAD.pdf  used on input line 100.
+(pdftex.def)             Requested size: 271.49364pt x 146.67715pt.
+<images/chap5/Gripper_Schematic_FinalCAD.pdf, id=2214, 356.44017pt x 163.48576pt>
+File: images/chap5/Gripper_Schematic_FinalCAD.pdf Graphic file (type pdf)
+<use images/chap5/Gripper_Schematic_FinalCAD.pdf>
+Package pdftex.def Info: images/chap5/Gripper_Schematic_FinalCAD.pdf  used on input line 106.
+(pdftex.def)             Requested size: 271.49364pt x 124.52237pt.
+ [97 <./images/chap5/Inverter_Schematic_FinalCAD.pdf> <./images/chap5/Inverter_evo_00.png> <./images/chap5/Inverter_evo_02.png> <./images/chap5/Inverter_evo_03.png> <./images/chap5/Inverter_evo_04.png> <./images/chap5/Inverter_evo_05.png> <./images/chap5/Inverter_evo_final.png> <./images/chap5/Crimper_Schematic_FinalCAD.pdf
+
+pdfTeX warning: pdflatex (file ./images/chap5/Crimper_Schematic_FinalCAD.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] (./images/chap5/BM_Inverter30_FEM.tex (./images/chap5/BM_Inverter30.pgf)
+<images/chap5/Inverter_step0_v3.png, id=2231, 1689.31125pt x 1152.305pt>
+File: images/chap5/Inverter_step0_v3.png Graphic file (type png)
+<use images/chap5/Inverter_step0_v3.png>
+Package pdftex.def Info: images/chap5/Inverter_step0_v3.png  used on input line 18.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Inverter_step1.png, id=2233, 1689.31125pt x 1152.305pt>
+File: images/chap5/Inverter_step1.png Graphic file (type png)
+<use images/chap5/Inverter_step1.png>
+Package pdftex.def Info: images/chap5/Inverter_step1.png  used on input line 20.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Inverter_step2.png, id=2235, 1689.31125pt x 1152.305pt>
+File: images/chap5/Inverter_step2.png Graphic file (type png)
+<use images/chap5/Inverter_step2.png>
+Package pdftex.def Info: images/chap5/Inverter_step2.png  used on input line 22.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Inverter_step0.png, id=2237, 1689.31125pt x 1152.305pt>
+File: images/chap5/Inverter_step0.png Graphic file (type png)
+<use images/chap5/Inverter_step0.png>
+Package pdftex.def Info: images/chap5/Inverter_step0.png  used on input line 24.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Colorbar.pdf, id=2239, 48.39496pt x 305.34596pt>
+File: images/chap5/Colorbar.pdf Graphic file (type pdf)
+<use images/chap5/Colorbar.pdf>
+Package pdftex.def Info: images/chap5/Colorbar.pdf  used on input line 26.
+(pdftex.def)             Requested size: 10.37148pt x 65.44142pt.
+) (./images/chap5/BM_Crimper30_FEM.tex (./images/chap5/BM_Crimper30.pgf)
+<images/chap5/Crimper_step0_v3.png, id=2240, 1689.31125pt x 1152.305pt>
+File: images/chap5/Crimper_step0_v3.png Graphic file (type png)
+<use images/chap5/Crimper_step0_v3.png>
+Package pdftex.def Info: images/chap5/Crimper_step0_v3.png  used on input line 18.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Crimper_step1.png, id=2242, 1689.31125pt x 1152.305pt>
+File: images/chap5/Crimper_step1.png Graphic file (type png)
+<use images/chap5/Crimper_step1.png>
+Package pdftex.def Info: images/chap5/Crimper_step1.png  used on input line 20.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Crimper_step2.png, id=2244, 1689.31125pt x 1152.305pt>
+File: images/chap5/Crimper_step2.png Graphic file (type png)
+<use images/chap5/Crimper_step2.png>
+Package pdftex.def Info: images/chap5/Crimper_step2.png  used on input line 22.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Crimper_step0.png, id=2246, 1689.31125pt x 1152.305pt>
+File: images/chap5/Crimper_step0.png Graphic file (type png)
+<use images/chap5/Crimper_step0.png>
+Package pdftex.def Info: images/chap5/Crimper_step0.png  used on input line 24.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+File: images/chap5/Colorbar.pdf Graphic file (type pdf)
+<use images/chap5/Colorbar.pdf>
+Package pdftex.def Info: images/chap5/Colorbar.pdf  used on input line 26.
+(pdftex.def)             Requested size: 10.37148pt x 65.44142pt.
+) (./images/chap5/BM_Gripper30_FEM.tex (./images/chap5/BM_Gripper30.pgf)
+<images/chap5/Gripper_step0_v3.png, id=2248, 1689.31125pt x 1152.305pt>
+File: images/chap5/Gripper_step0_v3.png Graphic file (type png)
+<use images/chap5/Gripper_step0_v3.png>
+Package pdftex.def Info: images/chap5/Gripper_step0_v3.png  used on input line 18.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Gripper_step1.png, id=2250, 1689.31125pt x 1152.305pt>
+File: images/chap5/Gripper_step1.png Graphic file (type png)
+<use images/chap5/Gripper_step1.png>
+Package pdftex.def Info: images/chap5/Gripper_step1.png  used on input line 20.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Gripper_step2.png, id=2252, 1689.31125pt x 1152.305pt>
+File: images/chap5/Gripper_step2.png Graphic file (type png)
+<use images/chap5/Gripper_step2.png>
+Package pdftex.def Info: images/chap5/Gripper_step2.png  used on input line 22.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+<images/chap5/Gripper_step0.png, id=2254, 1689.31125pt x 1152.305pt>
+File: images/chap5/Gripper_step0.png Graphic file (type png)
+<use images/chap5/Gripper_step0.png>
+Package pdftex.def Info: images/chap5/Gripper_step0.png  used on input line 24.
+(pdftex.def)             Requested size: 58.3416pt x 56.9055pt.
+File: images/chap5/Colorbar.pdf Graphic file (type pdf)
+<use images/chap5/Colorbar.pdf>
+Package pdftex.def Info: images/chap5/Colorbar.pdf  used on input line 26.
+(pdftex.def)             Requested size: 10.37148pt x 65.44142pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [98 <./images/chap5/Gripper_Schematic_FinalCAD.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99 <./images/chap5/Inverter_step0_v3.png> <./images/chap5/Inverter_step1.png> <./images/chap5/Inverter_step2.png> <./images/chap5/Inverter_step0.png> <./images/chap5/Colorbar.pdf>]
+Underfull \vbox (badness 2617) has occurred while \output is active []
+
+ [100 <./images/chap5/Crimper_step0_v3.png> <./images/chap5/Crimper_step1.png> <./images/chap5/Crimper_step2.png> <./images/chap5/Crimper_step0.png>] (./images/chap5/inverter-prototype-setup.tex
+<images/chap5/prototype-setup-new5.pdf, id=2307, 425.79073pt x 361.35pt>
+File: images/chap5/prototype-setup-new5.pdf Graphic file (type pdf)
+<use images/chap5/prototype-setup-new5.pdf>
+Package pdftex.def Info: images/chap5/prototype-setup-new5.pdf  used on input line 29.
+(pdftex.def)             Requested size: 425.78969pt x 361.34912pt.
+)
+Underfull \vbox (badness 4001) has occurred while \output is active []
+
+ [101 <./images/chap5/Gripper_step0_v3.png> <./images/chap5/Gripper_step1.png> <./images/chap5/Gripper_step2.png> <./images/chap5/Gripper_step0.png>] (./images/chap5/prototype-pull-tester-forcedisp.pgf) [102 <./images/chap5/prototype-setup-new5.pdf>] [103]
+<images/chap5/07_final_schematic_induction.pdf, id=2341, 439.0426pt x 106.56218pt>
+File: images/chap5/07_final_schematic_induction.pdf Graphic file (type pdf)
+<use images/chap5/07_final_schematic_induction.pdf>
+Package pdftex.def Info: images/chap5/07_final_schematic_induction.pdf  used on input line 214.
+(pdftex.def)             Requested size: 417.68646pt x 101.37982pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [104]
+<images/chap5/10_final_Coil_BodeDiagram_2.pdf, id=2351, 243.78186pt x 266.40936pt>
+File: images/chap5/10_final_Coil_BodeDiagram_2.pdf Graphic file (type pdf)
+<use images/chap5/10_final_Coil_BodeDiagram_2.pdf>
+Package pdftex.def Info: images/chap5/10_final_Coil_BodeDiagram_2.pdf  used on input line 228.
+(pdftex.def)             Requested size: 313.26485pt x 342.3402pt.
+
+Underfull \vbox (badness 4353) has occurred while \output is active []
+
+ [105 <./images/chap5/07_final_schematic_induction.pdf>]
+<images/chap5/11_final_results_experiments_heating.pdf, id=2403, 243.81288pt x 207.33946pt>
+File: images/chap5/11_final_results_experiments_heating.pdf Graphic file (type pdf)
+<use images/chap5/11_final_results_experiments_heating.pdf>
+Package pdftex.def Info: images/chap5/11_final_results_experiments_heating.pdf  used on input line 237.
+(pdftex.def)             Requested size: 313.26485pt x 266.43446pt.
+
+Underfull \vbox (badness 7486) has occurred while \output is active []
+
+ [106 <./images/chap5/10_final_Coil_BodeDiagram_2.pdf>]
+<images/chap5/06_final_evolve_mandrel_2.pdf, id=2791, 236.68744pt x 118.26814pt>
+File: images/chap5/06_final_evolve_mandrel_2.pdf Graphic file (type pdf)
+<use images/chap5/06_final_evolve_mandrel_2.pdf>
+Package pdftex.def Info: images/chap5/06_final_evolve_mandrel_2.pdf  used on input line 254.
+(pdftex.def)             Requested size: 292.37924pt x 146.11499pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [107 <./images/chap5/11_final_results_experiments_heating.pdf>]
+<images/chap5/05_final_SIMO_schematics.pdf, id=2824, 226.3335pt x 277.39058pt>
+File: images/chap5/05_final_SIMO_schematics.pdf Graphic file (type pdf)
+<use images/chap5/05_final_SIMO_schematics.pdf>
+Package pdftex.def Info: images/chap5/05_final_SIMO_schematics.pdf  used on input line 262.
+(pdftex.def)             Requested size: 417.68646pt x 511.954pt.
+ (./images/chap5/table-simo-results.tex
+Overfull \hbox (1.87589pt too wide) in paragraph at lines 12--12
+[][] 
+ []
+
+
+Overfull \hbox (21.50945pt too wide) in paragraph at lines 16--16
+[][] 
+ []
+
+
+Overfull \hbox (21.50945pt too wide) in paragraph at lines 18--18
+[][] 
+ []
+
+
+Overfull \vbox (0.53616pt too high) detected at line 21
+ []
+
+
+Overfull \hbox (21.50945pt too wide) in paragraph at lines 21--21
+[][] 
+ []
+
+) (./main/ch5_1_kirigami.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [108 <./images/chap5/06_final_evolve_mandrel_2.pdf>] [109 <./images/chap5/05_final_SIMO_schematics.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [110]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [111]
+<images/chap5/sma-kiri-unit-grey.png, id=3034, 831.105pt x 1407.2575pt>
+File: images/chap5/sma-kiri-unit-grey.png Graphic file (type png)
+<use images/chap5/sma-kiri-unit-grey.png>
+Package pdftex.def Info: images/chap5/sma-kiri-unit-grey.png  used on input line 26.
+(pdftex.def)             Requested size: 73.26173pt x 124.05272pt.
+<images/chap5/sma-kiri-lotus-fixation-grey.png, id=3035, 2252.415pt x 2271.48625pt>
+File: images/chap5/sma-kiri-lotus-fixation-grey.png Graphic file (type png)
+<use images/chap5/sma-kiri-lotus-fixation-grey.png>
+Package pdftex.def Info: images/chap5/sma-kiri-lotus-fixation-grey.png  used on input line 33.
+(pdftex.def)             Requested size: 123.00679pt x 124.05272pt.
+ (./images/chap5/deformed-long-ohm-kiri.tex
+<images/chap5/ohm-dual-kirigami-deformed-shadows.png, id=3037, 2740.90666pt x 1600.64667pt>
+File: images/chap5/ohm-dual-kirigami-deformed-shadows.png Graphic file (type png)
+<use images/chap5/ohm-dual-kirigami-deformed-shadows.png>
+Package pdftex.def Info: images/chap5/ohm-dual-kirigami-deformed-shadows.png  used on input line 10.
+(pdftex.def)             Requested size: 275.67459pt x 160.97772pt.
+) (./images/chap5/deformed-lotus-kiri.tex
+<images/chap5/lotus-kirigami-deformed-contrast.png, id=3039, 2678.67416pt x 1574.54916pt>
+File: images/chap5/lotus-kirigami-deformed-contrast.png Graphic file (type png)
+<use images/chap5/lotus-kirigami-deformed-contrast.png>
+Package pdftex.def Info: images/chap5/lotus-kirigami-deformed-contrast.png  used on input line 10.
+(pdftex.def)             Requested size: 275.67459pt x 162.029pt.
+) [112 <./images/chap5/sma-kiri-unit-grey.png> <./images/chap5/sma-kiri-lotus-fixation-grey.png>]
+Underfull \vbox (badness 4608) has occurred while \output is active []
+
+ [113 <./images/chap5/ohm-dual-kirigami-deformed-shadows.png> <./images/chap5/lotus-kirigami-deformed-contrast.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 63.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Omega' on input line 63.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 63.
+
+(./images/chap5/kirigami-parametrisation.tex
+<images/chap5/kirigami-parametrisation.pdf, id=3073, 434.40292pt x 375.15157pt>
+File: images/chap5/kirigami-parametrisation.pdf Graphic file (type pdf)
+<use images/chap5/kirigami-parametrisation.pdf>
+Package pdftex.def Info: images/chap5/kirigami-parametrisation.pdf  used on input line 9.
+(pdftex.def)             Requested size: 208.84323pt x 180.35692pt.
+)
+Underfull \vbox (badness 4595) has occurred while \output is active []
+
+ [114 <./images/chap5/kirigami-parametrisation.pdf>] (./images/chap5/ohm-kirigami-deformed.tex
+
+pdfTeX warning: pdflatex (file ./images/chap5/ohm-kiri-half-deformed-iso.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<images/chap5/ohm-kiri-half-deformed-iso.pdf, id=3083, 1927.2pt x 999.735pt>
+File: images/chap5/ohm-kiri-half-deformed-iso.pdf Graphic file (type pdf)
+<use images/chap5/ohm-kiri-half-deformed-iso.pdf>
+Package pdftex.def Info: images/chap5/ohm-kiri-half-deformed-iso.pdf  used on input line 10.
+(pdftex.def)             Requested size: 313.26485pt x 163.52309pt.
+
+
+pdfTeX warning: pdflatex (file ./images/chap5/ohm-kiri-half-deformed-side.pdf): PDF inclusion: found PDF version <1.6>, but at most version <1.5> allowed
+<images/chap5/ohm-kiri-half-deformed-side.pdf, id=3085, 1927.2pt x 999.735pt>
+File: images/chap5/ohm-kiri-half-deformed-side.pdf Graphic file (type pdf)
+<use images/chap5/ohm-kiri-half-deformed-side.pdf>
+Package pdftex.def Info: images/chap5/ohm-kiri-half-deformed-side.pdf  used on input line 13.
+(pdftex.def)             Requested size: 313.26485pt x 136.39282pt.
+) [115 <./images/chap5/ohm-kiri-half-deformed-iso.pdf> <./images/chap5/ohm-kiri-half-deformed-side.pdf>] (./images/chap5/ohm-kiri-am-fem-comparison.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [116] [117] (./images/chap5/sma-kiri-working-principle.pgf) [118] (./images/chap5/sma-kiri-expt-results-side.tex (./images/chap5/ohm-kiri-sma-expt.pgf)
+File: images/chap5/sma-kiri-unit-grey.png Graphic file (type png)
+<use images/chap5/sma-kiri-unit-grey.png>
+Package pdftex.def Info: images/chap5/sma-kiri-unit-grey.png  used on input line 16.
+(pdftex.def)             Requested size: 35.56593pt x 60.21027pt.
+<images/chap5/sma-kiri-2x1.png, id=3130, 658.46pt x 1686.3pt>
+File: images/chap5/sma-kiri-2x1.png Graphic file (type png)
+<use images/chap5/sma-kiri-2x1.png>
+Package pdftex.def Info: images/chap5/sma-kiri-2x1.png  used on input line 20.
+(pdftex.def)             Requested size: 35.56593pt x 91.06142pt.
+<images/chap5/sma-kiri-1x2.png, id=3131, 1571.8725pt x 1337.99875pt>
+File: images/chap5/sma-kiri-1x2.png Graphic file (type png)
+<use images/chap5/sma-kiri-1x2.png>
+Package pdftex.def Info: images/chap5/sma-kiri-1x2.png  used on input line 24.
+(pdftex.def)             Requested size: 71.13188pt x 60.534pt.
+) (./images/chap5/kirigami-actuator-prototype.tex
+<images/chap5/sma-kiri-actuator-green-iso.jpg, id=3134, 4047.12pt x 3035.34pt>
+File: images/chap5/sma-kiri-actuator-green-iso.jpg Graphic file (type jpg)
+<use images/chap5/sma-kiri-actuator-green-iso.jpg>
+Package pdftex.def Info: images/chap5/sma-kiri-actuator-green-iso.jpg  used on input line 11.
+(pdftex.def)             Requested size: 4047.11017pt x 2181.75204pt.
+<images/chap5/sma-kiri-flat.jpg, id=3136, 3035.34pt x 4047.12pt>
+File: images/chap5/sma-kiri-flat.jpg Graphic file (type jpg)
+<use images/chap5/sma-kiri-flat.jpg>
+Package pdftex.def Info: images/chap5/sma-kiri-flat.jpg  used on input line 17.
+(pdftex.def)             Requested size: 1328.17143pt x 3478.05646pt.
+) [119 <./images/chap5/sma-kiri-2x1.png> <./images/chap5/sma-kiri-1x2.png>])
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [120 <./images/chap5/sma-kiri-actuator-green-iso.jpg> <./images/chap5/sma-kiri-flat.jpg>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121]
+Underfull \hbox (badness 10000) in paragraph at lines 297--299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 304--305
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 306--307
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 308--64
+
+ []
+
+[122]
+\openout2 = `main/ch6_case_study_buckled_beam.aux'.
+
+ (./main/ch6_case_study_buckled_beam.tex
+Chapter 6.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3--3
+[][][]\T1/futs/b/n/24.88 (+20) Validation us-ing a Novel SMA Grip-per
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [123
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [124]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [125] (./images/chap7/smabb-wp-diagram_revC.pdf_tex
+<images/chap7/smabb-wp-diagram_revC.pdf, id=3199, page=1, 465.5053pt x 223.4011pt>
+File: images/chap7/smabb-wp-diagram_revC.pdf Graphic file (type pdf)
+<use images/chap7/smabb-wp-diagram_revC.pdf, page 1>
+Package pdftex.def Info: images/chap7/smabb-wp-diagram_revC.pdf , page1 used on input line 56.
+(pdftex.def)             Requested size: 446.23451pt x 214.15239pt.
+<images/chap7/smabb-wp-diagram_revC.pdf, id=3200, page=2, 465.5053pt x 223.4011pt>
+File: images/chap7/smabb-wp-diagram_revC.pdf Graphic file (type pdf)
+<use images/chap7/smabb-wp-diagram_revC.pdf, page 2>
+Package pdftex.def Info: images/chap7/smabb-wp-diagram_revC.pdf , page2 used on input line 63.
+(pdftex.def)             Requested size: 446.23451pt x 214.15239pt.
+) [126 <./images/chap7/smabb-wp-diagram_revC.pdf> <./images/chap7/smabb-wp-diagram_revC.pdf
+
+pdfTeX warning: pdflatex (file ./images/chap7/smabb-wp-diagram_revC.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+<images/chap6/hexgon-base-layer-intersect-smabb.pdf, id=3210, 568.56746pt x 374.66847pt>
+File: images/chap6/hexgon-base-layer-intersect-smabb.pdf Graphic file (type pdf)
+<use images/chap6/hexgon-base-layer-intersect-smabb.pdf>
+Package pdftex.def Info: images/chap6/hexgon-base-layer-intersect-smabb.pdf  used on input line 48.
+(pdftex.def)             Requested size: 334.15044pt x 220.19493pt.
+ [127 <./images/chap6/hexgon-base-layer-intersect-smabb.pdf>]
+<images/chap7/buckled_beam_model.png, id=3231, 695.59875pt x 698.61pt>
+File: images/chap7/buckled_beam_model.png Graphic file (type png)
+<use images/chap7/buckled_beam_model.png>
+Package pdftex.def Info: images/chap7/buckled_beam_model.png  used on input line 69.
+(pdftex.def)             Requested size: 292.37924pt x 293.63806pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [128 <./images/chap7/buckled_beam_model.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [129]
+<images/chap7/bistable_mechanism.png, id=3257, 1335.99126pt x 832.10875pt>
+File: images/chap7/bistable_mechanism.png Graphic file (type png)
+<use images/chap7/bistable_mechanism.png>
+Package pdftex.def Info: images/chap7/bistable_mechanism.png  used on input line 132.
+(pdftex.def)             Requested size: 417.68646pt x 247.69415pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [130] (./images/chap7/tab-bb-design-parameters.tex)
+Underfull \vbox (badness 3872) has occurred while \output is active []
+
+ [131 <./images/chap7/bistable_mechanism.png>] (./images/chap6/bb-results.tex (./images/chap6/bb-results.pgf)) [132] [133] (./images/chap7/fig-smabb-sizing.tex (./images/chap7/smabb-sizing-adapted3.pgf))
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [134] (./images/chap7/tab-smabb-design-parameters.tex) (./images/chap7/fig-smabb-assembly.tex
+<images/chap7/Gripper rendu.JPG, id=3301, 381.425pt x 1017.8025pt>
+File: images/chap7/Gripper rendu.JPG Graphic file (type jpg)
+<use images/chap7/Gripper rendu.JPG>
+Package pdftex.def Info: images/chap7/Gripper rendu.JPG  used on input line 8.
+(pdftex.def)             Requested size: 104.42162pt x 278.63083pt.
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [135] [136 <./images/chap7/Gripper rendu.JPG>] (./images/chap6/smabb-actuation-notitle.pgf)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [137]
+<images/chap6/smabb-circuit-diagram.pdf, id=3320, 227.99178pt x 236.65013pt>
+File: images/chap6/smabb-circuit-diagram.pdf Graphic file (type pdf)
+<use images/chap6/smabb-circuit-diagram.pdf>
+Package pdftex.def Info: images/chap6/smabb-circuit-diagram.pdf  used on input line 247.
+(pdftex.def)             Requested size: 208.84323pt x 216.77827pt.
+
+Underfull \vbox (badness 4752) has occurred while \output is active []
+
+ [138 <./images/chap6/smabb-circuit-diagram.pdf>]
+<images/chap7/smabb-proto-front.jpg, id=3337, 3035.34pt x 4047.12pt>
+File: images/chap7/smabb-proto-front.jpg Graphic file (type jpg)
+<use images/chap7/smabb-proto-front.jpg>
+Package pdftex.def Info: images/chap7/smabb-proto-front.jpg  used on input line 263.
+(pdftex.def)             Requested size: 112.77711pt x 225.31258pt.
+<images/chap7/smabb-proto-iso.jpg, id=3339, 4047.12pt x 3035.34pt>
+File: images/chap7/smabb-proto-iso.jpg Graphic file (type jpg)
+<use images/chap7/smabb-proto-iso.jpg>
+Package pdftex.def Info: images/chap7/smabb-proto-iso.jpg  used on input line 274.
+(pdftex.def)             Requested size: 300.73476pt x 225.51016pt.
+ [139 <./images/chap7/smabb-proto-front.jpg> <./images/chap7/smabb-proto-iso.jpg>] (./images/chap6/tab-bistable-gripper-comparison.tex
+Overfull \hbox (0.7867pt too wide) in paragraph at lines 17--17
+ []|[]\T1/futs/b/n/10.95 (-20) Material[]| 
+ []
+
+
+Overfull \hbox (4.40805pt too wide) in paragraph at lines 17--17
+ []|[]\T1/futs/b/n/10.95 (-20) Bandwidth 
+ []
+
+
+Underfull \hbox (badness 1043) in paragraph at lines 19--19
+[]|[][]\T1/futs/m/n/10.95 (+20) Scholtes et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--20
+[]|[][]\T1/futs/m/n/10.95 (+20) Zhang et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--21
+[]|[][]\T1/futs/m/n/10.95 (+20) Wang et al.[][]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--23
+[]|[][]\T1/futs/m/n/10.95 (+20) Lerner et al.[][]
+ []
+
+)
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [140]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [141]
+Underfull \hbox (badness 10000) in paragraph at lines 310--312
+
+ []
+
+)
+Overfull \hbox (14.32265pt too wide) in paragraph at lines 317--65
+\T1/futs/m/n/10.95 (-20) cal Ma-chines and Sys-tems (ICEMS), Oct. 2018, pp. 1771^^U1776. doi: 10.23919/ICEMS.2018.8549122. 
+ []
+
+[142]
+\openout2 = `main/ch7_conclusion.aux'.
+
+ (./main/ch7_conclusion.tex [143
+
+
+
+
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [144]) [145] [146
+
+
+
+]
+\openout2 = `tail/biblio.aux'.
+
+ (./tail/biblio.tex (./sethomas_thesis_main.bbl
+Overfull \hbox (0.68631pt too wide) in paragraph at lines 24--28
+\T1/futs/m/n/10.95 (-20) Hand with Shape Memory Alloy Actuators.  \T1/futs/m/it/10.95 (-20) Journal of Intelligent & Robotic Systems\T1/futs/m/n/10.95 (-20) , 78(2):257--
+ []
+
+[147
+
+
+
+
+] [148] [149] [150]
+Underfull \hbox (badness 5504) in paragraph at lines 401--408
+[]\T1/futs/m/n/10.95 (+20) Must, I., Kaasik, F., Põld-salu, I., Mihkels, L., Jo-han-son, U., Pun-ning, A., and
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--408
+\T1/futs/m/n/10.95 (+20) Aabloo, A. (2015).  Ionic and Ca-pac-i-tive Ar-ti-fi-cial Mus-cle for Biomimetic
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 401--408
+\T1/futs/m/n/10.95 (+20) Soft Robotics.  \T1/futs/m/it/10.95 (+20) Ad-vanced En-gi-neer-ing Ma-te-ri-als\T1/futs/m/n/10.95 (+20) , 17(1):84--94.  _eprint:
+ []
+
+[151] [152]
+Underfull \hbox (badness 4084) in paragraph at lines 534--540
+[]\T1/futs/m/n/10.95 (+20) Shintake, J., Ros-set, S., Schu-bert, B., Flo-re-ano, D., and Shea, H. (2016).  Ver-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--540
+\T1/futs/m/n/10.95 (+20) sa-tile Soft Grip-pers with In-trin-sic Elec-troad-he-sion Based on Mul-ti-func-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 534--540
+\T1/futs/m/n/10.95 (+20) tional Poly-mer Ac-tu-a-tors.  \T1/futs/m/it/10.95 (+20) Ad-vanced Ma-te-ri-als\T1/futs/m/n/10.95 (+20) , 28(2):231--238.  _eprint:
+ []
+
+[153] [154])) [155]
+\openout2 = `tail/cv.aux'.
+
+ (./tail/cv.tex [156
+
+
+
+
+]
+<tail/seanthomas-cv.pdf, id=3439, 597.23125pt x 845.1575pt>
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf>
+Package pdftex.def Info: tail/seanthomas-cv.pdf  used on input line 7.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf>
+Package pdftex.def Info: tail/seanthomas-cv.pdf  used on input line 7.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+<tail/seanthomas-cv.pdf, id=3442, page=1, 597.23125pt x 845.1575pt>
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 1>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.22978pt x 845.15544pt.
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 1>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 1>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 1>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 ...dfimports},pages=-]{tail/seanthomas-cv.pdf}
+                                                  
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 1>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page1 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [1 <./tail/seanthomas-cv.pdf>]
+<tail/seanthomas-cv.pdf, id=3491, page=2, 597.23125pt x 845.1575pt>
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 2>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page2 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 2>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page2 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 ...dfimports},pages=-]{tail/seanthomas-cv.pdf}
+                                                  
+File: tail/seanthomas-cv.pdf Graphic file (type pdf)
+<use tail/seanthomas-cv.pdf, page 2>
+Package pdftex.def Info: tail/seanthomas-cv.pdf , page2 used on input line 7.
+(pdftex.def)             Requested size: 597.25711pt x 845.19412pt.
+ [2 <./tail/seanthomas-cv.pdf>]) (./sethomas_thesis_main.aux (./head/dedication.aux) (./head/acknowledgements.aux) (./head/preface.aux) (./head/abstracts.aux) (./main/ch0_introduction.aux) (./main/ch1_sma_actuators.aux) (./main/ch2_modelling.aux) (./main/ch3_design_method.aux) (./main/ch4_oscillator.aux) (./main/ch5_compliant_sma.aux) (./main/ch6_case_study_buckled_beam.aux) (./main/ch7_conclusion.aux) (./tail/biblio.aux) (./tail/cv.aux)) ) 
+Here is how much of TeX's memory you used:
+ 57910 strings out of 478994
+ 1292130 string characters out of 5858183
+ 3496929 words of memory out of 5000000
+ 72311 multiletter control sequences out of 15000+600000
+ 923217 words of font info for 1139 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 103i,26n,105p,2286b,2176s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{/usr/local/texlive/2021/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2021/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2021/texmf-dist/fonts
+/type1/public/fourier/fourier-bb.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-mcl.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-mex.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-ml.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-mlit.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/fourier/fourier-ms.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/adobe/utopia/putb8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/adobe/utopia/putr8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/adobe/utopia/putri8a.pfb></usr/local/texlive/2021/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb>
+Output written on sethomas_thesis_main.pdf (182 pages, 36092617 bytes).
+PDF statistics:
+ 3947 PDF objects out of 4296 (max. 8388607)
+ 3169 compressed objects within 32 object streams
+ 560 named destinations out of 1000 (max. 500000)
+ 379233 words of extra memory for PDF output out of 383344 (max. 10000000)
+

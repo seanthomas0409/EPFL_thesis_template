@@ -1,0 +1,31 @@
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\babel@toc {german}{}
+\babel@toc {english}{}
+\babel@toc {french}{}
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {1.1}{\ignorespaces A summary of the various implementations of the biomedical SMA actuators.\relax }}{21}{table.caption.19}%
+\contentsline {table}{\numberline {1.2}{\ignorespaces A summary of the various implementations of the aerospace and automotive SMA actuators from the different examples.\relax }}{22}{table.caption.20}%
+\contentsline {table}{\numberline {1.3}{\ignorespaces A summary of the various implementations of the industrial SMA actuators.\relax }}{22}{table.caption.21}%
+\contentsline {table}{\numberline {1.4}{\ignorespaces A summary of the various implementations of the bio-inspired SMA-powered systems.\relax }}{23}{table.caption.22}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {2.1}{\ignorespaces The material properties of Ni-Ti}}{28}{table.caption.25}%
+\contentsline {table}{\numberline {2.2}{\ignorespaces The definitions of the parameters used to define the SME in the commercial FEM software, ANSYS}}{37}{table.caption.32}%
+\contentsline {table}{\numberline {2.3}{\ignorespaces Some examples of the material properties used in the analytical modelling of the SMA actuator.\relax }}{42}{table.caption.36}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {3.1}{\ignorespaces The trade-offs observed during the sizing of the biasing compliant mechanism for the SMA actuator with a given SMA wire or coil}}{53}{table.caption.43}%
+\contentsline {table}{\numberline {3.2}{\ignorespaces Additional trade-offs observed when sizing the flexural compliant mechanism actuated by a given SMA wire or coil}}{64}{table.caption.50}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4.1}{\ignorespaces The design parameters of the inchworm robot.\relax }}{84}{table.caption.69}%
+\contentsline {table}{\numberline {4.2}{\ignorespaces Comparison of the proposed mechanically-intelligent inchworm robot with various different smart material based crawling robots based on their speed and weight\relax }}{89}{table.caption.73}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces The simulation results of the strain retention factor for each of the benchmark problems}}{100}{table.caption.83}%
+\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison between the FEM and experimental results of the modified inverter benchmark problem.\relax }}{103}{table.caption.86}%
+\contentsline {table}{\numberline {5.3}{\ignorespaces Results of the strain retention factor for each of the generated multi-output compliant SMA structures.\relax }}{110}{table.caption.92}%
+\contentsline {table}{\numberline {5.4}{\ignorespaces The dimensions of the simulated $\Omega $-pattern.\relax }}{117}{table.caption.98}%
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces A summary of the design parameters for the flexure-based bistable mechanism.\relax }}{132}{table.caption.106}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces The design parameters of the SMA actuator}}{136}{table.caption.109}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces Comparison of the proposed bistable gripper against other smart material powered bistable grippers.\relax }}{141}{table.caption.114}%

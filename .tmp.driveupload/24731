@@ -1,0 +1,137 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{luNovelDesignParallel2019}
+\citation{leeLongShapeMemory2019}
+\citation{modabberifarShapeMemoryAlloyactuated2018}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Validation using a Novel SMA Gripper System}{123}{chapter.6}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:case-study}{{6}{123}{Validation using a Novel SMA Gripper System}{chapter.6}{}}
+\newlabel{chap:case-study@cref}{{[chapter][6][]6}{[1][123][]123}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.1}Introduction}{123}{section.6.1}\protected@file@percent }
+\citation{meng_mechanically_2020}
+\citation{scholtesDesignCompliantIndustrial2020a}
+\citation{zhangCompliantBistableGrippers2020}
+\@writefile{toc}{\contentsline {section}{\numberline {6.2}A Case Study of an SMA-Powered Bistable Gripper}{124}{section.6.2}\protected@file@percent }
+\newlabel{sec:smabb-gripper}{{6.2}{124}{A Case Study of an SMA-Powered Bistable Gripper}{section.6.2}{}}
+\newlabel{sec:smabb-gripper@cref}{{[section][2][6]6.2}{[1][124][]124}}
+\citation{scholtesDevelopmentBistableSMA2021}
+\citation{scholtesDevelopmentBistableSMA2021}
+\citation{welschVacuumGripperSystem2018}
+\@writefile{toc}{\contentsline {section}{\numberline {6.3}Working Principle and Operation}{125}{section.6.3}\protected@file@percent }
+\citation{scholtesDevelopmentBistableSMA2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces The schematic of the bistable SMA actuator composed on a buckled beam and a pair of SMA coils.\relax }}{126}{figure.caption.102}\protected@file@percent }
+\newlabel{fig:smabbwp}{{6.1}{126}{The schematic of the bistable SMA actuator composed on a buckled beam and a pair of SMA coils.\relax }{figure.caption.102}{}}
+\newlabel{fig:smabbwp@cref}{{[figure][1][6]6.1}{[1][126][]126}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.2}{\ignorespaces Diagram of the adapted building blocks of the bistable SMA-powered robotic gripper.\relax }}{127}{figure.caption.103}\protected@file@percent }
+\newlabel{fig:building-blocks-smabb}{{6.2}{127}{Diagram of the adapted building blocks of the bistable SMA-powered robotic gripper.\relax }{figure.caption.103}{}}
+\newlabel{fig:building-blocks-smabb@cref}{{[figure][2][6]6.2}{[1][127][]127}}
+\citation{tivot2021}
+\@writefile{toc}{\contentsline {section}{\numberline {6.4}Design of the Bistable Kinematic Stage}{128}{section.6.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.1}Analytical Model of the Buckled Beam}{128}{subsection.6.4.1}\protected@file@percent }
+\newlabel{eq:deflection}{{6.1}{128}{Analytical Model of the Buckled Beam}{equation.6.4.1}{}}
+\newlabel{eq:deflection@cref}{{[equation][1][6]6.1}{[1][128][]128}}
+\newlabel{A_norm}{{6.2}{128}{Analytical Model of the Buckled Beam}{equation.6.4.2}{}}
+\newlabel{A_norm@cref}{{[equation][2][6]6.2}{[1][128][]128}}
+\newlabel{B_norm}{{6.3}{128}{Analytical Model of the Buckled Beam}{equation.6.4.3}{}}
+\newlabel{B_norm@cref}{{[equation][3][6]6.3}{[1][128][]128}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.3}{\ignorespaces Diagram of the bistable mechanism}}{129}{figure.caption.104}\protected@file@percent }
+\newlabel{fig:buckled-beam-schematic}{{6.3}{129}{Diagram of the bistable mechanism}{figure.caption.104}{}}
+\newlabel{fig:buckled-beam-schematic@cref}{{[figure][3][6]6.3}{[1][128][]129}}
+\newlabel{C_norm}{{6.4}{129}{Analytical Model of the Buckled Beam}{equation.6.4.4}{}}
+\newlabel{C_norm@cref}{{[equation][4][6]6.4}{[1][128][]129}}
+\newlabel{eq:delta_l}{{6.5}{129}{Analytical Model of the Buckled Beam}{equation.6.4.5}{}}
+\newlabel{eq:delta_l@cref}{{[equation][5][6]6.5}{[1][129][]129}}
+\newlabel{eq:H-smabb}{{6.6}{129}{Analytical Model of the Buckled Beam}{equation.6.4.6}{}}
+\newlabel{eq:H-smabb@cref}{{[equation][6][6]6.6}{[1][129][]129}}
+\citation{heneinConceptionStructuresArticulees2005}
+\newlabel{eq:theta_in}{{6.7}{130}{Analytical Model of the Buckled Beam}{equation.6.4.7}{}}
+\newlabel{eq:theta_in@cref}{{[equation][7][6]6.7}{[1][129][]130}}
+\newlabel{eq:M_in}{{6.8}{130}{Analytical Model of the Buckled Beam}{equation.6.4.8}{}}
+\newlabel{eq:M_in@cref}{{[equation][8][6]6.8}{[1][130][]130}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.2}Design and Fabrication of Kinematic Stage}{130}{subsection.6.4.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.4}{\ignorespaces Schematic view of the bistable mechanism as fabricated}}{131}{figure.caption.105}\protected@file@percent }
+\newlabel{fig:bistable-mechanism}{{6.4}{131}{Schematic view of the bistable mechanism as fabricated}{figure.caption.105}{}}
+\newlabel{fig:bistable-mechanism@cref}{{[figure][4][6]6.4}{[1][130][]131}}
+\newlabel{eq:x_out}{{6.10}{131}{Design and Fabrication of Kinematic Stage}{equation.6.4.10}{}}
+\newlabel{eq:x_out@cref}{{[equation][10][6]6.10}{[1][130][]131}}
+\newlabel{eq:f_out}{{6.11}{131}{Design and Fabrication of Kinematic Stage}{equation.6.4.11}{}}
+\newlabel{eq:f_out@cref}{{[equation][11][6]6.11}{[1][131][]131}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.1}{\ignorespaces A summary of the design parameters for the flexure-based bistable mechanism.\relax }}{132}{table.caption.106}\protected@file@percent }
+\newlabel{tab:bb-design-parameters}{{6.1}{132}{A summary of the design parameters for the flexure-based bistable mechanism.\relax }{table.caption.106}{}}
+\newlabel{tab:bb-design-parameters@cref}{{[table][1][6]6.1}{[1][131][]132}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4.3}Testing and Validation of the Kinematic Stage}{132}{subsection.6.4.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.5}{\ignorespaces Validation of the analytical model of the bistable mechanism against the finite element model and experimental results.\relax }}{133}{figure.caption.107}\protected@file@percent }
+\newlabel{fig:bistable graph}{{6.5}{133}{Validation of the analytical model of the bistable mechanism against the finite element model and experimental results.\relax }{figure.caption.107}{}}
+\newlabel{fig:bistable graph@cref}{{[figure][5][6]6.5}{[1][132][]133}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.5}Sizing of the Actuator using the Proposed Methodology}{134}{section.6.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.6}{\ignorespaces An estimation of the operating points of the bistable mechanism based on the adapted sizing methodology}}{135}{figure.caption.108}\protected@file@percent }
+\newlabel{fig:smabb-sizing}{{6.6}{135}{An estimation of the operating points of the bistable mechanism based on the adapted sizing methodology}{figure.caption.108}{}}
+\newlabel{fig:smabb-sizing@cref}{{[figure][6][6]6.6}{[1][134][]135}}
+\@writefile{lot}{\contentsline {table}{\numberline {6.2}{\ignorespaces The design parameters of the SMA actuator}}{136}{table.caption.109}\protected@file@percent }
+\newlabel{tab:sma-design-parameters}{{6.2}{136}{The design parameters of the SMA actuator}{table.caption.109}{}}
+\newlabel{tab:sma-design-parameters@cref}{{[table][2][6]6.2}{[1][135][]136}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.6}Actuation using the Mechanically-Intelligent Control Strategy}{136}{section.6.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6.7}{\ignorespaces The assembly of the bistable gripper}}{137}{figure.caption.110}\protected@file@percent }
+\newlabel{fig:assembly-gripper}{{6.7}{137}{The assembly of the bistable gripper}{figure.caption.110}{}}
+\newlabel{fig:assembly-gripper@cref}{{[figure][7][6]6.7}{[1][136][]137}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.8}{\ignorespaces The jaw position and SMA current readings during the opening and closing sequences of the gripper}}{138}{figure.caption.111}\protected@file@percent }
+\newlabel{fig:smabb-actuation}{{6.8}{138}{The jaw position and SMA current readings during the opening and closing sequences of the gripper}{figure.caption.111}{}}
+\newlabel{fig:smabb-actuation@cref}{{[figure][8][6]6.8}{[1][137][]138}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.9}{\ignorespaces The electrical circuit diagram of the bistable SMA gripper based on the proposed control strategy.\relax }}{139}{figure.caption.112}\protected@file@percent }
+\newlabel{fig:smabb-circuit}{{6.9}{139}{The electrical circuit diagram of the bistable SMA gripper based on the proposed control strategy.\relax }{figure.caption.112}{}}
+\newlabel{fig:smabb-circuit@cref}{{[figure][9][6]6.9}{[1][138][]139}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.7}Specifications of the Final Prototype}{139}{section.6.7}\protected@file@percent }
+\citation{zhangCompliantBistableGrippers2020}
+\citation{scholtesDevelopmentBistableSMA2021}
+\citation{scholtesDevelopmentBistableSMA2021}
+\citation{zhangCompliantBistableGrippers2020}
+\citation{wangDesignAnalysisBistable2018a}
+\citation{liuDesignControlNovel2017}
+\citation{lernerDesignExperimentationVariable2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.10}{\ignorespaces The fabricated prototype of the bistable gripper with the wiring circuit presented on the left.\relax }}{140}{figure.caption.113}\protected@file@percent }
+\newlabel{fig:final-prototype}{{6.10}{140}{The fabricated prototype of the bistable gripper with the wiring circuit presented on the left.\relax }{figure.caption.113}{}}
+\newlabel{fig:final-prototype@cref}{{[figure][10][6]6.10}{[1][140][]140}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.7.1}Comparison of the Proposed Gripper}{140}{subsection.6.7.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6.3}{\ignorespaces Comparison of the proposed bistable gripper against other smart material powered bistable grippers.\relax }}{141}{table.caption.114}\protected@file@percent }
+\newlabel{tab:bistable-gripper-comparison}{{6.3}{141}{Comparison of the proposed bistable gripper against other smart material powered bistable grippers.\relax }{table.caption.114}{}}
+\newlabel{tab:bistable-gripper-comparison@cref}{{[table][3][6]6.3}{[1][140][]141}}
+\@writefile{toc}{\contentsline {section}{\numberline {6.8}Summary and Conclusion}{141}{section.6.8}\protected@file@percent }
+\@setckpt{main/ch6_case_study_buckled_beam}{
+\setcounter{page}{143}
+\setcounter{equation}{11}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{6}
+\setcounter{section}{8}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{10}
+\setcounter{table}{3}
+\setcounter{NAT@ctr}{0}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{AM@survey}{0}
+\setcounter{ttlp@side}{0}
+\setcounter{myparts}{0}
+\setcounter{parentequation}{0}
+\setcounter{nlinenum}{0}
+\setcounter{dirtytalk@qdepth}{0}
+\setcounter{caption@flags}{2}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{currfiledepth}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{0}
+}

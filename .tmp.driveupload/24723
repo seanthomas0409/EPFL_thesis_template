@@ -1,0 +1,142 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\@writefile{toc}{\contentsline {chapter}{\numberline {1}Overview of SMA Actuator Design}{9}{chapter.1}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:sma-actuator-design}{{1}{9}{Overview of SMA Actuator Design}{chapter.1}{}}
+\newlabel{chap:sma-actuator-design@cref}{{[chapter][1][]1}{[1][9][]9}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Introduction}{9}{section.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Working Principle of SMA Actuators}{9}{section.1.2}\protected@file@percent }
+\citation{mohdjaniDesigningShapeMemory2017}
+\citation{bellouardShapeMemoryAlloys2008}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.1}{\ignorespaces A schematic representation of the basic types of linear SMA actuators}}{10}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:sma-actuators-diagram}{{1.1}{10}{A schematic representation of the basic types of linear SMA actuators}{figure.caption.13}{}}
+\newlabel{fig:sma-actuators-diagram@cref}{{[figure][1][1]1.1}{[1][10][]10}}
+\citation{mohdjaniReviewShapeMemory2014}
+\citation{sreekumarCriticalReviewCurrent2007}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Analysis of SMA Actuators}{12}{section.1.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.2}{\ignorespaces A simple SEO-keyword analysis of the different applications of Shape Memory Alloy actuators.\relax }}{12}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:domain-donut-chart}{{1.2}{12}{A simple SEO-keyword analysis of the different applications of Shape Memory Alloy actuators.\relax }{figure.caption.14}{}}
+\newlabel{fig:domain-donut-chart@cref}{{[figure][2][1]1.2}{[1][12][]12}}
+\citation{liuMesoscaleShapeMemory2019}
+\citation{liuMesoscaleShapeMemory2019}
+\citation{abdulkadirMultisegmentedShapeMemory2019b}
+\citation{roshanDesignFabricationMinimally2018}
+\citation{liuMesoscaleShapeMemory2019}
+\citation{abdulkadirMultisegmentedShapeMemory2019b}
+\citation{roshanDesignFabricationMinimally2018}
+\citation{abdulkadirMultisegmentedShapeMemory2019b}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Biomedical Applications}{13}{subsection.1.3.1}\protected@file@percent }
+\citation{roshanDesignFabricationMinimally2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {1.3}{\ignorespaces Examples of different implementations of SMA actuators in the biomedical field}}{14}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:biomed-examples}{{1.3}{14}{Examples of different implementations of SMA actuators in the biomedical field}{figure.caption.15}{}}
+\newlabel{fig:biomed-examples@cref}{{[figure][3][1]1.3}{[1][13][]14}}
+\citation{williamsControlAutomotiveShape2010a}
+\citation{belliniMechatronicDesignShape2009}
+\citation{belliniMechatronicDesignShape2009}
+\citation{williamsControlAutomotiveShape2010a}
+\citation{belliniMechatronicDesignShape2009}
+\citation{belliniMechatronicDesignShape2009}
+\citation{williamsControlAutomotiveShape2010a}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Automotive and Aerospace Applications}{15}{subsection.1.3.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.4}{\ignorespaces Examples of different implementations of SMA actuators in automotive and aerospace applications}}{15}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:auto-examples}{{1.4}{15}{Examples of different implementations of SMA actuators in automotive and aerospace applications}{figure.caption.16}{}}
+\newlabel{fig:auto-examples@cref}{{[figure][4][1]1.4}{[1][15][]15}}
+\citation{belliniMechatronicDesignShape2009}
+\citation{benafanRecentAdvancementsRotary2019a}
+\citation{rodrigueCurvedShapeMemory2017a}
+\citation{motzkiEnergyefficientSMAVacuum2016}
+\citation{luNovelDesignParallel2019}
+\citation{rodrigueCurvedShapeMemory2017a}
+\citation{motzkiEnergyefficientSMAVacuum2016}
+\citation{luNovelDesignParallel2019}
+\citation{rodrigueCurvedShapeMemory2017a}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Industrial Applications}{17}{subsection.1.3.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.5}{\ignorespaces Examples of different implementations of SMA actuators in industrial applications}}{17}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:industrial-examples}{{1.5}{17}{Examples of different implementations of SMA actuators in industrial applications}{figure.caption.17}{}}
+\newlabel{fig:industrial-examples@cref}{{[figure][5][1]1.5}{[1][17][]17}}
+\citation{motzkiEnergyefficientSMAVacuum2016}
+\citation{luNovelDesignParallel2019}
+\citation{liangShapeMemoryAlloy2020}
+\citation{huangHighlyDynamicShape2019}
+\citation{yang88milligramInsectscaleAutonomous2020a}
+\citation{liangShapeMemoryAlloy2020}
+\citation{huangHighlyDynamicShape2019}
+\citation{yang88milligramInsectscaleAutonomous2020a}
+\citation{liangShapeMemoryAlloy2020}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Bio-inspired Robotic Applications}{19}{subsection.1.3.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.6}{\ignorespaces Examples of different implementations of SMA actuators in bio-inspired robotic systems}}{19}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:bio-examples}{{1.6}{19}{Examples of different implementations of SMA actuators in bio-inspired robotic systems}{figure.caption.18}{}}
+\newlabel{fig:bio-examples@cref}{{[figure][6][1]1.6}{[1][19][]19}}
+\citation{huangHighlyDynamicShape2019}
+\citation{yang88milligramInsectscaleAutonomous2020a}
+\citation{liuMesoscaleShapeMemory2019}
+\citation{abdulkadirMultisegmentedShapeMemory2019b}
+\citation{roshanDesignFabricationMinimally2018}
+\citation{williamsControlAutomotiveShape2010a}
+\citation{belliniMechatronicDesignShape2009}
+\citation{benafanRecentAdvancementsRotary2019a}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Design Criteria}{21}{section.1.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces A summary of the various implementations of the biomedical SMA actuators.\relax }}{21}{table.caption.19}\protected@file@percent }
+\newlabel{tab:biomed-subsystems-examples}{{1.1}{21}{A summary of the various implementations of the biomedical SMA actuators.\relax }{table.caption.19}{}}
+\newlabel{tab:biomed-subsystems-examples@cref}{{[table][1][1]1.1}{[1][21][]21}}
+\citation{rodrigueCurvedShapeMemory2017a}
+\citation{motzkiEnergyefficientSMAVacuum2016}
+\citation{luNovelDesignParallel2019}
+\@writefile{lot}{\contentsline {table}{\numberline {1.2}{\ignorespaces A summary of the various implementations of the aerospace and automotive SMA actuators from the different examples.\relax }}{22}{table.caption.20}\protected@file@percent }
+\newlabel{tab:auto-subsystems-examples}{{1.2}{22}{A summary of the various implementations of the aerospace and automotive SMA actuators from the different examples.\relax }{table.caption.20}{}}
+\newlabel{tab:auto-subsystems-examples@cref}{{[table][2][1]1.2}{[1][21][]22}}
+\@writefile{lot}{\contentsline {table}{\numberline {1.3}{\ignorespaces A summary of the various implementations of the industrial SMA actuators.\relax }}{22}{table.caption.21}\protected@file@percent }
+\newlabel{tab:industrial-subsystems-examples}{{1.3}{22}{A summary of the various implementations of the industrial SMA actuators.\relax }{table.caption.21}{}}
+\newlabel{tab:industrial-subsystems-examples@cref}{{[table][3][1]1.3}{[1][22][]22}}
+\citation{liangShapeMemoryAlloy2020}
+\citation{huangHighlyDynamicShape2019}
+\citation{yang88milligramInsectscaleAutonomous2020a}
+\@writefile{lot}{\contentsline {table}{\numberline {1.4}{\ignorespaces A summary of the various implementations of the bio-inspired SMA-powered systems.\relax }}{23}{table.caption.22}\protected@file@percent }
+\newlabel{tab:bioinspired-subsystems-examples}{{1.4}{23}{A summary of the various implementations of the bio-inspired SMA-powered systems.\relax }{table.caption.22}{}}
+\newlabel{tab:bioinspired-subsystems-examples@cref}{{[table][4][1]1.4}{[1][23][]23}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.5}Traditional Design Elements of an SMA-based System}{23}{section.1.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1.7}{\ignorespaces A visual representation of the different subsystems that exist in traditional SMA-based systems.\relax }}{24}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:hexahon-base-layer}{{1.7}{24}{A visual representation of the different subsystems that exist in traditional SMA-based systems.\relax }{figure.caption.23}{}}
+\newlabel{fig:hexahon-base-layer@cref}{{[figure][7][1]1.7}{[1][24][]24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.5.1}Building Blocks of an SMA Actuator}{24}{subsection.1.5.1}\protected@file@percent }
+\citation{bellouardShapeMemoryAlloys2008}
+\@writefile{toc}{\contentsline {section}{\numberline {1.6}Summary and Conclusion}{25}{section.1.6}\protected@file@percent }
+\@setckpt{main/ch1_sma_actuators}{
+\setcounter{page}{27}
+\setcounter{equation}{0}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{1}
+\setcounter{section}{6}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{7}
+\setcounter{table}{4}
+\setcounter{NAT@ctr}{0}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{AM@survey}{0}
+\setcounter{ttlp@side}{0}
+\setcounter{myparts}{0}
+\setcounter{parentequation}{0}
+\setcounter{nlinenum}{0}
+\setcounter{dirtytalk@qdepth}{0}
+\setcounter{caption@flags}{0}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{currfiledepth}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{0}
+}

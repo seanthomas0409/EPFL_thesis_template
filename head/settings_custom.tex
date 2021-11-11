@@ -26,6 +26,7 @@
 \usepackage{array}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}} % New centered column with variable width
 \usepackage{framed}
+\usepackage{dirtytalk} % Quotes
 % \usepackage{tikz-dimline}
 \usepackage{caption}
 \usepackage{subcaption}
@@ -47,6 +48,15 @@
 % \relpenalty=9999
 % \binoppenalty=9999
 
+%%%%%%%%%% HEADLESS CHAPTER %%%%%%%%%%%%%
+\makeatletter
+\newcommand{\unchapter}[1]{%
+  \begingroup
+  \let\@makechapterhead\@gobble % make \@makechapterhead do nothing
+  \chapter*{#1}
+  \endgroup
+}
+\makeatother
 %%%%%%%%%% FLOW CHART %%%%%%%%%%%%%
 \usetikzlibrary{calc,trees,positioning,arrows,chains,shapes.geometric,%
     decorations.pathreplacing,decorations.pathmorphing,decorations.markings,shapes,%

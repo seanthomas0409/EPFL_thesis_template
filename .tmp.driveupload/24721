@@ -1,0 +1,210 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{faranFerromagneticShapeMemory2016}
+\citation{raoDesignShapeMemory2015}
+\citation{raoDesignShapeMemory2015}
+\@writefile{toc}{\contentsline {chapter}{\numberline {2}Predicting the Shape Memory Effect}{27}{chapter.2}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:sma-model}{{2}{27}{Predicting the Shape Memory Effect}{chapter.2}{}}
+\newlabel{chap:sma-model@cref}{{[chapter][2][]2}{[1][27][]27}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Introduction}{27}{section.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.1}{\ignorespaces A visual representation of the phase transformations that occur during Shape Memory Effect (SME) under no load}}{27}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:sma-phase-transformations}{{2.1}{27}{A visual representation of the phase transformations that occur during Shape Memory Effect (SME) under no load}{figure.caption.24}{}}
+\newlabel{fig:sma-phase-transformations@cref}{{[figure][1][2]2.1}{[1][27][]27}}
+\citation{duerigTiNiShapeMemory1994}
+\citation{raoDesignShapeMemory2015}
+\citation{duerigTiNiShapeMemory1994}
+\citation{raoDesignShapeMemory2015}
+\citation{changPlasticDeformationDiffusionless1951}
+\citation{WAYMAN19903}
+\citation{otsukaPseudoelasticityShapeMemory1986}
+\citation{heDSCAnalysisReverse2004}
+\@writefile{lot}{\contentsline {table}{\numberline {2.1}{\ignorespaces The material properties of Ni-Ti}}{28}{table.caption.25}\protected@file@percent }
+\newlabel{tab:niti-material-properties}{{2.1}{28}{The material properties of Ni-Ti}{table.caption.25}{}}
+\newlabel{tab:niti-material-properties@cref}{{[table][1][2]2.1}{[1][28][]28}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.2}{\ignorespaces A schematic representation of the Shape Memory Effect (SME) showing the different phase transformations and crystalline structures}}{29}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:sma-phases}{{2.2}{29}{A schematic representation of the Shape Memory Effect (SME) showing the different phase transformations and crystalline structures}{figure.caption.26}{}}
+\newlabel{fig:sma-phases@cref}{{[figure][2][2]2.2}{[1][28][]29}}
+\citation{liangConstitutiveModelingShape1990a}
+\citation{liangConstitutiveModelingShape1990a}
+\citation{liangConstitutiveModelingShape1990a}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces Schematic representation of a differential scanning calorimetry (DSC) graph showing the energy required during the SME}}{30}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:dsc-graph}{{2.3}{30}{Schematic representation of a differential scanning calorimetry (DSC) graph showing the energy required during the SME}{figure.caption.27}{}}
+\newlabel{fig:dsc-graph@cref}{{[figure][3][2]2.3}{[1][29][]30}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Analytical Modelling of the SME}{30}{section.2.2}\protected@file@percent }
+\newlabel{eq:liang_model_1}{{2.1}{30}{Analytical Modelling of the SME}{equation.2.2.1}{}}
+\newlabel{eq:liang_model_1@cref}{{[equation][1][2]2.1}{[1][30][]30}}
+\newlabel{eq:liang_model_2}{{2.2}{30}{Analytical Modelling of the SME}{equation.2.2.2}{}}
+\newlabel{eq:liang_model_2@cref}{{[equation][2][2]2.2}{[1][30][]30}}
+\newlabel{eq:liang_model_3}{{2.3}{30}{Analytical Modelling of the SME}{equation.2.2.3}{}}
+\newlabel{eq:liang_model_3@cref}{{[equation][3][2]2.3}{[1][30][]30}}
+\citation{liangConstitutiveModelingShape1990a}
+\citation{yooDevelopmentMartensiteTransformation2015}
+\citation{ricciardiChapterExperimentalCharacterization2021}
+\citation{ricciardiChapterExperimentalCharacterization2021}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{liangConstitutiveModelingShape1990a}
+\newlabel{eq:youngs-modulus}{{2.4}{31}{Analytical Modelling of the SME}{equation.2.2.4}{}}
+\newlabel{eq:youngs-modulus@cref}{{[equation][4][2]2.4}{[1][31][]31}}
+\newlabel{eq:tensor-youngsmodulus}{{2.5}{31}{Analytical Modelling of the SME}{equation.2.2.5}{}}
+\newlabel{eq:tensor-youngsmodulus@cref}{{[equation][5][2]2.5}{[1][31][]31}}
+\newlabel{eq:liang-MA}{{2.6}{31}{Analytical Modelling of the SME}{equation.2.2.6}{}}
+\newlabel{eq:liang-MA@cref}{{[equation][6][2]2.6}{[1][31][]31}}
+\newlabel{eq:liang-AM}{{2.7}{31}{Analytical Modelling of the SME}{equation.2.2.7}{}}
+\newlabel{eq:liang-AM@cref}{{[equation][7][2]2.7}{[1][31][]31}}
+\newlabel{eq:aM-aA}{{2.8}{31}{Analytical Modelling of the SME}{equation.2.2.8}{}}
+\newlabel{eq:aM-aA@cref}{{[equation][8][2]2.8}{[1][31][]31}}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces Graphical representation of the phase transformations showing the thermal and mechanical properties of the material}}{32}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:phase-diagram-graph}{{2.4}{32}{Graphical representation of the phase transformations showing the thermal and mechanical properties of the material}{figure.caption.28}{}}
+\newlabel{fig:phase-diagram-graph@cref}{{[figure][4][2]2.4}{[1][31][]32}}
+\newlabel{eq:xis-xit}{{2.9}{32}{Analytical Modelling of the SME}{equation.2.2.9}{}}
+\newlabel{eq:xis-xit@cref}{{[equation][9][2]2.9}{[1][32][]32}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.5}{\ignorespaces The relationship between the temperature and the martensitic fraction based on the \cite  {brinsonOneDimensionalConstitutiveBehavior1993} constitutive equations}}{33}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:sma-temperature-transformation-model}{{2.5}{33}{The relationship between the temperature and the martensitic fraction based on the \cite {brinsonOneDimensionalConstitutiveBehavior1993} constitutive equations}{figure.caption.29}{}}
+\newlabel{fig:sma-temperature-transformation-model@cref}{{[figure][5][2]2.5}{[1][31][]33}}
+\newlabel{eq:brinson_model_1}{{2.10}{33}{Analytical Modelling of the SME}{equation.2.2.10}{}}
+\newlabel{eq:brinson_model_1@cref}{{[equation][10][2]2.10}{[1][33][]33}}
+\newlabel{eq:brinson_model_2}{{2.11}{33}{Analytical Modelling of the SME}{equation.2.2.11}{}}
+\newlabel{eq:brinson_model_2@cref}{{[equation][11][2]2.11}{[1][33][]33}}
+\newlabel{eq:brinson_model_3}{{2.12}{33}{Analytical Modelling of the SME}{equation.2.2.12}{}}
+\newlabel{eq:brinson_model_3@cref}{{[equation][12][2]2.12}{[1][33][]33}}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\newlabel{eq:brinson_conv_xis}{{2.13}{34}{Analytical Modelling of the SME}{equation.2.2.13}{}}
+\newlabel{eq:brinson_conv_xis@cref}{{[equation][13][2]2.13}{[1][33][]34}}
+\newlabel{eq:brinson_conv_xit}{{2.14}{34}{Analytical Modelling of the SME}{equation.2.2.14}{}}
+\newlabel{eq:brinson_conv_xit@cref}{{[equation][14][2]2.14}{[1][34][]34}}
+\newlabel{eq:brinson_conv_xis1}{{2.15}{34}{Analytical Modelling of the SME}{equation.2.2.15}{}}
+\newlabel{eq:brinson_conv_xis1@cref}{{[equation][15][2]2.15}{[1][34][]34}}
+\newlabel{eq:brinson_conv_xit2}{{2.16}{34}{Analytical Modelling of the SME}{equation.2.2.16}{}}
+\newlabel{eq:brinson_conv_xit2@cref}{{[equation][16][2]2.16}{[1][34][]34}}
+\newlabel{eq:deltaTxi}{{2.17}{34}{Analytical Modelling of the SME}{equation.2.2.17}{}}
+\newlabel{eq:deltaTxi@cref}{{[equation][17][2]2.17}{[1][34][]34}}
+\newlabel{eq:A_transf}{{2.18}{34}{Analytical Modelling of the SME}{equation.2.2.18}{}}
+\newlabel{eq:A_transf@cref}{{[equation][18][2]2.18}{[1][34][]34}}
+\newlabel{eq:a-transf_1}{{2.19}{34}{Analytical Modelling of the SME}{equation.2.2.19}{}}
+\newlabel{eq:a-transf_1@cref}{{[equation][19][2]2.19}{[1][34][]34}}
+\newlabel{eq:a-transf_2}{{2.20}{34}{Analytical Modelling of the SME}{equation.2.2.20}{}}
+\newlabel{eq:a-transf_2@cref}{{[equation][20][2]2.20}{[1][34][]34}}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{ansysincNonlinearMaterialProperties2021}
+\citation{auricchioRobustIntegrationalgorithmFinitestrain2001}
+\citation{souzaThreedimensionalModelSolids1998}
+\citation{auricchioImprovementsAlgorithmicalConsiderations2002}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.6}{\ignorespaces The analytical model of the SMA based on the \cite  {brinsonOneDimensionalConstitutiveBehavior1993} constitutive equations}}{35}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:brinson-model-stress-strain}{{2.6}{35}{The analytical model of the SMA based on the \cite {brinsonOneDimensionalConstitutiveBehavior1993} constitutive equations}{figure.caption.30}{}}
+\newlabel{fig:brinson-model-stress-strain@cref}{{[figure][6][2]2.6}{[1][35][]35}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Finite Element Modelling}{35}{section.2.3}\protected@file@percent }
+\newlabel{eq:fem-free-energy}{{2.21}{35}{Finite Element Modelling}{equation.2.3.21}{}}
+\newlabel{eq:fem-free-energy@cref}{{[equation][21][2]2.21}{[1][35][]35}}
+\citation{malagisiCoupledNormalshearStress2017}
+\citation{jaberAnsysParametersShape2018}
+\citation{jaberAnsysParametersShape2018}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.7}{\ignorespaces The 3D graph showing the \cite  {brinsonOneDimensionalConstitutiveBehavior1993} analytical model of the entire Shape Memory Effect cycle.\relax }}{36}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:brinson-model-3d}{{2.7}{36}{The 3D graph showing the \cite {brinsonOneDimensionalConstitutiveBehavior1993} analytical model of the entire Shape Memory Effect cycle.\relax }{figure.caption.31}{}}
+\newlabel{fig:brinson-model-3d@cref}{{[figure][7][2]2.7}{[1][35][]36}}
+\newlabel{eq:fem-stress-transf-stress}{{2.22}{36}{Finite Element Modelling}{equation.2.3.22}{}}
+\newlabel{eq:fem-stress-transf-stress@cref}{{[equation][22][2]2.22}{[1][36][]36}}
+\citation{jaberAnsysParametersShape2018}
+\citation{jaberAnsysParametersShape2018}
+\citation{jaberAnsysParametersShape2018}
+\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces The definitions of the parameters used to define the SME in the commercial FEM software, ANSYS}}{37}{table.caption.32}\protected@file@percent }
+\newlabel{tab:fem-parameters}{{2.2}{37}{The definitions of the parameters used to define the SME in the commercial FEM software, ANSYS}{table.caption.32}{}}
+\newlabel{tab:fem-parameters@cref}{{[table][2][2]2.2}{[1][36][]37}}
+\newlabel{eq:fem-h}{{2.23}{37}{Finite Element Modelling}{equation.2.3.23}{}}
+\newlabel{eq:fem-h@cref}{{[equation][23][2]2.23}{[1][37][]37}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.8}{\ignorespaces A visual representation of the various parameters required to define the Shape Memory Effect within the FEM model}}{38}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:fem-wp-graph}{{2.8}{38}{A visual representation of the various parameters required to define the Shape Memory Effect within the FEM model}{figure.caption.33}{}}
+\newlabel{fig:fem-wp-graph@cref}{{[figure][8][2]2.8}{[1][37][]38}}
+\newlabel{eq:fem-C}{{2.24}{38}{Finite Element Modelling}{equation.2.3.24}{}}
+\newlabel{eq:fem-C@cref}{{[equation][24][2]2.24}{[1][37][]38}}
+\newlabel{eq:fem-beta}{{2.25}{38}{Finite Element Modelling}{equation.2.3.25}{}}
+\newlabel{eq:fem-beta@cref}{{[equation][25][2]2.25}{[1][38][]38}}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Stroke Estimation of SMA Actuators}{39}{section.2.4}\protected@file@percent }
+\newlabel{sec:stroke-estimation}{{2.4}{39}{Stroke Estimation of SMA Actuators}{section.2.4}{}}
+\newlabel{sec:stroke-estimation@cref}{{[section][4][2]2.4}{[1][39][]39}}
+\newlabel{eq:f-x-sma}{{2.26}{39}{Stroke Estimation of SMA Actuators}{equation.2.4.26}{}}
+\newlabel{eq:f-x-sma@cref}{{[equation][26][2]2.26}{[1][39][]39}}
+\newlabel{eq:bias-spring}{{2.27}{39}{Stroke Estimation of SMA Actuators}{equation.2.4.27}{}}
+\newlabel{eq:bias-spring@cref}{{[equation][27][2]2.27}{[1][39][]39}}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{elahiniaEnhancedSMAPhenomenological2005}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.9}{\ignorespaces A schematic representation of the Bias-spring SMA actuator showing the different variables and the stroke estimation based on the SMA temperature.\relax }}{40}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:bias-spring-diagram}{{2.9}{40}{A schematic representation of the Bias-spring SMA actuator showing the different variables and the stroke estimation based on the SMA temperature.\relax }{figure.caption.34}{}}
+\newlabel{fig:bias-spring-diagram@cref}{{[figure][9][2]2.9}{[1][39][]40}}
+\newlabel{eq:bias-spring-sma-cold-elongation}{{2.28}{40}{Stroke Estimation of SMA Actuators}{equation.2.4.28}{}}
+\newlabel{eq:bias-spring-sma-cold-elongation@cref}{{[equation][28][2]2.28}{[1][40][]40}}
+\newlabel{eq:bias-spring-sma-hot-elongation}{{2.29}{40}{Stroke Estimation of SMA Actuators}{equation.2.4.29}{}}
+\newlabel{eq:bias-spring-sma-hot-elongation@cref}{{[equation][29][2]2.29}{[1][40][]40}}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{dragoniDesignDevelopmentAdvanced2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces A plot showing the stroke estimation of a 100 $\mu $m SMA wire actuator using the equations adapted from the \cite  {brinsonOneDimensionalConstitutiveBehavior1993} analytical model}}{41}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:brinson-sma-spring}{{2.10}{41}{A plot showing the stroke estimation of a 100 $\mu $m SMA wire actuator using the equations adapted from the \cite {brinsonOneDimensionalConstitutiveBehavior1993} analytical model}{figure.caption.35}{}}
+\newlabel{fig:brinson-sma-spring@cref}{{[figure][10][2]2.10}{[1][40][]41}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.5}Simplifying the Sizing of the SMA Actuator}{41}{section.2.5}\protected@file@percent }
+\newlabel{sec:simplified-sma-model}{{2.5}{41}{Simplifying the Sizing of the SMA Actuator}{section.2.5}{}}
+\newlabel{sec:simplified-sma-model@cref}{{[section][5][2]2.5}{[1][41][]41}}
+\citation{dragoniDesignDevelopmentAdvanced2021}
+\citation{dragoniDesignDevelopmentAdvanced2021}
+\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Some examples of the material properties used in the analytical modelling of the SMA actuator.\relax }}{42}{table.caption.36}\protected@file@percent }
+\newlabel{tab:brinson-material-properties}{{2.3}{42}{Some examples of the material properties used in the analytical modelling of the SMA actuator.\relax }{table.caption.36}{}}
+\newlabel{tab:brinson-material-properties@cref}{{[table][3][2]2.3}{[1][41][]42}}
+\newlabel{eq:critical-M-stress}{{2.30}{42}{Simplifying the Sizing of the SMA Actuator}{equation.2.5.30}{}}
+\newlabel{eq:critical-M-stress@cref}{{[equation][30][2]2.30}{[1][42][]42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.11}{\ignorespaces Using curve fitting to estimate the simplified material properties of the high temperature and cold temperature SMA helical spring}}{43}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:sma-coil-curve-fit}{{2.11}{43}{Using curve fitting to estimate the simplified material properties of the high temperature and cold temperature SMA helical spring}{figure.caption.37}{}}
+\newlabel{fig:sma-coil-curve-fit@cref}{{[figure][11][2]2.11}{[1][41][]43}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.6}Summary and Conclusion}{43}{section.2.6}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2.12}{\ignorespaces The simplified sizing methodology of an SMA actuators}}{44}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:simplied-sma-bias-spring-wp}{{2.12}{44}{The simplified sizing methodology of an SMA actuators}{figure.caption.38}{}}
+\newlabel{fig:simplied-sma-bias-spring-wp@cref}{{[figure][12][2]2.12}{[1][42][]44}}
+\citation{liangConstitutiveModelingShape1990a}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{auricchioRobustIntegrationalgorithmFinitestrain2001}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\citation{brinsonOneDimensionalConstitutiveBehavior1993}
+\@setckpt{main/ch2_modelling}{
+\setcounter{page}{47}
+\setcounter{equation}{30}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{2}
+\setcounter{section}{6}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{12}
+\setcounter{table}{3}
+\setcounter{NAT@ctr}{0}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{AM@survey}{0}
+\setcounter{ttlp@side}{0}
+\setcounter{myparts}{0}
+\setcounter{parentequation}{0}
+\setcounter{nlinenum}{0}
+\setcounter{dirtytalk@qdepth}{0}
+\setcounter{caption@flags}{0}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{currfiledepth}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{0}
+}

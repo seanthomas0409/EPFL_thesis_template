@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2021)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: sethomas_thesis_main.aux
+A level-1 auxiliary file: head/dedication.aux
+A level-1 auxiliary file: head/acknowledgements.aux
+A level-1 auxiliary file: head/abstracts.aux
+A level-1 auxiliary file: main/ch0_introduction.aux
+A level-1 auxiliary file: main/ch1_sma_actuators.aux
+A level-1 auxiliary file: main/ch2_modelling.aux
+A level-1 auxiliary file: main/ch3_design_method.aux
+A level-1 auxiliary file: main/ch4_oscillator.aux
+A level-1 auxiliary file: main/ch5_compliant_sma.aux
+A level-1 auxiliary file: main/ch6_case_study_buckled_beam.aux
+A level-1 auxiliary file: main/ch7_conclusion.aux
+A level-1 auxiliary file: tail/biblio.aux
+The style file: apalike.bst
+A level-1 auxiliary file: tail/cv.aux
+Database file #1: tail/bibliography.bib
+Warning--empty booktitle in scholtesDesignCompliantIndustrial2020a
+You've used 110 entries,
+            1935 wiz_defined-function locations,
+            1231 strings with 33821 characters,
+and the built_in function-call counts, 50182 in all, are:
+= -- 4924
+> -- 2395
+< -- 50
++ -- 882
+- -- 827
+* -- 4536
+:= -- 8654
+add.period$ -- 368
+call.type$ -- 110
+change.case$ -- 956
+chr.to.int$ -- 109
+cite$ -- 111
+duplicate$ -- 1715
+empty$ -- 3299
+format.name$ -- 979
+if$ -- 9730
+int.to.chr$ -- 2
+int.to.str$ -- 0
+missing$ -- 110
+newline$ -- 580
+num.names$ -- 335
+pop$ -- 771
+preamble$ -- 1
+purify$ -- 959
+quote$ -- 0
+skip$ -- 1278
+stack$ -- 0
+substring$ -- 3681
+swap$ -- 237
+text.length$ -- 17
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 652
+warning$ -- 1
+while$ -- 408
+width$ -- 0
+write$ -- 1505
+(There was 1 warning)

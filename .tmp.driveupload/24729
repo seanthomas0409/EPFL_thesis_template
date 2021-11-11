@@ -1,0 +1,215 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\citation{singhCompactCompliantExternal2013}
+\citation{hwangPlanarWobbleMotor2016}
+\citation{ruizOptimalDesignRobust2018}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Generation of Actuators Powered by Compliant SMA Elements}{91}{chapter.5}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\newlabel{chap:compliant-sma}{{5}{91}{Generation of Actuators Powered by Compliant SMA Elements}{chapter.5}{}}
+\newlabel{chap:compliant-sma@cref}{{[chapter][5][]5}{[1][91][]91}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.1}Introduction}{91}{section.5.1}\protected@file@percent }
+\citation{elahiniaAdditiveManufacturingNiTiHf2018}
+\citation{tangProgrammableKiriKirigamiMetamaterials2017}
+\citation{shyuKirigamiApproachEngineering2015}
+\citation{modabberifarShapeMemoryAlloyactuated2018}
+\citation{maffiodoThreeFingeredGripperFlexure2017}
+\@writefile{toc}{\contentsline {section}{\numberline {5.2}Designing Integrated Active Elements}{92}{section.5.2}\protected@file@percent }
+\citation{sigmundUsefulnessNongradientApproaches2011}
+\citation{bendsoeTopologyOptimizationTheory2013}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Diagram of the adapted building blocks of the SMA actuator based on integrating the active element and the kinematic stage.\relax }}{93}{figure.caption.74}\protected@file@percent }
+\newlabel{fig:building-blocks-at}{{5.1}{93}{Diagram of the adapted building blocks of the SMA actuator based on integrating the active element and the kinematic stage.\relax }{figure.caption.74}{}}
+\newlabel{fig:building-blocks-at@cref}{{[figure][1][5]5.1}{[1][92][]93}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Generation using Topology Optimization}{93}{section.5.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Density-Based Topology Optimization}{93}{subsection.5.3.1}\protected@file@percent }
+\citation{bendsoeTopologyOptimizationTheory2013}
+\citation{bendsoeTopologyOptimizationTheory2013}
+\citation{zhuDesignCompliantMechanisms2020}
+\citation{talischiPolyTopMatlabImplementation2012}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Basic design problem for compliant mechanisms.\relax }}{94}{figure.caption.75}\protected@file@percent }
+\newlabel{fig:ComplProb}{{5.2}{94}{Basic design problem for compliant mechanisms.\relax }{figure.caption.75}{}}
+\newlabel{fig:ComplProb@cref}{{[figure][2][5]5.2}{[1][93][]94}}
+\newlabel{eq:SIMP}{{5.1}{94}{Density-Based Topology Optimization}{equation.5.3.1}{}}
+\newlabel{eq:SIMP@cref}{{[equation][1][5]5.1}{[1][94][]94}}
+\citation{alonsoTopologySynthesisMultiInput2014}
+\citation{alonsoTopologySynthesisMultiInput2014}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Topology Optimization of Compliant Mechanisms}{95}{subsection.5.3.2}\protected@file@percent }
+\newlabel{eq:OptProblem}{{5.3}{96}{Topology Optimization of Compliant Mechanisms}{equation.5.3.3}{}}
+\newlabel{eq:OptProblem@cref}{{[equation][3][5]5.3}{[1][96][]96}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.4}Testing using Benchmark problems}{96}{section.5.4}\protected@file@percent }
+\newlabel{sec:benchmark-problems}{{5.4}{96}{Testing using Benchmark problems}{section.5.4}{}}
+\newlabel{sec:benchmark-problems@cref}{{[section][4][5]5.4}{[1][96][]96}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Inverter: Design problem (left), Interpolated final topology (right)}}{97}{figure.caption.76}\protected@file@percent }
+\newlabel{fig:Invert_ProbFinal}{{5.3}{97}{Inverter: Design problem (left), Interpolated final topology (right)}{figure.caption.76}{}}
+\newlabel{fig:Invert_ProbFinal@cref}{{[figure][3][5]5.3}{[1][97][]97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Evolution of the inverter design throughout the optimization}}{97}{figure.caption.77}\protected@file@percent }
+\newlabel{fig:ForceInverter_evol}{{5.4}{97}{Evolution of the inverter design throughout the optimization}{figure.caption.77}{}}
+\newlabel{fig:ForceInverter_evol@cref}{{[figure][4][5]5.4}{[1][97][]97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Crimper: Design problem (left), Interpolated final topology (right)}}{97}{figure.caption.78}\protected@file@percent }
+\newlabel{fig:Crimper_ProbFinal}{{5.5}{97}{Crimper: Design problem (left), Interpolated final topology (right)}{figure.caption.78}{}}
+\newlabel{fig:Crimper_ProbFinal@cref}{{[figure][5][5]5.5}{[1][97][]97}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces Gripper: Design problem (left), Interpolated final topology (right)}}{98}{figure.caption.79}\protected@file@percent }
+\newlabel{fig:Gripper_ProbFinal}{{5.6}{98}{Gripper: Design problem (left), Interpolated final topology (right)}{figure.caption.79}{}}
+\newlabel{fig:Gripper_ProbFinal@cref}{{[figure][6][5]5.6}{[1][97][]98}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.1}A Qualitative Measure of the SME}{98}{subsection.5.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces Results of the shape memory effect simulation of the Inverter design}}{99}{figure.caption.80}\protected@file@percent }
+\newlabel{fig:InverterAnsysSimu}{{5.7}{99}{Results of the shape memory effect simulation of the Inverter design}{figure.caption.80}{}}
+\newlabel{fig:InverterAnsysSimu@cref}{{[figure][7][5]5.7}{[1][98][]99}}
+\newlabel{eq:strainretention}{{5.4}{99}{A Qualitative Measure of the SME}{equation.5.4.4}{}}
+\newlabel{eq:strainretention@cref}{{[equation][4][5]5.4}{[1][98][]99}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Results of the shape memory effect simulation of the Crimper design}}{100}{figure.caption.81}\protected@file@percent }
+\newlabel{fig:CrimperAnsysSimu}{{5.8}{100}{Results of the shape memory effect simulation of the Crimper design}{figure.caption.81}{}}
+\newlabel{fig:CrimperAnsysSimu@cref}{{[figure][8][5]5.8}{[1][98][]100}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces The simulation results of the strain retention factor for each of the benchmark problems}}{100}{table.caption.83}\protected@file@percent }
+\newlabel{tab:bm-fem-results}{{5.1}{100}{The simulation results of the strain retention factor for each of the benchmark problems}{table.caption.83}{}}
+\newlabel{tab:bm-fem-results@cref}{{[table][1][5]5.1}{[1][99][]100}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4.2}Experimental Validation of the Methodology}{100}{subsection.5.4.2}\protected@file@percent }
+\citation{sabahiReviewAdditiveManufacturing2020}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Results of the shape memory effect simulation of the Inverter design}}{101}{figure.caption.82}\protected@file@percent }
+\newlabel{fig:GripperAnsysSimu}{{5.9}{101}{Results of the shape memory effect simulation of the Inverter design}{figure.caption.82}{}}
+\newlabel{fig:GripperAnsysSimu@cref}{{[figure][9][5]5.9}{[1][98][]101}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.10}{\ignorespaces The experimental setup of the laser-cut inverter prototype}}{102}{figure.caption.84}\protected@file@percent }
+\newlabel{fig:inverter-proto-setup}{{5.10}{102}{The experimental setup of the laser-cut inverter prototype}{figure.caption.84}{}}
+\newlabel{fig:inverter-proto-setup@cref}{{[figure][10][5]5.10}{[1][101][]102}}
+\citation{paikNovelLowprofileShape2010}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.11}{\ignorespaces The experimental results of the inverter prototype are obtained using a pull-tester and a strain retention of 84.3\% is observed.\relax }}{103}{figure.caption.85}\protected@file@percent }
+\newlabel{fig:results-proto-inverter}{{5.11}{103}{The experimental results of the inverter prototype are obtained using a pull-tester and a strain retention of 84.3\% is observed.\relax }{figure.caption.85}{}}
+\newlabel{fig:results-proto-inverter@cref}{{[figure][11][5]5.11}{[1][102][]103}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Comparison between the FEM and experimental results of the modified inverter benchmark problem.\relax }}{103}{table.caption.86}\protected@file@percent }
+\newlabel{tab:inverter-prototype-fem-results}{{5.2}{103}{Comparison between the FEM and experimental results of the modified inverter benchmark problem.\relax }{table.caption.86}{}}
+\newlabel{tab:inverter-prototype-fem-results@cref}{{[table][2][5]5.2}{[1][103][]103}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.5}Proposed Induction Heating Strategy}{103}{section.5.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.1}Magnetic Induction Heating}{104}{subsection.5.5.1}\protected@file@percent }
+\newlabel{eq:back_emf}{{5.6}{104}{Magnetic Induction Heating}{equation.5.5.6}{}}
+\newlabel{eq:back_emf@cref}{{[equation][6][5]5.6}{[1][104][]104}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.12}{\ignorespaces Working principle of the induction heating strategy}}{105}{figure.caption.87}\protected@file@percent }
+\newlabel{fig:induction_schematic}{{5.12}{105}{Working principle of the induction heating strategy}{figure.caption.87}{}}
+\newlabel{fig:induction_schematic@cref}{{[figure][12][5]5.12}{[1][104][]105}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5.2}Fabrication and Results of Primary Coil}{105}{subsection.5.5.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.13}{\ignorespaces A comparison of primary coils with different wire types}}{106}{figure.caption.88}\protected@file@percent }
+\newlabel{fig:induction-coil-freq}{{5.13}{106}{A comparison of primary coils with different wire types}{figure.caption.88}{}}
+\newlabel{fig:induction-coil-freq@cref}{{[figure][13][5]5.13}{[1][105][]106}}
+\citation{alaghaAdditiveManufacturingShape2021}
+\citation{zhuPredictiveAnalyticalModelling2021a}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.14}{\ignorespaces Implementation of induction heating system}}{107}{figure.caption.89}\protected@file@percent }
+\newlabel{fig:induction-heating-temp}{{5.14}{107}{Implementation of induction heating system}{figure.caption.89}{}}
+\newlabel{fig:induction-heating-temp@cref}{{[figure][14][5]5.14}{[1][106][]107}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.6}Designing Multi-Output Compliant SMA Actuators}{107}{section.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6.1}Generated Multi-Output SMA Actuators}{108}{subsection.5.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.15}{\ignorespaces $4$-point Mandrel $\mathbin {\rotatebox [origin=c]{45}{$+$}}$ : Evolution throughout the optimization}}{108}{figure.caption.90}\protected@file@percent }
+\newlabel{fig:TopologyEvolution-mandrel}{{5.15}{108}{$4$-point Mandrel $\Xsymbol $ : Evolution throughout the optimization}{figure.caption.90}{}}
+\newlabel{fig:TopologyEvolution-mandrel@cref}{{[figure][15][5]5.15}{[1][107][]108}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.16}{\ignorespaces Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state}}{109}{figure.caption.91}\protected@file@percent }
+\newlabel{fig:simo-results}{{5.16}{109}{Using the novel design methodology, multi-output bias-spring SMA actuators are generated making use of compliant SMA structures, shown with normalised stress distribution in the deformed state}{figure.caption.91}{}}
+\newlabel{fig:simo-results@cref}{{[figure][16][5]5.16}{[1][108][]109}}
+\citation{tangProgrammableKiriKirigamiMetamaterials2017}
+\citation{runcimanEquivalentStrainCoffin2011}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Results of the strain retention factor for each of the generated multi-output compliant SMA structures.\relax }}{110}{table.caption.92}\protected@file@percent }
+\newlabel{tab:simo-results}{{5.3}{110}{Results of the strain retention factor for each of the generated multi-output compliant SMA structures.\relax }{table.caption.92}{}}
+\newlabel{tab:simo-results@cref}{{[table][3][5]5.3}{[1][108][]110}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.7}Kirigami inspired Compliant SMA Actuators}{110}{section.5.7}\protected@file@percent }
+\citation{kyungDesignMicrogripperMicromanipulation2008}
+\citation{welschVacuumGripperSystem2018}
+\citation{haibinModelingGraspingForce2018}
+\citation{andrianesisDevelopmentControlMultifunctional2015}
+\citation{ikutaMicroMiniatureShape1990}
+\citation{zhakypovOrigamiInspiredReconfigurableSuction2018}
+\citation{kohlSMAMicrogripperSystem2002}
+\citation{benardThinfilmShapememoryAlloy1998}
+\citation{zhakypovOrigamiInspiredReconfigurableSuction2018}
+\citation{shyuKirigamiApproachEngineering2015}
+\citation{shyuKirigamiApproachEngineering2015}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.1}Proposed Patterns}{112}{subsection.5.7.1}\protected@file@percent }
+\newlabel{fig:omega-pattern-simple}{{5.17a}{112}{$\Omega $-pattern\relax }{figure.caption.93}{}}
+\newlabel{fig:omega-pattern-simple@cref}{{[subfigure][1][5,17]5.17a}{[1][112][]112}}
+\newlabel{sub@fig:omega-pattern-simple}{{a}{112}{$\Omega $-pattern\relax }{figure.caption.93}{}}
+\newlabel{sub@fig:omega-pattern-simple@cref}{{[subfigure][1][5,17]5.17a}{[1][112][]112}}
+\newlabel{fig:lotus-pattern-simple}{{5.17b}{112}{Lotus-pattern\relax }{figure.caption.93}{}}
+\newlabel{fig:lotus-pattern-simple@cref}{{[subfigure][2][5,17]5.17b}{[1][112][]112}}
+\newlabel{sub@fig:lotus-pattern-simple}{{b}{112}{Lotus-pattern\relax }{figure.caption.93}{}}
+\newlabel{sub@fig:lotus-pattern-simple@cref}{{[subfigure][2][5,17]5.17b}{[1][112][]112}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.17}{\ignorespaces The proposed kirigami patterns for the SMA actuator}}{112}{figure.caption.93}\protected@file@percent }
+\newlabel{fig:sma-kiri-patterns}{{5.17}{112}{The proposed kirigami patterns for the SMA actuator}{figure.caption.93}{}}
+\newlabel{fig:sma-kiri-patterns@cref}{{[figure][17][5]5.17}{[1][112][]112}}
+\citation{shyuKirigamiApproachEngineering2015}
+\citation{firouzehDesignModelingNovel2015}
+\citation{shyuKirigamiApproachEngineering2015}
+\citation{dragoniDesignDevelopmentAdvanced2021}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.18}{\ignorespaces The out-of-plane deformation of the $\Omega $-pattern and the Lotus-pattern using an FEM model.\relax }}{113}{figure.caption.94}\protected@file@percent }
+\newlabel{fig:kirigami-patterns-deformed}{{5.18}{113}{The out-of-plane deformation of the $\Omega $-pattern and the Lotus-pattern using an FEM model.\relax }{figure.caption.94}{}}
+\newlabel{fig:kirigami-patterns-deformed@cref}{{[figure][18][5]5.18}{[1][112][]113}}
+\citation{morikawaUltrastretchableKirigamiBioprobes2018}
+\citation{shyuKirigamiApproachEngineering2015}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.2}Case Study: Modelling of the $\Omega $-Pattern}{114}{subsection.5.7.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.19}{\ignorespaces Parametrisation of the $\Omega $-pattern}}{114}{figure.caption.95}\protected@file@percent }
+\newlabel{fig:kirigami-param}{{5.19}{114}{Parametrisation of the $\Omega $-pattern}{figure.caption.95}{}}
+\newlabel{fig:kirigami-param@cref}{{[figure][19][5]5.19}{[1][114][]114}}
+\@writefile{toc}{\contentsline {subsubsection}{Simplifying the Out-of-plane Deformation}{115}{figure.caption.95}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5.20}{\ignorespaces A visualisation of the out-of-plane deformation of the $\Omega $-pattern based on the FEM model}}{115}{figure.caption.96}\protected@file@percent }
+\newlabel{fig:ohm-pattern-deformed}{{5.20}{115}{A visualisation of the out-of-plane deformation of the $\Omega $-pattern based on the FEM model}{figure.caption.96}{}}
+\newlabel{fig:ohm-pattern-deformed@cref}{{[figure][20][5]5.20}{[1][115][]115}}
+\newlabel{eq:bucklingLoad}{{5.7}{115}{Simplifying the Out-of-plane Deformation}{equation.5.7.7}{}}
+\newlabel{eq:bucklingLoad@cref}{{[equation][7][5]5.7}{[1][115][]115}}
+\newlabel{eq:deflectionAngle}{{5.8}{116}{Simplifying the Out-of-plane Deformation}{equation.5.7.8}{}}
+\newlabel{eq:deflectionAngle@cref}{{[equation][8][5]5.8}{[1][116][]116}}
+\newlabel{eq:deltaX}{{5.9}{116}{Simplifying the Out-of-plane Deformation}{equation.5.7.9}{}}
+\newlabel{eq:deltaX@cref}{{[equation][9][5]5.9}{[1][116][]116}}
+\@writefile{toc}{\contentsline {subsubsection}{Estimating the Apparent Young's Modulus}{116}{equation.5.7.9}\protected@file@percent }
+\newlabel{eq:apparentStiffness}{{5.10}{116}{Estimating the Apparent Young's Modulus}{equation.5.7.10}{}}
+\newlabel{eq:apparentStiffness@cref}{{[equation][10][5]5.10}{[1][116][]116}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.21}{\ignorespaces Comparison of the analytical model and the FEM results of the $\Omega $-pattern}}{116}{figure.caption.97}\protected@file@percent }
+\newlabel{fig:ohm-kiri-am-fem-comparison}{{5.21}{116}{Comparison of the analytical model and the FEM results of the $\Omega $-pattern}{figure.caption.97}{}}
+\newlabel{fig:ohm-kiri-am-fem-comparison@cref}{{[figure][21][5]5.21}{[1][116][]116}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces The dimensions of the simulated $\Omega $-pattern.\relax }}{117}{table.caption.98}\protected@file@percent }
+\newlabel{tab:pattern-dimensions}{{5.4}{117}{The dimensions of the simulated $\Omega $-pattern.\relax }{table.caption.98}{}}
+\newlabel{tab:pattern-dimensions@cref}{{[table][4][5]5.4}{[1][117][]117}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7.3}Implementation of a Kirigami-inspired Linear Actuator}{117}{subsection.5.7.3}\protected@file@percent }
+\citation{heneinParallelSpringStages1998}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.22}{\ignorespaces A schematic of the working principle and sizing methodology of the kirigami-inspired SMA actuator.\relax }}{118}{figure.caption.99}\protected@file@percent }
+\newlabel{fig:sma-kiri-working-principle}{{5.22}{118}{A schematic of the working principle and sizing methodology of the kirigami-inspired SMA actuator.\relax }{figure.caption.99}{}}
+\newlabel{fig:sma-kiri-working-principle@cref}{{[figure][22][5]5.22}{[1][118][]118}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.23}{\ignorespaces Results of the pull-tester of the single $\Omega $-pattern sample}}{119}{figure.caption.100}\protected@file@percent }
+\newlabel{fig:ohm-kiri-sma-expt-results}{{5.23}{119}{Results of the pull-tester of the single $\Omega $-pattern sample}{figure.caption.100}{}}
+\newlabel{fig:ohm-kiri-sma-expt-results@cref}{{[figure][23][5]5.23}{[1][119][]119}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.24}{\ignorespaces A linear actuator powered by a kirigami-inspired SMA active element}}{120}{figure.caption.101}\protected@file@percent }
+\newlabel{fig:sma-kiri-actuator}{{5.24}{120}{A linear actuator powered by a kirigami-inspired SMA active element}{figure.caption.101}{}}
+\newlabel{fig:sma-kiri-actuator@cref}{{[figure][24][5]5.24}{[1][119][]120}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.8}Summary and Conclusion}{121}{section.5.8}\protected@file@percent }
+\@setckpt{main/ch5_compliant_sma}{
+\setcounter{page}{123}
+\setcounter{equation}{10}
+\setcounter{enumi}{0}
+\setcounter{enumii}{0}
+\setcounter{enumiii}{0}
+\setcounter{enumiv}{0}
+\setcounter{footnote}{0}
+\setcounter{mpfootnote}{0}
+\setcounter{part}{0}
+\setcounter{chapter}{5}
+\setcounter{section}{8}
+\setcounter{subsection}{0}
+\setcounter{subsubsection}{0}
+\setcounter{paragraph}{0}
+\setcounter{subparagraph}{0}
+\setcounter{figure}{24}
+\setcounter{table}{4}
+\setcounter{NAT@ctr}{0}
+\setcounter{lstnumber}{1}
+\setcounter{Item}{0}
+\setcounter{Hfootnote}{0}
+\setcounter{bookmark@seq@number}{0}
+\setcounter{AM@survey}{0}
+\setcounter{ttlp@side}{0}
+\setcounter{myparts}{0}
+\setcounter{parentequation}{0}
+\setcounter{nlinenum}{0}
+\setcounter{dirtytalk@qdepth}{0}
+\setcounter{caption@flags}{0}
+\setcounter{continuedfloat}{0}
+\setcounter{subfigure}{0}
+\setcounter{subtable}{0}
+\setcounter{r@tfl@t}{0}
+\setcounter{currfiledepth}{0}
+\setcounter{lstlisting}{0}
+\setcounter{section@level}{0}
+}
