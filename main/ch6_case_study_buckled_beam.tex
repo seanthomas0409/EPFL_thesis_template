@@ -29,7 +29,7 @@ The SMA coils, when heated, will contract and revert back to their original size
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   % \resizebox{0.7\columnwidth}{!}{\input{images/chap7/smabb-wp-diagram_revC.pdf_tex}}
-   \includegraphics[width=0.8\columnwidth]{images/chap6/smabb-working-principle-schematic.pdf}
+   \includegraphics[width=0.75\columnwidth]{images/chap6/smabb-working-principle-schematic.pdf}
   \begin{tabular}{l@{ }l l@{ }l l@{ }l}
     {\color{mygreen} \rule[1.5pt]{10pt}{0.5mm} } & {\footnotesize 1\textsuperscript{st} Stable state} & {\color{mygreen} \rule[1.5pt]{1.5pt}{0.5mm} \rule[1.5pt]{1.5pt}{0.5mm} \rule[1.5pt]{1.5pt}{0.5mm}} & {\footnotesize Unstable state} &
     {\color{mygreen} \rule[1.5pt]{7.5pt}{0.5mm} \rule[1.5pt]{7.5pt}{0.5mm}} & {\footnotesize 2\textsuperscript{nd} Stable state}\\
@@ -47,7 +47,7 @@ Finally, in regards to the control of such a system, the SMAs are heated by pass
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \begin{tikzpicture}
-    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip, width=0.8\textwidth]{images/chap6/hexgon-base-layer-intersect-smabb.pdf}};
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip, width=0.75\textwidth]{images/chap6/hexgon-base-layer-intersect-smabb.pdf}};
 	% Insert a relative reference based on image dimensions
     \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
     \node[] at (0.19, 0.5) {\textcolor{white}{\large Active Element}};
@@ -63,14 +63,15 @@ Finally, in regards to the control of such a system, the SMAs are heated by pass
 As shown in \cref{fig:building-blocks-smabb}, the different design methodologies presented in this work are combined to create a more highly integrated SMA actuator that reduces the overall footprint of the system while allowing for a relatively fast time response. Here, the kinematic stage, as proposed in \cref{chap:design-methodology}, acts as a biasing element and transforms the behaviour of the antagonistic SMA actuator into a bistable motion with rapid activation while also, as proposed in \cref{chap:integrated-control}, acts as the control strategy for the mechanical intelligence of the actuator. This allows to be integrate the kinematic stage into the core of the SMA actuator where this motion conversion stage which acts as the gripper is an integral part of the SMA actuator.
 
 \section{Design of the Bistable Kinematic Stage}
-The next step, as proposed by the design methodology, consists of defining the relationship between the contract of the SMA and the kinematic stage. In this section, the analytical model of the snap-through behaviour of the proposed bistable buckled beam is established. This model can then be used to design and size the buckled beam and the SMA coils so as to create a rapidly switching gripper with the required force and stroke specifications.
+The next step, as proposed by the design methodology, consists of defining the relationship between the contract of the SMA and the kinematic stage. In this section, the analytical model of the snap-through behaviour of the proposed bistable buckled beam is described and this model can then be used to design and size the buckled beam and the SMA coils so as to create a rapidly switching gripper with the required force and stroke specifications. This section is a result of the collaboration with Loic Tissot-Daguette (Instant-Lab, EPFL).
+
 \subsection{Analytical Model of the Buckled Beam}
-A beam theory model is proposed in this section to size the bistable buckled beam mechanism for the kinematic stage. In \cref{fig:buckled-beam-schematic}, a schematic view of the buckled beam is shown. The initially flat beam buckled when compressed by a distance of $\Delta l$ by the preloading stage attached to the input pivot. The SMA is considered to apply an input torque of $M_\mathrm{in}$ at the input pivot. As the final prototype of the kinematic stage is composed completely of flexure-based mechanisms, the pivots also present with an inherent angular stiffness, $K_\mathrm{in}$ and $K_\mathrm{out}$ at the input and output pivot, respectively. The buckled beam has  flexural rigidity of $EI$ and an initial length before compression of $L$. As the flexure-based pivots are not ideal, the extremities of the beam start at a distance of $p$ from the centre of rotation of the pivots.
+A beam theory model is proposed in this section to size the bistable buckled beam mechanism for the kinematic stage. In \cref{fig:buckled-beam-schematic}, a schematic view of the buckled beam is shown. The initially flat beam buckles when compressed by a distance of $\Delta l$ by the preloading stage attached to the input pivot. The SMA is considered to apply an input torque of $M_\mathrm{in}$ at the input pivot. As the final prototype of the kinematic stage is composed completely of flexure-based mechanisms, the pivots also present with an inherent angular stiffness, $K_\mathrm{in}$ and $K_\mathrm{out}$ at the input and output pivot, respectively. This stiffness must be taken into account when sizing the SMA element for the actuator. The buckled beam has flexural rigidity of $EI$ and an initial length before compression of $L$. As the flexure-based pivots are not ideal, the extremities of the beam start at a distance of $p$ from the centre of rotation of the pivots.
 \begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
   \centering
   \includegraphics[width=0.8\columnwidth]{images/chap6/buckled-beam-schematic-old.pdf}
   % \includegraphics[width=0.7\columnwidth]{images/chap7/buckled_beam_model.png}
-  \caption[Diagram of the bistable mechanism]{Diagram of the bistable mechanism (a) As-fabricated, (b) deformed and (c) free-body diagram of the buckling beam.}
+  \caption[Diagram of the bistable mechanism]{Diagram of the bistable mechanism (a) As-fabricated, (b) deformed and (c) free-body diagram of the buckling beam. (Illustration by Loic Tissot-Daguette)}
   \label{fig:buckled-beam-schematic}
 \end{figure}
 
@@ -78,41 +79,9 @@ Based on the hypothesis described in the work by \cite{tivot2021} and the Euler-
 \begin{equation}\label{eq:deflection}
   y(x) = \left(A\sin{kx}+B(\cos{kx}-1)+C\frac{x}{l}\right) l {\theta }_\textrm{in}
 \end{equation}
-with $k=\sqrt{P/(EI)}$ and the boundary conditions of the supported beam are as follows
-\[y(0)=0\]
-\[y'(0)\cong{\theta }_\textrm{out}\]
-\[M_0\cong K_\textrm{out}\theta_\textrm{out}+Vp-Pp\theta_\textrm{out}\]
-\[y(l)\cong -p(\theta_\textrm{out}+\theta_\textrm{in})\]
-\[y'(l)\cong \theta_\textrm{in}\]
-Furthermore, the deflection parameters of \cref{eq:deflection} are given by
-\begin{equation}\label{A_norm}
-A =    \frac{(1+2\overline{p})kl+{\varepsilon }_0\left(\overline{p}  \sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
-{kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
-\end{equation}
-\begin{equation} \label{B_norm}
-B = \frac{  \overline{p}(1+2\overline{p}){(kl)}^2+{\varepsilon }_0 \left(\overline{p} \left(\cos{kl}-1\right) + \frac{\sin{kl}}{kl} -1\right)}
-{kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
-\end{equation}
-\begin{equation} \label{C_norm}
-C = \frac{  {\overline{p}}^2{(kl)}^2\sin{kl} -2\overline{p} kl\cos{kl} -\sin{kl} - {\varepsilon }_0\left(\overline{p}\sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
-{ kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)}
-\end{equation}
-where $\overline{p} = p/l $ and $\varepsilon_0=K_\textrm{out}/(EI/l)$. When considering the beam’s arc length as constant, the end-shorting, $\Delta l$, can be approximated using the following expression
-\begin{equation}\label{eq:delta_l}
- \Delta l\cong \frac{p}{2}({\theta }^2_\textrm{in}+\theta ^2_\textrm{out})+\int^l_0{\frac{y'(x)^2}{2}dx}=H l{\theta }^2_\textrm{in}
-\end{equation}
-Here, the coefficient $H$ is expressed as
-\begin{multline}\label{eq:H-smabb}
- H = \frac{\left({A}^2+{B}^2\right){\left(kl\right)}^2}{4} + \frac{\left({A}^2-{B}^2\right)kl\sin{2kl} }{8} + \frac{AB kl\left(\cos{2kl}-1\right)}{4}\\
- +AC\sin{kl} + BC\left(\cos{kl}-1\right) + \frac{{C}^2}{2} +\frac{\overline{p}}{2}\left({\left( Akl+C\right)}^2+1\right)
-\end{multline}
+with $k=\sqrt{P/(EI)}$. The boundary conditions and the consequent analytical model of the buckled beam system has been developed with the help of Loic Tissot-Daguette and has been illustrated in detail in \cref{chap:appendixA}.
 
-By rearranging \cref{eq:delta_l}, the input angle can be expressed as
-\begin{equation}\label{eq:theta_in}
- {\theta}_\textrm{in}=\pm \sqrt{\frac{\Delta l}{l}}\sqrt{\frac{1}{H}}
-\end{equation}
-
-Finally, the input moment can be described as the following \cref{eq:M_in}
+The input moment required by the bistable mechanism, to be supplied by the SMA coils, can be described as seen in the following \cref{eq:M_in}.
 \begin{equation}
 \begin{split}
  M_\textrm{in} &\cong M_l+K_\textrm{in}{\theta }_\textrm{in}+Vp-Pp{\theta}_\textrm{in}\\
@@ -120,7 +89,11 @@ Finally, the input moment can be described as the following \cref{eq:M_in}
  \label{eq:M_in}
 \end{split}
 \end{equation}
-\noindent{where ${\varepsilon }_l=K_\textrm{in}/(EI/l)$.} Using these equations, the moment and angular stroke requirements of the bistable element can be estimated. These values can then be utilised in sizing the bistable element so as to fit the requirements of the project specifications and to verify that the SMA active element can sufficiently provide the required moment and stroke.
+\noindent{where ${\varepsilon }_l=K_\textrm{in}/(EI/l)$.} Here, the input angle can be expressed as :
+\begin{equation}\label{eq:theta_in}
+ {\theta}_\textrm{in}=\pm \sqrt{\frac{\Delta l}{l}}\sqrt{\frac{1}{H}}
+\end{equation}
+where, the deflections parameters, $A$, $B$, $C$, $\Delta l$, and $H$, are defined in \cref{chap:appendixA}. Using these equations, the moment and angular stroke requirements of the bistable element can be estimated. These values can then be utilised in sizing the bistable element so as to fit the requirements of the project specifications while also verifying that the SMA active element can sufficiently provide the required moment and stroke to trigger the snap-through of the buckled beam.
 
 \subsection{Design and Fabrication of Kinematic Stage}
 With the help of this analytical model, a flexure-based kinematic stage can be designed and sized accordingly. In this case, cross-spring pivots as shown in \cref{fig:bistable-mechanism} are used for the input and output pivots that mount the buckled beam. Based on the work by \cite{heneinConceptionStructuresArticulees2005}, their angular stiffness can be estimated using the equation below
@@ -140,7 +113,7 @@ where $h_p$ and $L_p$ are the thickness and the total diagonal length of the cro
     \node[] at (0.84, -0.02) {\large(c)};
     \end{scope}
     \end{tikzpicture}
-  \caption[Schematic view of the bistable mechanism as fabricated]{(a) Schematic view of the bistable mechanism as fabricated. Gripper with mounted jaws and the beam preloaded, (b) in open stable equilibrium and (c) in closed unstable equilibrium.}
+  \caption[Schematic view of the bistable mechanism as fabricated]{(a) Schematic view of the bistable mechanism as fabricated. Gripper with mounted jaws and the beam preloaded, (b) in open stable equilibrium and (c) in closed unstable equilibrium. (Designed and illustrated by Loic Tissot-Daguette)}
   \label{fig:bistable-mechanism}
 \end{figure}
 The gripping requirements of the gripper can be estimated using the following equations.
@@ -163,7 +136,7 @@ The flexure-based kinematic stage was fabricated from \textit{Bohler K390} steel
 \end{table}
 
 \subsection{Testing and Validation of the Kinematic Stage}
-The validating of the bistable mechanism design and analytical modelling, a finite element method (FEM) 2D static study was conducted with the help of the commercial software, \textit{Comsol Multiphysics 5.4}. The material was, first, verified to determine whether the compliant structure can withstand the internal stresses during its maximal deformation. This determines the maximal admissible deformation to verify if the material is sufficient. Numerical simulations of the force-displacement characteristics of the mechanism were established to verify the analytical model as shown in \cref{fig:bistable graph}. As the numerical results fit the analytical model quite well, its implies that this model can be used to adequately size the SMA actuator as described in the sizing methodology proposed in \cref{chap:design-methodology}.
+The validation of the bistable mechanism and the analytical model, a finite element method (FEM) 2D static study was conducted, with the help of Loic Tissot-Daguette, using the commercial software, \textit{Comsol Multiphysics 5.4}. The material was, first, verified to determine whether the compliant structure can withstand the internal stresses during its maximal deformation. This determines the maximal admissible deformation to verify if the material is sufficient. Numerical simulations of the force-displacement characteristics of the mechanism were established to verify the analytical model as shown in \cref{fig:bistable graph}. As the numerical results fit the analytical model quite well, its implies that this model can be used to adequately size the SMA actuator as described in the sizing methodology proposed in \cref{chap:design-methodology}.
 
 Furthermore, a test bench was constructed to validate the analytical model with experimental results. The test bench consists of a manual micrometer linear stage to push the input lever arm, $\theta_\mathrm{in}$ and measure the required force using the \textit{Kistler Model 9207} force sensor for the input torque, $M_\mathrm{in}$. Lastly, another force sensor is placed between the two jaws to measure the gripping force, $F_\mathrm{out}$.
 
@@ -175,7 +148,7 @@ The experimental results of the mechanical behaviour of the gripper are portraye
         {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize Theory (Opening)} & {\color{myblue} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} } & {\footnotesize FEM (Opening)} & {\color{myblue} x } & {\footnotesize Expt. (Opening)}\\
         {\color{myred} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize Theory (Closing)} & {\color{myred} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} } & {\footnotesize FEM (Closing)} & {\color{myred} x } & {\footnotesize Expt. (Closing)}\\
     \end{tabular}
-    \caption{Validation of the analytical model of the bistable mechanism against the finite element model and experimental results.}
+    \caption{Validation of the analytical model of the bistable mechanism against the finite element model and experimental results. (Data courtesy of Loic Tissot-Daguette)}
     \label{fig:bistable graph}
 \end{figure}
 
@@ -313,7 +286,7 @@ The gripper, presented in this chapter, is powered using shape memory alloys and
 \noindent\hrulefill \\
 \textbf{\large Publications related to this chapter :}
 
-\underline{S. Thomas}, L. Tissot-Daguette, Y. Perriard, C. Baur, and L. Borelli, \textit{“Microgripper Device”}, European Patent Application, 21150579.7 - 1016
+\underline{S. Thomas}, L. Tissot-Daguette, et al., \textit{“Microgripper Device”}, European Patent Application, 21150579.7 - 1016
 
 \underline{S. Thomas}, L. Tissot-Daguette, T. Martinez, C. Baur, and Y. Perriard, \textit{“Design and Modelling of a Flexure-based Bistable Gripper Powered by Shape Memory Alloys,”} Sensors and Actuators A: Physical, p. 8, 2022. (pending)
 

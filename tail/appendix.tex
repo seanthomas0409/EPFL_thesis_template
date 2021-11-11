@@ -1,4 +1,54 @@
 \appendix
-\chapter{An appendix}
+\chapter{Analytical Modelling of Bistable Mechanism}\label{chap:appendixA}
+The bistable mechanism consists of an initially flat beam which, when compressed by a distance $\Delta l$, buckles and forms a structure that exists in two stable positions. In the case of the actuator, which consists of a pair of SMA coils and the buckled beam itself, is considered to require an input torque $M_\mathrm{in}$ at the input pivot to switch between its two stable states.
 
-\lipsum[1]
+As the entire kinematic stage is comprised of flexure-based mechanisms, as shown in \cref{fig:bistable-mechanism}, the pivots that support the buckled beam present with an inherent angular stiffness, $K_\mathrm{in}$ and $K_\mathrm{out}$ at the input and output pivot, respectively. The buckled beam is considered to have a flexural rigidity of $EI$ and an initial length before compression of $L$. The distance between the centre of the flexural pivots and the beam is considered to be offset by a distance of $p$, as shown in \cref{fig:buckled-beam-schematic}.
+
+Based on the hypothesis described in the work by \cite{tivot2021} and the Euler-Bernoulli beam theory, the beam deflection can be described using the following equation:
+\begin{equation}\label{eq:deflection_A}
+  y(x) = \left(A\sin{kx}+B(\cos{kx}-1)+C\frac{x}{l}\right) l {\theta }_\textrm{in}
+\end{equation}
+with $k=\sqrt{P/(EI)}$ and the boundary conditions of the supported beam are as follows
+\[y(0)=0\]
+\[y'(0)\cong{\theta }_\textrm{out}\]
+\[M_0\cong K_\textrm{out}\theta_\textrm{out}+Vp-Pp\theta_\textrm{out}\]
+\[y(l)\cong -p(\theta_\textrm{out}+\theta_\textrm{in})\]
+\[y'(l)\cong \theta_\textrm{in}\]
+Furthermore, the deflection parameters of \cref{eq:deflection_A} are given by
+\begin{equation}\label{A_norm}
+A =    \frac{(1+2\overline{p})kl+{\varepsilon }_0\left(\overline{p}  \sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
+{kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
+\end{equation}
+\begin{equation} \label{B_norm}
+B = \frac{  \overline{p}(1+2\overline{p}){(kl)}^2+{\varepsilon }_0 \left(\overline{p} \left(\cos{kl}-1\right) + \frac{\sin{kl}}{kl} -1\right)}
+{kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
+\end{equation}
+\begin{equation} \label{C_norm}
+C = \frac{  {\overline{p}}^2{(kl)}^2\sin{kl} -2\overline{p} kl\cos{kl} -\sin{kl} - {\varepsilon }_0\left(\overline{p}\sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
+{ kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)}
+\end{equation}
+where $\overline{p} = p/l $ and $\varepsilon_0=K_\textrm{out}/(EI/l)$. When considering the beam’s arc length as constant, the end-shorting, $\Delta l$, can be approximated using the following expression
+\begin{equation}\label{eq:delta_l}
+ \Delta l\cong \frac{p}{2}({\theta }^2_\textrm{in}+\theta ^2_\textrm{out})+\int^l_0{\frac{y'(x)^2}{2}dx}=H l{\theta }^2_\textrm{in}
+\end{equation}
+Here, the coefficient $H$ is expressed as
+\begin{multline}\label{eq:H-smabb}
+ H = \frac{\left({A}^2+{B}^2\right){\left(kl\right)}^2}{4} + \frac{\left({A}^2-{B}^2\right)kl\sin{2kl} }{8} + \frac{AB kl\left(\cos{2kl}-1\right)}{4}\\
+ +AC\sin{kl} + BC\left(\cos{kl}-1\right) + \frac{{C}^2}{2} +\frac{\overline{p}}{2}\left({\left( Akl+C\right)}^2+1\right)
+\end{multline}
+
+By rearranging \cref{eq:delta_l}, the input angle can be expressed as
+\begin{equation}\label{eq:theta_in_A}
+ {\theta}_\textrm{in}=\pm \sqrt{\frac{\Delta l}{l}}\sqrt{\frac{1}{H}}
+\end{equation}
+
+Finally, the input moment can be described as the following \cref{eq:M_in_A}
+\begin{equation}
+\begin{split}
+ M_\textrm{in} &\cong M_l+K_\textrm{in}{\theta }_\textrm{in}+Vp-Pp{\theta}_\textrm{in}\\
+ &=\frac{EI}{l}\left({\left(kl\right)}^2\left(\overline{p}\left(C-1\right)-A\sin{kl}-B\cos{kl}\right)+{\varepsilon }_l\right){\theta}_\textrm{in}
+ \label{eq:M_in_A}
+\end{split}
+\end{equation}
+\noindent{where ${\varepsilon }_l=K_\textrm{in}/(EI/l)$.}
+These equations, as developed by Loic Tissot-Daguette are used to obtain the moment and angular stroke requirements of the bistable element when sizing the SMA elements for the bistable gripper.

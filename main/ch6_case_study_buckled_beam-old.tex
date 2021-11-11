@@ -1,0 +1,320 @@
+% !TEX root = ../sethomas_thesis_main.tex
+
+\chapter{Validation using a Novel SMA Gripper System}\label{chap:case-study}
+\section{Introduction}
+In \cref{chap:sma-actuator-design}, by exploring the different domains in which SMA actuators are used, the various design criteria and priorities were outlined. By comparing the various design strategies of SMA actuators in their respective applications, the miniaturisation and integration of SMA actuators was deemed to be critical in designing robotic systems powered by smart materials. In the previous chapters, various design methodologies were presented to further integrate the different subsystems present in a conventional SMA actuator. This strategy was explored in order to create miniature robotic systems powered by SMA actuators. In this chapter, the goal is to explore the design methodology presented earlier so as to implement and validate them using a case study.
+
+Here, in this work, the presented design methodologies are implemented in tandem to design and size a novel robotic system powered by an SMA actuator. The sizing methodology and design parameters of conventional SMA actuators were adapted and is used in this chapter to create a more compact and integrated solution so as to miniaturise the final prototype. As stated previously, in this final chapter, the novel design methodologies are validated using a case study. This case study employs the strategies and analytical models described and defined in the previous chapters to adequately size a compact and lightweight gripper. By creating such a work dense SMA powered gripper, the different models are validated while also validating the basic premise of the described methodologies.
+
+As mentioned previously, the primary advantage of SMAs being their relatively high energy work density when compared to smart materials, they can be exploited to create powerful actuators for applications where low weight and compactness are required. In this context, a common application for SMAs are in actuators used to power grippers for drones or pick and place machine as shown in the works by \cite{luNovelDesignParallel2019}, \cite{leeLongShapeMemory2019} and \cite{modabberifarShapeMemoryAlloyactuated2018}. Their lightweight nature makes them ideal for drone-based applications and the active nature of the material makes them ideal for clean-room applications as opposed to traditional pneumatic solutions. Here, the primary criteria to take into account are the overall dimensions, weight and time responses of the gripper. When designing SMA grippers, the main drawback is the large cooling time required resulting in a poor bandwidth. In the case where passive cooling is employed, this drawback is further pronounced and can only be limited by the optimal design of the SMA geometry. Using the design methodology presented earlier, the force and stroke requirements of the application can be taken in account such that the sizing of the SMA actuator can result in a gripper that is still highly integrated while retaining a reasonably fast time response.
+
+In the context of pick and place machines or bistable grippers in general, the primary focus of the design centres around the rigid volume and weight constraints. Furthermore, the bandwidth of the resulting gripper, in certain use cases, can impose a rigid constraint as well. Here, the bistable gripper is designed and sized, using the proposed integrated design methodology, such that the resulting gripper remains within a small foot print and uses the thinnest SMA coils so as to retain an efficient time response with respect to the resulting gripping force. By creating such a bistable gripper, where compact and integrated solution is obtained while obtaining a reasonably fast time response, the design methodologies can be validated.
+
+\section{A Case Study of an SMA-Powered Bistable Gripper}\label{sec:smabb-gripper}
+The core ideology behind SMA actuators has been to create miniature and compact systems that could potentially replace the current traditional solutions. In this work, the basic concept has been to discover methods by which the high energy dense nature of SMAs can be conserved when designing actuators.
+
+This section has been primarily motivated by the need to replace traditional pneumatic pick and place grippers that require large compressors to operate. These conventional pneumatic grippers, as they operate using compressed air and are a source of dust, are incompatible with clean-room applications. These pneumatic grippers are bistable grippers that fit within a small footprint with the disadvantage of requiring a wired connection to a large air compressor. The motivation behind this section is to replace such a gripper and create a compact and lightweight solution that can be compatible with clean-room applications.
+
+Recently, SMAs have been paired with bistable elements to create actuator as shown in the work by \cite{meng_mechanically_2020} and \cite{scholtesDesignCompliantIndustrial2020a}. A simple but effective way to create a bistable element is to axially compress a beam such that they buckled. This buckled beam, which can be easily fabricated in varying dimensions, now can exist in two stable positions. The main advantage to using a bistable system is the fact that they require no additional energy to remain in these stable positions. They only require power when switching from one stable configuration to another. Thus, this behaviour can be further advantageous for designing grippers that often tend to remain in an open or closed position for extended periods of time such as drone-deliveries as shown in the work by \cite{zhangCompliantBistableGrippers2020}. As stated in previous examples, a fully compliant system can reduce the assembly complexity and weight while also preserving the life cycle if properly designed. Furthermore, a compliant bistable SMA-driven gripper can be the ideal candidate to replace the current pneumatic solution for clean-room pick and place applications.
+
+When compared to other bistable SMA-powered systems as shown in the work by \cite{scholtesDevelopmentBistableSMA2021}, this work presents a novel decoupled compliant system accompanied with a simplified sizing methodology. The bistable element prevents the gripper from requiring any energy while grasping while the SMA element allows the gripper to achieve high forces without increasing the weight of the system. However, the main drawback of the system consists of the long cooling time required by the SMA elements. In this work, the proposed analytical models and sizing methodology are implemented and validated such that the geometry of the SMA element is optimised so as to reduce the passive cooling time and enable the gripper to have a higher bandwidth.
+
+\section{Working Principle and Operation}
+In this design, the basic concept consists of combining antagonistic SMAs with a bistable compliant mechanism based on the proposed design methodology as described in \cref{subsec:design-methodology-antagonistic}. Using a buckled beam, a simple bistable compliant mechanism can be designed such no energy is required to remain in the open or closed position of the gripper. As previously stated, the behaviour of SMAs are difficult to model accurately and predicting the shape memory effect can be quite difficult. Similarly, multistable mechanisms with snap-through behaviours are incredibly difficult to model mathematically and therefore, system pairing both SMAs and buckled beam are used but are, often, not adequately sized. Commonly, as displayed in the works by \cite{scholtesDevelopmentBistableSMA2021} and \cite{welschVacuumGripperSystem2018}, the authors present a similar mechanism but lack the methodology to appropriately size the SMA. The SMAs used in such systems are often oversized and present with higher cooling times degrading the time response and work density. However, in this work, using the proposed design methodology, the SMA buckled beam bistable gripper will be sized using the simplified models so as to create a gripper with reduced cooling times.
+
+The basic principle of the presented gripper consists of using a pair of SMAs are external triggers to switch the buckled beam from one of its stable configurations to the other. In \cref{fig:smabbwp}, a simple diagram of the system can be observed. Here, as mentioned, the buckled beam which is axially compressed exhibits the bistability and behaves as the compliant bistable mechanisms. The buckled beam is mounted at both ends using two supporting pivots and the snap-through is triggered by heating one of the two SMA coils. The initially straight beam, which can be fabricated as such, is buckled by bring together the support pivots. Here, one of the pivots is considered the input pivot and connected to the pair of SMA coils. The remaining pivot is considered the output and is connect to the jaws of the gripper.
+
+The SMA coils, when heated, will contract and revert back to their original size. The input pivot is adapted to host a lever arm. As the SMA coils are allowed to contract, being attached to the lever arm, will cause the rotation of the input pivot. This rotation of the input pivot will, after a certain stroke, enable to rapid snap-through of the buckled beam switching it to its alternate stable position. Similarly, by heating the antagonistic SMA, the buckled beam can be made to switch back to its original stable position. Thus, by alternately heating either of the two SMAs, the compliant system can be made to switch back and forth between its two stable positions. As the SMA cools down, the complaint system requires no additional energy from the SMA coils to remain in the stable configurations and only requires energy when forcing the snap-through to occur.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  % \resizebox{0.7\columnwidth}{!}{\input{images/chap7/smabb-wp-diagram_revC.pdf_tex}}
+   \includegraphics[width=0.8\columnwidth]{images/chap6/smabb-working-principle-schematic.pdf}
+  \begin{tabular}{l@{ }l l@{ }l l@{ }l}
+    {\color{mygreen} \rule[1.5pt]{10pt}{0.5mm} } & {\footnotesize 1\textsuperscript{st} Stable state} & {\color{mygreen} \rule[1.5pt]{1.5pt}{0.5mm} \rule[1.5pt]{1.5pt}{0.5mm} \rule[1.5pt]{1.5pt}{0.5mm}} & {\footnotesize Unstable state} &
+    {\color{mygreen} \rule[1.5pt]{7.5pt}{0.5mm} \rule[1.5pt]{7.5pt}{0.5mm}} & {\footnotesize 2\textsuperscript{nd} Stable state}\\
+    % {\color{mygreen} \dhorline{10pt}{1.5pt}} & {\footnotesize 2\textsuperscript{nd} Stable state}\\
+  \end{tabular}
+  \caption{The schematic of the bistable SMA actuator composed on a buckled beam and a pair of SMA coils.}
+  \label{fig:smabbwp}
+\end{figure}
+
+Compared to other bistable SMA actuators such as the work by \cite{scholtesDevelopmentBistableSMA2021}, the real advantage of the proposed kinematic stage, using a buckled beam supported by pivots, is that gripping output is independent of the actuation input up to the point of snap-through. This decoupling of the input and output stage prevents the actuation of the SMA from applying unnecessary forces on the grasped object. From the stable to unstable position of the buckled beam, the input lever makes a near full stroke while the output pivot barely rotates. As soon as the unstable position is exceeded, rapid snap-through occurs and the output pivot switches instantaneously to the other stable stage, allowing for a rapid grasping or releasing motion.
+
+Finally, in regards to the control of such a system, the SMAs are heated by passing a current across them to generate heat using Joule's losses. The internal resistance of the SMA coil is used to reach the transformation temperature of the SMA and generate the forces require to switch the bistable element. However, as the SMA coils are heated, there runs a risk of overheating and destroying the SMA. In conventional SMA actuators, a temperature sensor is used to control the heating of the SMA and prevent any unwanted damage to the actuator. This additional sensor, when combined with the micro-controller required to process the control logic, results in a significant addition to the overall weight and footprint to the system, degrading the work density of the material. Furthermore, in the case of sub-millimetre thin SMA wires or coils, temperature sensors are difficult and expensive to integrate within the system. However, based on the design methodology presented in \cref{chap:integrated-control}, the kinematic stage of the actuator and the control can be integrated to create a mechanically-intelligent control system that can prevent the overheating of the SMA without any additional sensors or micro-controllers. In this proposed mechanism, the bistable element is used to trigger the electrical connection across the SMA. As the first SMA coil heats up, this triggers the buckled beam to snap and cut the electrical connection across this first SMA and establish the connection across the second antagonistic SMA. This prevents the SMA from overheating while also creating a control system that can mechanically chose the appropriate SMA coil to heat for activation. This mechanically-intelligent design, as proposed in the earlier chapter, allows a more compact and integrated footprint for the final design of the gripper prototype.
+
+%% SMABB Hexagon Image
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 0 0 0},clip, width=0.8\textwidth]{images/chap6/hexgon-base-layer-intersect-smabb.pdf}};
+	% Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    \node[] at (0.19, 0.5) {\textcolor{white}{\large Active Element}};
+    \node[] at (0.52, 0.75) {\textcolor{white}{\large Kinematic Stage}};
+    \node[] at (0.52, 0.25) {\textcolor{white}{\large Control Stage}};
+    \node[] at (0.82, 0.5) {\textcolor{white}{\large Biasing Element}};
+    \end{scope}
+    \end{tikzpicture}
+  \caption{Diagram of the adapted building blocks of the bistable SMA-powered robotic gripper.}
+  \label{fig:building-blocks-smabb}
+\end{figure}
+
+As shown in \cref{fig:building-blocks-smabb}, the different design methodologies presented in this work are combined to create a more highly integrated SMA actuator that reduces the overall footprint of the system while allowing for a relatively fast time response. Here, the kinematic stage, as proposed in \cref{chap:design-methodology}, acts as a biasing element and transforms the behaviour of the antagonistic SMA actuator into a bistable motion with rapid activation while also, as proposed in \cref{chap:integrated-control}, acts as the control strategy for the mechanical intelligence of the actuator. This allows to be integrate the kinematic stage into the core of the SMA actuator where this motion conversion stage which acts as the gripper is an integral part of the SMA actuator.
+
+\section{Design of the Bistable Kinematic Stage}
+The next step, as proposed by the design methodology, consists of defining the relationship between the contract of the SMA and the kinematic stage. In this section, the analytical model of the snap-through behaviour of the proposed bistable buckled beam is established. This model can then be used to design and size the buckled beam and the SMA coils so as to create a rapidly switching gripper with the required force and stroke specifications.
+\subsection{Analytical Model of the Buckled Beam}
+A beam theory model is proposed in this section to size the bistable buckled beam mechanism for the kinematic stage. In \cref{fig:buckled-beam-schematic}, a schematic view of the buckled beam is shown. The initially flat beam buckled when compressed by a distance of $\Delta l$ by the preloading stage attached to the input pivot. The SMA is considered to apply an input torque of $M_\mathrm{in}$ at the input pivot. As the final prototype of the kinematic stage is composed completely of flexure-based mechanisms, the pivots also present with an inherent angular stiffness, $K_\mathrm{in}$ and $K_\mathrm{out}$ at the input and output pivot, respectively. The buckled beam has  flexural rigidity of $EI$ and an initial length before compression of $L$. As the flexure-based pivots are not ideal, the extremities of the beam start at a distance of $p$ from the centre of rotation of the pivots.
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \includegraphics[width=0.8\columnwidth]{images/chap6/buckled-beam-schematic-old.pdf}
+  % \includegraphics[width=0.7\columnwidth]{images/chap7/buckled_beam_model.png}
+  \caption[Diagram of the bistable mechanism]{Diagram of the bistable mechanism (a) As-fabricated, (b) deformed and (c) free-body diagram of the buckling beam.}
+  \label{fig:buckled-beam-schematic}
+\end{figure}
+
+Based on the hypothesis described in the work by \cite{tivot2021} and the Euler-Bernoulli beam theory, the beam deflection can be described using the following equation:
+\begin{equation}\label{eq:deflection}
+  y(x) = \left(A\sin{kx}+B(\cos{kx}-1)+C\frac{x}{l}\right) l {\theta }_\textrm{in}
+\end{equation}
+with $k=\sqrt{P/(EI)}$ and the boundary conditions of the supported beam are as follows
+\[y(0)=0\]
+\[y'(0)\cong{\theta }_\textrm{out}\]
+\[M_0\cong K_\textrm{out}\theta_\textrm{out}+Vp-Pp\theta_\textrm{out}\]
+\[y(l)\cong -p(\theta_\textrm{out}+\theta_\textrm{in})\]
+\[y'(l)\cong \theta_\textrm{in}\]
+Furthermore, the deflection parameters of \cref{eq:deflection} are given by
+\begin{equation}\label{A_norm}
+A =    \frac{(1+2\overline{p})kl+{\varepsilon }_0\left(\overline{p}  \sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
+{kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
+\end{equation}
+\begin{equation} \label{B_norm}
+B = \frac{  \overline{p}(1+2\overline{p}){(kl)}^2+{\varepsilon }_0 \left(\overline{p} \left(\cos{kl}-1\right) + \frac{\sin{kl}}{kl} -1\right)}
+{kl\left( kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)\right)}
+\end{equation}
+\begin{equation} \label{C_norm}
+C = \frac{  {\overline{p}}^2{(kl)}^2\sin{kl} -2\overline{p} kl\cos{kl} -\sin{kl} - {\varepsilon }_0\left(\overline{p}\sin{kl}-\frac{\cos{kl}-1}{kl}\right)}
+{ kl \cos{kl}-\sin{kl}-\left({\overline{p}}^2+\overline{p}\right){(kl)}^2\sin{kl}+{\varepsilon }_0\left(\sin{kl}+2\frac{\cos{kl}-1}{kl}\right)}
+\end{equation}
+where $\overline{p} = p/l $ and $\varepsilon_0=K_\textrm{out}/(EI/l)$. When considering the beam’s arc length as constant, the end-shorting, $\Delta l$, can be approximated using the following expression
+\begin{equation}\label{eq:delta_l}
+ \Delta l\cong \frac{p}{2}({\theta }^2_\textrm{in}+\theta ^2_\textrm{out})+\int^l_0{\frac{y'(x)^2}{2}dx}=H l{\theta }^2_\textrm{in}
+\end{equation}
+Here, the coefficient $H$ is expressed as
+\begin{multline}\label{eq:H-smabb}
+ H = \frac{\left({A}^2+{B}^2\right){\left(kl\right)}^2}{4} + \frac{\left({A}^2-{B}^2\right)kl\sin{2kl} }{8} + \frac{AB kl\left(\cos{2kl}-1\right)}{4}\\
+ +AC\sin{kl} + BC\left(\cos{kl}-1\right) + \frac{{C}^2}{2} +\frac{\overline{p}}{2}\left({\left( Akl+C\right)}^2+1\right)
+\end{multline}
+
+By rearranging \cref{eq:delta_l}, the input angle can be expressed as
+\begin{equation}\label{eq:theta_in}
+ {\theta}_\textrm{in}=\pm \sqrt{\frac{\Delta l}{l}}\sqrt{\frac{1}{H}}
+\end{equation}
+
+Finally, the input moment can be described as the following \cref{eq:M_in}
+\begin{equation}
+\begin{split}
+ M_\textrm{in} &\cong M_l+K_\textrm{in}{\theta }_\textrm{in}+Vp-Pp{\theta}_\textrm{in}\\
+ &=\frac{EI}{l}\left({\left(kl\right)}^2\left(\overline{p}\left(C-1\right)-A\sin{kl}-B\cos{kl}\right)+{\varepsilon }_l\right){\theta}_\textrm{in}
+ \label{eq:M_in}
+\end{split}
+\end{equation}
+\noindent{where ${\varepsilon }_l=K_\textrm{in}/(EI/l)$.} Using these equations, the moment and angular stroke requirements of the bistable element can be estimated. These values can then be utilised in sizing the bistable element so as to fit the requirements of the project specifications and to verify that the SMA active element can sufficiently provide the required moment and stroke.
+
+\subsection{Design and Fabrication of Kinematic Stage}
+With the help of this analytical model, a flexure-based kinematic stage can be designed and sized accordingly. In this case, cross-spring pivots as shown in \cref{fig:bistable-mechanism} are used for the input and output pivots that mount the buckled beam. Based on the work by \cite{heneinConceptionStructuresArticulees2005}, their angular stiffness can be estimated using the equation below
+\begin{equation}
+    K_p = \frac{2Ebh_p^3}{3L_p},
+\end{equation}
+where $h_p$ and $L_p$ are the thickness and the total diagonal length of the cross blades, respectively. The interface between the SMA coils and the kinematic stage consists of a lever arm that can be sized to adapt the force and stroke requirements of the SMA so as to trigger the snap-through of the buckled beam. The preloading screw, as observed in \cref{fig:bistable-mechanism} (b), is used to displace the preloading stage by $\Delta l$ so as to cause the buckling of the initially straight beam. This buckling creates the bistability observed within the kinematic stage. In this gripper, the jaws are required to move towards the centre symmetrical in a parallel motion. This jaw guidance mechanism, linked to the output pivot, is comprised of a reverse motion linkage of lever length, $r$, and two linear stages to ensure that the jaws move is opposite directions with the same amplitude, $x_\textrm{out}$, when the gripper is triggered to open. The angular stiffness, $K_\textrm{out}$ of the jaw guidance mechanism perceived at the output pivot was estimated using FEM simulations for small values of the output angle, $\theta_\mathrm{out}$. As the gripper is triggered to close, $x_\textrm{out}$ drops to zero and $\theta_\mathrm{out}$ is approximated to zero. Due to the reaction torque experience by the output pivot coming from the buckled beam, a gripping force, $F_\textrm{out}$, is applied by each jaw onto the payload. These jaws can be interchanged to accommodate differing sizes and types of payload, allowing the gripper to be used in a wide variety of scenarios.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\includegraphics[trim={0 1.4cm 0 0},clip, width=\textwidth]{images/chap7/bistable_mechanism.png}};
+	% Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+    \node[] at (0.17, -0.02) {\large (a)};
+    \node[] at (0.495, -0.02) {\large(b)};
+    \node[] at (0.84, -0.02) {\large(c)};
+    \end{scope}
+    \end{tikzpicture}
+  \caption[Schematic view of the bistable mechanism as fabricated]{(a) Schematic view of the bistable mechanism as fabricated. Gripper with mounted jaws and the beam preloaded, (b) in open stable equilibrium and (c) in closed unstable equilibrium.}
+  \label{fig:bistable-mechanism}
+\end{figure}
+The gripping requirements of the gripper can be estimated using the following equations.
+\begin{equation}\label{eq:x_out}
+  x_\textrm{out}\cong r{\theta }_\textrm{out}=\left(A kl+C\right)r{\theta }_\textrm{in}
+\end{equation}
+
+\begin{equation}\label{eq:f_out}
+  F_\textrm{out}=\frac{M_0-Vp}{2r}=-\frac{EI}{l}\frac{{\left(B+C\overline{p}\right)\left(kl\right)}^2}{2r}{\theta }_\textrm{in}
+\end{equation}
+where $K_\mathrm{out}$ tends to infinity when $F_\mathrm{out}$ is calculated as the object is considered to be infinitely rigid. In this case, the specifications of the gripper are sized with a jaw stroke, $x_\mathrm{out}$, of $1.5$ mm and a gripping force, $F_\mathrm{out}$, of $1$ N.
+
+The flexure-based kinematic stage was fabricated from \textit{Bohler K390} steel due to its high yield strength to Young's modulus ratio ($\sigma_y/E$). The prototype of the mechanism was fabricated using wire-cut electrical discharge machining (EDM) which allows a minimal thickness of 50 $\mu$m for the blades with a tolerance of a few $\mu$m. The design parameters of the fabricated prototype can be found in \cref{tab:bb-design-parameters}.
+
+\begin{table}[hbt!]
+    \centering
+    \caption{A summary of the design parameters for the flexure-based bistable mechanism.}
+    \label{tab:bb-design-parameters}
+    \input{images/chap7/tab-bb-design-parameters.tex}
+\end{table}
+
+\subsection{Testing and Validation of the Kinematic Stage}
+The validating of the bistable mechanism design and analytical modelling, a finite element method (FEM) 2D static study was conducted with the help of the commercial software, \textit{Comsol Multiphysics 5.4}. The material was, first, verified to determine whether the compliant structure can withstand the internal stresses during its maximal deformation. This determines the maximal admissible deformation to verify if the material is sufficient. Numerical simulations of the force-displacement characteristics of the mechanism were established to verify the analytical model as shown in \cref{fig:bistable graph}. As the numerical results fit the analytical model quite well, its implies that this model can be used to adequately size the SMA actuator as described in the sizing methodology proposed in \cref{chap:design-methodology}.
+
+Furthermore, a test bench was constructed to validate the analytical model with experimental results. The test bench consists of a manual micrometer linear stage to push the input lever arm, $\theta_\mathrm{in}$ and measure the required force using the \textit{Kistler Model 9207} force sensor for the input torque, $M_\mathrm{in}$. Lastly, another force sensor is placed between the two jaws to measure the gripping force, $F_\mathrm{out}$.
+
+The experimental results of the mechanical behaviour of the gripper are portrayed in \cref{fig:bistable graph}. Based on the equations \ref{eq:theta_in}-\ref{eq:f_out}, the analytical model is traced out with the parameter $kl$ ranging from $1.4\pi$ (near stable position) to $2.4\pi$ (near unstable position) for the opening sequence and from $1.3\pi$ (near stable position) to $2.2\pi$ (near unstable position) for the closing sequence. Here, $l$ is approximated as $L-\Delta l$. The FEM results are also presented in the same figure to display the minor discrepancies present between the analytical, numerical model and experimental results.
+\begin{figure}[htp!] % t for top of the page, H could be put to impose the position of the float
+    \centering
+    \resizebox{0.7\textwidth}{!}{\input{images/chap6/bb-results.tex}}
+    \begin{tabular}{l@{ }l l@{ }l l@{ }l}
+        {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize Theory (Opening)} & {\color{myblue} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} } & {\footnotesize FEM (Opening)} & {\color{myblue} x } & {\footnotesize Expt. (Opening)}\\
+        {\color{myred} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize Theory (Closing)} & {\color{myred} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} } & {\footnotesize FEM (Closing)} & {\color{myred} x } & {\footnotesize Expt. (Closing)}\\
+    \end{tabular}
+    \caption{Validation of the analytical model of the bistable mechanism against the finite element model and experimental results.}
+    \label{fig:bistable graph}
+\end{figure}
+
+As shown in \cref{fig:bistable graph}, the gripper is in its stable states when the input lever angle is at $-20^{\circ}$ and at $21^{\circ}$, which corresponds to its open and closed positions, respectively. The snap-through occurs when the lever angle exceeds the unstable position which corresponds to $-16^{\circ}$ when the gripper is open and $17^{\circ}$ when the gripper is closed. As the snap-through occurs, a rapid change between the open and closed gripper positions are observed. Furthermore, the high hysteresis of the bistable mechanism helps keep the gripper in a fixed state against any external perturbations such as accelerations and shocks to the gripper frame.
+
+The output force and displacements also always stay positive. This implies that the gripper will continuously apply a gripping force during the opening transition and will always be open for the closing transition. However, during these transitions the output force and displacement increase by nearly $50$\%.
+
+\section{Sizing of the Actuator using the Proposed Methodology}
+The goal of this section is to validate the sizing methodology of presented in \cref{subsec:design-methodology-antagonistic} by sizing the SMA coils for the proposed bistable gripper. The sizing of the SMA coils is a critical part in designing this proposed bistable gripper as the active element must have sufficient pull force to switch the bistable element while not being too rigid to overwrite the required bistability. In this design, the SMA coils are heated using Joule's heating and cooled passively. This implies that the cooling time of the SMA coil is directly and principally determined by the wire thickness of the coil. The thinnest wire diameter provided by the supplier was 200 $\mu$m and thus, the sizing methodology was applied to size the mechanism to work with such a thin SMA coil. Furthermore, by utilising the thinnest SMA coil available, the time between opening and closing sequence is minimised.
+
+As mentioned in \cref{fig:bistable-mechanism}, a lever arm is used to convert the linear motion of the SMA actuator to a rotational output of the input pivot of the kinematic stage. By increasing the length of this lever arm, the required force to switch the stable state of the buckled beam within the kinematic stage can be controlled. However, increasing the lever arm length also increases the required stroke to trigger the snap-through.
+
+Using the simplified sizing methodology presented in \cref{chap:design-methodology}, the operating points of the SMA actuator are determine by estimating the intersection between the force-displacement curve of the SMA and the kinematic stage. As the SMA is activated, the coil must overcome the switching requirements of the bistable mechanism as well as the detwinning requirements of the antagonistic SMA. In this case, the analytical model of the buckled beam developed in the previous sections is added to the curve of the antagonistic SMA to determine the biasing curve. The operating points are, thus, estimated by obtaining the intersection between the high temperature SMA curve and the combined buckled beam and cold temperature antagonistic SMA curve as shown in \cref{fig:smabb-sizing} as \bigcircled{$1$} and \bigcircled{$2$}. It is important to note that both SMA must be cool to re-initiate the switching sequence to prevent both SMAs applying a pulling force on the kinematic stage at the same time. This operating point where both SMAs are cooled is represented in the figure as \bigcircled{$1'$}.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \resizebox{0.75\textwidth}{!}{\input{images/chap7/fig-smabb-sizing.tex}}
+  \begin{tabular}{l@{ }l l@{ }l}
+    {\color{myblue} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize SMA at 30$^{\circ}$C} & {\color{mygreen} \rule[2pt]{10pt}{0.5mm}} & {\footnotesize Buckled Beam + Ant. SMA at 30$^{\circ}$C}\\
+    {\color{myred} \rule[2pt]{10pt}{0.5mm} } & {\footnotesize SMA at 120$^{\circ}$C} & {\color{myblack} \dottedrule} & {\footnotesize SMA at snap-through temperature}\\
+    {\color{myblue} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm} \rule[2pt]{1pt}{0.5mm}} & {\footnotesize Ant. SMA at 30$^{\circ}$C} & \\
+  \end{tabular}
+  \caption[An estimation of the operating points of the bistable mechanism based on the adapted sizing methodology]{An estimation of the operating points of the bistable mechanism based on the adapted sizing methodology. Here, the lever arm is assumed to have a length of $12$ mm and the SMA coils are pre-stretched by $7.5$ mm when attached to the lever.}
+  \label{fig:smabb-sizing}
+\end{figure}
+
+As stated earlier, an important parameter in sizing the SMA actuator is the length of the lever arm which can be used to adapt the switching requirements of the buckled beam. The linear SMA model, obtained using a pull-tester while maintaining the coil at a fixed temperature using a PID controller and a thermal camera as a feedback loop, can be used to determine the capabilities of the SMA coil. By sizing the lever arm, the curve of the bistable kinematic stage can be transformed such that the resulting force-displacement curve only intersects the SMA curve at two points preventing any undesired operating points. Furthermore, another important parameter to consider in the sizing strategy is the initial preloading deformation of the SMA coil. By adjusting this parameter, the SMA can be preloaded to recover more strain when heating but this comes at the cost of increased restoring force for the detwinning of the antagonistic SMA which is added to the force requirements of the activated SMA. This parameter can be visualised in \cref{fig:smabb-sizing} as a shift in the SMA curve along the $x$-axis. The final sizing parameters of the lever arm and the SMA are summarized in \cref{tab:sma-design-parameters}.
+
+\begin{table}[hbt!]
+    \centering
+    \caption[The design parameters of the SMA actuator]{The design parameters of the SMA actuator. The SMA coils were supplied by \textit{Dynalloy, Inc.}}
+    \label{tab:sma-design-parameters}
+    \input{images/chap7/tab-smabb-design-parameters.tex}
+\end{table}
+
+The implementation of the lever arm and the SMA pre-stretching mechanism can be seen in \cref{fig:assembly-gripper}. This interface between the SMA coils and the bistable kinematic stage, shown in white, is fabricated from polyoxymethylene (POM) using laser cutting. This interface acts as a thermally and electrically insulated layer. Here, the interface consists of two parallel leaf spring stages that allow the preloading of the SMA using a screw and a trapped nut. This interface is constructed as a layer which can be mounted on top of the kinematic stage. Making use of this 2.5D design, an additional interface layer can be mounted on the opposing side to double the amount of SMAs coils, effectively doubling the pulling force of the SMA actuator without increasing the cooling time.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \input{images/chap7/fig-smabb-assembly.tex}
+  \caption[The assembly of the bistable gripper]{The assembly of the bistable gripper. Here, in white, the interface layer between the SMA actuator and the bistable mechanism can be seen.}
+  \label{fig:assembly-gripper}
+\end{figure}
+
+As previously stated, the main advantage to the proposed sizing methodology is the ability to adequately size the SMA elements based on the require force-displacement requirements of the bistable kinematic stage. This allows the gripper to employ the thinnest SMA coils and thus, when passively cooled, results in the shortest cooling time. As presented in \cref{subsec:thermal-sizing}, the cooling time of the SMA can be estimated using a simple thermal model. As shown in the model, the cooling time can be further optimised by increasing the thermal gradient between the SMA and the ambient temperature. Thus, by employing SMA coils with high transition temperature, the cooling time can be further reduced. Additionally, as shown in the sizing of the SMA, the antagonistic cold SMA provides some additional force requirements when triggering the system. Thus, using the sizing methodology, the temperature of the antagonistic cold SMA can be sized such that the system operates at a temperature above ambient, further increasing the bandwidth of the gripper. It is important to note, however, that the temperature of the antagonistic SMA must be below $\Mf$. In the case of the proposed bistable SMA gripper, using 200 $\mu$m SMA coils and a transition temperature of $90~^\circ$C, a cooling time of $2.83$ s was obtained.
+
+\section{Actuation using the Mechanically-Intelligent Control Strategy}
+As explained previously, the principle behind the operating of the gripper consists of alternately heating the SMA coils by passing a current through them and cooling the coils passively by heat exchange with the surrounding air. Here, the basic working principle of the control is to heat the first SMA coil till the buckled beam switches and then leave sufficient time to cool the coil. Once, the temperature of the coil decreases sufficiently, the opposing antagonistic SMA is heated.
+
+Thus, the heating and cooling time of the SMA coils are critical parameters to consider when implementing the control. By reducing these parameters, the time required between the opening and closing sequences can be minimised, implying that the time response of the gripper can be increased. Based on the methodology of an integrated control scheme presented in \cref{chap:integrated-control}, the mechanical behaviour of the SMA and the kinematic stage is exploited to control the SMA and prevent any overheating. In this design, the bistability of the buckled beam is used to cut the current flow across the corresponding SMA to prevent overheating. The electrical contact across the SMA is implemented using a limit switch. This Honeywell SX, 5A, 1CO, 0.2N limit switch is used to pass a current across the coils as it is rated for high current. Furthermore, the limit switch, activated by the buckled beam snap-through, is used to detect the state of the output pivot and cut the electrical contacts across the SMA coils, as shown in \cref{fig:assembly-gripper} and \cref{fig:final-prototype}.
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+    \centering
+    \begin{tikzpicture}
+    \node[anchor=south west,inner sep=0] (graph) at (0,0) {\resizebox{\textwidth}{!}{\input{images/chap6/smabb-actuation-notitle.pgf}}};
+	% Insert a relative reference based on image dimensions
+    \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+        \node[draw, fill=white] at (0.7,0.9) {\footnotesize Opening sequence};
+        \node[draw, fill=white] at (0.7,0.45) {\footnotesize Closing sequence};
+    \end{scope}
+  \end{tikzpicture}
+  \caption[The jaw position and SMA current readings during the opening and closing sequences of the gripper]{The jaw position and SMA current readings during the opening and closing sequences of the gripper showing that the current across the SMA is instantly cut when the gripper switches between its stable positions.}
+  \label{fig:smabb-actuation}
+\end{figure}
+
+The basic strategy consists of heating the SMA by passing the current through the limit switch and into the SMA. The SMA coil is supplied with a pulse of high current which is automatically cut when the buckled beam switches and activates the limit switch as shown in \cref{fig:smabb-actuation}. Similarly, another pulse of current is sent across the antagonistic SMA. This ensures that the absolute minimum energy is used to heat the SMA and the minimum heating time is obtained. The width of the pulse can be increased to accommodate the cooling time as once the limit switch is activated, no more current is physically allowed to flow through the SMA coil. Therefore, this strategy requires no control logic for the activation of the gripper. Ideally, due to the conductive nature of the kinematic stage, the limit switch mechanism could be implemented within the kinematic stage to further integrate the solution. In this case, using a small form factor limit switch reduced the complexity of the design while still fitting withing the imposed volume constraints.
+
+As previously mentioned, the activation of the gripper is controlled by supplying one of the SMA coils with a pulse of current so as to heat the alloy. An H-bridge circuit is used to supply the current to either of the two SMA coils to activate the gripper in the required direction. A current pulse of $3$ s is supplied to each SMA through the limit switch such that the required cooling time is also taken into account. The wiring of the gripper can be seen in \cref{fig:smabb-circuit}.
+
+%%%%%%%%%%%%%%%%%%%% INSERT CIRCUIT DIAGRAM %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \includegraphics[width=0.5\textwidth]{images/chap6/smabb-circuit-diagram.pdf}
+  % \input{images/chap6/smabb-circuit-diagram.tex}
+  % \resizebox{\textwidth}{!}{\input{images/chap6/smabb-circuit-diagram.tex}}
+  \caption{The electrical circuit diagram of the bistable SMA gripper based on the proposed control strategy.}
+  \label{fig:smabb-circuit}
+\end{figure}
+
+The measurements presented in \cref{fig:smabb-actuation} shows that by using the limit switch design, the gripper switches state and cuts the current across the SMA immediately ensuring that the minimum heating time is obtained and preventing any overheating of the SMA coil. The figure shows the opening and closing sequence of the gripper as the current passes through the coils. The gripper switches very quickly between states, thanks to the buckled beam snap-through. However, it can be observed that the jaws vibrate after the gripper opening around the stable open position. This is due to the fact that the compliant gripper dissipates the energy of the closed to open snap-through very gradually. A damping mechanism could be added to the gripper output to decrease the jaw vibration. During actuation testing, the buckled beam was not fully preloaded showing that the gripper stroke can be adjusted. Similarly, adjusting the preload should allow adapting the gripping force to a given application.
+
+\section{Specifications of the Final Prototype}
+Based on the design methodology, the final prototype consists of a flexure-based bistable mechanism that acts as the kinematic stage for the SMA actuator. As mentioned previously, this stage was fabricated using electrical discharge machining from a monolithic block of \textit{Bohler K390} steel, as shown in \cref{fig:final-prototype}. As the entire stage is created from a monolithic block, the system consists of only a single piece and thus, does not require any complex micro-assembly, displaying one of the key advantages of the use of flexure-based structures and this design methodology.
+
+The SMA elements are integrated into the kinematic stage using a 2.5D design where an interface layer is used to actuate the input pivot of the kinematic stage. Using the design methodology, the pair of SMA coils, arranged in an antagonistic manner, is sized such that the thinnest SMA coils are used so as to keep the cooling time below $3$ s. The design methodology takes into account the inherent stiffness of the bistable structure and sizes the SMAs such that there are no unintended operating points during the activation and snap-through of the gripper system. The final gripper has a stroke of $2.5$ mm per jaw and has a gripping force of around $1.4$ N.
+
+Furthermore, the bistable mechanism and the thermoelastic behaviour of the SMA is exploited to create the mechanically-intelligent control strategy based on the proposed design methodology. In the final prototype, the current flowing the limit switch and into the SMA is controlled by the state of the buckled beam. The kinematic stage is able to cut the current across the SMA in less than $10$ ms. Thus, with the use of these proposed design methodologies, the entire kinematic stage with the integrated SMA actuator fits within a volume constraint of $110 \times 34 \times 26$ mm.
+
+\begin{figure}[hbt!] % t for top of the page, H could be put to impose the position of the float
+  \centering
+  \begin{subfigure}[b]{0.27\textwidth}
+      \begin{tikzpicture}
+        \node[anchor=south west,inner sep=0] (graph) at (0,0){\includegraphics[trim={25cm 4cm 15cm 5cm},clip, width=\textwidth]{images/chap7/smabb-proto-front.jpg}};
+        \begin{scope}[x={(graph.south east)},y={(graph.north west)}]
+            \fill [white] (0.05, 0.2cm) rectangle (1cm,0.3cm);
+            \draw [white] (0.02, 0.3cm) node[anchor=south west] {\scriptsize 10 mm};
+            \end{scope}
+      \end{tikzpicture}
+  \end{subfigure}
+  % \begin{subfigure}[b]{0.27\textwidth}
+  %     \includegraphics[width=\textwidth]{images/chap7/smabb-proto-front-cropped-scale.pdf}
+  % \end{subfigure}
+  \begin{subfigure}[b]{0.72\textwidth}
+      \includegraphics[width=\textwidth]{images/chap7/smabb-proto-iso.jpg}
+  \end{subfigure}
+  \caption{The fabricated prototype of the bistable gripper with the wiring circuit presented on the left.}
+  \label{fig:final-prototype}
+\end{figure}
+
+\subsection{Comparison of the Proposed Gripper}
+Due to the complex nature of the bistable mechanism, the literature on bistable grippers powered by smart materials is limited. However, a comparison of the proposed gripper with other bistable grippers shows the innovative aspects and the advantages of the design methodology. In most cases, as shown in the work by \cite{zhangCompliantBistableGrippers2020} and \cite{scholtesDevelopmentBistableSMA2021}, the bistable gripper requires no holding energy but however also does not provide any gripping force. As the stable state exists at 0 N, the gripping force depends on the size of the object and in the case of the aforementioned works, the grasped object is retained only using friction. In the case of bistable grippers using other smart materials, as shown in \cref{tab:bistable-gripper-comparison}, they often provide lower gripping force. The proposed gripper is able to provide a constant gripping force and stroke and has been sized to show comparable bandwidth. Thus, it is clear to see the primary advantages of the proposed methodology. Additionally, the presented gripper, when compared to other works, is able to produce fixed gripping forces and strokes while also using a compliant structure to provide a parallel gripping motion, compact footprint and a decoupled input-output actuation. Furthermore, the sizing strategy can be adapted to fit the various specifications of the application and the grasped object.
+
+\begin{table}[hbt!]
+    \centering
+    \caption{Comparison of the proposed bistable gripper against other smart material powered bistable grippers.}
+    \label{tab:bistable-gripper-comparison}
+    \input{images/chap6/tab-bistable-gripper-comparison.tex}
+\end{table}
+
+\section{Summary and Conclusion}
+In this chapter, the design methodology presented in this work was validated using a case study. The described methodology proposed novel ways to design actuators that were compact and integrated. Using the various strategies proposed in the previous chapters, a gripper powered by shape memory alloys is designed and sized such that the resulting gripper presents with a relatively high time response while maintaining a low footprint. Furthermore, using the simplified sizing methodology presented in this work has been implemented in this chapter to create a gripper with reduced cooling times and faster time responses. The methodology allowed the conception of a gripper that can be fabricated and assembled with a reduced number of parts, showing one of the primary advantages of the proposed design methodology.
+
+In this final case study, a bistable SMA-powered gripper was designed and experimentally validated. Here, the prototype of the gripper consists of a bistable kinematic stage paired with an antagonistic SMA actuator. Furthermore, the kinematic stage and the shape memory effect has been exploited to create an integrated mechanical control that is able to perfectly control the temperature of the SMA coils without any micro-controllers or control logic. The bistable kinematic stage was conceived using flexure-based hinges and sized using the proposed methodology from \cref{chap:design-methodology}. Here, using the validated analytical models of the bistable element, the operating points of the final gripper were estimated and the final behaviour was verified to not present any unexpected operating points. Using the sizing methodology, the SMA coils and the kinematic stage were sized such that the thinnest wires could be used so as to increase the overall time response of the gripper. The prototype, while being able to apply a constant gripping force, could easily be adjusted to show different types of gripping behaviours and be made to grasp various sizes of objects which showcases one of the key advantages when compared to other bistable gripper solutions. Furthermore, by using the integrated mechanical control strategy as presented in \cref{chap:integrated-control}, this case study was able to validate the proposed approach. Here, using the bistable element to mechanically control the electrical contacts across the SMA coils, the gripper is able to be actuated without the use of temperature sensors or complex control schemes. Finally, the entire prototype, which fits in a foot print of $110\times34\times26$ mm, exhibits a stroke and gripping force of $2.5$ mm and $1.4$ N, showing the strength of the design strategy in creating compact actuators for application such as industrial pick-and-place grippers. Furthermore, using the novel sizing strategy, the bandwidth of the gripper was optimised such that the cooling time required by the SMA coils is as low as $2.8$ s.
+
+The gripper, presented in this chapter, is powered using shape memory alloys and are designed using the different design methodologies presented in this work. These gripper, which can be used in industrial or drone related application, can be further optimised for their specific use cases but can also serve as an example for designing future grippers with differing specifications. Furthermore, future work could include using kirigami inspired SMA elements, to remove the need for a lever arm and further reduce the footprint and assembly time of the proposed gripper.
+
+
+%In this chapter, the designing methodology presented in this work has been validated using two case studies. The methodology proposed a novel way to design compact and integrated SMA actuators. Here, using the proposed approach and techniques, two grippers powered by shape memory alloy coils were conceived and fabricated. The novel methodology also proposed a simplified method with which the SMA and the biasing elements can be sized so as to harness the shape memory effect when a thermal load is applied to the SMA. Finally, the grippers were fabricated using machining techniques that allowed a reduced number of parts and a simplified assembly process, showing one of the key advantages of this proposed integrated approach.
+%
+% In the first section, a four prong mandrel gripper is designed and fabricated. In this prototype, the gripper consists of just an SMA coil and a kinematic stage. Based on the design methodology, the kinematic stage is created using compliant flexure-based mechanisms that, while acting as a motion conversion mechanism, also behaves as a biasing spring. The kinematic stage conceived using topology optimization and improved using flexure-based hinges is able to convert the shape memory effect of one SMA coil into a more complex multi-output gripping motion. Based on the design approach presented in \cref{chap:design-methodology}, the compliant mechanism has been sized to optimize the stroke of the SMA actuator while reducing the required SMA coil wire diameter. Using the established and validated analytical models of the kinematic stage and the traditional simplified SMA models, the operating points and the stroke of the gripper, around 4 mm, was estimated. The final prototype of this four prong gripper weighs less than 17 g and is able to exert around 1.78 N of force, which leads to a maximum force-weight density of around 105 N/kg. This shows that by using the proposed design methodology, a lightweight and compact gripper can be fabricated for applications such as drone-deliveries.
+%
+% Lastly, in the final case study, a bistable SMA-powered gripper was designed and fabricated. Here, the prototype of the gripper consists of a bistable kinematic stage paired with an antagonistic SMA actuator. Furthermore, the kinematic stage and the shape memory effect has been exploited to create an integrated mechanical control that is able to perfectly control the temperature of the SMA coils without any micro-controllers or control logic. The bistable kinematic stage was conceived using flexure-based hinges and sized using the proposed methodology from \cref{chap:design-methodology}. Here, using the validated analytical models of the bistable element, the operating points of the final gripper were estimated and the final behaviour was verified to not present any unexpected operating points. Using the sizing methodology, the SMA coils and the kinematic stage were sized such that the thinnest wires could be used so as to increase the overall time response of the gripper. The prototype, while functioning as intended, could easily be adjusted to show different types of gripping behaviours and be made to grasp various sizes of objects. Furthermore, by using the mechanical integrated control strategy as presented in \cref{chap:integrated-control}, the case study was able to validated the proposed approach. Here, using the bistable element to mechanically control the electrical contacts across the SMA coils, the gripper is able to be actuated without the use of temperature sensors or complex control schemes. Finally, the entire prototype, which fits in a foot print of $110\times34\times26$ mm, exhibits a stroke and gripping force of $2.5$ mm and $1.4$ N, showing the strength of the design strategy in creating compact actuators for application such as industrial pick-and-place grippers.
+%
+% The grippers, presented in this chapter, are powered using shape memory alloys and are designed using the different design methodologies presented in this work. These gripper, which can be used in industrial or drone related application, can be further optimised for their specific use cases but can also serve as an example for designing future grippers with differing specifications.
+\vspace*{\fill}
+\noindent\hrulefill \\
+\textbf{\large Publications related to this chapter :}
+
+\underline{S. Thomas}, L. Tissot-Daguette, et al., \textit{“Microgripper Device”}, European Patent Application, 21150579.7 - 1016
+
+\underline{S. Thomas}, L. Tissot-Daguette, T. Martinez, C. Baur, and Y. Perriard, \textit{“Design and Modelling of a Flexure-based Bistable Gripper Powered by Shape Memory Alloys,”} Sensors and Actuators A: Physical, p. 8, 2022. (pending)
+
+\underline{S. Thomas}, P. Peralta, R. Mottet, M. Lehmann, Y. Civet, and Y. Perriard, \textit{“Analysis and Reduction of Time Response in Thermally Activated Shape Memory Alloys,”} in 2018 21st International Conference on Electrical Machines and Systems (ICEMS), Oct. 2018, p. 7. doi: 10.23919/ICEMS.2018.8549332.
