@@ -3193,11 +3193,11 @@ INPUT ./images/chap5/ohm-kirigami-deformed.tex
 INPUT images/chap5/ohm-kirigami-deformed.tex
 INPUT ./images/chap5/ohm-kirigami-deformed.tex
 INPUT images/chap5/ohm-kirigami-deformed.tex
-INPUT ./images/chap5/ohm-kiri-half-deformed-iso.pdf
-INPUT ./images/chap5/ohm-kiri-half-deformed-iso.pdf
-INPUT images/chap5/ohm-kiri-half-deformed-iso.pdf
-INPUT ./images/chap5/ohm-kiri-half-deformed-iso.pdf
-INPUT ./images/chap5/ohm-kiri-half-deformed-iso.pdf
+INPUT ./images/chap5/ohm-kirigami-deformed-fem-annotated.pdf
+INPUT ./images/chap5/ohm-kirigami-deformed-fem-annotated.pdf
+INPUT images/chap5/ohm-kirigami-deformed-fem-annotated.pdf
+INPUT ./images/chap5/ohm-kirigami-deformed-fem-annotated.pdf
+INPUT ./images/chap5/ohm-kirigami-deformed-fem-annotated.pdf
 INPUT ./images/chap5/ohm-kiri-half-deformed-side.pdf
 INPUT ./images/chap5/ohm-kiri-half-deformed-side.pdf
 INPUT images/chap5/ohm-kiri-half-deformed-side.pdf

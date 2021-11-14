@@ -100,14 +100,14 @@
 
 \tikzset{
   pivot_node/.style = {
-    inner sep=0pt, minimum width=0.6cm,minimum height=0.215cm,
+    inner sep=0pt, minimum width=1.18cm,minimum height=2.15cm,
     path picture={
     % screen (with border)
         \node (piv) {};
         % \spiral[thick]{start radius=0.01, end radius=0.25, revolutions=3, center={(piv.center)}, clockwise, name=clockwisespiral};
-        \draw coordinate (piv1) [black,thin,domain=25:335] plot ({0.1cm*cos(\x)}, {0.1cm*sin(\x)});
-        \draw[thin] ($(piv1.center)+({0.1cm*cos(25)},{0.1cm*sin(25)})$) -- +(0.2cm,0) coordinate (end1);
-        \draw[thin] ($(piv1.center)+({0.1cm*cos(25)},{-0.1cm*sin(25)})$) -- +(0.2cm,0) coordinate (end2);
+        \draw coordinate (piv1) [black,thin,domain=25:335] plot ({0.2*cos(\x)}, {0.2*sin(\x)});
+        \draw[thin] ($(piv1.center)+({0.2*cos(25)},{0.2*sin(25)})$) -- +(0.4,0) coordinate (end1);
+        \draw[thin] ($(piv1.center)+({0.2*cos(25)},{-0.2*sin(25)})$) -- +(0.4,0) coordinate (end2);
         \draw[thin] (end1) -- (end2);
     }
   }
@@ -116,53 +116,49 @@
 
 \begin{document}
 \begin{tikzpicture}[every node/.style={inner sep=0,outer sep=0}]
-\tikzstyle{sma}=[thick,decorate,decoration={zigzag,pre length=1mm,post length=1mm,segment length=1.25mm, amplitude=0.75mm}]
-\tikzstyle{smalong}=[thick,decorate,decoration={zigzag,pre length=1mm,post length=1mm,segment length=2.75mm, amplitude=0.75mm}]
-\tikzstyle{ground}=[pattern=north east hatch, hatch distance=1mm, hatch thickness=.5pt, fill,draw=none,minimum width=2mm,minimum height=0.1mm]
+\tikzstyle{sma}=[thick,decorate,decoration={zigzag,pre length=2mm,post length=2mm,segment length=2.2mm, amplitude=0.75mm}]
+\tikzstyle{smalong}=[thick,decorate,decoration={zigzag,pre length=2mm,post length=2mm,segment length=4mm, amplitude=0.75mm}]
+\tikzstyle{ground}=[pattern=north east hatch, hatch distance=1mm, hatch thickness=0.3pt, fill,draw=none,minimum width=2mm,minimum height=0.1mm]
 
     % <BB>
     \node[thin, anchor=east, pivot_node, solid, black,rotate=30 ,anchor=center] (R) at (0,0) {};
-    \node[thin, pivot_node, anchor=west, solid, black,rotate=150,anchor=center] (L) at (2.5,0) {}; % Left pivot node
+    \node[thin, pivot_node, anchor=west, solid, black,rotate=150,anchor=center] (L) at (5,0) {}; % Left pivot node
     \draw[mygreen, dotted, thick] (R.center) to[in=-150, out=30] (L.center); % Middle beam
-    % \draw[mygreen, dotted, thick] (0,0) node[thin, draw, circle, anchor=east, minimum width=0.1cm, solid, black] (R) {} to[in=-150, out=30] +(2.5,0) node[thin, draw, circle, minimum width=0.1cm, anchor=west, solid, black] (L) {}; % Middle beam
     \draw[solid, mygreen, thick](R.east) to[in=150,out=30] coordinate[pos=0.5] (topSMA) (L.east); % Main beam
     \draw[dashed, mygreen,thick](R.center) to[in=-150,out=-30] coordinate[pos=0.5] (botSMA) (L.center); % Antagonistic beam
     % <\BB>
     % <Right Pivot>
-    \draw[thin] ($(R.center)+({-0.1*cos(25)},{0.1*sin(25)})$) --+($({-0.2*cos(25)},{0.2*sin(25)})$) coordinate (pivRend1);
-    \draw[thin] ($(R.center)+({-0.1*cos(25)},{-0.1*sin(25)})$) --+($({-0.2*cos(25)},{-0.2*sin(25)})$) coordinate (pivRend2);
+    \draw[thin] ($(R.center)+({-0.2*cos(40)},{0.2*sin(40)})$) --+($({-0.3*cos(35)},{0.3*sin(35)})$) coordinate (pivRend1);
+    \draw[thin] ($(R.center)+({-0.2*cos(40)},{-0.2*sin(40)})$) --+($({-0.3*cos(35)},{-0.3*sin(35)})$) coordinate (pivRend2);
     \draw[thin] (pivRend1) -- coordinate[pos=0.5] (pivR) (pivRend2);
-    \node (groundR) [ground,anchor=south,minimum width=7.5,minimum height=0.75mm, yshift=0, rotate=90] at (pivR.west) {};
-    % \draw[thin] (groundR.south east) -- (groundR.south west); % Ground hatch
+    \node (groundR) [ground,anchor=south,minimum width=17,minimum height=0.8mm, yshift=0, rotate=90] at (pivR.west) {};
     % <\Right Pivot>
     % <Preloading Screw>
-    \draw[thin] ($(L.center)+({0.1*cos(25)},{0.1*sin(25)})$) --+($({0.2*cos(25)},{0.2*sin(25)})$) coordinate (pivLend1);
-    \draw[thin] ($(L.center)+({0.1*cos(25)},{-0.1*sin(25)})$) --+($({0.2*cos(25)},{-0.2*sin(25)})$) coordinate (pivLend2);
-    % \draw[thin] (L) --+($({0.2*cos(25)},{0.2*sin(25)})$) coordinate (pivLend1);
-    % \draw[thin] (L) --+($({0.2*cos(25)},{-0.2*sin(25)})$) coordinate (pivLend2);
-    \draw[thin] (pivLend1) --+(0.25,0) coordinate (temp)
-                (pivLend2) --+(0.25,0) coordinate[pos=0.5](pivL) -- (temp)
+    \draw[thin] ($(L.center)+({0.2*cos(40)},{0.2*sin(40)})$) --+($({0.3*cos(35)},{0.3*sin(35)})$) coordinate (pivLend1);
+    \draw[thin] ($(L.center)+({0.2*cos(40)},{-0.2*sin(40)})$) --+($({0.3*cos(35)},{-0.3*sin(35)})$) coordinate (pivLend2);
+    \draw[thin] (pivLend1) --+(0.4,0) coordinate (temp)
+                (pivLend2) --+(0.4,0) coordinate[pos=0.5](pivL) -- (temp)
                 (pivLend1) -- (pivLend2);
-    \node (groundL) [ground,anchor=south,minimum width=7.5,minimum height=0.75mm, yshift=-1.75mm] at (pivL) {};
+    \node (groundL) [ground,anchor=south,minimum width=11.5,minimum height=0.75mm, yshift=-1.75mm] at (pivL) {};
         \draw[thin] (groundL.north east) -- (groundL.north west); % Ground hatch
-    \draw[draw,thin] ($(pivL.south)+(0.075,-0.05)$) circle (0.375mm); % Wheel
-    \draw[draw,thin] ($(pivL.south)+(-0.075,-0.05)$) circle (0.375mm); % Wheel
+    \draw[draw,thin] ($(pivL.south)+(0.125,-0.05)$) circle (0.375mm); % Wheel
+    \draw[draw,thin] ($(pivL.south)+(-0.125,-0.05)$) circle (0.375mm); % Wheel
     % <\Preloading Screw>
     % <Cold SMA>
     \node (groundTSMA) [ground,anchor=south,minimum width=7.5,minimum height=0.75mm, yshift=3mm, rotate=-90] at (topSMA) {};
         \draw[thin] (groundTSMA.north east) -- (groundTSMA.north west); % Ground hatch
-    \draw[smalong, color=myblue] (groundTSMA.north) -- node[draw=none,above, yshift=-2.25mm,scale=0.25] {Antagonistic SMA} ($(L.center)+({0.87*cos(60)},{0.87*sin(60)})$);% <\Cold SMA>
+    \draw[smalong, color=myblue] (groundTSMA.north) -- node[draw=none,above, yshift=-2.75mm,scale=0.5] {Antagonistic SMA} ($(L.center)+({1.35*cos(60)},{1.35*sin(60)})$);% <\Cold SMA>
     % <Hot SMA>
     \node (groundBSMA) [ground,anchor=south,minimum width=7.5,minimum height=0.75mm, yshift=-3mm, rotate=-90] at (botSMA) {};
         \draw[thin] (groundBSMA.north east) -- (groundBSMA.north west); % Ground hatch
-    \draw[sma, color=myred] (groundBSMA.north) -- node[draw=none,below, yshift=2mm, scale=0.25] {SMA} ($(L.center)+({-0.765*cos(60)},{-0.765*sin(60)})$); % <\Hot SMA>
+    \draw[sma, color=myred] (groundBSMA.north) -- node[draw=none,below, yshift=2.5mm, scale=0.5] {SMA} ($(L.center)+({-1.16  *cos(60)},{-1.16    *sin(60)})$); % <\Hot SMA>
     % <Lever Arm>
-    \draw[thick] (L) --+($({1*cos(60)},{1*sin(60)})$);
-    \draw[thick] (L) --+($({-1*cos(60)},{-1*sin(60)})$) node[pos=0.5, below, sloped, scale=0.25, outer sep=4] {Lever arm}; % <\Lever Arm>
+    \draw[thick] ($(L.center)+({0.2*cos(60)},{0.2*sin(60)})$) --+($({1.25*cos(60)},{1.25*sin(60)})$) node[pos=0.6, below, sloped, scale=0.5, outer sep=4] {Lever arm};
+    \draw[thick] ($(L.center)+({-0.2*cos(60)},{-0.2*sin(60)})$) --+($({-1.25*cos(60)},{-1.25*sin(60)})$); % <\Lever Arm>
     % <Labels>
-    \node[draw=none, color=mygreen, scale=0.25, yshift=-5mm] at (topSMA) {Buckled Beam};
-    \node[draw=none, color=black, scale=0.25, yshift=9.5mm, xshift=-1mm] at (R) {Output Pivot};
-    \node[draw=none, color=black, scale=0.25, yshift=8.5mm, xshift=16.5mm] at (L) {Input Pivot};
+    \node[draw=none, color=mygreen, scale=0.5, yshift=-5mm] at (topSMA) {Buckled Beam};
+    \node[draw=none, color=black, scale=0.5, yshift=11.5mm, xshift=-1mm] at (R) {Output Pivot};
+    \node[draw=none, color=black, scale=0.5, yshift=-1.2cm, xshift=0.8cm] at (L) {Input Pivot};
     % <\Labels>
 \end{tikzpicture}
 \end{document}

@@ -1,0 +1,35 @@
+\documentclass[margin=1pt]{standalone}
+\usepackage{color,xcolor}
+\usepackage{makecell}
+%%%%%%%%% ANNOTATING IMAGES %%%%%%%%%%%%%
+\usepackage{tikz-imagelabels}
+
+\imagelabelset{
+   coarse grid color = red,
+   fine grid color = gray,
+   image label font = \sffamily\bfseries\small,
+   image label distance = 2mm,
+   image label back = black,
+   image label text = white,
+   coordinate label font = \sffamily\bfseries\small,
+   coordinate label distance = 2mm,
+   coordinate label back = none,
+   coordinate label text = white,
+   annotation font = \normalfont\small,
+   arrow distance = 0mm,
+   border thickness = 0.6pt,
+   arrow thickness = 0.4pt,
+   tip size = 1.2mm,
+   outer dist = 0.1cm,
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\renewcommand{\arraystretch}{1} % to increase the space between rows
+\begin{annotationimage}{width=0.75\textwidth,trim={14cm 5cm 14cm 5cm}, clip}{ohm-kiri-half-deformed-iso.pdf}
+ \draw[annotation left = {\begin{tabular}{r} Coupling\\Beam \end{tabular} at 0.46}] to (0.48,0.46);
+ \draw[annotation right = {\begin{tabular}{l} Buckling\\Beam\end{tabular} at 0.48}] to (0.66,0.48);
+\end{annotationimage}
+\renewcommand{\arraystretch}{1.5} % to increase the space between rows
+\end{document}
