@@ -49,9 +49,15 @@ These patterned structures make use of out-of-plane deformation to create the de
 \end{figure}
 
 % Talk about the FEM models of both patterns
-The FEM simulation was constructed such that rolling supports are placed on the sides to simulate the adjacent patterns. In the case the $\Omega$-pattern, one end of the pattern is fixed while an elongation is applied at the opposite end while measuring the reaction force of the pattern. Similarly, in the Lotus-pattern, the outer circumference is fixed while a rotation is applied on the inside circumference and the reaction moment is measured. The primary goal of simulated these proposed patterns is to establish a force-elongation profile so as to determine the rigidity of the metamaterial.
+The FEM simulation was constructed such that rolling supports are placed on the sides to simulate the adjacent patterns. In the case the $\Omega$-pattern, one end of the pattern is fixed while an elongation is applied at the opposite end while measuring the reaction force of the pattern. Similarly, in the Lotus-pattern, the outer circumference is fixed while a rotation is applied on the inside circumference and the reaction moment is measured. The primary goal of simulated these proposed patterns is to establish a force-elongation profile so as to determine the rigidity of the metamaterial as shown in \cref{fig:kirigami-patterns-fem-results}.
 
 % Figure : Force-displacement FEM
+\begin{figure}[hbt!]
+    \centering
+    \resizebox{0.9\textwidth}{!}{\input{images/chap5/lotus-ohm-kiri-fem-plot.pgf}}
+    \caption{Deformation profile of the proposed Lotus-pattern (right) and the $\Omega$-pattern (left) from the FEM simulation.}
+    \label{fig:kirigami-patterns-fem-results}
+\end{figure}
 
 % Talk about buckling load and and then large deformation of individual beams
 As seen in the work by \cite{shyuKirigamiApproachEngineering2015} and the work by \cite{firouzehDesignModelingNovel2015}, the force-displacement characteristics of the patterns are highly non-linear. However, the characteristic shows two distinct regions which can be simplified linearly. Initially, the metamaterial is highly rigid and requires a large force to create some deformation. This behaviour can be explained by the buckling load required to create the out-of-plane deformation. Initially, the individual beams present in the patterns are compressed axially as the structure is force to elongate. As soon as the buckling load is reached, these beams will buckle and deviate from the plane create a slight deformation. This deviation allows each beam to deform from the plane which drastically reduces the stiffness of the metamaterial creating the second region of rigidity. This principle can be also extended to other kirigami-inspired patterns such as the lotus-pattern and other out-of-plane deforming patterns presented in \cite{shyuKirigamiApproachEngineering2015}. In the case of the $\Omega$-pattern, the individual beams, post-buckling, are deformed in flexion and undergoes large deformations. The deflection and deformations of the individual patterns can be used to deduce the rigidity of the final resulting metamaterial.
@@ -142,7 +148,7 @@ The design of a basic SMA linear actuator consists of estimating the output stro
 
 \begin{figure}[htb!] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.75\textwidth}{!}{\input{images/chap5/sma-kiri-working-principle.pgf}}
+  \resizebox{0.7\textwidth}{!}{\input{images/chap5/sma-kiri-working-principle.pgf}}
   \caption{A schematic of the working principle and sizing methodology of the kirigami-inspired SMA actuator.}
   \label{fig:sma-kiri-working-principle}
 \end{figure}
@@ -153,7 +159,7 @@ The rigidity of the resulting metamaterial produced from a passive material such
 
 \begin{figure}[htb] % t for top of the page, H could be put to impose the position of the float
   \centering
-  \resizebox{0.95\textwidth}{!}{
+  \resizebox{0.85\textwidth}{!}{
     \input{images/chap5/sma-kiri-expt-results-side.tex}
   }
   \caption[Results of the pull-tester of the single $\Omega$-pattern sample]{Results of the pull-tester of the single $\Omega$-pattern sample cut from a 100 $\mu$m NiTiNOL sheet showing the force-displacement curve of the metamaterial.}
@@ -172,7 +178,7 @@ In order to understand the effects of using an active non-linear material such a
 \begin{figure}[hbt]
     \centering
     % \includegraphics[width=0.9\columnwidth, trim={0 10cm 0 20cm}, clip]{images/chap5/sma-kiri-actuator-green-iso.jpg}
-    \resizebox{0.75\textwidth}{!}{
+    \resizebox{0.55\textwidth}{!}{
       \input{images/chap5/kirigami-actuator-prototype.tex}
     }
     \caption[A linear actuator powered by a kirigami-inspired SMA active element]{A linear actuator powered by a kirigami-inspired SMA active element. Here, using flexure-based structures, the final dimensions and complexity of the system has been further optimised.}
